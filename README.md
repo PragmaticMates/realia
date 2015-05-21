@@ -1,15 +1,8 @@
-=== Realia ===
-Contributors: pragmaticmates
-Tags: real estate, agent, listing, estator, realestate, agent, agency, house, directory, property
-Requires at least: 3.8
-Tested up to: 4.2
-Stable tag: 0.1.0
-License: GNU General Public License v3.0
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+# Realia
 
 Complete real estate solution in one plugin. Create your real estate website or directory with few clicks over the night.
 
-== Description ==
+## Description
 
 ** Front end submission system **
 
@@ -119,30 +112,30 @@ purposes or directory listings.
 * [realia_submission_package_info] Displays package information, if available.
 * [realia_transactions] Transaction history for current user.
 
-== Installation ==
+## Installation
 
 1. Upload `realia` to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the `Plugins` section in WordPress admin.
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 
-= How do I add property filter to my site? =
+** How do I add property filter to my site? **
 
 Just put a `Vertical Filter` widget into suitable widget area. You can also specify which fields will be shown and which to hide in widget settings.
 
-= How can I add property map into my website? =
+** How can I add property map into my website? **
 
 Put a `Properties Map` widget into widget area. In widget settings set latitude and longitude of map center. You can set zoom level, cluster grid size and map style as well.
 
-= I want to set 'negotiated price' for my property. How can I do that ? =
+** I want to set 'negotiated price' for my property. How can I do that ? **
 
 You are able to set custom price text of each property in its detail. You can also set price prefix and suffix if you wish.
 
-= How do I assign an agent to property ? =
+** How do I assign an agent to property ? **
 
 Create at least one agent at first and then choose the one you wish to assign in property detail.
 
-== Screenshots ==
+## Screenshots
 
 1. Google map with properties
 2. Property grid
@@ -153,7 +146,8 @@ Create at least one agent at first and then choose the one you wish to assign in
 7. Property widget
 8. Agents widget
 
-== Changelog ==
+## Changelog
 
-= 0.1.0 =
+** 0.1.0 **
+
 Initial release
