@@ -145,6 +145,7 @@ Create at least one agent at first and then choose the one you wish to assign in
 6. Search filter widget
 7. Property widget
 8. Agents widget
+9. User properties
 
 ## Changelog
 
