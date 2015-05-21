@@ -1,0 +1,50 @@
+.subtitle {
+	color: rgba(0, 0, 0, .7);
+	font-style: italic;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.center {
+	text-align: center !important;
+}
+
+.warning {
+	border-color: #FFF200;
+}
+
+.attachment-thumbnail-small {
+	height: 55px;
+	width: 55px;
+}
+
+.one-half {
+	box-sizing: border-box;
+	float: left;
+	padding: 0px 15px;
+	width: 50%;
+}
+
+.row {
+	margin: 0px -15px;
+}
+
+.min-width {
+	width: 1px;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+.center {
+	text-align: center;
+}

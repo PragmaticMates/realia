@@ -1,0 +1,1127 @@
+/*******************************************************************
+ * Alerts
+ *******************************************************************/
+.alert {
+    padding: 15px;
+    border: solid 1px black;
+}
+
+.alert-success {
+    background-color: lightgreen;
+    color: green;
+    border-color: green;
+}
+
+.alert-warning {
+    background-color: lightyellow;
+    color: #FFBB00;
+    border-color: #FFBB00;
+}
+
+/*******************************************************************
+ * Forms
+ *******************************************************************/
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select {
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    border-radius: 0px;
+    height: 40px;
+    width: 100%;
+}
+
+.terms-conditions-input {
+    margin-top: 20px;
+}
+
+/*******************************************************************
+ * Property
+ *******************************************************************/
+.type-property .wp-post-image {
+    width: 100% !important;
+}
+
+.similar-properties {
+    overflow: hidden;
+}
+
+.similar-properties .property-box-wrapper:nth-child(odd) {
+    padding-left: 10px;
+}
+
+.similar-properties .property-box-wrapper:nth-child(even) {
+    padding-right: 10px;
+}
+
+/*******************************************************************
+ * Property Table
+ *******************************************************************/
+.property-table {
+    border: 0px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.property-table td {
+    border-left: 0px;
+    border-right: 0px;
+    padding: 30px 0px;
+    vertical-align: top;
+}
+
+.property-table tr:last-child td {
+    border-bottom: 0px;
+}
+
+.property-table button {
+    display: block;
+    font-size: 13px;
+    margin: 0px 0px 15px 0px;
+    padding: 6px 12px;
+    text-align: left;
+    width: 100%;
+}
+
+.property-table button.disabled {
+    cursor: default;
+    opacity: .6;
+}
+
+.property-table button.disabled:hover {
+    background-color: #333;
+}
+
+.property-table-info img {
+    width: 194px;
+}
+
+.property-table-info-content {
+    margin-top: 20px;
+}
+
+.property-table-info-content-title {
+    margin-bottom: 10px;
+}
+
+.property-table-info-content-location, .property-table-info-content-price {
+    font-size: 80%;
+}
+
+.property-table-info-content-price {
+    font-weight: 700;
+}
+
+.property-table-actions {
+    padding-right: 26px !important;
+}
+
+.property-table-action {
+    background-color: #333;
+    border: 0px !important;
+    color: #fff;
+    display: block;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 15px;
+    padding: 0px 12px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.property-table-action:hover {
+    background-color: rgba(51, 51, 51, 0.7);
+    color: #fff;
+    font-size: 13px;
+    padding: 0px 12px;
+}
+/*******************************************************************
+ * Property Row
+ *******************************************************************/
+.type-property .property-row-image {
+    display: block;
+    margin-bottom: 100px;
+}
+
+.type-property .entry-content .property-row-location {
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+.type-property .entry-footer strong {
+    color: rgba(51, 51, 51, 0.7);
+    font-weight: 400;
+}
+
+.type-property .entry-footer .property-row-meta-item {
+    margin-right: 25px;
+}
+
+.type-property .entry-footer .property-row-meta-item {
+    color: rgba(51, 51, 51, 0.3);
+}
+
+/*******************************************************************
+ * Property Small
+ *******************************************************************/
+.property-small {
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
+}
+
+.property-small:last-child {
+    margin-bottom: 0px;
+}
+
+.property-small-image {
+    float: left;
+    margin: 0px 15px 0px 0px;
+}
+
+.property-small-image img {
+    width: 70px;
+}
+
+.property-small-content {
+    display: table-cell;
+}
+
+.property-small-type {
+    font-size: 80%;
+}
+
+.property-small-title {
+    margin: 2px 0px;
+}
+
+.property-small-price {
+    font-weight: bold;
+}
+
+/*******************************************************************
+ * Property Box
+ *******************************************************************/
+.property-box-wrapper {
+    float: left;
+    width: 50%;
+    padding: 0px 0px 20px 0px;
+}
+
+.property-box {
+    border: 1px solid #eaeaea;
+    padding: 12px;
+}
+
+.property-box-image {
+    position: relative;
+}
+
+.property-box-image .property-badge {
+    font-size: 14px;
+    left: 15px;
+    top: 15px;
+}
+
+.property-box-image .property-badge-sticky {
+    left: auto;
+    right: 15px;
+}
+
+.property-box-title {
+    font-size: 22px !important;
+    margin-bottom: 3px !important;
+    margin-top: 12px !important;
+}
+
+.property-box-title a {
+    border-bottom: 0px !important;
+}
+
+.property-box-type {
+    color: rgba(51, 51, 51, 0.7);
+}
+
+.property-box-price {
+    color: rgba(51, 51, 51, 0.7);
+    font-weight: bold;
+}
+
+.property-box-archive {
+    background-color: #fff;
+    margin: 60px 8.3333% 0 8.3333%;
+    overflow: hidden;
+    padding: 8.3333%;
+}
+
+.property-box-archive .property-box {
+    float: left;
+    margin-bottom: 30px;
+    width: 48%;
+}
+
+.property-box-archive .property-box:nth-child(2n) {
+    float: right;
+}
+
+/*******************************************************************
+ * Property Gallery
+ *******************************************************************/
+.property-gallery {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.property-gallery-preview img {
+    display: block;
+}
+
+.property-gallery-index {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .5), transparent);
+    bottom: 0px;
+    left: 0px;
+    list-style: none;
+    margin: 0px;
+    padding: 50px 0px 20px 0px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+}
+
+.property-gallery-index li {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.property-gallery-index li.active a {
+    opacity: 1;
+}
+
+.property-gallery-index a {
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    opacity: .45;
+    width: 10px;
+}
+
+/*******************************************************************
+ * Property Overview
+ *******************************************************************/
+.property-overview {
+    border: 1px solid #eaeaea;
+    margin: 0px 0px 60px 0px;
+    padding: 0px 60px;
+}
+
+.property-overview dl {
+    font-size: 16px;
+    margin: 60px 0px;
+}
+
+.property-overview dt {
+    float: left;
+    line-height: 3;
+    margin: 0px;
+    width: 40%;
+}
+
+.property-overview dd {
+    border-bottom: 1px solid rgba(0, 0, 0, .02);
+    line-height: 3;
+    margin: 0px;
+}
+
+.property-overview dd:last-child {
+    border-bottom: 0px;
+}
+
+
+/*******************************************************************
+ * Agent
+ *******************************************************************/
+
+.type-agent.has-post-thumbnail .entry-title {
+    padding-top: 60px;
+}
+
+.agent-thumbnail {
+    float: left;
+    width: 30%;
+}
+
+.type-agent .wp-post-image {
+    width: 100%;
+}
+
+.agent-header {
+    overflow: hidden;
+}
+
+.agent-overview {
+    float: right;
+    width: 70%;
+}
+
+.agent-overview dl {
+    border: 1px solid #eaeaea;
+    font-size: 16px;
+    padding: 20px 30px;
+    margin-left: 30px;
+}
+
+.agent-overview dt {
+    float: left;
+    line-height: 2;
+    margin: 0px;
+    width: 40%;
+}
+
+.agent-overview dd {
+    display: table-cell;
+    line-height: 2;
+    margin: 0px;
+}
+
+.agent-properties {
+    overflow: hidden;
+}
+
+.agent-properties .property-box-wrapper:nth-child(odd) {
+    padding-right: 10px;
+}
+
+.agent-properties .property-box-wrapper:nth-child(even) {
+    padding-left: 10px;
+}
+
+/*******************************************************************
+ * Property Amenities
+ *******************************************************************/
+.property-amenities {
+    border-top: 1px solid #eaeaea;
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.property-amenities ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.property-amenities ul li.no {
+    opacity: .6;
+    text-decoration: line-through;
+}
+
+.property-amenities ul li {
+    float: left;
+    line-height: 3;
+    width: 50%;
+}
+
+/*******************************************************************
+ * Property Valuation
+ *******************************************************************/
+.property-valuation {
+    border-top: 1px solid #eaeaea;
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.property-valuation dt {
+    float: left;
+    font-weight: normal;
+    width: 30%;
+}
+
+.property-valuation dd {
+    margin-left: 30%;
+}
+
+.property-valuation dd span {
+    background-color: rgba(0, 0, 0, .1);
+    display: block;
+    height: 31px;
+}
+
+.property-valuation dd strong {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0px 0px 0px 10px;
+}
+
+/*******************************************************************
+ * Property Public Facilities
+ *******************************************************************/
+.property-public-facilities {
+    border-top: 1px solid #eaeaea;
+    margin-top: 60px;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.property-public-facility-wrapper {
+    float: left;
+    padding-bottom: 20px;
+    width: 50%;
+}
+
+.property-public-facility-wrapper:nth-child(2n+1) {
+    padding-right: 10px;
+}
+
+.property-public-facility-wrapper:nth-child(2n+2) {
+    padding-left: 10px;
+}
+
+.property-public-facility {
+    border: solid 1px #eaeaea;
+    overflow: hidden;
+}
+
+.property-public-facility-info {
+    background-color: #eaeaea;
+    float: left;
+    line-height: 3;
+    text-align: center;
+    width: 30%;
+}
+
+.property-public-facility-title {
+    float: right;
+    line-height: 3;
+    padding: 0px 20px 0px 20px;
+    width: 70%;
+}
+
+
+/*******************************************************************
+ * Property Floor Plans
+ *******************************************************************/
+.property-floor-plans {
+    border-top: 1px solid #eaeaea;
+    margin-top: 60px;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
+.property-floor-plans a {
+    border: 0px !important;
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.property-floor-plans a:hover {
+    text-decoration: none;
+}
+
+.property-floor-plans a img {
+
+}
+
+/*******************************************************************
+ * Property Badge
+ *******************************************************************/
+.property-badge {
+    background-color: #fff;
+    left: 30px;
+    padding: 4px 12px;
+    position: absolute;
+    top: 30px;
+}
+
+.property-badge-sticky {
+    left: auto;
+    right: 30px;
+}
+
+/*******************************************************************
+ * Property Form
+ *******************************************************************/
+.cmb-th {
+    width: 40%;
+}
+
+.cmb-td {
+    width: 60%;
+}
+
+.cmb-td input[type=text] {
+    height: 40px;
+    margin: 0px 0px 10px 0px;
+    width: 100% !important;
+}
+
+.cmb-td input[type=button] {
+    margin: 0px !important;
+    padding: 6px 12px;
+}
+
+.cmb-td iframe {
+    border: 0px;
+}
+
+.cmb2-wrap .button, .cmb2-wrap button {
+    cursor: pointer;
+}
+
+.cmb2-checkbox-list {
+    list-style: none;
+}
+
+.cmb2-checkbox-list label {
+    vertical-align: middle;
+}
+
+.cmb2-checkbox-list li {
+    display: block;
+    margin-bottom: 10px !important;
+}
+
+.pw-map {
+    border: 0px !important;
+    margin: 0px !important;
+    width: 100% !important;
+}
+
+/*******************************************************************
+ * Agent Row
+ *******************************************************************/
+h2.agent-row-title {
+    margin-bottom: 10px;
+}
+
+.type-agent .entry-header .agent-row-properties {
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.agent-row-body {
+    clear: both;
+}
+
+/*******************************************************************
+ * Agent Box
+ *******************************************************************/
+.agent-box-wrapper {
+    float: left;
+    width: 33%;
+    padding: 0px 0px 20px 0px;
+}
+
+.agent-box-image {
+    border-radius: 50%;
+    float: left;
+    margin: 0px 0px 15px 0px;
+    overflow: hidden;
+}
+
+.agent-box {
+    border: 1px solid #eaeaea;
+    padding: 12px;
+}
+
+.agent-box-title {
+    font-size: 22px !important;
+    margin-bottom: 3px !important;
+    margin-top: 12px !important;
+}
+
+.agent-box-title a {
+    border-bottom: 0px !important;
+}
+
+.agent-box-email {
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 14px;
+}
+
+.agent-box-phone {
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.agent-box-archive {
+    background-color: #fff;
+    margin: 60px 8.3333% 0 8.3333%;
+    overflow: hidden;
+    padding: 8.3333%;
+}
+
+.agent-box-archive .agent-box {
+    float: left;
+    margin-bottom: 30px;
+    width: 48%;
+}
+
+.agent-box-archive .agent-box:nth-child(2n) {
+    float: right;
+}
+
+/*******************************************************************
+ * Agency Row
+ *******************************************************************/
+h2.agency-row-title {
+    margin-bottom: 10px;
+}
+
+.type-agency .entry-header .agency-row-agents {
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.agency-row-body {
+    clear: both;
+}
+
+/*******************************************************************
+ * Agency
+ *******************************************************************/
+
+.type-agency.has-post-thumbnail .entry-title {
+    padding-top: 60px;
+}
+
+.agency-thumbnail {
+    float: left;
+    width: 30%;
+}
+
+.type-agency .wp-post-image {
+    width: 100%;
+}
+
+.agency-header {
+    overflow: hidden;
+}
+
+.agency-overview {
+    float: right;
+    width: 70%;
+}
+
+.agency-overview dl {
+    border: 1px solid #eaeaea;
+    font-size: 16px;
+    padding: 20px 30px;
+    margin-left: 30px;
+}
+
+.agency-overview dt {
+    float: left;
+    line-height: 2;
+    margin: 0px;
+    width: 40%;
+}
+
+.agency-overview dd {
+    display: table-cell;
+    line-height: 2;
+    margin: 0px;
+}
+
+.type-agency .map-position #simple-map {
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.agency-agents {
+    overflow: hidden;
+}
+
+.agency-agents .agent-box-wrapper:nth-child(3n+1) {
+    padding-right: 13px;
+}
+
+.agency-agents .agent-box-wrapper:nth-child(3n+2) {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.agency-agents .agent-box-wrapper:nth-child(3n+3) {
+    padding-left: 13px;
+}
+
+
+/*******************************************************************
+ * Agent Small
+ *******************************************************************/
+.agent-small {
+    border: 1px solid #eaeaea;
+    overflow: hidden;
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
+}
+
+.agent-small-image {
+    border-radius: 50%;
+    float: left;
+    margin: 0px 15px 0px 0px;
+    overflow: hidden;
+}
+
+.agent-small-image img {
+    width: 70px;
+}
+
+.agent-small-content {
+    display: table-cell;
+}
+
+.agent-small-title {
+    margin: 0px 0px 7px 0px;
+}
+
+.agent-small-email, .agent-small-phone {
+    font-size: 80%;
+}
+
+/*******************************************************************
+ * Map
+ *******************************************************************/
+.map-wrapper {
+    background-color: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), inset 0px 0px 30px 0px rgba(0, 0, 0, .08);
+    margin: 0 8.3333% 8.3333% 8.3333%;
+    padding: 30px;
+    position: relative;
+}
+
+.map-wrapper #map {
+    height: 450px;
+    width: 100%;
+}
+
+/*******************************************************************
+ * Marker
+ *******************************************************************/
+.marker {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    height: 56px;
+    position: relative;
+    text-align: center;
+    transition: all .15s ease-out;
+    -webkit-user-select: none;
+    user-select: none;
+    width: 56px;
+}
+
+.marker img {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+    width: 50px;
+}
+
+.marker:hover {
+    transform: scale(1.4);
+    transition: all .15s ease-in ;
+}
+
+.marker:after {
+    border-radius: 50%;
+    bottom: 0px;
+    content: '';
+    display: block;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.marker span {
+    background-color: #fff;
+    border: 2px solid red;
+    border-radius: 50%;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    height: 50px;
+    line-height: 46px;
+    text-align: center;
+    width: 50px;
+}
+
+.marker .multiple {
+    &:hover {
+        transform: scale(1);
+    }
+}
+
+/*******************************************************************
+ * Cluster
+ *******************************************************************/
+.clusterer {
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-weight: 700;
+    height: 50px;
+    line-height: 52px;
+    text-align: center;
+    width: 50px;
+}
+
+/*******************************************************************
+ * Infobox
+ *******************************************************************/
+.infobox {
+    background-color: transparent;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .2);
+    height: 120px;
+    position: relative;
+    width: 280px;
+}
+
+.infobox .close {
+    color: #333;
+    cursor: pointer;
+    height: 17px;
+    display: block;
+    font-size: 10px;
+    line-height: 17px;
+    opacity: 1;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    text-indent: 0px;
+    top: 10px;
+    transition: background-color .15s linear, color .15s linear;
+    width: 17px;
+}
+
+.infobox-scroll {
+    bottom: 4px;
+    font-size: 16px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+}
+
+.infobox-image {
+    background-color: rgba(black, .12);
+    border-radius: 2px 0px 0px 2px;
+    display: block;
+    float: left;
+    height: 120px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+
+
+}
+
+.infobox-image img {
+    display: block;
+    max-width: 120px;
+    position: relative;
+    z-index: 2;
+}
+
+.infobox-content {
+    background-color: #fff;
+    height: 120px;
+    float: left;
+    padding: 8px;
+    position: relative;
+    width: 160px;
+    z-index: 2;
+}
+
+.infobox-content.multiple {
+    border-radius: 2px 0px 0px 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    width: 280px;
+}
+
+.infobox-content-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.infobox-content-body {
+    background-color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+    height: 80px;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.infobox-content-body.multiple {
+    height: 102px;
+    overflow: auto;
+}
+
+.infobox-content-body-location {
+    color: #9E9E9E;
+    display: block;
+    font-size: 9px;
+    font-weight: 500;
+    list-style: none;
+    margin: 0px 0px 2px 0px;
+    overflow: hidden;
+    padding: 0px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 144px;
+}
+
+.infobox-content-body-area, .infobox-content-body-baths, .infobox-content-body-beds {
+    line-height: 19px;
+}
+
+.infobox-content-body-value strong {
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.infobox-content-price {
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(black, .12);
+    font-size: 11px;
+    font-weight: 600;
+    left: 7px;
+    line-height: 1;
+    margin: 0px;
+    padding: 6px 7px;
+    position: absolute;
+    top: 7px;
+    z-index: 3;
+}
+
+/*******************************************************************
+ * Submission Payment
+ *******************************************************************/
+.submission-payment {
+    box-shadow: none !important;
+    margin: 0px !important;
+}
+
+.submission-payment-process {
+    float: right;
+}
+
+.payment {
+    border: 1px solid #eaeaea;
+    margin: 0px 0px 45px 0px;
+    padding: 25px;
+}
+
+.payment-content {
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.payment-content input[type=text] {
+    height: 40px;
+}
+
+.payment-info {
+    border: 1px solid #eaeaea;
+    margin: 0px 0px 20px 0px;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.payment-header label {
+    cursor: pointer;
+}
+
+.payment-header label span {
+    margin: 0px 0px 0px 20px;
+    vertical-align: middle;
+}
+
+.payment-paypal-credit-card-first-name {
+    float: left;
+    width: 48%;
+}
+
+.payment-paypal-credit-card-last-name {
+    float: right;
+    width: 48%;
+}
+
+.payment-paypal-credit-card-number {
+    float: left;
+    width: 48%;
+}
+
+.payment-paypal-credit-card-cvv {
+    float: left;
+    margin: 0px 4% 0px 4%;
+    width: 10%;
+}
+
+.payment-paypal-credit-card-expires {
+    overflow: hidden;
+    width: 34%;
+}
+
+.payment-paypal-credit-card-expires-month {
+    float: left;
+    width: 48% !important;
+}
+
+.payment-paypal-credit-card-expires-year {
+    float: right;
+    width: 48% !important;
+}
+
+/*******************************************************************
+ * Transactions
+ *******************************************************************/
+.transactions-table {
+    border: 0px;
+}
+
+.transactions-table td {
+    border: 0px;
+    border-bottom: 1px solid rgba(51, 51, 51, .1);
+    font-size: 16px;
+}
+
+.transactions-table td strong {
+    color: rgba(51, 51, 51, .7);
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.transactions-table tr:last-child td {
+    border-bottom: 0px !important;
+}

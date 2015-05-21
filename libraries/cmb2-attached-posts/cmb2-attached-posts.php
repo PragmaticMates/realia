@@ -1,0 +1,173 @@
+<?php
+/**
+ * Enqueue admin scripts for our attached posts field
+ */
+add_action( 'admin_enqueue_scripts', 'cmb2_attached_posts_field_scripts_styles' );
+
+function cmb2_attached_posts_field_scripts_styles() {
+	$requirements = array(
+		'jquery-ui-core',
+		'jquery-ui-widget',
+		'jquery-ui-mouse',
+		'jquery-ui-draggable',
+		'jquery-ui-droppable',
+		'jquery-ui-sortable',
+	);
+
+	wp_enqueue_script( 'cmb2-attached-posts-field', plugins_url( 'realia/libraries/cmb2-attached-posts/js/attached-posts.js' ), $requirements, false, true );
+	wp_enqueue_style( 'cmb2-attached-posts-field', plugins_url(  'realia/libraries/cmb2-attached-posts/css/attached-posts-admin.css' ) );
+
+}
+
+/**
+ * Add a CMB custom field to allow for the selection of multiple posts
+ * attached to a single page
+ */
+function cmb2_attached_posts_fields_render( $field, $escaped_value, $object_id, $object_type, $field_type ) {
+
+	// Setup our args
+	$args = wp_parse_args( (array) $field->options( 'query_args' ), array(
+		'post_type'			=> 'post',
+		'posts_per_page'	=> 100,
+		'orderby'			=> 'name',
+		'order'				=> 'ASC',
+	) );
+	
+	// Get post type object for attached post type
+	$attached_post_type = get_post_type_object( $args['post_type'] );
+
+	// Get our posts
+	$posts = get_posts( $args );
+
+	// If there are no posts found, just stop
+	if ( ! $posts ) {
+		return;
+	}
+
+	// Check to see if we have any meta values saved yet
+	$attached = (array) $escaped_value;
+
+	// Set our count class
+	$count = 0;
+
+	$class = '';
+	$single = false;
+	if ( $field->options('single') ) {
+		$class = 'attached-posts-single';
+		$single = true;
+	}
+
+	// Wrap our lists
+	echo '<div class="attached-posts-wrap ' . $class . ' widefat" data-fieldname="'. $field_type->_name() .'">';
+
+	// Open our retrieved, or found posts, list
+	echo '<div class="retrieved-wrap column-wrap">';
+	echo '<h4 class="attached-posts-section">' . sprintf( __( 'Available %s', 'cmb' ), $attached_post_type->labels->name ) . '</h4>';
+	echo '<ul class="retrieved connected">';	
+
+	// Loop through our posts as list items
+	foreach ( $posts as $post ) {
+
+		// Increase our count
+		$count++;
+
+		// Set our zebra stripes
+		$zebra = $count % 2 == 0 ? 'even' : 'odd';
+
+		// Set a class if our post is in our attached post meta
+		$added = ! empty ( $attached ) && in_array( $post->ID, $attached ) ? ' added' : '';
+		// print_r($attached);
+		if ( is_array( $attached ) && count( $attached ) > 0 && ! empty( $attached[0] ) && $single ) {
+			$added = ' added';
+		}
+
+		// Build our list item
+//		if ( ! in_array( $post->ID, $attached ) ) {
+			echo '<li data-id="', $post->ID ,'" class="' . $zebra . $added . '"><a title="'. __( 'Edit' ) .'" href="', get_edit_post_link( $post->ID ) ,'">', $post->post_title ,'</a><span class="dashicons dashicons-plus add-remove"></span></li>';
+//		}
+
+	}
+
+	// Close our retrieved, or found, posts
+	echo '</ul><!-- .retrieved -->';
+	echo '</div><!-- .retrieved-wrap -->';
+
+	// Open our attached posts list
+	echo '<div class="attached-wrap column-wrap">';
+	echo '<h4 class="attached-posts-section">' . sprintf( __( 'Attached %s', 'cmb' ), $attached_post_type->labels->name ) . '</h4>';
+	echo '<ul class="attached connected">';
+
+	// If we have any posts saved already, display them
+	$post_ids = cmb2_attached_posts_fields_display_attached( $field, $attached );
+
+	$value = ! empty( $post_ids ) ? implode( ',', $post_ids ) : '';
+
+	// Close up shop
+	echo '</ul><!-- #attached -->';
+	echo '</div><!-- .attached-wrap -->';
+
+	echo $field_type->input( array(
+		'type'  => 'hidden',
+		'class' => 'attached-posts-ids',
+		'value' => $value,
+		'desc'  => '',
+	) );
+
+	echo '</div><!-- .attached-posts-wrap -->';
+
+	// Display our description if one exists
+	$field_type->_desc( true, true );
+
+}
+add_action( 'cmb2_render_custom_attached_posts', 'cmb2_attached_posts_fields_render', 10, 5 );
+
+function cmb2_attached_posts_fields_sanitize( $sanitized_val, $val ) {
+	if ( ! empty( $val ) ) {
+		return explode( ',', $val );
+	}
+	return $sanitized_val;
+}
+add_action( 'cmb2_sanitize_custom_attached_posts', 'cmb2_attached_posts_fields_sanitize', 10, 2 );
+
+/**
+ * Helper function to grab and filter our post meta
+ */
+function cmb2_attached_posts_fields_display_attached( $field, $attached ) {
+
+	// Start with nothing
+	$output = '';
+
+	// If we do, then we need to display them as items in our attached list
+	if ( ! $attached ) {
+		return;
+	}
+
+	// Set our count to zero
+	$count = 0;
+
+	// Remove any empty values
+	$attached = array_filter( $attached );
+
+	$post_ids = array();
+
+	// Loop through and build our existing display items
+	foreach ( $attached as $post_id ) {
+		if ( ! get_post( $post_id ) ) {
+			continue;
+		}
+
+		// Increase our count
+		$count++;
+
+		// Set our zebra stripes
+		$zebra = $count % 2 == 0 ? 'even' : 'odd';
+
+		// Build our list item
+		echo '<li data-id="' . $post_id . '" class="' . $zebra . '"><a title="'. __( 'Edit' ) .'" href="', get_edit_post_link( $post_id ) ,'">'.  get_the_title( $post_id ) .'</a><span class="dashicons dashicons-minus add-remove"></span></li>';
+
+		$post_ids[] = $post_id;
+
+	}
+
+	return $post_ids;
+}
