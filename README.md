@@ -4,6 +4,8 @@ Complete real estate solution in one plugin. Create your real estate website or 
 
 ## Description
 
+You can try it out by visiting a preview demo at [http://preview.wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia "Demo").
+
 ### Front end submission system
 
 Realia allows to add properties by your users. Create the property directory by few clicks. If you want you can review

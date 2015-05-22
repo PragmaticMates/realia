@@ -11,18 +11,20 @@ Complete real estate solution in one plugin. Create your real estate website or 
 
 == Description ==
 
-**Front end submission system**
+You can try it out by visiting a preview demo at [http://preview.wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia "Demo").
+
+=== Front end submission system
 
 Realia allows to add properties by your users. Create the property directory by few clicks. If you want you can review
 newly added properties before publishing. Of course it is possible to charge users for using your website. Plugins has
 builtin pay per post and package system.
 
-**Property management**
+=== Property management
 
 Manage properties from WordPress admin. Custom version of table display is containing all important information about
 properties like featured image, price and assigned taxonomy terms.
 
-**Price formatting options**
+=== Price formatting options
 
 Realia supports various price formatting options. You can define the currency where you are able to set currency sign and number formatting options like number of decimal places, decimal point and thousands separator.
 
@@ -30,12 +32,12 @@ For properties you can set another group of price settings. You are able to writ
 
 Are you developer and still not satisfied with price formatting? Don't worry. Everything is located in one method so it is pretty easy to change the functionality.
 
-**Agencies & Agents**
+=== Agencies & Agents
 
 With Realia plugin you are able to assign agent to properties and create agencies grouping agents. Great for internal
 purposes or directory listings.
 
-**Widgets**
+=== Widgets
 
 * Google Map with properties
 * Vertical filter
@@ -44,7 +46,7 @@ purposes or directory listings.
 * Assigned agent to property
 * Enquire form
 
-**Property Attributes**
+=== Property Attributes
 
 * Featured image
 * Image gallery
@@ -70,7 +72,7 @@ purposes or directory listings.
 * Public facilities
 * Agent assignment
 
-**Features**
+=== Features
 
 * Front end submission system
 * Pay per post
@@ -92,21 +94,21 @@ purposes or directory listings.
 * Terms and conditions link from registration form
 * Not other plugins required
 
-**Custom post types**
+=== Custom post types
 
 * Property
 * Agent
 * Agency
 * Package
 
-**Custom taxonomies**
+=== Custom taxonomies
 
 * Locations
 * Property types
 * Contracts
 * Amenities
 
-**Shortcodes**
+=== Shortcodes
 
 * [realia_breadcrumb] Displays breadcrumb.
 * [realia_login] Login page.
