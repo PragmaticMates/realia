@@ -29,6 +29,8 @@ if ( ! class_exists( 'Realia ' ) ) {
             $this->libraries();
             $this->includes();
 	        $this->load_plugin_textdomain();
+
+            add_action( 'tgmpa_register', array( __CLASS__, 'register_plugins' ) );
         }
 
         /**
@@ -84,14 +86,36 @@ if ( ! class_exists( 'Realia ' ) ) {
             require_once REALIA_DIR . 'libraries/CMB2/init.php';
             require_once REALIA_DIR . 'libraries/cmb_field_map/cmb-field-map.php';
             require_once REALIA_DIR . 'libraries/cmb2-attached-posts/cmb2-attached-posts.php';
+            require_once REALIA_DIR . 'libraries/class-tgm-plugin-activation.php';
         }
 
 	    /**
 	     * Loads localization files
+         *
+         * @access public
+         * @return void
 	     */
 	    public function load_plugin_textdomain() {
 		    load_plugin_textdomain( 'realia', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 	    }
+
+        /**
+         * Access public
+         *
+         * @access public
+         * @return void
+         */
+        public function register_plugins() {
+            $plugins = array(
+                array(
+                    'name'      => 'WP REST API (WP API)',
+                    'slug'      => 'json-rest-api',
+                    'required'  => false,
+                ),
+            );
+
+            tgmpa( $plugins );
+        }
     }
 }
 
