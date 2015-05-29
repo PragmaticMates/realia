@@ -3,7 +3,7 @@ Contributors: pragmaticmates
 Tags: real estate, agent, listing, estator, realestate, agent, agency, house, directory, property
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -160,5 +160,14 @@ Create at least one agent at first and then choose the one you wish to assign in
 
 == Changelog ==
 
+= 0.2.0 =
+*Release Date - 29th May, 2015*
+
+* Material
+* Rooms
+* Home area & Lot size (dimensions + area)
+
 = 0.1.0 =
-Initial release
+*Release Date - 22th May, 2015*
+
+* Initial release
