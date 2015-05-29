@@ -47,6 +47,19 @@ class Realia_Customizations_Measurement {
             'section'   => 'realia_measurement',
             'settings'  => 'realia_measurement_area_unit',
         ) );
+
+        // Distance unit
+        $wp_customize->add_setting( 'realia_measurement_distance_unit', array(
+            'default'           => 'ft',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'sanitize_text_field',
+        ) );
+
+        $wp_customize->add_control( 'realia_measurement_distance_unit', array(
+            'label'     => __( 'Distance Unit', 'realia' ),
+            'section'   => 'realia_measurement',
+            'settings'  => 'realia_measurement_distance_unit',
+        ) );
     }
 }
 

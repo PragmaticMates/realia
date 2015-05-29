@@ -73,9 +73,22 @@
 					<dt><?php echo __( 'Location', 'realia' ); ?></dt><dd><?php echo wp_kses( $location, wp_kses_allowed_html( 'post' ) ); ?></dd>
 				<?php endif; ?>
 
-				<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_area', true ); ?>
-				<?php if ( ! empty( $area ) ) : ?>
-					<dt><?php echo __( 'Area', 'realia' ); ?></dt><dd><?php echo esc_attr( $area ); ?> <?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></dd>
+				<?php $home_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_area', true ); ?>
+				<?php if ( ! empty( $home_area ) ) : ?>
+					<dt><?php echo __( 'Home area', 'realia' ); ?></dt><dd><?php echo esc_attr( $home_area ); ?>
+						<?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></dd>
+				<?php endif; ?>
+
+				<?php $lot_dimensions = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_lot_dimensions', true ); ?>
+				<?php if ( ! empty( $lot_dimensions ) ) : ?>
+					<dt><?php echo __( 'Lot dimensions', 'realia' ); ?></dt><dd><?php echo esc_attr( $lot_dimensions ); ?>
+						<?php echo get_theme_mod( 'realia_measurement_distance_unit', 'ft' ); ?></dd>
+				<?php endif; ?>
+
+				<?php $lot_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_lot_area', true ); ?>
+				<?php if ( ! empty( $lot_area ) ) : ?>
+					<dt><?php echo __( 'Lot area', 'realia' ); ?></dt><dd><?php echo esc_attr( $lot_area ); ?>
+						<?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></dd>
 				<?php endif; ?>
 
 				<?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_baths', true ); ?>

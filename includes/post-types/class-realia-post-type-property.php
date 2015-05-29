@@ -191,8 +191,20 @@ class Realia_Post_Type_Property {
                     'type'              => 'text',
                 ),
                 array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'attributes_area',
-                    'name'              => __( 'Area', 'realia' ),
+                    'id'                => REALIA_PROPERTY_PREFIX . 'attributes_home_area',
+                    'name'              => __( 'Home area', 'realia' ),
+                    'type'              => 'text',
+                    'description'       => __( 'In unit set in settings.', 'realia' ),
+                ),
+                array(
+                    'id'                => REALIA_PROPERTY_PREFIX . 'attributes_lot_dimensions',
+                    'name'              => __( 'Lot dimensions', 'realia' ),
+                    'type'              => 'text',
+                    'description'       => __( 'e.g. 20x30, 20x30x40, 20x30x40x50', 'realia' ),
+                ),
+                array(
+                    'id'                => REALIA_PROPERTY_PREFIX . 'attributes_lot_area',
+                    'name'              => __( 'Lot area', 'realia' ),
                     'type'              => 'text',
                     'description'       => __( 'In unit set in settings.', 'realia' ),
                 ),
