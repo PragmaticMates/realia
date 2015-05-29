@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php if ( ! empty( $name ) ) : ?>
     <strong><?php echo __( 'Name', 'realia' ); ?>: </strong> <?php echo esc_attr( $name ); ?><br>
 <?php endif; ?>

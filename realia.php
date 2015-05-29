@@ -105,7 +105,7 @@ if ( ! class_exists( 'Realia ' ) ) {
          * @access public
          * @return void
          */
-        public function register_plugins() {
+        public static function register_plugins() {
             $plugins = array(
                 array(
                     'name'      => 'WP REST API (WP API)',

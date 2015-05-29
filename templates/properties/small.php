@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <div class="property-small">
 	<div class="property-small-image <?php if ( ! has_post_thumbnail() ) { echo "without-image"; } ?>">
 		<?php if ( has_post_thumbnail() ): ?>

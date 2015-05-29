@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $latitude = ! empty( $instance['latitude'] ) ? $instance['latitude'] : 37.439826; ?>
 <?php $longitude = ! empty( $instance['longitude'] ) ? $instance['longitude'] : -122.132088; ?>
 <?php $zoom = ! empty( $instance['zoom'] ) ? $instance['zoom'] : 11; ?>

@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $title = ! empty( $instance['title'] ) ? $instance['title'] : ''; ?>
 <?php $button_text = ! empty( $instance['button_text'] ) ? $instance['button_text'] : ''; ?>
 <?php $hide_property_id = ! empty( $instance['hide_property_id'] ) ? $instance['hide_property_id'] : ''; ?>
@@ -40,7 +46,7 @@
 <!-- PROPERTY ID -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_property_id ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_property_id' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_property_id' ) ); ?>">
@@ -53,7 +59,7 @@
 <!-- LOCATION -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_location ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_location' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_location' ) ); ?>">
@@ -66,7 +72,7 @@
 <!-- PROPERTY TYPE -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_property_type ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_property_type' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_property_type' ) ); ?>">
@@ -79,7 +85,7 @@
 <!-- CONTRACT -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_contract ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_contract' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_contract' ) ); ?>">
@@ -92,7 +98,7 @@
 <!-- PRICE -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_price ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_price' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_price' ) ); ?>">
@@ -105,7 +111,7 @@
 <!-- BATHS -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_baths ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_baths' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_baths' ) ); ?>">
@@ -118,7 +124,7 @@
 <!-- BEDS -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_beds ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_beds' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_beds' ) ); ?>">
@@ -131,7 +137,7 @@
 <!-- AREA -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_area ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_area' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_area' ) ); ?>">
@@ -144,7 +150,7 @@
 <!-- GARAGES -->
 <p>
     <input 	type="checkbox"
-    	    class="checkbox" 
+    	    class="checkbox"
     	    <?php echo ! empty( $hide_garages ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'hide_garages' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'hide_garages' ) ); ?>">
@@ -161,11 +167,11 @@
     <li>
         <label>
             <input  type="radio"
-                    class="radio" 
+                    class="radio"
                     value="labels"
                     <?php echo ( empty( $input_titles ) || $input_titles == 'labels' ) ? 'checked="checked"' : ''; ?>
                     id="<?php echo esc_attr( $this->get_field_id( 'input_titles' ) ); ?>"
-                    name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">    
+                    name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">
             <?php echo __( 'Labels', 'realia' ); ?>
         </label>
     </li>
@@ -173,12 +179,12 @@
     <li>
         <label>
             <input  type="radio"
-                    class="radio" 
+                    class="radio"
                     value="placeholders"
                     <?php echo ( $input_titles == 'placeholders' ) ? 'checked="checked"' : ''; ?>
                     id="<?php echo esc_attr( $this->get_field_id( 'input_titles' ) ); ?>"
-                    name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">    
+                    name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">
             <?php echo __( 'Placeholders', 'realia' ); ?>
-        </label>            
-    </li>        
+        </label>
+    </li>
 </ul>
