@@ -102,15 +102,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <dt><?php echo __( 'Material', 'realia' ); ?></dt><dd><?php echo wp_kses( $material, wp_kses_allowed_html( 'post' ) ); ?></dd>
                 <?php endif; ?>
 
-				<?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_baths', true ); ?>
-				<?php if ( ! empty( $baths ) ) : ?>
-					<dt><?php echo __( 'Baths', 'realia' ); ?></dt><dd><?php echo esc_attr( $baths ); ?></dd>
-				<?php endif; ?>
+                <?php $rooms = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_rooms', true ); ?>
+                <?php if ( ! empty( $rooms ) ) : ?>
+                    <dt><?php echo __( 'Rooms', 'realia' ); ?></dt><dd><?php echo esc_attr( $rooms ); ?></dd>
+                <?php endif; ?>
 
 				<?php $beds = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_beds', true ); ?>
 				<?php if ( ! empty( $beds ) ) : ?>
 					<dt><?php echo __( 'Beds', 'realia' ); ?></dt><dd><?php echo esc_attr( $beds ); ?></dd>
 				<?php endif; ?>
+
+                <?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_baths', true ); ?>
+                <?php if ( ! empty( $baths ) ) : ?>
+                    <dt><?php echo __( 'Baths', 'realia' ); ?></dt><dd><?php echo esc_attr( $baths ); ?></dd>
+                <?php endif; ?>
 
 				<?php $garages = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_garages', true ); ?>
 				<?php if ( ! empty( $garages ) ) : ?>

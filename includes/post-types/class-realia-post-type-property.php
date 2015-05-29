@@ -176,6 +176,11 @@ class Realia_Post_Type_Property {
             'show_names'                => true,
             'fields'                    => array(
                 array(
+                    'id'                => REALIA_PROPERTY_PREFIX . 'attributes_rooms',
+                    'name'              => __( 'Rooms', 'realia' ),
+                    'type'              => 'text',
+                ),
+                array(
                     'id'                => REALIA_PROPERTY_PREFIX . 'attributes_beds',
                     'name'              => __( 'Beds', 'realia' ),
                     'type'              => 'text',
@@ -396,6 +401,11 @@ class Realia_Post_Type_Property {
                         'name'              => __( 'Price', 'realia' ),
                         'type'              => 'text',
                         'description'       => __( 'Enter amount without currency.', 'realia' ),
+                    ),
+                    array(
+                        'id'                => REALIA_PROPERTY_PREFIX . 'attributes_rooms',
+                        'name'              => __( 'Rooms', 'realia' ),
+                        'type'              => 'text',
                     ),
                     array(
                         'id'                => REALIA_PROPERTY_PREFIX . 'attributes_beds',
