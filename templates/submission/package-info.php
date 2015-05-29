@@ -41,25 +41,19 @@
 			<form method="post" action="<?php echo esc_attr( get_permalink( $package_payment_id ) ); ?>">
 				<input type="hidden" name="payment_type" value="package">
 
-				<div class="row">
-					<div class="col-sm-4 col-sm-offset-3">
-						<div class="form-group">
-							<select name="object_id">
-								<option value=""><?php echo __( 'Select Package', 'realia' ); ?></option>
+				<div class="form-group">
+					<select name="object_id">
+						<option value=""><?php echo __( 'Select Package', 'realia' ); ?></option>
 
-								<?php foreach ( $packages as $package_id => $package_title ) : ?>
-									<option value="<?php echo esc_attr( $package_id ); ?>" <?php if ( ! empty( $current_package->ID) && $current_package->ID == $package_id ) : ?>selected="selected"<?php endif; ?>>
-										<?php echo esc_attr( Realia_Packages::get_full_package_title( $package_id ) ); ?>
-									</option>
-								<?php endforeach; ?>
-							</select>
-						</div><!-- /.form-group -->
-					</div><!-- /.col-* -->
+						<?php foreach ( $packages as $package_id => $package_title ) : ?>
+							<option value="<?php echo esc_attr( $package_id ); ?>" <?php if ( ! empty( $current_package->ID) && $current_package->ID == $package_id ) : ?>selected="selected"<?php endif; ?>>
+								<?php echo esc_attr( Realia_Packages::get_full_package_title( $package_id ) ); ?>
+							</option>
+						<?php endforeach; ?>
+					</select>
+				</div><!-- /.form-group -->
 
-					<div class="col-sm-2">
-						<button type="submit" class="btn btn-block" name="change-package"><?php echo __( 'Upgrade', 'realia' ); ?></button>
-					</div>
-				</div>
+				<button type="submit" class="btn btn-block" name="change-package"><?php echo __( 'Upgrade', 'realia' ); ?></button>
 			</form>
 		<?php endif; ?>
 

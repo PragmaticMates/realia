@@ -6,6 +6,7 @@
                     <h2 class="agent-row-title entry-title">
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h2>
+
                     <div class="agent-row-properties">
                         <?php $properties_count = Realia_Query::get_agent_properties()->post_count; ?>
                         <?php if ( ! empty( $properties_count ) ) : ?>
@@ -13,7 +14,7 @@
                                 <?php echo esc_attr( $properties_count ); ?> <?php echo __( 'properties', 'realia' ); ?>
                             </div><!-- /.agent-row-subtitle -->
                         <?php endif; ?>
-                    </div>
+                    </div><!-- /.agent-row-properties -->
                 </header>
 
                 <div class="entry-content">

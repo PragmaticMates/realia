@@ -77,7 +77,7 @@
                             <?php include 'agents/box.php'; ?>
                         </div>
                     <?php endwhile; ?>
-                </div><!-- /.row -->
+                </div><!-- /.agency-agents -->
             <?php endif;?>
 
             <?php wp_reset_query(); ?>

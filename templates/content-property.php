@@ -276,10 +276,10 @@
 
                 <?php while( have_posts() ) : the_post(); ?>
                     <div class="property-box-wrapper">
-                        <?php echo Realia_Template_Loader::load('properties/box'); ?>
+                        <?php echo Realia_Template_Loader::load( 'properties/box' ); ?>
                     </div>
                 <?php endwhile; ?>
-            </div><!-- /.row -->
+            </div><!-- /.similar-properties -->
 
         <?php endif?>
 
@@ -298,7 +298,7 @@
         <?php if ( comments_open() || get_comments_number() ): ?>
             <div class="box">
                 <?php comments_template( '', true ); ?>
-            </div>
+            </div><!-- /.box -->
         <?php endif; ?>
 	</div><!-- .entry-content -->
 
