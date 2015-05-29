@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $title = ! empty( $instance['title'] ) ? $instance['title'] : ''; ?>
 <?php $count = ! empty( $instance['count'] ) ? $instance['count'] : 3; ?>
 <?php $per_row = ! empty( $instance['per_row'] ) ? $instance['per_row'] : 3; ?>
@@ -42,20 +48,20 @@
         <option value="3" <?php echo ( $per_row == '3' ) ? 'selected="selected"' : ''; ?>>3</option>
         <option value="4" <?php echo ( $per_row == '4' ) ? 'selected="selected"' : ''; ?>>4</option>
         <option value="6" <?php echo ( $per_row == '4' ) ? 'selected="selected"' : ''; ?>>6</option>
-    </select>            
+    </select>
 </p>
 
 <!-- ATTRIBUTE -->
 <p>
-    <strong><?php echo __( 'Choose attribute', 'realia' ); ?></strong><br>    
+    <strong><?php echo __( 'Choose attribute', 'realia' ); ?></strong><br>
     <ul>
         <li>
             <label>
                 <input  type="radio"
-                        class="radio" 
+                        class="radio"
                         <?php echo ( empty( $attribute ) || $attribute == 'on' ) ? 'checked="checked"' : ''; ?>
                         id="<?php echo esc_attr( $this->get_field_id( 'attribute' ) ); ?>"
-                        name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">    
+                        name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">
                 <?php echo __( 'It doesn\'t matter', 'realia' ); ?>
             </label>
         </li>
@@ -63,26 +69,26 @@
         <li>
             <label>
                 <input  type="radio"
-                        class="radio" 
+                        class="radio"
                         value="featured"
                         <?php echo ( $attribute == 'featured' ) ? 'checked="checked"' : ''; ?>
                         id="<?php echo esc_attr( $this->get_field_id( 'attribute' ) ); ?>"
-                        name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">    
+                        name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">
                 <?php echo __( 'Featured only', 'realia' ); ?>
-            </label>            
+            </label>
         </li>
 
         <li>
             <label>
                 <input  type="radio"
-                        class="radio" 
+                        class="radio"
                         value="reduced"
                         <?php echo ( $attribute == 'reduced' ) ? 'checked="checked"' : ''; ?>
                         id="<?php echo esc_attr( $this->get_field_id( 'attribute' ) ); ?>"
                         name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">
 
                 <?php echo __( 'Reduced only', 'realia' ); ?>
-            </label>            
-        </li>        
+            </label>
+        </li>
     </ul>
 </p>

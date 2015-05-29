@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <div <?php comment_class(empty( $args['has_children'] ) ? '' : 'comments'); ?> id="comment-<?php comment_ID() ?>">
     <div class="comment clearfix">
         <div class="comment-author">

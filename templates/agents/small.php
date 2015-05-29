@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <div class="agent-small">
 	<div class="agent-small-inner">
 		<div class="agent-small-image">

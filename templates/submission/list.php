@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $create_page_id = get_theme_mod( 'realia_submission_create_page', null ); ?>
 
 <?php if ( ! empty( $create_page_id ) ) : ?>

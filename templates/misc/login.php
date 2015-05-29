@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <form method="post" action="<?php the_permalink(); ?>">
 	<div class="form-group">
 		<label><?php echo __( 'Username', 'realia' ); ?></label>

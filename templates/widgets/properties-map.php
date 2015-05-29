@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $style = ! empty( $instance['style'] ) ? $instance['style'] : ''; ?>
 <?php $style_slug = ! empty( $_GET['map-style'] ) ? $_GET['map-style'] : $style; ?>
 

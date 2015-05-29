@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php if ( get_theme_mod( 'realia_submission_type', 'free' ) == 'packages' ): ?>
 	<div class="realestate-package-info">
 		<?php $current_package = Realia_Packages::get_package_for_user( get_current_user_id() ); ?>

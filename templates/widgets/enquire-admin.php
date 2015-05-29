@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $title = ! empty( $instance['title'] ) ? $instance['title'] : ''; ?>
 <?php $receive_admin = ! empty( $instance['receive_admin'] ) ? $instance['receive_admin'] : ''; ?>
 <?php $receive_author = ! empty( $instance['receive_author'] ) ? $instance['receive_author'] : ''; ?>
@@ -25,7 +31,7 @@
 <p>
     <!-- RECEIVE ADMIN -->
     <input  type="checkbox"
-            class="checkbox" 
+            class="checkbox"
             <?php echo ! empty( $receive_admin ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'receive_admin' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'receive_admin' ) ); ?>">
@@ -38,7 +44,7 @@
 
     <!-- RECEIVE AUTHOR -->
     <input  type="checkbox"
-            class="checkbox" 
+            class="checkbox"
             <?php echo ! empty( $receive_author ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'receive_author' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'receive_author' ) ); ?>">
@@ -51,7 +57,7 @@
 
     <!-- RECEIVE AGENT -->
     <input  type="checkbox"
-            class="checkbox" 
+            class="checkbox"
             <?php echo ! empty( $receive_agent ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'receive_agent' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'receive_agent' ) ); ?>">
@@ -68,7 +74,7 @@
 <p>
     <!-- DISABLE RECAPTCHA -->
     <input  type="checkbox"
-            class="checkbox" 
+            class="checkbox"
             <?php echo ! empty( $disable_recaptcha ) ? 'checked="checked"' : ''; ?>
             id="<?php echo esc_attr( $this->get_field_id( 'disable_recaptcha' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'disable_recaptcha' ) ); ?>">

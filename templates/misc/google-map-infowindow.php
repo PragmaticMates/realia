@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <div class="infobox">
 	<a class="infobox-image" href="<?php the_permalink(); ?>">
 		<?php the_post_thumbnail( 'thumbnail' ); ?>

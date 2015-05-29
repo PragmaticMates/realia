@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <article id="page-<?php the_ID(); ?>" <?php post_class( 'submission-payment' ); ?>>
 	<?php
 	$payment_type = ! empty( $_POST['payment_type'] ) ? $_POST['payment_type'] : null;

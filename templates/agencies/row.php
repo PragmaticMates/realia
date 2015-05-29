@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <article <?php post_class( 'agency-row' ); ?>>
     <div class="agency-row-content">
         <div class="agency-row-content-inner">

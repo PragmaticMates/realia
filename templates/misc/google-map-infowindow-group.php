@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php if ( have_posts() ) : ?>
 	<div class="infobox multiple">
 		<div class="infobox-content">

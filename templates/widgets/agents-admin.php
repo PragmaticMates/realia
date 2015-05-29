@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php $title = ! empty( $instance['title'] ) ? $instance['title'] : ''; ?>
 <?php $count = ! empty( $instance['count'] ) ? $instance['count'] : 3; ?>
 

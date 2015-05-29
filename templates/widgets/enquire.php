@@ -1,3 +1,9 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+?>
+
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 
 <?php if ( ! empty( $instance['title'] ) ) : ?>
@@ -19,7 +25,7 @@
 
     <?php if ( ! empty( $instance['receive_agent'] ) ) : ?>
         <input type="hidden" name="receive_agent" value="1">
-    <?php endif; ?>    
+    <?php endif; ?>
 
     <div class="form-group">
         <input class="form-control" name="name" type="text" placeholder="<?php echo __( 'Name', 'realia' ); ?>" required="required">
@@ -38,7 +44,7 @@
             <div id="recaptcha-<?php echo esc_attr( $this->id );  ?>"class="recaptcha" data-sitekey="<?php echo get_theme_mod( 'realia_recaptcha_site_key' ); ?>"></div>
         <?php endif; ?>
     <?php endif; ?>
-    
+
     <div class="button-wrapper">
         <button type="submit" class="btn" name="enquire_form"><?php echo __( 'Send Message', 'realia' ); ?></button>
     </div><!-- /.button-wrapper -->
