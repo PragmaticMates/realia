@@ -40,7 +40,7 @@ class Realia_Taxonomies_Contracts {
             'update_itm'        => __( 'Update Contract', 'realia' ),
             'add_new_item'      => __( 'Add New Contract', 'realia' ),
             'new_item_name'     => __( 'New Contract', 'realia' ),
-            'menu_name'         => __( 'Contract', 'realia' ),
+            'menu_name'         => __( 'Contracts', 'realia' ),
         );
 
         register_taxonomy( 'contracts', 'property', array(

@@ -430,6 +430,12 @@ class Realia_Post_Type_Property {
                         'taxonomy'  => 'property_types'
                     ),
                     array(
+                        'name'      => __( 'Materials', 'realia' ),
+                        'id'        => REALIA_PROPERTY_PREFIX . 'material',
+                        'type'      => 'taxonomy_multicheck',
+                        'taxonomy'  => 'materials'
+                    ),
+                    array(
                         'name'      => __( 'Amenities', 'realia' ),
                         'id'        => REALIA_PROPERTY_PREFIX . 'amenity',
                         'type'      => 'taxonomy_multicheck',
@@ -518,6 +524,15 @@ class Realia_Post_Type_Property {
                 if ( ! empty( $terms ) ) {
                     $contract_type = array_shift( $terms );
                     echo sprintf('<a href="?post_type=property&contract=%s">%s</a>', $contract_type->slug, $contract_type->name );
+                } else {
+                    echo '-';
+                }
+                break;
+            case 'material':
+                $terms = get_the_terms( get_the_ID(), 'materials' );
+                if ( ! empty( $terms ) ) {
+                    $material = array_shift( $terms );
+                    echo sprintf('<a href="?post_type=property&material=%s">%s</a>', $material->slug, $material->name );
                 } else {
                     echo '-';
                 }

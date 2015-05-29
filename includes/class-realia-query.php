@@ -181,6 +181,44 @@ class Realia_Query {
     }
 
     /**
+     * Gets property material name
+     *
+     * @access public
+     * @param null $post_id
+     * @return bool
+     */
+    public static function get_property_material_name( $post_id = null ) {
+        static $property_materials;
+
+        if ( $post_id == null ) {
+            $post_id = get_the_ID();
+        }
+
+        if ( ! empty( $property_materials[$post_id] ) ) {
+            return $property_materials[$post_id];
+        }
+
+        $materials = wp_get_post_terms( $post_id, 'materials' );
+
+        if ( is_array( $materials ) && count( $materials ) > 0 ) {
+            $output = '';
+
+            foreach ( $materials as $key => $material ) {
+                $output .= $material->name;
+
+                if ( array_key_exists( $key + 1, $materials ) ) {
+                    $output .= ', ';
+                }
+            }
+
+            $property_materials[$post_id] = $output;
+            return $output;
+        }
+
+        return false;
+    }
+
+    /**
      * Gets property type name
      *
      * @access public
