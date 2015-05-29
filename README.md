@@ -45,6 +45,7 @@ purposes or directory listings.
 * Image gallery
 * Location
 * Property type
+* Material
 * Amenities
 * Address
 * Property ID
@@ -53,10 +54,11 @@ purposes or directory listings.
 * Reduced
 * Video link
 * Price
+* Rooms
 * Beds
 * Baths
 * Garages
-* Area
+* Home area & Lot size (dimensions + area)
 * GPS position
 * Contract type
 * Description
