@@ -49,5 +49,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php echo wp_kses( $price, wp_kses_allowed_html( 'post' ) ); ?>
             </div><!-- /.property-box-price -->
         <?php endif; ?>
+
+	    <div class="property-box-read-more">
+		    <a href="<?php the_permalink(); ?>"><?php echo __( 'Read More', 'realia' ); ?></a>
+	    </div><!-- /.property-box-price -->
     </div><!-- /.property-box-content -->
 </div>

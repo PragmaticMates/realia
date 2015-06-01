@@ -430,4 +430,20 @@ class Realia_Query {
     public static function loop_reset() {
         wp_reset_query();
     }
+
+	/**
+	 * Checks if there is another post in query
+	 *
+	 * @access public
+	 * @return bool
+	 */
+	public static function loop_has_next() {
+		global $wp_query;
+
+		if ( $wp_query->current_post + 1 < $wp_query->post_count ) {
+			return true;
+		}
+
+		return false;
+	}
 }
