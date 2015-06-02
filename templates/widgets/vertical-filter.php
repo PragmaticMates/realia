@@ -125,7 +125,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- CONTRACT TYPE-->
 		<div class="form-group">
 			<?php if ( $input_titles == 'labels' ) : ?>
-				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Contract', 'realia' ); ?></label>
+				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Status', 'realia' ); ?></label>
 			<?php endif; ?>
 
 			<select name="filter-status" id="<?php echo esc_attr( $args['widget_id'] ); ?>_status">

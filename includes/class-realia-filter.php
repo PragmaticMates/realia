@@ -149,7 +149,7 @@ class Realia_Filter {
             );
         }
 
-        // Contract
+        // Status
         if ( ! empty( $_GET['filter-status'] ) ) {
             $taxonomies[] = array(
                 'taxonomy'  => 'statuses',

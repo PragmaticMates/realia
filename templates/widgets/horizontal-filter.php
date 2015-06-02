@@ -133,14 +133,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- CONTRACT TYPE-->
 		<div class="form-group">
 			<?php if ( $input_titles == 'labels' ) : ?>
-				<label><?php echo __( 'Contract', 'realia' ); ?></label>
+				<label><?php echo __( 'Status', 'realia' ); ?></label>
 			<?php endif; ?>
 
 			<select name="filter-status">
 				<?php $statuses = get_terms( 'statuses', array( 'hide_empty' => false ) ); ?>
 				<option value="">
 					<?php if ( $input_titles == 'placeholders' ) : ?>
-						<?php echo __( 'Contract', 'realia' ); ?>
+						<?php echo __( 'Status', 'realia' ); ?>
 					<?php else: ?>
 						<?php echo __( 'All statuses', 'realia' ); ?>
 					<?php endif; ?>
