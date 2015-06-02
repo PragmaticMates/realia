@@ -92,7 +92,7 @@ class Realia_Post_Type_Property {
 	                'name'              => __( 'Year built', 'realia' ),
 	                'id'                => REALIA_PROPERTY_PREFIX . 'year_built',
 	                'type'              => 'text',
-                ),                ),
+                ),          
                 array(
                     'name'              => __( 'Address', 'realia' ),
                     'id'                => REALIA_PROPERTY_PREFIX . 'address',
