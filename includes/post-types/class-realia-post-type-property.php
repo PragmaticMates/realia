@@ -56,7 +56,7 @@ class Realia_Post_Type_Property {
         register_post_type( 'property',
             array(
                 'labels'            => $labels,
-                'supports'          => array( 'title', 'editor', 'thumbnail', 'comments' ),
+                'supports'          => array( 'title', 'editor', 'thumbnail', 'comments', 'author' ),
                 'public'            => true,
                 'has_archive'       => true,
                 'rewrite'           => array( 'slug' => __( 'properties', 'realia' ) ),
@@ -92,7 +92,7 @@ class Realia_Post_Type_Property {
 	                'name'              => __( 'Year built', 'realia' ),
 	                'id'                => REALIA_PROPERTY_PREFIX . 'year_built',
 	                'type'              => 'text',
-                ),          
+                ),
                 array(
                     'name'              => __( 'Address', 'realia' ),
                     'id'                => REALIA_PROPERTY_PREFIX . 'address',
