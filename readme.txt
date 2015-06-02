@@ -161,6 +161,18 @@ Create at least one agent at first and then choose the one you wish to assign in
 == Changelog ==
 
 = 0.2.0 =
+*Release Date - 2th June, 2015*
+
+* Amenities filter
+* Status filter
+* Contract filter
+* Options to select property layout in "Properties" widget
+* Read more text for property boxes
+* Call Realia_Template_Loader:locate() with plugin param
+* New CMB2 version
+* Updated translation catalogue
+
+= 0.2.0 =
 *Release Date - 29th May, 2015*
 
 * Material
