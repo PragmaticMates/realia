@@ -127,8 +127,9 @@ purposes or directory listings.
 
 == Installation ==
 
-1. Upload `realia` to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the `Plugins` section in WordPress admin.
+1. Make sure you are using at least PHP version 5.3.4 !
+2. Upload `realia` to the `/wp-content/plugins/` directory.
+3. Activate the plugin through the `Plugins` section in WordPress admin.
 
 == Frequently Asked Questions ==
 
@@ -147,6 +148,10 @@ You are able to set custom price text of each property in its detail. You can al
 **How do I assign an agent to property ?**
 
 Create at least one agent at first and then choose the one you wish to assign in property detail.
+
+**Are there any requirements before installing plugin?**
+
+Just be sure you are running at least PHP 5.3.4
 
 == Screenshots ==
 
