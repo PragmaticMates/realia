@@ -274,6 +274,11 @@
     float: right;
 }
 
+.property-box-read-more {
+    text-align: right;
+    text-decoration: underline;
+}
+
 /*******************************************************************
  * Property Gallery
  *******************************************************************/
