@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php $index = 0; ?>
 				<?php foreach ( $gallery as $id => $src ) : ?>
 					<li <?php echo ( $index == 0 ) ? 'class="active"' : ''; ?>>
-						<a rel="<?php echo esc_url( $src ); ?>"></a>
+						<a rel="<?php echo esc_url( $src ); ?>"><?php echo __( 'Show', 'realia' ); ?></a>
 						<?php $index++; ?>
 					</li>
 				<?php endforeach; ?>
@@ -339,7 +339,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 	<footer class="entry-footer">
-		<?php twentyfifteen_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'realia' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->
 
