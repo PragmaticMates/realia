@@ -43,10 +43,12 @@ class Realia_Shortcodes {
 	public static function check_logout( $wp ) {
 		$post = get_post();
 
-		if ( strpos( $post->post_content, '[realia_logout]' ) !== false ) {
-			$_SESSION['messages'][] = array( 'success', __( 'You have been successfully logged out.', 'realia' ) );
-			wp_redirect( html_entity_decode( wp_logout_url( home_url( '/' ) ) ) );
-			exit();
+		if ( is_object( $post ) ) {
+			if ( strpos( $post->post_content, '[realia_logout]' ) !== false ) {
+				$_SESSION['messages'][] = array( 'success', __( 'You have been successfully logged out.', 'realia' ) );
+				wp_redirect( html_entity_decode( wp_logout_url( home_url( '/' ) ) ) );
+				exit();
+			}
 		}
 	}
 
