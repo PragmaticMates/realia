@@ -37,19 +37,19 @@ class Realia_Taxonomies_Materials {
             'parent_item'       => __( 'Parent Material', 'realia' ),
             'parent_item_colon' => __( 'Parent Material:', 'realia' ),
             'edit_item'         => __( 'Edit Material', 'realia' ),
-            'update_itm'        => __( 'Update Material', 'realia' ),
+            'update_item'       => __( 'Update Material', 'realia' ),
             'add_new_item'      => __( 'Add New Material', 'realia' ),
             'new_item_name'     => __( 'New Material', 'realia' ),
             'menu_name'         => __( 'Materials', 'realia' ),
         );
 
         register_taxonomy( 'materials', 'property', array(
-            'labels'        => $property_materials_labels,
-            'hierarchical'  => true,
-            'query_var'     => 'material',
-            'rewrite'       => array( 'slug' => __( 'material', 'realia' ) ),
-            'public'        => true,
-            'show_ui'       => true,
+            'labels'            => $property_materials_labels,
+            'hierarchical'      => true,
+            'query_var'         => 'material',
+            'rewrite'           => array( 'slug' => __( 'material', 'realia' ) ),
+            'public'            => true,
+            'show_ui'           => true,
         ) );
     }
 }
