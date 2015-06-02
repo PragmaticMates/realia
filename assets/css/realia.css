@@ -301,6 +301,7 @@
 .property-gallery-index li {
     display: inline-block;
     margin: 0px 5px;
+    text-indent: -9999px;
 }
 
 .property-gallery-index li.active a {
