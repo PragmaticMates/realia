@@ -445,10 +445,10 @@ class Realia_Post_Type_Property {
                         'taxonomy'  => 'locations'
                     ),
                     array(
-                        'name'      => __( 'Contracts', 'realia' ),
-                        'id'        => REALIA_PROPERTY_PREFIX . 'contract',
+                        'name'      => __( 'Statuses', 'realia' ),
+                        'id'        => REALIA_PROPERTY_PREFIX . 'status',
                         'type'      => 'taxonomy_multicheck',
-                        'taxonomy'  => 'contracts'
+                        'taxonomy'  => 'statuses'
                     ),
                     array(
                         'name'      => __( 'Types', 'realia' ),
@@ -488,7 +488,7 @@ class Realia_Post_Type_Property {
             'price' 			=> __( 'Price', 'realia' ),
             'location' 			=> __( 'Location', 'realia' ),
             'type' 				=> __( 'Type', 'realia' ),
-            'contract' 			=> __( 'Contract', 'realia' ),
+            'status' 			=> __( 'Status', 'realia' ),
             'sticky'            => __( 'TOP', 'realia' ),
             'featured' 			=> __( 'Featured', 'realia' ),
             'reduced' 			=> __( 'Reduced', 'realia' ),
@@ -546,11 +546,11 @@ class Realia_Post_Type_Property {
                     echo '-';
                 }
                 break;
-            case 'contract':
-                $terms = get_the_terms( get_the_ID(), 'contracts' );
+            case 'status':
+                $terms = get_the_terms( get_the_ID(), 'statuses' );
                 if ( ! empty( $terms ) ) {
-                    $contract_type = array_shift( $terms );
-                    echo sprintf('<a href="?post_type=property&contract=%s">%s</a>', $contract_type->slug, $contract_type->name );
+                    $status_type = array_shift( $terms );
+                    echo sprintf('<a href="?post_type=property&status=%s">%s</a>', $status_type->slug, $status_type->name );
                 } else {
                     echo '-';
                 }

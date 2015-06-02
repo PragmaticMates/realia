@@ -24,7 +24,7 @@ class Realia_Filter {
     }
 
     /**
-     * Checks if in URI are filter conditiokns
+     * Checks if in URI are filter conditions
      *
      * @access public
      * @return bool
@@ -49,7 +49,7 @@ class Realia_Filter {
      */
     public static function taxonomy( $query ) {
         $is_correct_taxonomy = false;
-        if ( is_tax( 'contracts' ) || is_tax( 'property_types' ) || is_tax( 'amenities') || is_tax( 'locations' ) ) {
+        if ( is_tax( 'statuses' ) || is_tax( 'property_types' ) || is_tax( 'amenities') || is_tax( 'locations' ) ) {
             $is_correct_taxonomy = true;
         }
 
@@ -150,11 +150,11 @@ class Realia_Filter {
         }
 
         // Contract
-        if ( ! empty( $_GET['filter-contract-type'] ) ) {
+        if ( ! empty( $_GET['filter-status'] ) ) {
             $taxonomies[] = array(
-                'taxonomy'  => 'contracts',
+                'taxonomy'  => 'statuses',
                 'field'     => 'id',
-                'terms'     => $_GET['filter-contract-type'],
+                'terms'     => $_GET['filter-status'],
             );
         }
 

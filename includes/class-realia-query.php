@@ -159,18 +159,18 @@ class Realia_Query {
     }
 
     /**
-     * Gets property contract name
+     * Gets property status name
      *
      * @access public
      * @param null $post_id
      * @return bool
      */
-    public static function get_property_contract_name( $post_id = null ) {
+    public static function get_property_status_name( $post_id = null ) {
         if ( $post_id == null ) {
             $post_id = get_the_ID();
         }
 
-        $types = wp_get_post_terms( $post_id, 'contracts' );
+        $types = wp_get_post_terms( $post_id, 'statuses' );
 
         if ( is_array( $types ) && count( $types ) > 0 ) {
             $type = array_shift( $types );

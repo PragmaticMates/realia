@@ -7,10 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 <?php $input_titles = ! empty( $instance['input_titles'] ) ? $instance['input_titles'] : 'labels'; ?>
 
-<?php if ( ! empty( $instance['fullwidth'] ) ) : ?>
-	<div class="container">
-<?php endif; ?>
-
 <?php if ( ! empty( $instance['title'] ) ) : ?>
     <?php echo wp_kses( $args['before_title'], wp_kses_allowed_html( 'post' ) ); ?>
     <?php echo esc_attr( $instance['title'] ); ?>
@@ -25,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <form method="get" action="<?php echo esc_attr( $uri ); ?>" class="horizontal-filter <?php if ( empty( $instance['title'] ) ) : ?>no-title<?php endif; ?>">
 	<?php $skip = array(
-		'filter-id', 'filter-location', 'filter-contract-type', 'price-from', 'price-to', 'beds', 'baths', 'garages', 'area'
+		'filter-id', 'filter-location', 'filter-status', 'price-from', 'price-to', 'beds', 'baths', 'garages', 'area'
 	); ?>
 
     <?php foreach ( $_GET as $key => $value ) : ?>
@@ -133,26 +129,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.form-group -->
 	<?php endif; ?>
 
-	<?php if ( empty ( $instance['hide_contract'] ) ) : ?>
+	<?php if ( empty ( $instance['hide_status'] ) ) : ?>
 		<!-- CONTRACT TYPE-->
 		<div class="form-group">
 			<?php if ( $input_titles == 'labels' ) : ?>
 				<label><?php echo __( 'Contract', 'realia' ); ?></label>
 			<?php endif; ?>
 
-			<select name="filter-contract-type">
-				<?php $contracts = get_terms( 'contracts', array( 'hide_empty' => false ) ); ?>
+			<select name="filter-status">
+				<?php $statuses = get_terms( 'statuses', array( 'hide_empty' => false ) ); ?>
 				<option value="">
 					<?php if ( $input_titles == 'placeholders' ) : ?>
 						<?php echo __( 'Contract', 'realia' ); ?>
 					<?php else: ?>
-						<?php echo __( 'All contracts', 'realia' ); ?>
+						<?php echo __( 'All statuses', 'realia' ); ?>
 					<?php endif; ?>
 				</option>
 
-				<?php if ( is_array( $contracts ) ) : ?>
-					<?php foreach ( $contracts as $contract ) : ?>
-						<option value="<?php echo esc_attr( $contract->term_id ); ?>" <?php if ( ! empty(  $_GET['filter-contract-type'] ) && $_GET['filter-contract-type']== $contract->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $contract->name ); ?></option>
+				<?php if ( is_array( $statuses ) ) : ?>
+					<?php foreach ( $statuses as $status ) : ?>
+						<option value="<?php echo esc_attr( $status->term_id ); ?>" <?php if ( ! empty(  $_GET['filter-status'] ) && $_GET['filter-status']== $status->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $status->name ); ?></option>
 					<?php endforeach ?>
 				<?php endif; ?>
 			</select>
@@ -235,9 +231,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.form-group -->
 	<?php endif; ?>
 </form>
-
-<?php if ( ! empty( $instance['fullwidth'] ) ) : ?>
-	</div><!-- /.container -->
-<?php endif; ?>
 
 <?php echo wp_kses( $args['after_widget'], wp_kses_allowed_html( 'post' ) ); ?>

@@ -30,7 +30,7 @@ class Realia_Taxonomies {
      */
     public static function includes() {
         require_once REALIA_DIR . 'includes/taxonomies/class-realia-taxonomies-amenities.php';
-        require_once REALIA_DIR . 'includes/taxonomies/class-realia-taxonomies-contracts.php';
+        require_once REALIA_DIR . 'includes/taxonomies/class-realia-taxonomies-statuses.php';
         require_once REALIA_DIR . 'includes/taxonomies/class-realia-taxonomies-locations.php';
         require_once REALIA_DIR . 'includes/taxonomies/class-realia-taxonomies-materials.php';
         require_once REALIA_DIR . 'includes/taxonomies/class-realia-taxonomies-property-types.php';

@@ -74,9 +74,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<dt><?php echo __( 'Type', 'realia' ); ?></dt><dd><?php echo esc_attr( $type ); ?></dd>
 				<?php endif; ?>
 
-				<?php $contract = Realia_Query::get_property_contract_name(); ?>
-				<?php if ( ! empty ( $contract ) ) : ?>
-					<dt><?php echo __( 'Contract', 'realia' ); ?></dt><dd><?php echo esc_attr( $contract ); ?></dd>
+				<?php $status = Realia_Query::get_property_status_name(); ?>
+				<?php if ( ! empty ( $status ) ) : ?>
+					<dt><?php echo __( 'Status', 'realia' ); ?></dt><dd><?php echo esc_attr( $status ); ?></dd>
 				<?php endif; ?>
 
                 <?php $location = Realia_Query::get_property_location_name(); ?>

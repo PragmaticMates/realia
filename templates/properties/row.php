@@ -49,10 +49,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php $price = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'price', true ); ?>
 			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_area', true ); ?>
-			<?php $contract = Realia_Query::get_property_contract_name(); ?>
+			<?php $status = Realia_Query::get_property_status_name(); ?>
 			<?php $type = Realia_Query::get_property_type_name(); ?>
 
-			<?php if ( ! empty( $price ) || ! empty( $area ) || ! empty( $contract ) || ! empty( $type ) ) :?>
+			<?php if ( ! empty( $price ) || ! empty( $area ) || ! empty( $status ) || ! empty( $type ) ) :?>
 				<footer class="entry-footer">
 					<div class="property-row-meta">
 						<?php if ( ! empty( $price ) ) : ?>
@@ -77,10 +77,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php endif; ?>
 
 
-						<?php if ( ! empty( $contract ) ) : ?>
+						<?php if ( ! empty( $status ) ) : ?>
 							<span class="property-row-meta-item">
-								<span><?php echo __( 'Contract', 'realia' ); ?>:</span>
-								<strong><?php echo esc_attr( $contract ); ?></strong>
+								<span><?php echo __( 'Status', 'realia' ); ?>:</span>
+								<strong><?php echo esc_attr( $status ); ?></strong>
 							</span><!-- /.property-box-meta-item -->
 						<?php endif; ?>
 					</div><!-- /.property-row-meta -->
