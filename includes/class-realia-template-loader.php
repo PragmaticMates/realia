@@ -52,10 +52,11 @@ class Realia_Template_Loader {
      *
      * @access public
      * @param $name
+     * @param $plugin_dir
      * @return string
      * @throws Exception
      */
-    public static function locate( $name ) {
+    public static function locate( $name, $plugin_dir = REALIA_DIR ) {
         $template = '';
 
         // Current theme base dir
@@ -74,13 +75,13 @@ class Realia_Template_Loader {
         }
 
         // Plugin
-        if ( ! $template && ! empty( $name ) && file_exists( REALIA_DIR . "/templates/{$name}.php" ) ) {
-            $template = REALIA_DIR . "/templates/{$name}.php";
+        if ( ! $template && ! empty( $name ) && file_exists( $plugin_dir . "/templates/{$name}.php" ) ) {
+            $template = $plugin_dir . "/templates/{$name}.php";
         }
 
         // Nothing found
         if ( empty( $template ) ) {
-            throw new Exception( "Template {$name}.php not found." );
+            throw new Exception( "Template /templates/{$name}.php in plugin dir {$plugin_dir} not found." );
         }
 
         return $template;
