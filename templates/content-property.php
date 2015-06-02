@@ -64,6 +64,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<dt><?php echo __( 'ID', 'realia' ); ?></dt><dd><?php echo esc_attr( $id ); ?></dd>
 				<?php endif; ?>
 
+				<?php $year_built = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'year_built', true ); ?>
+				<?php if ( ! empty( $year_built ) ) : ?>
+					<dt><?php echo __( 'Year built', 'realia' ); ?></dt><dd><?php echo esc_attr( $year_built ); ?></dd>
+				<?php endif; ?>
+
 				<?php $type = Realia_Query::get_property_type_name(); ?>
 				<?php if ( ! empty ( $type ) ) : ?>
 					<dt><?php echo __( 'Type', 'realia' ); ?></dt><dd><?php echo esc_attr( $type ); ?></dd>
