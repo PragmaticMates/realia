@@ -149,6 +149,15 @@ class Realia_Filter {
             );
         }
 
+	    // Amenity
+	    if ( ! empty( $_GET['filter-amenity'] ) ) {
+		    $taxonomies[] = array(
+			    'taxonomy'  => 'amenities',
+			    'field'     => 'id',
+			    'terms'     => $_GET['filter-amenity'],
+		    );
+	    }
+
         // Status
         if ( ! empty( $_GET['filter-status'] ) ) {
             $taxonomies[] = array(

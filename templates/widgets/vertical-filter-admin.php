@@ -9,6 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $hide_property_id = ! empty( $instance['hide_property_id'] ) ? $instance['hide_property_id'] : ''; ?>
 <?php $hide_location = ! empty( $instance['hide_location'] ) ? $instance['hide_location'] : ''; ?>
 <?php $hide_property_type = ! empty( $instance['hide_property_type'] ) ? $instance['hide_property_type'] : ''; ?>
+<?php $hide_amenity = ! empty( $instance['hide_amenities'] ) ? $instance['hide_amenities'] : ''; ?>
 <?php $hide_status = ! empty( $instance['hide_status'] ) ? $instance['hide_status'] : ''; ?>
 <?php $hide_contract = ! empty( $instance['hide_contract'] ) ? $instance['hide_contract'] : ''; ?>
 <?php $hide_price = ! empty( $instance['hide_price'] ) ? $instance['hide_price'] : ''; ?>
@@ -82,6 +83,19 @@ if ( ! defined( 'ABSPATH' ) ) {
     <label for="<?php echo esc_attr( $this->get_field_id( 'hide_property_type' ) ); ?>">
         <?php echo __( 'Hide property type', 'realia' ); ?>
     </label>
+</p>
+
+<!-- AMENITIES -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_amenity ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_amenity' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_amenity' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_amenity' ) ); ?>">
+		<?php echo __( 'Hide amenity', 'realia' ); ?>
+	</label>
 </p>
 
 <!-- STATUS -->
