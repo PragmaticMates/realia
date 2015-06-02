@@ -186,6 +186,24 @@ class Realia_Filter {
             );
         }
 
+	    // Contract
+	    if ( ! empty( $_GET['filter-contract'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'contract',
+			    'value'     => $_GET['filter-contract'],
+		    );
+	    }
+
+	    // Rooms
+	    if ( ! empty( $_GET['filter-rooms'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_rooms',
+			    'value'     => $_GET['filter-rooms'],
+			    'compare'   => '>=',
+			    'type'      => 'NUMERIC',
+		    );
+	    }
+
         // Beds
         if ( ! empty( $_GET['filter-beds'] ) ) {
             $meta[] = array(
