@@ -74,6 +74,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<dt><?php echo __( 'Type', 'realia' ); ?></dt><dd><?php echo esc_attr( $type ); ?></dd>
 				<?php endif; ?>
 
+				<?php $sold = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'sold', true ); ?>
+				<dt><?php echo __( 'Sold', 'realia' ); ?></dt>
+				<dd>
+					<?php if ( ! empty( $sold ) ) : ?>
+						<?php echo __( 'Yes', 'realia' ); ?>
+					<?php else : ?>
+						<?php echo __( 'No', 'realia' ); ?>
+					<?php endif; ?>
+				</dd>
+
+				<?php $contract = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'contract', true ); ?>
+
+				<?php if ( ! empty ( $contract ) ) : ?>
+					<dt><?php echo __( 'Contract', 'realia' ); ?></dt>
+					<dd>
+						<?php if ( $contract == REALIA_CONTRACT_RENT ) : ?>
+							<?php echo __( 'Rent', 'realia' ); ?>
+						<?php elseif ( $contract == REALIA_CONTRACT_SALE ) : ?>
+							<?php echo __( 'Sale', 'realia' ); ?>
+						<?php endif; ?>
+					</dd>
+				<?php endif; ?>
+
 				<?php $status = Realia_Query::get_property_status_name(); ?>
 				<?php if ( ! empty ( $status ) ) : ?>
 					<dt><?php echo __( 'Status', 'realia' ); ?></dt><dd><?php echo esc_attr( $status ); ?></dd>

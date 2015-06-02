@@ -48,6 +48,9 @@ if ( ! class_exists( 'Realia ' ) ) {
             define( 'REALIA_PACKAGE_PREFIX', 'user_' );
             define( 'REALIA_USER_PREFIX', 'user_' );
             define( 'REALIA_RECAPTCHA_URL', 'https://www.google.com/recaptcha/api/siteverify' );
+
+	        define( 'REALIA_CONTRACT_SALE', 'SALE' );
+	        define( 'REALIA_CONTRACT_RENT', 'RENT' );
         }
 
         /**
