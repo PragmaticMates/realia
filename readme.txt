@@ -52,10 +52,13 @@ purposes or directory listings.
 * Image gallery
 * Location
 * Property type
+* Status
+* Contract
 * Material
 * Amenities
 * Address
 * Property ID
+* Year built
 * Featured
 * Sticky
 * Reduced
@@ -67,7 +70,6 @@ purposes or directory listings.
 * Garages
 * Home area & Lot size (dimensions + area)
 * GPS position
-* Contract type
 * Description
 * Floor plans
 * Land valuation
