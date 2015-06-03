@@ -177,6 +177,18 @@ Just be sure you are running at least PHP 5.3.4
 
 == Changelog ==
 
+= 0.4.0 =
+
+*Release Date - 3nd June, 2015*
+
+* WP API filter functionality
+* PayPal libraries are loading after filling credentials
+* Added material search filter
+* Property sorting
+* New archive pages actions
+* CMB2 moved to TGM
+* PayPal library cleanup
+
 = 0.3.0 =
 *Release Date - 2nd June, 2015*
 
