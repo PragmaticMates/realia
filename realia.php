@@ -86,7 +86,6 @@ if ( ! class_exists( 'Realia ' ) ) {
          * @return void
          */
         public static function libraries() {
-            require_once REALIA_DIR . 'libraries/CMB2/init.php';
             require_once REALIA_DIR . 'libraries/cmb_field_map/cmb-field-map.php';
             require_once REALIA_DIR . 'libraries/cmb2-attached-posts/cmb2-attached-posts.php';
             require_once REALIA_DIR . 'libraries/class-tgm-plugin-activation.php';
@@ -110,6 +109,11 @@ if ( ! class_exists( 'Realia ' ) ) {
          */
         public static function register_plugins() {
             $plugins = array(
+	            array(
+		            'name'      => 'CMB2',
+		            'slug'      => 'cmb2',
+		            'required'  => false,
+	            ),
                 array(
                     'name'      => 'WP REST API (WP API)',
                     'slug'      => 'json-rest-api',
