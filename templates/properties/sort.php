@@ -11,11 +11,11 @@
 		<?php endforeach; ?>
 
 		<div class="properties-sort-inner">
-			<div class="filter-sort-title">
+			<div class="properties-filter-sort-title">
 				<h3><?php echo __( 'Sorting options', 'realia' ); ?></h3>
 			</div><!-- /.filter-sort-title -->
 
-			<div class="filter-sort-by-wrapper">
+			<div class="properties-filter-sort-by-wrapper">
 				<select name="filter-sort-by">
 					<option value=""><?php echo __( 'Sort by', 'realia' ); ?></option>
 					<option value="price" <?php if ( ! empty( $_GET['filter-sort-by'] ) && $_GET['filter-sort-by'] == 'price' ): ?>selected="selected"<?php endif; ?>><?php echo __( 'Price', 'realia' ); ?></option>
@@ -24,7 +24,7 @@
 				</select>
 			</div><!-- /.filter-sort-by-wrapper -->
 
-			<div class="filter-sort-order-wrapper">
+			<div class="properties-filter-sort-order-wrapper">
 				<select name="filter-sort-order">
 					<option value=""><?php echo __( 'Order', 'realia' ); ?></option>
 					<option value="asc" <?php if ( ! empty( $_GET['filter-sort-order'] ) && $_GET['filter-sort-order'] == 'asc' ): ?>selected="selected"<?php endif; ?>><?php echo __( 'ASC', 'realia' ); ?></option>

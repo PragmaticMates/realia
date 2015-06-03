@@ -144,6 +144,36 @@
     font-size: 13px;
     padding: 0px 12px;
 }
+
+/*******************************************************************
+ * Property Sort
+ *******************************************************************/
+.properties-sort {
+    background-color: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    margin: 8.3333%;
+    padding: 4.1666% 8.3333%;
+}
+
+.properties-filter-sort-title {
+    float: left;
+}
+
+.properties-sort-inner {
+    overflow: hidden;
+}
+
+.properties-filter-sort-order-wrapper,
+.properties-filter-sort-by-wrapper {
+    float: right;
+    margin: 0px 0px 0px 30px;
+}
+
+.properties-filter-sort-order-wrapper select,
+.properties-filter-sort-by-wrapper select {
+    min-width: 120px;
+}
+
 /*******************************************************************
  * Property Row
  *******************************************************************/
