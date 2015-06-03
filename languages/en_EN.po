@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Realia\n"
-"POT-Creation-Date: 2015-06-02 15:36+0100\n"
-"PO-Revision-Date: 2015-06-02 15:36+0100\n"
+"POT-Creation-Date: 2015-06-03 16:40+0100\n"
+"PO-Revision-Date: 2015-06-03 16:40+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -34,112 +34,112 @@ msgstr ""
 msgid "1 year"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:70
+#: ../includes/class-realia-paypal.php:69
 msgid "First name is required."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:75
+#: ../includes/class-realia-paypal.php:74
 msgid "Last name is required."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:80
+#: ../includes/class-realia-paypal.php:79
 msgid "Card number is required."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:85
+#: ../includes/class-realia-paypal.php:84
 msgid "CVV is required."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:90
+#: ../includes/class-realia-paypal.php:89
 msgid "Expires month is required."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:95
+#: ../includes/class-realia-paypal.php:94
 msgid "Expires year is required."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:100
+#: ../includes/class-realia-paypal.php:99
 msgid "Credit card number is not valid."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:105
+#: ../includes/class-realia-paypal.php:104
 msgid "CVV number is not valid."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:137
+#: ../includes/class-realia-paypal.php:136
 msgid "Property has been featured."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:141
+#: ../includes/class-realia-paypal.php:140
 msgid "Property has been sticked."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:148
+#: ../includes/class-realia-paypal.php:147
 msgid "Property has been published."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:150
+#: ../includes/class-realia-paypal.php:149
 msgid "Property will be published after review."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:156
+#: ../includes/class-realia-paypal.php:155
 msgid "Package has been upgraded."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:159
+#: ../includes/class-realia-paypal.php:158
 msgid "Undefined payment type."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:193
+#: ../includes/class-realia-paypal.php:192
 msgid "Payment has been successfull."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:197
+#: ../includes/class-realia-paypal.php:196
 msgid "Error processing payment."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:307
+#: ../includes/class-realia-paypal.php:306
 msgid "Payment has been successful."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:311
+#: ../includes/class-realia-paypal.php:310
 msgid "There was an error processing payment."
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:409
+#: ../includes/class-realia-paypal.php:408
 #: ../includes/post-types/class-realia-post-type-transaction.php:160
 #: ../templates/misc/transactions.php:47
 msgid "Feature property"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:410
+#: ../includes/class-realia-paypal.php:409
 #, php-format
 msgid "Feature property %s"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:421
+#: ../includes/class-realia-paypal.php:420
 msgid "Sticky property"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:422
+#: ../includes/class-realia-paypal.php:421
 #, php-format
 msgid "Sticky property %s"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:432
+#: ../includes/class-realia-paypal.php:431
 msgid "Publish property"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:433
+#: ../includes/class-realia-paypal.php:432
 #, php-format
 msgid "Publish property %s"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:444
+#: ../includes/class-realia-paypal.php:443
 msgid "Purchase package"
 msgstr ""
 
-#: ../includes/class-realia-paypal.php:445
+#: ../includes/class-realia-paypal.php:444
 #, php-format
 msgid "Upgrade package to %s"
 msgstr ""
@@ -164,11 +164,11 @@ msgstr ""
 msgid "An error occured when removing an item."
 msgstr ""
 
-#: ../includes/class-realia-utilities.php:29
+#: ../includes/class-realia-utilities.php:45
 msgid "Please sign in before accessing this page."
 msgstr ""
 
-#: ../includes/class-realia-utilities.php:40
+#: ../includes/class-realia-utilities.php:56
 #: ../templates/misc/not-allowed.php:8
 msgid "You are not allowed to access this page."
 msgstr ""
@@ -456,8 +456,8 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:504
 #: ../includes/taxonomies/class-realia-taxonomies-locations.php:34
 #: ../templates/content-property.php:107
-#: ../templates/widgets/vertical-filter.php:46
-#: ../templates/widgets/vertical-filter.php:52
+#: ../templates/widgets/vertical-filter.php:48
+#: ../templates/widgets/vertical-filter.php:54
 msgid "Location"
 msgstr ""
 
@@ -566,7 +566,7 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:503
 #: ../includes/post-types/class-realia-post-type-transaction.php:114
 #: ../templates/content-property.php:59 ../templates/misc/transactions.php:31
-#: ../templates/properties/row.php:60
+#: ../templates/properties/row.php:60 ../templates/properties/sort.php:21
 msgid "Price"
 msgstr ""
 
@@ -676,19 +676,19 @@ msgstr ""
 
 #: ../includes/post-types/class-realia-post-type-property.php:122
 #: ../templates/content-property.php:90
-#: ../templates/widgets/vertical-filter.php:181
+#: ../templates/widgets/vertical-filter.php:183
 msgid "Contract"
 msgstr ""
 
 #: ../includes/post-types/class-realia-post-type-property.php:127
 #: ../templates/content-property.php:93
-#: ../templates/widgets/vertical-filter.php:187
+#: ../templates/widgets/vertical-filter.php:189
 msgid "Rent"
 msgstr ""
 
 #: ../includes/post-types/class-realia-post-type-property.php:128
 #: ../templates/content-property.php:95
-#: ../templates/widgets/vertical-filter.php:186
+#: ../templates/widgets/vertical-filter.php:188
 msgid "Sale"
 msgstr ""
 
@@ -753,8 +753,8 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:200
 #: ../includes/post-types/class-realia-post-type-property.php:427
 #: ../templates/content-property.php:135
-#: ../templates/widgets/vertical-filter.php:222
-#: ../templates/widgets/vertical-filter.php:226
+#: ../templates/widgets/vertical-filter.php:251
+#: ../templates/widgets/vertical-filter.php:255
 msgid "Rooms"
 msgstr ""
 
@@ -762,8 +762,8 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:432
 #: ../templates/content-property.php:140
 #: ../templates/misc/google-map-infowindow.php:38
-#: ../templates/widgets/vertical-filter.php:251
-#: ../templates/widgets/vertical-filter.php:255
+#: ../templates/widgets/vertical-filter.php:280
+#: ../templates/widgets/vertical-filter.php:284
 msgid "Beds"
 msgstr ""
 
@@ -771,16 +771,16 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:437
 #: ../templates/content-property.php:145
 #: ../templates/misc/google-map-infowindow.php:46
-#: ../templates/widgets/vertical-filter.php:237
-#: ../templates/widgets/vertical-filter.php:241
+#: ../templates/widgets/vertical-filter.php:266
+#: ../templates/widgets/vertical-filter.php:270
 msgid "Baths"
 msgstr ""
 
 #: ../includes/post-types/class-realia-post-type-property.php:215
 #: ../includes/post-types/class-realia-post-type-property.php:442
 #: ../templates/content-property.php:150
-#: ../templates/widgets/vertical-filter.php:279
-#: ../templates/widgets/vertical-filter.php:283
+#: ../templates/widgets/vertical-filter.php:308
+#: ../templates/widgets/vertical-filter.php:312
 msgid "Garages"
 msgstr ""
 
@@ -899,11 +899,12 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:392
 #: ../includes/post-types/class-realia-post-type-property.php:501
 #: ../includes/post-types/class-realia-post-type-transaction.php:111
+#: ../templates/properties/sort.php:22
 #: ../templates/widgets/agent-assigned-admin.php:12
 #: ../templates/widgets/agents-admin.php:13
 #: ../templates/widgets/enquire-admin.php:16
 #: ../templates/widgets/properties-admin.php:16
-#: ../templates/widgets/vertical-filter-admin.php:26
+#: ../templates/widgets/vertical-filter-admin.php:27
 msgid "Title"
 msgstr ""
 
@@ -918,8 +919,8 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:447
 #: ../templates/misc/google-map-infowindow.php:30
 #: ../templates/properties/row.php:74
-#: ../templates/widgets/vertical-filter.php:265
-#: ../templates/widgets/vertical-filter.php:269
+#: ../templates/widgets/vertical-filter.php:294
+#: ../templates/widgets/vertical-filter.php:298
 msgid "Area"
 msgstr ""
 
@@ -960,8 +961,8 @@ msgstr ""
 #: ../includes/post-types/class-realia-post-type-property.php:506
 #: ../includes/taxonomies/class-realia-taxonomies-statuses.php:34
 #: ../templates/content-property.php:102 ../templates/properties/row.php:82
-#: ../templates/widgets/vertical-filter.php:154
-#: ../templates/widgets/vertical-filter.php:162
+#: ../templates/widgets/vertical-filter.php:156
+#: ../templates/widgets/vertical-filter.php:164
 msgid "Status"
 msgstr ""
 
@@ -1139,8 +1140,8 @@ msgid "You have been successfully registered."
 msgstr ""
 
 #: ../includes/taxonomies/class-realia-taxonomies-amenities.php:34
-#: ../templates/widgets/vertical-filter.php:128
-#: ../templates/widgets/vertical-filter.php:135
+#: ../templates/widgets/vertical-filter.php:130
+#: ../templates/widgets/vertical-filter.php:137
 msgid "Amenity"
 msgstr ""
 
@@ -1218,6 +1219,8 @@ msgstr ""
 
 #: ../includes/taxonomies/class-realia-taxonomies-materials.php:34
 #: ../templates/content-property.php:130
+#: ../templates/widgets/vertical-filter.php:198
+#: ../templates/widgets/vertical-filter.php:206
 msgid "Material"
 msgstr ""
 
@@ -1404,20 +1407,20 @@ msgstr ""
 msgid "Send message"
 msgstr ""
 
-#: ../templates/archive-agency.php:21 ../templates/archive-agent.php:21
-#: ../templates/archive-property.php:33 ../templates/single-agency.php:16
+#: ../templates/archive-agency.php:35 ../templates/archive-agent.php:35
+#: ../templates/archive-property.php:47 ../templates/single-agency.php:16
 #: ../templates/single-agent.php:16 ../templates/single-property.php:16
 msgid "Previous page"
 msgstr ""
 
-#: ../templates/archive-agency.php:22 ../templates/archive-agent.php:22
-#: ../templates/archive-property.php:34 ../templates/single-agency.php:17
+#: ../templates/archive-agency.php:36 ../templates/archive-agent.php:36
+#: ../templates/archive-property.php:48 ../templates/single-agency.php:17
 #: ../templates/single-agent.php:17 ../templates/single-property.php:17
 msgid "Next page"
 msgstr ""
 
-#: ../templates/archive-agency.php:23 ../templates/archive-agent.php:23
-#: ../templates/archive-property.php:35 ../templates/content-agency.php:97
+#: ../templates/archive-agency.php:37 ../templates/archive-agent.php:37
+#: ../templates/archive-property.php:49 ../templates/content-agency.php:97
 #: ../templates/content-agent.php:82 ../templates/content-property.php:350
 #: ../templates/single-agency.php:18 ../templates/single-agent.php:18
 #: ../templates/single-property.php:18
@@ -1550,6 +1553,30 @@ msgstr ""
 msgid "Read More"
 msgstr ""
 
+#: ../templates/properties/sort.php:15
+msgid "Sorting options"
+msgstr ""
+
+#: ../templates/properties/sort.php:20
+msgid "Sort by"
+msgstr ""
+
+#: ../templates/properties/sort.php:23 ../templates/submission/list.php:128
+msgid "Published"
+msgstr ""
+
+#: ../templates/properties/sort.php:29
+msgid "Order"
+msgstr ""
+
+#: ../templates/properties/sort.php:30
+msgid "ASC"
+msgstr ""
+
+#: ../templates/properties/sort.php:31
+msgid "DESC"
+msgstr ""
+
 #: ../templates/submission/list.php:11
 msgid "Create Property"
 msgstr ""
@@ -1564,10 +1591,6 @@ msgstr ""
 
 #: ../templates/submission/list.php:112
 msgid "Make featured"
-msgstr ""
-
-#: ../templates/submission/list.php:128
-msgid "Published"
 msgstr ""
 
 #: ../templates/submission/list.php:140
@@ -1819,106 +1842,114 @@ msgstr ""
 msgid "No properties found."
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:39
+#: ../templates/widgets/vertical-filter-admin.php:40
 msgid "Button text"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:58
+#: ../templates/widgets/vertical-filter-admin.php:59
 msgid "Hide property ID"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:71
+#: ../templates/widgets/vertical-filter-admin.php:72
 msgid "Hide location"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:84
+#: ../templates/widgets/vertical-filter-admin.php:85
 msgid "Hide property type"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:97
+#: ../templates/widgets/vertical-filter-admin.php:98
 msgid "Hide amenity"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:110
+#: ../templates/widgets/vertical-filter-admin.php:111
 msgid "Hide status"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:123
+#: ../templates/widgets/vertical-filter-admin.php:124
 msgid "Hide contract"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:136
+#: ../templates/widgets/vertical-filter-admin.php:137
+msgid "Hide material"
+msgstr ""
+
+#: ../templates/widgets/vertical-filter-admin.php:150
 msgid "Hide price"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:149
+#: ../templates/widgets/vertical-filter-admin.php:163
 msgid "Hide rooms"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:162
+#: ../templates/widgets/vertical-filter-admin.php:176
 msgid "Hide baths"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:175
+#: ../templates/widgets/vertical-filter-admin.php:189
 msgid "Hide beds"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:188
+#: ../templates/widgets/vertical-filter-admin.php:202
 msgid "Hide area"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:201
+#: ../templates/widgets/vertical-filter-admin.php:215
 msgid "Hide garages"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:206
+#: ../templates/widgets/vertical-filter-admin.php:220
 msgid "Input titles"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:217
+#: ../templates/widgets/vertical-filter-admin.php:231
 msgid "Labels"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter-admin.php:229
+#: ../templates/widgets/vertical-filter-admin.php:243
 msgid "Placeholders"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:32
-#: ../templates/widgets/vertical-filter.php:36
+#: ../templates/widgets/vertical-filter.php:34
+#: ../templates/widgets/vertical-filter.php:38
 msgid "Property ID"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:54
+#: ../templates/widgets/vertical-filter.php:56
 msgid "All locations"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:102
-#: ../templates/widgets/vertical-filter.php:109
+#: ../templates/widgets/vertical-filter.php:104
+#: ../templates/widgets/vertical-filter.php:111
 msgid "Property type"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:111
+#: ../templates/widgets/vertical-filter.php:113
 msgid "All property types"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:137
+#: ../templates/widgets/vertical-filter.php:139
 msgid "All amenities"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:164
+#: ../templates/widgets/vertical-filter.php:166
 msgid "All statuses"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:185
+#: ../templates/widgets/vertical-filter.php:187
 msgid "All contracts"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:196
-#: ../templates/widgets/vertical-filter.php:200
+#: ../templates/widgets/vertical-filter.php:208
+msgid "All materials"
+msgstr ""
+
+#: ../templates/widgets/vertical-filter.php:225
+#: ../templates/widgets/vertical-filter.php:229
 msgid "Price from"
 msgstr ""
 
-#: ../templates/widgets/vertical-filter.php:207
-#: ../templates/widgets/vertical-filter.php:211
+#: ../templates/widgets/vertical-filter.php:236
+#: ../templates/widgets/vertical-filter.php:240
 msgid "Price to"
 msgstr ""
