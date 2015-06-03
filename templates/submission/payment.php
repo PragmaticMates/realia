@@ -61,7 +61,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.payment-info -->
 	<?php endif; ?>
 
-	<?php if ( Realia_PayPal::is_active() && ! empty( $payment_type ) && ! empty( $object_id )) : ?>
+	<?php if ( Realia_Utilities::is_paypal_enabled() && Realia_PayPal::is_active() && ! empty( $payment_type ) && ! empty( $object_id )) : ?>
 		<form class="payment-form" method="post" action="?">
 			<?php if ( ! empty( $payment_type ) ) : ?>
 				<input type="hidden" name="payment_type" value="<?php echo esc_attr( $payment_type ); ?>">

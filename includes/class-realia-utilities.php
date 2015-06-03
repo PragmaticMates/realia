@@ -12,6 +12,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author Pragmatic Mates
  */
 class Realia_Utilities {
+	/**
+	 * Checks if PayPal is enabled
+	 *
+	 * @access public
+	 * @return bool
+	 */
+	public static function is_paypal_enabled() {
+		$client_id = get_theme_mod( 'realia_paypal_client_id', null );
+		$client_secret = get_theme_mod( 'realia_paypal_client_secret', null );
+
+		if ( ! empty( $client_id ) && ! empty( $client_secret ) ) {
+			return true;
+		}
+		return false;
+	}
+
     /**
      * Function checks if the user is signed in and if there is ID attribute
      * in $_GET, check if the current user is owner.

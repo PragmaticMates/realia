@@ -20,7 +20,6 @@ use PayPal\Api\Transaction;
 use PayPal\Rest\ApiContext;
 use PayPal\Auth\OAuthTokenCredential;
 
-
 /**
  * Class Realia_PayPal
  *

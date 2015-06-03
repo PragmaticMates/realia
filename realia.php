@@ -60,6 +60,7 @@ if ( ! class_exists( 'Realia ' ) ) {
          * @return void
          */
         public function includes() {
+	        require_once REALIA_DIR . 'includes/class-realia-utilities.php';
             require_once REALIA_DIR . 'includes/class-realia-recaptcha.php';
             require_once REALIA_DIR . 'includes/class-realia-template-loader.php';
             require_once REALIA_DIR . 'includes/class-realia-post-types.php';
@@ -75,8 +76,10 @@ if ( ! class_exists( 'Realia ' ) ) {
             require_once REALIA_DIR . 'includes/class-realia-shortcodes.php';
             require_once REALIA_DIR . 'includes/class-realia-google-maps-styles.php';
             require_once REALIA_DIR . 'includes/class-realia-packages.php';
-            require_once REALIA_DIR . 'includes/class-realia-paypal.php';
-            require_once REALIA_DIR . 'includes/class-realia-utilities.php';
+
+	        if ( Realia_Utilities::is_paypal_enabled() ) {
+		        require_once REALIA_DIR . 'includes/class-realia-paypal.php';
+	        }
         }
 
         /**
