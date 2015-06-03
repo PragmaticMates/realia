@@ -190,7 +190,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<?php if ( empty( $instance['hide_material'] ) ) : ?>
-		<!-- STATUS TYPE-->
+		<!-- MATERIAL -->
 		<div class="form-group">
 			<?php if ( $input_titles == 'labels' ) : ?>
 				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Material', 'realia' ); ?></label>
