@@ -167,6 +167,15 @@ class Realia_Filter {
             );
         }
 
+	    // Material
+	    if ( ! empty( $_GET['filter-material'] ) ) {
+		    $taxonomies[] = array(
+			    'taxonomy'  => 'materials',
+			    'field'     => 'id',
+			    'terms'     => $_GET['filter-material'],
+		    );
+	    }
+
         // Property ID
         if ( ! empty( $_GET['filter-id'] ) ) {
             $meta[] = array(
