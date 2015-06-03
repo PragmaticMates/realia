@@ -21,7 +21,12 @@ class Realia_Filter {
     public static function init() {
         add_action( 'pre_get_posts', array( __CLASS__, 'archive' ) );
         add_action( 'pre_get_posts', array( __CLASS__, 'taxonomy') );
+	    add_action( 'realia_before_property_archive', array( __CLASS__, 'sort_template') );
     }
+
+	public static function sort_template() {
+		include Realia_Template_Loader::locate( 'properties/sort' );
+	}
 
     /**
      * Checks if in URI are filter conditions
@@ -49,7 +54,7 @@ class Realia_Filter {
      */
     public static function taxonomy( $query ) {
         $is_correct_taxonomy = false;
-        if ( is_tax( 'statuses' ) || is_tax( 'property_types' ) || is_tax( 'amenities') || is_tax( 'locations' ) ) {
+        if ( is_tax( 'statuses' ) || is_tax( 'property_types' ) || is_tax( 'amenities') || is_tax( 'locations' ) || is_tax( 'materials' ) ) {
             $is_correct_taxonomy = true;
         }
 

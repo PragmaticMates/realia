@@ -109,8 +109,18 @@ purposes or directory listings.
 
 * Locations
 * Property types
-* Contracts
+* Statuses
 * Amenities
+* Materials
+
+### Custom action
+
+* realia_before_property_archive
+* realia_after_property_archive
+* realia_before_agency_archive
+* realia_after_agency_archive
+* realia_before_agent_archive
+* realia_after_agent_archive
 
 ### Shortcodes
 
