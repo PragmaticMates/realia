@@ -167,7 +167,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<?php if ( is_array( $statuses ) ) : ?>
 					<?php foreach ( $statuses as $status ) : ?>
-						<option value="<?php echo esc_attr( $status->term_id ); ?>" <?php if ( ! empty( $_GET['filter-status-type'] ) &&  $_GET['filter-status-type'] == $status->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $status->name ); ?></option>
+						<option value="<?php echo esc_attr( $status->term_id ); ?>" <?php if ( ! empty( $_GET['filter-status'] ) &&  $_GET['filter-status'] == $status->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $status->name ); ?></option>
 					<?php endforeach ?>
 				<?php endif; ?>
 			</select>
@@ -185,6 +185,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<option value=""><?php echo __( 'All contracts', 'realua' ); ?></option>
 				<option value="<?php echo REALIA_CONTRACT_SALE; ?>" <?php if ( ! empty( $_GET['filter-contract'] ) &&  $_GET['filter-contract'] == REALIA_CONTRACT_SALE ) : ?>selected="selected"<?php endif; ?>><?php echo __( 'Sale', 'realia' ); ?></option>
 				<option value="<?php echo REALIA_CONTRACT_RENT; ?>" <?php if ( ! empty( $_GET['filter-contract'] ) &&  $_GET['filter-contract'] == REALIA_CONTRACT_RENT ) : ?>selected="selected"<?php endif; ?>><?php echo __( 'Rent', 'realia' ); ?></option>
+			</select>
+		</div><!-- /.form-group -->
+	<?php endif; ?>
+
+	<?php if ( empty( $instance['hide_material'] ) ) : ?>
+		<!-- STATUS TYPE-->
+		<div class="form-group">
+			<?php if ( $input_titles == 'labels' ) : ?>
+				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Material', 'realia' ); ?></label>
+			<?php endif; ?>
+
+			<select name="filter-material" id="<?php echo esc_attr( $args['widget_id'] ); ?>_status">
+				<?php $materials = get_terms( 'materials', array( 'hide_empty' => false ) ); ?>
+
+				<option value="">
+					<?php if ( $input_titles == 'placeholders' ) : ?>
+						<?php echo __( 'Material', 'realia' ); ?>
+					<?php else: ?>
+						<?php echo __( 'All materials', 'realia' ); ?>
+					<?php endif; ?>
+				</option>
+
+				<?php if ( is_array( $materials ) ) : ?>
+					<?php foreach ( $materials as $material ) : ?>
+						<option value="<?php echo esc_attr( $material->term_id ); ?>" <?php if ( ! empty( $_GET['filter-material'] ) &&  $_GET['filter-material'] == $status->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $material->name ); ?></option>
+					<?php endforeach ?>
+				<?php endif; ?>
 			</select>
 		</div><!-- /.form-group -->
 	<?php endif; ?>

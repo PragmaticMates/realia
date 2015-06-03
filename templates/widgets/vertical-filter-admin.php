@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $hide_amenity = ! empty( $instance['hide_amenities'] ) ? $instance['hide_amenities'] : ''; ?>
 <?php $hide_status = ! empty( $instance['hide_status'] ) ? $instance['hide_status'] : ''; ?>
 <?php $hide_contract = ! empty( $instance['hide_contract'] ) ? $instance['hide_contract'] : ''; ?>
+<?php $hide_material = ! empty( $instance['hide_material'] ) ? $instance['hide_material'] : ''; ?>
 <?php $hide_price = ! empty( $instance['hide_price'] ) ? $instance['hide_price'] : ''; ?>
 <?php $hide_rooms = ! empty( $instance['hide_rooms'] ) ? $instance['hide_rooms'] : ''; ?>
 <?php $hide_baths = ! empty( $instance['hide_baths'] ) ? $instance['hide_baths'] : ''; ?>
@@ -111,7 +112,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </label>
 </p>
 
-<!-- STATUS -->
+<!-- CONTRACT -->
 <p>
 	<input 	type="checkbox"
 	          class="checkbox"
@@ -121,6 +122,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_contract' ) ); ?>">
 		<?php echo __( 'Hide contract', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- MATERIAL -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_material) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_material' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_material' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_material' ) ); ?>">
+		<?php echo __( 'Hide material', 'realia' ); ?>
 	</label>
 </p>
 
