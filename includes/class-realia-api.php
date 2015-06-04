@@ -25,8 +25,12 @@ class Realia_Api {
 	}
 
 	public static function add_fields( $post_response, $post, $context ) {
+		if ( $post['post_type'] != 'property' ) {
+			return $post_response;
+		}
+
 		// Price
-		$post_response['price'] = Realia_Price::get_property_price( $post_response['ID'] );
+		$post_response['price'] = Realia_Price::get_property_price( $post['ID'] );
 
 		// Location
 		$location = get_post_meta( $post_response['ID'], REALIA_PROPERTY_PREFIX . 'map_location', true );
