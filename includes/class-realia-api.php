@@ -29,7 +29,7 @@ class Realia_Api {
 		$post_response['price'] = Realia_Price::get_property_price( $post_response['ID'] );
 
 		// Location
-		$location = get_post_meta( $post_response['ID'], REALIA_PROPERTY_PREFIX . 'location', true );
+		$location = get_post_meta( $post_response['ID'], REALIA_PROPERTY_PREFIX . 'map_location', true );
 
 		$post_response['location'] = array(
 			'latitude'  => ! empty( $location['latitude'] ) ? $location['latitude'] : null,
