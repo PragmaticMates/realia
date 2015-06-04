@@ -29,11 +29,71 @@ class Realia_Api {
 			return $post_response;
 		}
 
+		// Property ID
+		$post_response['property_id'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'id', true );
+
+		// Year built
+		$post_response['year_built'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'year_built', true );
+
+		// Reduced
+		$post_response['reduced'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'reduced', true );
+
+		// Featured
+		$post_response['featured'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'featured', true );
+
+		// Sticky
+		$post_response['sticky'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sticky', true );
+
+		// Sold
+		$post_response['sold'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sold', true );
+
+		// Contract
+		$post_response['contract'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'contract', true );
+
+		// Gallery
+		$post_response['gallery'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'gallery', true );
+
 		// Price
 		$post_response['price'] = Realia_Price::get_property_price( $post['ID'] );
 
-		// Location
-		$location = get_post_meta( $post_response['ID'], REALIA_PROPERTY_PREFIX . 'map_location', true );
+		// Rooms
+		$post_response['rooms'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_rooms', true );
+
+		// Beds
+		$post_response['beds'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_beds', true );
+
+		// Baths
+		$post_response['baths'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_baths', true );
+
+		// Garages
+		$post_response['garages'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_garages', true );
+
+		// Home area
+		$home_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'home_area', true );
+		if ( ! empty( $home_area ) ) {
+			$post_response['home_area'] = $home_area . ' ' . get_theme_mod( 'realia_measurement_area_unit', 'sqft' );
+		} else {
+			$post_response['home_area'] = '';
+		}
+
+		// Lot dimensions
+		$lot_dimensions = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'lot_dimensions', true );
+		if ( ! empty( $lot_area ) ) {
+			$post_response['lot_dimensions'] = $lot_dimensions . ' ' . get_theme_mod( 'realia_measurement_distance_unit', 'ft' );
+		} else {
+			$post_response['lot_dimensions'] = '';
+		}
+
+		// Lot area
+		$lot_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'lot_area', true );
+		if ( ! empty( $lot_area ) ) {
+			$post_response['lot_area'] = $lot_area . ' ' . get_theme_mod( 'realia_measurement_area_unit', 'sqft' );
+		} else {
+			$post_response['lot_area'] = '';
+		}
+
+		// Map location
+		$location = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'map_location', true );
 
 		$post_response['map_location'] = array(
 			'latitude'  => ! empty( $location['latitude'] ) ? floatval( $location['latitude'] ) : null,
