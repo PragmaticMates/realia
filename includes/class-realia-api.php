@@ -58,7 +58,7 @@ class Realia_Api {
 		} else {
 			$post_response['sticky'] = false;
 		}
-		
+
 		// Sold
 		$sold = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sold', true );
 		if ( $sold == 'on' ) {
@@ -77,16 +77,16 @@ class Realia_Api {
 		$post_response['price'] = Realia_Price::get_property_price( $post['ID'] );
 
 		// Rooms
-		$post_response['rooms'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_rooms', true );
+		$post_response['rooms'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_rooms', true );
 
 		// Beds
-		$post_response['beds'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_beds', true );
+		$post_response['beds'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_beds', true );
 
 		// Baths
-		$post_response['baths'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_baths', true );
+		$post_response['baths'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_baths', true );
 
 		// Garages
-		$post_response['garages'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attribute_garages', true );
+		$post_response['garages'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_garages', true );
 
 		// Home area
 		$home_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'home_area', true );
