@@ -36,16 +36,36 @@ class Realia_Api {
 		$post_response['year_built'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'year_built', true );
 
 		// Reduced
-		$post_response['reduced'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'reduced', true );
+		$reduced = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'reduced', true );
+		if ( $reduced == 'on' ) {
+			$post_response['reduced'] = true;
+		} else {
+			$post_response['reduced'] = false;
+		}
 
 		// Featured
-		$post_response['featured'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'featured', true );
+		$featured = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'featured', true );
+		if ( $featured == 'on' ) {
+			$post_response['featured'] = true;
+		} else {
+			$post_response['featured'] = false;
+		}
 
 		// Sticky
-		$post_response['sticky'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sticky', true );
-
+		$sticky = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sticky', true );
+		if ( $sticky == 'on' ) {
+			$post_response['sticky'] = true;
+		} else {
+			$post_response['sticky'] = false;
+		}
+		
 		// Sold
-		$post_response['sold'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sold', true );
+		$sold = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sold', true );
+		if ( $sold == 'on' ) {
+			$post_response['sold'] = true;
+		} else {
+			$post_response['sold'] = false;
+		}
 
 		// Contract
 		$post_response['contract'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'contract', true );
