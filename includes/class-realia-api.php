@@ -32,8 +32,8 @@ class Realia_Api {
 		$location = get_post_meta( $post_response['ID'], REALIA_PROPERTY_PREFIX . 'map_location', true );
 
 		$post_response['map_location'] = array(
-			'latitude'  => ! empty( $location['latitude'] ) ? $location['latitude'] : null,
-			'longitude' => ! empty( $location['longitude'] ) ? $location['longitude'] : null,
+			'latitude'  => ! empty( $location['latitude'] ) ? floatval( $location['latitude'] ) : null,
+			'longitude' => ! empty( $location['longitude'] ) ? floatval( $location['longitude'] ) : null,
 		);
 
 		return $post_response;
