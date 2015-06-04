@@ -227,10 +227,10 @@ class Realia_Filter {
 	    }
 
         // Property ID
-        if ( ! empty( $_GET['filter-id'] ) ) {
+        if ( ! empty( $_GET['filter-property-id'] ) ) {
             $meta[] = array(
                 'key'       => REALIA_PROPERTY_PREFIX . 'id',
-                'value'     => $_GET['filter-id'],
+                'value'     => $_GET['filter-property-id'],
                 'compare'   => '=='
             );
         }
@@ -282,6 +282,16 @@ class Realia_Filter {
                 'type'      => 'NUMERIC',
             );
         }
+
+	    // Year built
+	    if ( ! empty( $_GET['filter-year-built'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'year_built',
+			    'value'     => $_GET['filter-year-built'],
+			    'compare'   => '>=',
+			    'type'      => 'NUMERIC',
+		    );
+	    }
 
         // Baths
         if ( ! empty( $_GET['filter-baths'] ) ) {

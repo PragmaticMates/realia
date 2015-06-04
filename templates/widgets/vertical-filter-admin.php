@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $hide_rooms = ! empty( $instance['hide_rooms'] ) ? $instance['hide_rooms'] : ''; ?>
 <?php $hide_baths = ! empty( $instance['hide_baths'] ) ? $instance['hide_baths'] : ''; ?>
 <?php $hide_beds = ! empty( $instance['hide_beds'] ) ? $instance['hide_beds'] : ''; ?>
+<?php $hide_year_built = ! empty( $instance['hide_year_built'] ) ? $instance['hide_year_built'] : ''; ?>
 <?php $hide_area = ! empty( $instance['hide_area'] ) ? $instance['hide_area'] : ''; ?>
 <?php $hide_garages = ! empty( $instance['hide_garages'] ) ? $instance['hide_garages'] : ''; ?>
 <?php $hide_featured = ! empty( $instance['hide_featured'] ) ? $instance['hide_featured'] : ''; ?>
@@ -194,6 +195,19 @@ if ( ! defined( 'ABSPATH' ) ) {
     </label>
 </p>
 
+<!-- YEAR BUILT -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_year_built ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_year_built' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_year_built' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_year_built' ) ); ?>">
+		<?php echo __( 'Hide year built', 'realia' ); ?>
+	</label>
+</p>
+
 <!-- AREA -->
 <p>
     <input 	type="checkbox"
@@ -255,7 +269,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	          name="<?php echo esc_attr( $this->get_field_name( 'hide_sticky' ) ); ?>">
 
 	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_sticky' ) ); ?>">
-		<?php echo __( 'Hide sticky', 'realia' ); ?>
+		<?php echo __( 'Hide TOP', 'realia' ); ?>
 	</label>
 </p>
 

@@ -16,9 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <form method="get" action="<?php echo get_post_type_archive_link( 'property' ); ?>">
 	<?php $skip = array(
-		'filter-id', 'filter-location', 'filter-property-type', 'filter-amenity', 'filter-status', 'filter-contract',
+		'filter-property-id', 'filter-location', 'filter-property-type', 'filter-amenity', 'filter-status', 'filter-contract',
 		'filter-material', 'filter-price-from', 'filter-price-to', 'filter-rooms', 'filter-baths', 'filter-beds', 'filter-area',
-		'filter-garages',
+		'filter-garages', 'filter-featured', 'filter-reduced', 'filter_sticky', 'filter-sold'
 	); ?>
 
     <?php foreach ( $_GET as $key => $value ) : ?>
@@ -287,6 +287,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.form-group -->
 	<?php endif;?>
 
+	<?php if ( empty( $instance['hide_year_built'] ) ) : ?>
+		<!-- YEAR BUILT -->
+		<div class="form-group">
+			<?php if ( $input_titles == 'labels' ) : ?>
+				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_year_built"><?php echo __( 'Year built', 'realia' ); ?></label>
+			<?php endif; ?>
+
+			<input type="text" name="filter-year-built"
+			       <?php if( $input_titles == 'placeholders' ) : ?>placeholder="<?php echo __( 'Year built', 'realia' ); ?>"<?php endif; ?>
+			       class="form-control" value="<?php echo ! empty( $_GET['filter-year-built'] ) ? $_GET['filter-year-built'] : ''; ?>"
+			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_year_built">
+		</div><!-- /.form-group -->
+	<?php endif;?>
+
 	<?php if ( empty( $instance['hide_home_area'] ) ) : ?>
 		<!-- HOME AREA FROM -->
 		<div class="form-group">
@@ -382,7 +396,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			       value="<?php echo ! empty( $_GET['filter-sticky'] ) ? $_GET['filter-sticky'] : 'on'; ?>"
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_sticky">
 
-			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_sticky"><?php echo __( 'Sticky', 'realia' ); ?></label>
+			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_sticky"><?php echo __( 'TOP', 'realia' ); ?></label>
 		</div><!-- /.form-group -->
 	<?php endif; ?>
 
