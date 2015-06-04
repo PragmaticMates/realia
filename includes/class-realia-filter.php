@@ -181,6 +181,51 @@ class Realia_Filter {
 		    );
 	    }
 
+	    // Property contract
+	    if ( ! empty( $_GET['filter-contract'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'contract',
+			    'value'     => $_GET['filter-contract'],
+			    'compare'   => '=='
+		    );
+	    }
+
+	    // Featured
+	    if ( ! empty( $_GET['filter-featured'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'featured',
+			    'value'     => 'on',
+			    'compare'   => '=='
+		    );
+	    }
+
+	    // Reduced
+	    if ( ! empty( $_GET['filter-reduced'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
+			    'value'     => 'on',
+			    'compare'   => '=='
+		    );
+	    }
+
+	    // Sticky
+	    if ( ! empty( $_GET['filter-sticky'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
+			    'value'     => 'on',
+			    'compare'   => '=='
+		    );
+	    }
+
+	    // Sold
+	    if ( ! empty( $_GET['filter-sticky'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
+			    'value'     => 'on',
+			    'compare'   => '=='
+		    );
+	    }
+
         // Property ID
         if ( ! empty( $_GET['filter-id'] ) ) {
             $meta[] = array(
@@ -200,6 +245,7 @@ class Realia_Filter {
             );
         }
 
+		// Price to
         if ( ! empty( $_GET['filter-price-to'] ) ) {
             $meta[] = array(
                 'key'       => REALIA_PROPERTY_PREFIX . 'price',
@@ -247,15 +293,45 @@ class Realia_Filter {
             );
         }
 
-        // Area
-        if ( ! empty( $_GET['filter-area'] ) ) {
+        // Home area from
+        if ( ! empty( $_GET['filter-home-area-from'] ) ) {
             $meta[] = array(
-                'key'       => REALIA_PROPERTY_PREFIX . 'attributes_area',
-                'value'     => $_GET['filter-area'],
+                'key'       => REALIA_PROPERTY_PREFIX . 'attributes_home_area',
+                'value'     => $_GET['filter-home-area-from'],
                 'compare'   => '>=',
                 'type'      => 'NUMERIC',
             );
         }
+
+	    // Home area to
+	    if ( ! empty( $_GET['filter-home-area-to'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_home_area',
+			    'value'     => $_GET['filter-home-area-to'],
+			    'compare'   => '>=',
+			    'type'      => 'NUMERIC',
+		    );
+	    }
+
+	    // Lot area from
+	    if ( ! empty( $_GET['filter-lot-area-from'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_lot_area',
+			    'value'     => $_GET['filter-lot-area-from'],
+			    'compare'   => '>=',
+			    'type'      => 'NUMERIC',
+		    );
+	    }
+
+	    // Lot area to
+	    if ( ! empty( $_GET['filter-lot-area-to'] ) ) {
+		    $meta[] = array(
+			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_lot_area',
+			    'value'     => $_GET['filter-lot-area-to'],
+			    'compare'   => '>=',
+			    'type'      => 'NUMERIC',
+		    );
+	    }
 
         // Garages
         if ( ! empty( $_GET['filter-garages'] ) ) {

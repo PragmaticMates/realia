@@ -19,6 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $hide_beds = ! empty( $instance['hide_beds'] ) ? $instance['hide_beds'] : ''; ?>
 <?php $hide_area = ! empty( $instance['hide_area'] ) ? $instance['hide_area'] : ''; ?>
 <?php $hide_garages = ! empty( $instance['hide_garages'] ) ? $instance['hide_garages'] : ''; ?>
+<?php $hide_featured = ! empty( $instance['hide_featured'] ) ? $instance['hide_featured'] : ''; ?>
+<?php $hide_reduced = ! empty( $instance['hide_reduced'] ) ? $instance['hide_reduced'] : ''; ?>
+<?php $hide_sticky = ! empty( $instance['hide_sticky'] ) ? $instance['hide_sticky'] : ''; ?>
+<?php $hide_sold = ! empty( $instance['hide_sold'] ) ? $instance['hide_sold'] : ''; ?>
 <?php $input_titles = ! empty( $instance['input_titles'] ) ? $instance['input_titles'] : ''; ?>
 
 <!-- TITLE -->
@@ -214,6 +218,58 @@ if ( ! defined( 'ABSPATH' ) ) {
     <label for="<?php echo esc_attr( $this->get_field_id( 'hide_garages' ) ); ?>">
         <?php echo __( 'Hide garages', 'realia' ); ?>
     </label>
+</p>
+
+<!-- FEATURED -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_featured ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_featured' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_featured' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_featured' ) ); ?>">
+		<?php echo __( 'Hide featured', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- REDUCED -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_reduced ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_reduced' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_reduced' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_reduced' ) ); ?>">
+		<?php echo __( 'Hide reduced', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- STICKY -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_sticky ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_sticky' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_sticky' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_sticky' ) ); ?>">
+		<?php echo __( 'Hide sticky', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- SOLD -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_sold ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_sold' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_sold' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_sold' ) ); ?>">
+		<?php echo __( 'Hide sold', 'realia' ); ?>
+	</label>
 </p>
 
 <!-- INPUT TITLES -->

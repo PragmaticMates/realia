@@ -14,10 +14,10 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<?php
-				/**
-				 * realia_before_property_archive
-				 */
-				do_action( 'realia_before_property_archive' );
+			/**
+			 * realia_before_property_archive
+			 */
+			do_action( 'realia_before_property_archive' );
 			?>
 
 			<?php if ( get_theme_mod( 'realia_general_show_property_archive_as_grid', null ) == '1' ) : ?>
@@ -37,10 +37,10 @@ get_header(); ?>
 			<?php endif; ?>
 
 			<?php
-				/**
-				 * realia_after_property_archive
-				 */
-				do_action( 'realia_after_property_archive' );
+			/**
+			 * realia_after_property_archive
+			 */
+			do_action( 'realia_after_property_archive' );
 			?>
 
 			<?php the_posts_pagination( array(
