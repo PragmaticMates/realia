@@ -369,7 +369,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( empty( $instance['hide_featured'] ) ) : ?>
 		<!-- FEATURED -->
-		<div class="form-group">
+		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-featured"
 			       value="<?php echo ! empty( $_GET['filter-featured'] ) ? $_GET['filter-featured'] : 'on'; ?>"
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_featured">
@@ -380,7 +380,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( empty( $instance['hide_reduced'] ) ) : ?>
 		<!-- REDUCED -->
-		<div class="form-group">
+		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-reduced"
 			       value="<?php echo ! empty( $_GET['filter-reduced'] ) ? $_GET['filter-reduced'] : 'on'; ?>"
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_reduced">
@@ -391,7 +391,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( empty( $instance['hide_sticky'] ) ) : ?>
 		<!-- STICKY -->
-		<div class="form-group">
+		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-sticky"
 			       value="<?php echo ! empty( $_GET['filter-sticky'] ) ? $_GET['filter-sticky'] : 'on'; ?>"
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_sticky">
@@ -402,7 +402,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( empty( $instance['hide_sold'] ) ) : ?>
 		<!-- SOLD -->
-		<div class="form-group">
+		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-sold"
 			       value="<?php echo ! empty( $_GET['filter-sold'] ) ? $_GET['filter-sold'] : 'on'; ?>"
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_sold">

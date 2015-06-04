@@ -38,6 +38,12 @@
     width: 100%;
 }
 
+.form-group.checkbox label {
+    display: inline;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
 .terms-conditions-input {
     margin-top: 20px;
 }
