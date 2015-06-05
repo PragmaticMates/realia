@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
         <a href="<?php the_permalink(); ?>" class="property-box-image-inner <?php if ( ! empty( $agent ) ) : ?>has-agent<?php endif; ?>">
             <?php if ( has_post_thumbnail() ) : ?>
-                <?php the_post_thumbnail( 'medium' ); ?>
+                <?php the_post_thumbnail(); ?>
             <?php endif; ?>
 
             <?php $is_featured = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'featured', true ); ?>
