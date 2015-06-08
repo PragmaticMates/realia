@@ -141,11 +141,11 @@ Just put a `Vertical Filter` widget into suitable widget area. You can also spec
 
 Put a `Properties Map` widget into widget area. In widget settings set latitude and longitude of map center. You can set zoom level, cluster grid size and map style as well.
 
-**I want to set 'negotiated price' for my property. How can I do that ?**
+**I want to set 'negotiated price' for my property. How can I do that?**
 
 You are able to set custom price text of each property in its detail. You can also set price prefix and suffix if you wish.
 
-**How do I assign an agent to property ?**
+**How do I assign an agent to property?**
 
 Create at least one agent at first and then choose the one you wish to assign in property detail.
 
