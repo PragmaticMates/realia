@@ -318,7 +318,7 @@ class Realia_Filter {
 		    $meta[] = array(
 			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_home_area',
 			    'value'     => $_GET['filter-home-area-to'],
-			    'compare'   => '>=',
+			    'compare'   => '<=',
 			    'type'      => 'NUMERIC',
 		    );
 	    }
@@ -338,7 +338,7 @@ class Realia_Filter {
 		    $meta[] = array(
 			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_lot_area',
 			    'value'     => $_GET['filter-lot-area-to'],
-			    'compare'   => '>=',
+			    'compare'   => '<=',
 			    'type'      => 'NUMERIC',
 		    );
 	    }
