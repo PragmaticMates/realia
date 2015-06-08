@@ -89,7 +89,7 @@ class Realia_Api {
 		$post_response['garages'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_garages', true );
 
 		// Home area
-		$home_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'home_area', true );
+		$home_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_home_area', true );
 		if ( ! empty( $home_area ) ) {
 			$post_response['home_area'] = $home_area . ' ' . get_theme_mod( 'realia_measurement_area_unit', 'sqft' );
 		} else {
@@ -97,15 +97,15 @@ class Realia_Api {
 		}
 
 		// Lot dimensions
-		$lot_dimensions = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'lot_dimensions', true );
-		if ( ! empty( $lot_area ) ) {
+		$lot_dimensions = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_lot_dimensions', true );
+		if ( ! empty( $lot_dimensions ) ) {
 			$post_response['lot_dimensions'] = $lot_dimensions . ' ' . get_theme_mod( 'realia_measurement_distance_unit', 'ft' );
 		} else {
 			$post_response['lot_dimensions'] = '';
 		}
 
 		// Lot area
-		$lot_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'lot_area', true );
+		$lot_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_lot_area', true );
 		if ( ! empty( $lot_area ) ) {
 			$post_response['lot_area'] = $lot_area . ' ' . get_theme_mod( 'realia_measurement_area_unit', 'sqft' );
 		} else {
