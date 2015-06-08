@@ -102,8 +102,18 @@ purposes or directory listings.
 
 * Locations
 * Property types
-* Contracts
+* Statuses
 * Amenities
+* Materials
+
+### Custom action
+
+* realia_before_property_archive
+* realia_after_property_archive
+* realia_before_agency_archive
+* realia_after_agency_archive
+* realia_before_agent_archive
+* realia_after_agent_archive
 
 ### Shortcodes
 
@@ -156,6 +166,18 @@ Create at least one agent at first and then choose the one you wish to assign in
 9. User properties
 
 ## Changelog
+
+**0.4.0**
+
+*Release Date - 3nd June, 2015*
+
+* WP API filter functionality
+* PayPal libraries are loading after filling credentials
+* Added material search filter
+* Property sorting
+* New archive pages actions
+* CMB2 moved to TGM
+* PayPal library cleanup
 
 **0.3.0**
 

@@ -13,13 +13,20 @@ get_header(); ?>
 				<?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
 			</header><!-- .page-header -->
 
+			<?php
+			/**
+			 * realia_before_property_archive
+			 */
+			do_action( 'realia_before_property_archive' );
+			?>
+
 			<?php if ( get_theme_mod( 'realia_general_show_property_archive_as_grid', null ) == '1' ) : ?>
 				<div class="property-box-archive">
 			<?php endif; ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php if ( get_theme_mod( 'realia_general_show_property_archive_as_grid', null ) == '1' ) : ?>
-						<?php echo Realia_Template_Loader::load( 'properties/box' ); ?>
+					<?php echo Realia_Template_Loader::load( 'properties/box' ); ?>
 				<?php else : ?>
 					<?php echo Realia_Template_Loader::load( 'properties/row' ); ?>
 				<?php endif; ?>
@@ -28,6 +35,13 @@ get_header(); ?>
 			<?php if ( get_theme_mod( 'realia_general_show_property_archive_as_grid', null ) == '1' ) : ?>
 				</div><!-- /.property-box-archive -->
 			<?php endif; ?>
+
+			<?php
+			/**
+			 * realia_after_property_archive
+			 */
+			do_action( 'realia_after_property_archive' );
+			?>
 
 			<?php the_posts_pagination( array(
 				'prev_text'          => __( 'Previous page', 'realia' ),

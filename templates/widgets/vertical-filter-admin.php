@@ -12,12 +12,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $hide_amenity = ! empty( $instance['hide_amenities'] ) ? $instance['hide_amenities'] : ''; ?>
 <?php $hide_status = ! empty( $instance['hide_status'] ) ? $instance['hide_status'] : ''; ?>
 <?php $hide_contract = ! empty( $instance['hide_contract'] ) ? $instance['hide_contract'] : ''; ?>
+<?php $hide_material = ! empty( $instance['hide_material'] ) ? $instance['hide_material'] : ''; ?>
 <?php $hide_price = ! empty( $instance['hide_price'] ) ? $instance['hide_price'] : ''; ?>
 <?php $hide_rooms = ! empty( $instance['hide_rooms'] ) ? $instance['hide_rooms'] : ''; ?>
 <?php $hide_baths = ! empty( $instance['hide_baths'] ) ? $instance['hide_baths'] : ''; ?>
 <?php $hide_beds = ! empty( $instance['hide_beds'] ) ? $instance['hide_beds'] : ''; ?>
+<?php $hide_year_built = ! empty( $instance['hide_year_built'] ) ? $instance['hide_year_built'] : ''; ?>
 <?php $hide_area = ! empty( $instance['hide_area'] ) ? $instance['hide_area'] : ''; ?>
 <?php $hide_garages = ! empty( $instance['hide_garages'] ) ? $instance['hide_garages'] : ''; ?>
+<?php $hide_featured = ! empty( $instance['hide_featured'] ) ? $instance['hide_featured'] : ''; ?>
+<?php $hide_reduced = ! empty( $instance['hide_reduced'] ) ? $instance['hide_reduced'] : ''; ?>
+<?php $hide_sticky = ! empty( $instance['hide_sticky'] ) ? $instance['hide_sticky'] : ''; ?>
+<?php $hide_sold = ! empty( $instance['hide_sold'] ) ? $instance['hide_sold'] : ''; ?>
 <?php $input_titles = ! empty( $instance['input_titles'] ) ? $instance['input_titles'] : ''; ?>
 
 <!-- TITLE -->
@@ -111,7 +117,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     </label>
 </p>
 
-<!-- STATUS -->
+<!-- CONTRACT -->
 <p>
 	<input 	type="checkbox"
 	          class="checkbox"
@@ -121,6 +127,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_contract' ) ); ?>">
 		<?php echo __( 'Hide contract', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- MATERIAL -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_material) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_material' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_material' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_material' ) ); ?>">
+		<?php echo __( 'Hide material', 'realia' ); ?>
 	</label>
 </p>
 
@@ -176,6 +195,19 @@ if ( ! defined( 'ABSPATH' ) ) {
     </label>
 </p>
 
+<!-- YEAR BUILT -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_year_built ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_year_built' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_year_built' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_year_built' ) ); ?>">
+		<?php echo __( 'Hide year built', 'realia' ); ?>
+	</label>
+</p>
+
 <!-- AREA -->
 <p>
     <input 	type="checkbox"
@@ -200,6 +232,58 @@ if ( ! defined( 'ABSPATH' ) ) {
     <label for="<?php echo esc_attr( $this->get_field_id( 'hide_garages' ) ); ?>">
         <?php echo __( 'Hide garages', 'realia' ); ?>
     </label>
+</p>
+
+<!-- FEATURED -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_featured ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_featured' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_featured' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_featured' ) ); ?>">
+		<?php echo __( 'Hide featured', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- REDUCED -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_reduced ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_reduced' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_reduced' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_reduced' ) ); ?>">
+		<?php echo __( 'Hide reduced', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- STICKY -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_sticky ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_sticky' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_sticky' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_sticky' ) ); ?>">
+		<?php echo __( 'Hide TOP', 'realia' ); ?>
+	</label>
+</p>
+
+<!-- SOLD -->
+<p>
+	<input 	type="checkbox"
+	          class="checkbox"
+		<?php echo ! empty( $hide_sold ) ? 'checked="checked"' : ''; ?>
+	          id="<?php echo esc_attr( $this->get_field_id( 'hide_sold' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'hide_sold' ) ); ?>">
+
+	<label for="<?php echo esc_attr( $this->get_field_id( 'hide_sold' ) ); ?>">
+		<?php echo __( 'Hide sold', 'realia' ); ?>
+	</label>
 </p>
 
 <!-- INPUT TITLES -->

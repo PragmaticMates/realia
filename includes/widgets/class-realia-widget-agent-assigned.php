@@ -23,7 +23,7 @@ class Realia_Widget_Agent_Assigned extends WP_Widget {
             'agent_assigned_widget',
             __( 'Assigned Agent', 'realia' ),
             array(
-                'description' => __( 'Displays assigned agent.', 'realia' ),
+                'description' => __( 'Displays assigned agent. Plugin is displaying agent card only on property detail.To show it only on property detail use is_singular(\'property\') in Widget Logic.', 'realia' ),
             )
         );
     }

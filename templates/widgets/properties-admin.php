@@ -106,6 +106,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<option value="0"><?php echo __( 'Select', 'realia' ); ?></option>
 		<option value="box" <?php echo ( $display == 'box'  || empty( $display ) ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Box', 'realia' ); ?></option>
 		<option value="small" <?php echo ( $display == 'small' ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Small', 'realia' ); ?></option>
-		<option value="only-image" <?php echo ( $display == 'only-image' ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Only image', 'realia' ); ?></option>
+		<option value="row" <?php echo ( $display == 'row' ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Row', 'realia' ); ?></option>
 	</select>
 </p>

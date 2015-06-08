@@ -1,6 +1,9 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+    /**
+     * Property gallery
+     */
     if ($('.property-gallery-index').length !== 0 && $('.property-gallery-preview').length !== 0) {
         $('.property-gallery-index a').on('click', function() {
             $(this).closest('ul').find('li').removeClass('active');
@@ -9,69 +12,12 @@ jQuery(document).ready(function($) {
         });
     }
 
-    var fontawesome = {
-        starType: 'i',
-        starOn: 'fa fa-star',
-        starHalf: 'fa fa-star-half-o',
-        starOff: 'fa fa-star-o'
-    };
-
-    if ($('.review-rating-total').length !== 0) {
-        $('.review-rating-total').each(function () {
-            var rating = $(this);
-            var opts = {
-                path: rating.data('path'),
-                score: rating.data('score'),
-                readOnly: true
-            };
-
-            if ($(this).data('fontawesome') !== undefined) {
-                $.extend(opts, fontawesome);
-            }
-
-            rating.raty(opts);
-        });
-    }
-
-    if ($('.review-rating').length !== 0) {
-        $('.review-rating').each(function () {
-            var rating = $(this);
-            var opts = {
-                path: rating.data('path'),
-                score: rating.data('score'),
-                readOnly: true
-            };
-
-            if ($(this).data('fontawesome') !== undefined) {
-                $.extend(opts, fontawesome);
-            }
-
-            rating.raty(opts);
-        });
-    }
-
-    if ($('.review-form-rating').length !== 0) {
-        var opts = {
-            path: $('.review-form-rating').data('path'),
-            targetScore: '#rating'
-        };
-
-        if ($('.review-form-rating').data('fontawesome') !== undefined) {
-            $.extend(opts, fontawesome);
-        }
-
-        $('.review-form-rating').raty(opts);
-    }
-
     /**
-     * Remove favorite
+     * Sort form
      */
-    $('.favorite-button-delete').on('click', function(e) {
-        var button = $(this);
-        e.preventDefault();
-        $.ajax(button.attr('href')).success(function(data) {
-            location.reload();
-        });        
+    var sort_form = $('#sort-form');
+    $('select' , sort_form).change(function() {
+        sort_form.submit();
     });
 
     /**
@@ -83,21 +29,6 @@ jQuery(document).ready(function($) {
         $.ajax(button.attr('href')).success(function(data) {
             location.reload();
         });        
-    });
-
-    /**
-     * Cookie policy
-     */
-    $('.cookie-policy-confirm').on('click', function(e) {
-    	e.preventDefault();
-        $.cookie('cookie-policy', true);
-    	var el = $('.cookie-policy');    	    	
-
-    	el.animate({
-    		bottom: -el.outerHeight()
-    	}, 400, function() {
-    		el.remove();
-    	});
     });
 
     /**

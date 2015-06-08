@@ -123,7 +123,7 @@ class Realia_Post_Type_Property {
 		            'id'                => REALIA_PROPERTY_PREFIX . 'contract',
 		            'type'              => 'select',
 		            'options'           => array(
-			            ''              => '',
+			            ''                      => '',
 			            REALIA_CONTRACT_RENT    => __( 'Rent', 'realia' ),
 			            REALIA_CONTRACT_SALE    => __( 'Sale', 'realia' ),
 		            ),
