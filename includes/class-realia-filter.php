@@ -227,11 +227,11 @@ class Realia_Filter {
 	    }
 
         // Property ID
-        if ( ! empty( $_GET['filter-property-id'] ) ) {
+        if ( ! empty( $_GET['filter-id'] ) ) {
             $meta[] = array(
                 'key'       => REALIA_PROPERTY_PREFIX . 'id',
-                'value'     => $_GET['filter-property-id'],
-                'compare'   => '=='
+                'value'     => $_GET['filter-id'],
+                'compare'   => 'CONTAINS'
             );
         }
 
