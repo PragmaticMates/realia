@@ -231,7 +231,7 @@ class Realia_Filter {
             $meta[] = array(
                 'key'       => REALIA_PROPERTY_PREFIX . 'id',
                 'value'     => $_GET['filter-id'],
-                'compare'   => 'CONTAINS'
+                'compare'   => 'LIKE'
             );
         }
 
