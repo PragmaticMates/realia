@@ -17,8 +17,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <form method="get" action="<?php echo get_post_type_archive_link( 'property' ); ?>">
 	<?php $skip = array(
 		'filter-property-id', 'filter-location', 'filter-property-type', 'filter-amenity', 'filter-status', 'filter-contract',
-		'filter-material', 'filter-price-from', 'filter-price-to', 'filter-rooms', 'filter-baths', 'filter-beds', 'filter-year-built', 'filter-area',
-		'filter-garages', 'filter-featured', 'filter-reduced', 'filter-sticky', 'filter-sold'
+		'filter-material', 'filter-price-from', 'filter-price-to', 'filter-rooms', 'filter-baths', 'filter-beds', 'filter-year-built',
+		'filter-home-area-from', 'filter-home-area-to', 'filter-garages', 'filter-featured', 'filter-reduced', 'filter-sticky', 'filter-sold',
+		'filter-lot-area-from', 'filter-lot-area-to',
 	); ?>
 
     <?php foreach ( $_GET as $key => $value ) : ?>
