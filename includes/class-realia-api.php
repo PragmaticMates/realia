@@ -58,7 +58,7 @@ class Realia_Api {
 		} else {
 			$post_response['sticky'] = false;
 		}
-		
+
 		// Sold
 		$sold = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sold', true );
 		if ( $sold == 'on' ) {

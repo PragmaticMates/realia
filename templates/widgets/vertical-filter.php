@@ -130,7 +130,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type"><?php echo __( 'Amenity', 'realia' ); ?></label>
 			<?php endif; ?>
 
-			<select name="filter-property-type" id="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
+			<select name="filter-amenity" id="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
 				<?php $amenities = get_terms( 'amenities', array( 'hide_empty' => false ) ); ?>
 				<option value="">
 					<?php if ( $input_titles == 'placeholders' ) : ?>
@@ -211,7 +211,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<?php if ( is_array( $materials ) ) : ?>
 					<?php foreach ( $materials as $material ) : ?>
-						<option value="<?php echo esc_attr( $material->term_id ); ?>" <?php if ( ! empty( $_GET['filter-material'] ) &&  $_GET['filter-material'] == $status->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $material->name ); ?></option>
+						<option value="<?php echo esc_attr( $material->term_id ); ?>" <?php if ( ! empty( $_GET['filter-material'] ) &&  $_GET['filter-material'] == $material->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $material->name ); ?></option>
 					<?php endforeach ?>
 				<?php endif; ?>
 			</select>
@@ -251,7 +251,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Rooms', 'realia' ); ?></label>
 				<?php endif; ?>
 
-				<input type="text" name="filter-baths"
+				<input type="text" name="filter-rooms"
 				       <?php if( $input_titles == 'placeholders' ) : ?>placeholder="<?php echo __( 'Rooms', 'realia' ); ?>"<?php endif; ?>
 				       class="form-control" value="<?php echo ! empty( $_GET['filter-rooms'] ) ? $_GET['filter-rooms'] : ''; ?>"
 				       id="<?php echo esc_attr( $args['widget_id'] ); ?>_baths">
@@ -336,7 +336,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<input type="text" name="filter-lot-area-from"
 			       <?php if( $input_titles == 'placeholders' ) : ?>placeholder="<?php echo __( 'Lot area from', 'realia' ); ?>"<?php endif; ?>
-			       class="form-control" value="<?php echo ! empty( $_GET['filter-home-area-from'] ) ? $_GET['filter-lot-area-from'] : ''; ?>"
+			       class="form-control" value="<?php echo ! empty( $_GET['filter-lot-area-from'] ) ? $_GET['filter-lot-area-from'] : ''; ?>"
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_lot_area_from">
 		</div><!-- /.form-group -->
 
@@ -371,7 +371,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- FEATURED -->
 		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-featured"
-			       value="<?php echo ! empty( $_GET['filter-featured'] ) ? $_GET['filter-featured'] : 'on'; ?>"
+			       <?php echo ! empty( $_GET['filter-featured'] ) ? 'checked' : ''; ?>
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_featured">
 
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_featured"><?php echo __( 'Featured', 'realia' ); ?></label>
@@ -382,7 +382,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- REDUCED -->
 		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-reduced"
-			       value="<?php echo ! empty( $_GET['filter-reduced'] ) ? $_GET['filter-reduced'] : 'on'; ?>"
+			       <?php echo ! empty( $_GET['filter-reduced'] ) ? 'checked' : ''; ?>
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_reduced">
 
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_reduced"><?php echo __( 'Reduced', 'realia' ); ?></label>
@@ -393,7 +393,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- STICKY -->
 		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-sticky"
-			       value="<?php echo ! empty( $_GET['filter-sticky'] ) ? $_GET['filter-sticky'] : 'on'; ?>"
+			       <?php echo ! empty( $_GET['filter-sticky'] ) ? 'checked' : ''; ?>
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_sticky">
 
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_sticky"><?php echo __( 'TOP', 'realia' ); ?></label>
@@ -404,7 +404,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<!-- SOLD -->
 		<div class="form-group checkbox">
 			<input type="checkbox" name="filter-sold"
-			       value="<?php echo ! empty( $_GET['filter-sold'] ) ? $_GET['filter-sold'] : 'on'; ?>"
+			       <?php echo ! empty( $_GET['filter-sold'] ) ? 'checked' : ''; ?>
 			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_sold">
 
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_sold"><?php echo __( 'Sold', 'realia' ); ?></label>
