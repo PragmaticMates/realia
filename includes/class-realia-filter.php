@@ -211,16 +211,16 @@ class Realia_Filter {
 	    // Sticky
 	    if ( ! empty( $_GET['filter-sticky'] ) ) {
 		    $meta[] = array(
-			    'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
+			    'key'       => REALIA_PROPERTY_PREFIX . 'sticky',
 			    'value'     => 'on',
 			    'compare'   => '=='
 		    );
 	    }
 
 	    // Sold
-	    if ( ! empty( $_GET['filter-sticky'] ) ) {
+	    if ( ! empty( $_GET['filter-sold'] ) ) {
 		    $meta[] = array(
-			    'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
+			    'key'       => REALIA_PROPERTY_PREFIX . 'sold',
 			    'value'     => 'on',
 			    'compare'   => '=='
 		    );
