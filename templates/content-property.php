@@ -107,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<dt><?php echo __( 'Location', 'realia' ); ?></dt><dd><?php echo wp_kses( $location, wp_kses_allowed_html( 'post' ) ); ?></dd>
 				<?php endif; ?>
 
-				<?php $home_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_area', true ); ?>
+				<?php $home_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_home_area', true ); ?>
 				<?php if ( ! empty( $home_area ) ) : ?>
 					<dt><?php echo __( 'Home area', 'realia' ); ?></dt><dd><?php echo esc_attr( $home_area ); ?>
 						<?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></dd>
