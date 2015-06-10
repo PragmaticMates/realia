@@ -132,6 +132,28 @@ class Realia_Api {
             $post_response['address'] = get_post_meta( $post['ID'], REALIA_AGENT_PREFIX. 'address', true );
         }
 
+        else if ( $post['post_type'] == 'agency') {
+            // Email
+            $post_response['email'] = get_post_meta( $post['ID'], REALIA_AGENCY_PREFIX. 'email', true );
+
+            // Web
+            $post_response['web'] = get_post_meta( $post['ID'], REALIA_AGENCY_PREFIX. 'web', true );
+
+            // Phone
+            $post_response['phone'] = get_post_meta( $post['ID'], REALIA_AGENCY_PREFIX. 'phone', true );
+
+            // Address
+            $post_response['address'] = get_post_meta( $post['ID'], REALIA_AGENCY_PREFIX. 'address', true );
+
+            // Map location
+            $location = get_post_meta( $post['ID'], REALIA_AGENCY_PREFIX . 'location', true );
+
+            $post_response['map_location'] = array(
+                'latitude'  => ! empty( $location['latitude'] ) ? floatval( $location['latitude'] ) : null,
+                'longitude' => ! empty( $location['longitude'] ) ? floatval( $location['longitude'] ) : null,
+            );
+        }
+
 		return $post_response;
 	}
 

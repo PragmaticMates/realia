@@ -172,6 +172,7 @@ Create at least one agent at first and then choose the one you wish to assign in
 *Release Date - TODO, 2015*
 
 * WP API for agents
+* WP API for agencies
 
 **0.4.0**
 

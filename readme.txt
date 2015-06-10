@@ -182,6 +182,7 @@ Just be sure you are running at least PHP 5.3.4
 *Release Date - TODO, 2015*
 
 * WP API for agents
+* WP API for agencies
 
 = 0.4.0 =
 
