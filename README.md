@@ -167,11 +167,18 @@ Create at least one agent at first and then choose the one you wish to assign in
 
 ## Changelog
 
+**0.5.0**
+
+*Release Date - TODO, 2015*
+
+* WP API for agents
+* WP API for agencies
+
 **0.4.0**
 
 *Release Date - 3nd June, 2015*
 
-* WP API filter functionality
+* WP API properties filter functionality
 * PayPal libraries are loading after filling credentials
 * Added material search filter
 * Property sorting
