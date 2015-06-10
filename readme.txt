@@ -3,7 +3,7 @@ Contributors: pragmaticmates
 Tags: real estate, agent, listing, estator, realestate, agent, agency, house, directory, property
 Requires at least: 3.8
 Tested up to: 4.2
-Stable tag: 0.4.0
+Stable tag: 0.5.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -176,6 +176,12 @@ Just be sure you are running at least PHP 5.3.4
 9. User properties
 
 == Changelog ==
+
+= 0.5.0 =
+
+*Release Date - TODO, 2015*
+
+* WP API for agents
 
 = 0.4.0 =
 
