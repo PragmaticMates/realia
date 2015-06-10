@@ -145,6 +145,16 @@ class Realia_Filter {
             );
         }
 
+	    // Search by distance
+	    if ( ! empty( $_GET['filter-center-latitude'] ) && ! empty( $_GET['filter-center-longitude'] ) && ! empty( $_GET['filter-distance'] ) ) {
+		    $properties = self::filter_by_distance( $_GET['filter-center-latitude'], $_GET['filter-center-longitude'], $_GET['filter-distance'] );
+		    $ids = array();
+		    foreach ( $properties as $property ) {
+			    $ids[] = $property->ID;
+		    }
+			$query->set( 'post__in', $ids );
+	    }
+
         // Property type
         if ( ! empty( $_GET['filter-property-type'] ) ) {
             $taxonomies[] = array(
@@ -376,6 +386,33 @@ class Realia_Filter {
 
         return $clauses;
     }
+
+	/**
+	 * Find properties by GPS position matching the distance
+	 *
+	 * @access public
+	 * @param $latitude
+	 * @param $longitude
+	 * @param $distance
+	 *
+	 * @return mixed
+	 */
+	public static function filter_by_distance($latitude, $longitude, $distance) {
+		global $wpdb;
+
+		$sql = 'SELECT SQL_CALC_FOUND_ROWS ID, ( 3959 * acos( cos( radians(' . $latitude . ') ) * cos(radians( latitude.meta_value ) ) * cos( radians( longitude.meta_value ) - radians(' . $longitude . ') ) + sin( radians(' . $latitude . ') ) * sin( radians( latitude.meta_value ) ) ) ) AS distance
+    				FROM ' . $wpdb->prefix . 'posts
+                    INNER JOIN ' . $wpdb->prefix . 'postmeta ON (' . $wpdb->prefix . 'posts.ID = ' . $wpdb->prefix . 'postmeta.post_id)
+                    INNER JOIN ' . $wpdb->prefix . 'postmeta AS latitude ON ' . $wpdb->prefix . 'posts.ID = latitude.post_id
+                    INNER JOIN ' . $wpdb->prefix . 'postmeta AS longitude ON ' . $wpdb->prefix . 'posts.ID = longitude.post_id
+                    WHERE ' . $wpdb->prefix . 'posts.post_type = "property"
+                        AND ' . $wpdb->prefix . 'posts.post_status = "publish"
+                        AND latitude.meta_key="property_map_location_latitude"
+                        AND longitude.meta_key="property_map_location_longitude"
+					GROUP BY ' . $wpdb->prefix . 'posts.ID HAVING distance <= ' . $distance . ';';
+
+		return $wpdb->get_results( $sql );
+	}
 }
 
 Realia_Filter::init();
