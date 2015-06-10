@@ -788,7 +788,6 @@ class Realia_Post_Type_Property {
             $property_groups = array();
             $data = array();
 
-
             Realia_Query::loop_properties_all();
             Realia_Query::loop_properties_filter();
 
@@ -797,14 +796,13 @@ class Realia_Post_Type_Property {
                     the_post();
                     // Property GPS positions. We will use these values
                     // for genearating unique md5 hash for property groups.
-                    $location = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location', true );
-                    $latitude = $location['latitude'];
-                    $longitude = $location['longitude'];
+                    $latitude = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location_latitude', true );
+                    $longitude = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location_longitude', true );
 
                     // Build on array of property groups. We need to know how
                     // many and which properties are at the same position.
                     if ( ! empty( $latitude ) && ! empty( $longitude ) ) {
-                        $hash = sha1($latitude . $longitude);
+                        $hash = sha1( $latitude . $longitude );
                         $property_groups[$hash][] = get_the_ID();
 
                     }
@@ -825,9 +823,8 @@ class Realia_Post_Type_Property {
                     // Group of properties at the same position so we will process
                     // property loop inside the template.
                     if ( count( $group ) > 1 ) {
-                        $location = get_post_meta( $group[0], REALIA_PROPERTY_PREFIX . 'map_location', true );
-                        $latitude = $location['latitude'];
-                        $longitude = $location['longitude'];
+                        $latitude = get_post_meta( $group[0], REALIA_PROPERTY_PREFIX . 'map_location_latitude', true );
+                        $longitude = get_post_meta( $group[0], REALIA_PROPERTY_PREFIX . 'map_location_longitude', true );
 
                         // Marker
                         ob_start();
@@ -849,9 +846,8 @@ class Realia_Post_Type_Property {
                     // Just one property. We can get current post here.
                     } else {
                         the_post();
-                        $location = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location', true );
-                        $latitude = $location['latitude'];
-                        $longitude = $location['longitude'];
+                        $latitude = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location_latitude', true );
+                        $longitude = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location_longitude', true );
 
                         $content = str_replace( array( "\r\n", "\n", "\t" ), '', Realia_Template_Loader::load( 'misc/google-map-infowindow' ) );
                         $marker_content = str_replace( array( "\r\n", "\n", "\t" ), '', Realia_Template_Loader::load( 'misc/google-map-marker' ) );

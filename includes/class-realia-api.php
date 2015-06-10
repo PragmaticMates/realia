@@ -110,11 +110,12 @@ class Realia_Api {
             }
 
             // Map location
-            $location = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'map_location', true );
+            $latitude = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'map_location_latitude', true );
+			$longitude = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'map_location_longitude', true );
 
             $post_response['map_location'] = array(
-                'latitude'  => ! empty( $location['latitude'] ) ? floatval( $location['latitude'] ) : null,
-                'longitude' => ! empty( $location['longitude'] ) ? floatval( $location['longitude'] ) : null,
+                'latitude'  => ! empty( $latitude ) ? floatval( $latitude ) : null,
+                'longitude' => ! empty( $longitude ) ? floatval( $longitude ) : null,
             );
         }
 
