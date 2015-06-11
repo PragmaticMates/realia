@@ -122,6 +122,11 @@ purposes or directory listings.
 * realia_before_agent_archive
 * realia_after_agent_archive
 
+* realia_before_property_box_title
+* realia_after_property_box_title
+* realia_before_property_box_body
+* realia_after_property_box_body
+
 ### Shortcodes
 
 * `[realia_breadcrumb]` Displays breadcrumb.

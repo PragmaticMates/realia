@@ -32,26 +32,56 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div><!-- /.property-image -->
 
     <div class="property-box-content">
-        <h3 class="property-box-title">
-            <a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
-        </h3><!-- /.property-box-title -->
+        <div class="property-box-title">
+	        <?php
+	        /**
+	         * realia_before_property_box_title
+	         */
+	        do_action( 'realia_before_property_box_title', get_the_ID() );
+	        ?>
 
-        <?php $type = Realia_Query::get_property_type_name(); ?>
-        <?php if ( ! empty( $type ) ) : ?>
-            <div class="property-box-type">
-                <?php echo wp_kses( $type, wp_kses_allowed_html( 'post' ) ); ?>
-            </div><!-- /.property-box-type -->
-        <?php endif; ?>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
 
-        <?php $price = Realia_Price::get_property_price(); ?>
-        <?php if ( ! empty( $price ) ) : ?>
-            <div class="property-box-price">
-                <?php echo wp_kses( $price, wp_kses_allowed_html( 'post' ) ); ?>
-            </div><!-- /.property-box-price -->
-        <?php endif; ?>
+	        <?php
+	        /**
+	         * realia_after_property_box_title
+	         */
+	        do_action( 'realia_after_property_box_title', get_the_ID() );
+	        ?>
+        </div><!-- /.property-box-title -->
 
-	    <div class="property-box-read-more">
-		    <a href="<?php the_permalink(); ?>"><?php echo __( 'Read More', 'realia' ); ?></a>
-	    </div><!-- /.property-box-price -->
+	    <div class="property-box-body">
+		    <?php
+		    /**
+		     * realia_before_property_box_body
+		     */
+		    do_action( 'realia_before_property_box_body', get_the_ID() );
+		    ?>
+
+	        <?php $type = Realia_Query::get_property_type_name(); ?>
+	        <?php if ( ! empty( $type ) ) : ?>
+	            <div class="property-box-type">
+	                <?php echo wp_kses( $type, wp_kses_allowed_html( 'post' ) ); ?>
+	            </div><!-- /.property-box-type -->
+	        <?php endif; ?>
+
+	        <?php $price = Realia_Price::get_property_price(); ?>
+	        <?php if ( ! empty( $price ) ) : ?>
+	            <div class="property-box-price">
+	                <?php echo wp_kses( $price, wp_kses_allowed_html( 'post' ) ); ?>
+	            </div><!-- /.property-box-price -->
+	        <?php endif; ?>
+
+		    <div class="property-box-read-more">
+			    <a href="<?php the_permalink(); ?>"><?php echo __( 'Read More', 'realia' ); ?></a>
+		    </div><!-- /.property-box-price -->
+
+		    <?php
+		    /**
+		     * realia_after_property_box_body
+		     */
+		    do_action( 'realia_after_property_box_body', get_the_ID() );
+		    ?>
+	    </div><!-- /.property-box-body -->
     </div><!-- /.property-box-content -->
 </div>
