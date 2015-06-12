@@ -136,8 +136,11 @@ class Realia_Query {
             return $property_locations[$post_id];
         }
 
-        $locations = wp_get_post_terms( $post_id, 'locations' );
-
+        $locations = wp_get_post_terms( $post_id, 'locations', array(
+	        'orderby'   => 'parent',
+	        'order'     => 'DESC'
+        ) );
+	    
         if ( is_array( $locations ) && count( $locations ) > 0 ) {
             $output = '';
 
