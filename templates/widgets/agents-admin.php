@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php $title = ! empty( $instance['title'] ) ? $instance['title'] : ''; ?>
 <?php $description = ! empty( $instance['description'] ) ? $instance['description'] : ''; ?>
+<?php $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : ''; ?>
 <?php $count = ! empty( $instance['count'] ) ? $instance['count'] : 3; ?>
 <?php $per_row = ! empty( $instance['per_row'] ) ? $instance['per_row'] : 3; ?>
 <?php $display = ! empty( $instance['display'] ) ? $instance['display'] : 'small'; ?>
@@ -34,6 +35,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	          id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"
 	          name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"><?php echo esc_attr( $description ); ?></textarea>
 </p>
+
+<!-- CLASSES -->
+<p>
+	<label for="<?php echo esc_attr( $this->get_field_id( 'classes' ) ); ?>">
+		<?php echo __( 'Classes', 'realia' ); ?>
+	</label>
+
+	<input  class="widefat"
+	        id="<?php echo esc_attr( $this->get_field_id( 'classes' ) ); ?>"
+	        name="<?php echo esc_attr( $this->get_field_name( 'classes' ) ); ?>"
+	        type="text"
+	        value="<?php echo esc_attr( $classes ); ?>">
+	<br>
+	<small><?php echo __( 'Additional classes e.g. <i>fullwidth background-gray</i>', 'realia' ); ?></small>
+</p>
+
 
 <!-- COUNT -->
 <p>

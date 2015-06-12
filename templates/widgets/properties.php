@@ -8,6 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 
+<?php if ( ! empty( $instance['classes'] ) ) : ?>
+	<div class="<?php echo $instance['classes']; ?>">
+<?php endif; ?>
+
 <?php if ( ! empty( $instance['title'] ) ) : ?>
     <?php echo wp_kses( $args['before_title'], wp_kses_allowed_html( 'post' ) ); ?>
 	<?php echo wp_kses( $instance['title'], wp_kses_allowed_html( 'post' ) ); ?>
@@ -21,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.description -->
 	<?php endif; ?>
 
-	<div class="type-<?php echo esc_attr( $instance['display'] ); ?> item-per-row-<?php echo esc_attr( $instance['per_row'] ); ?>">
+	<div class="type-<?php echo esc_attr( $instance['display'] ); ?> item-per-row-<?php echo esc_attr( $instance['per_row'] ); ?> <?php if ( ! empty( $instance['classes'] ) ) : ?><?php echo $instance['classes']; ?><?php endif; ?>">
 		<?php if ( $instance['per_row'] != 1 ) : ?>
 			<div class="properties-row">
 		<?php endif; ?>
@@ -47,6 +51,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="alert alert-warning">
 		<?php echo __( 'No properties found.', 'realia' ); ?>
  	</div><!-- /.alert -->
+<?php endif; ?>
+
+<?php if ( ! empty( $instance['classes'] ) ) : ?>
+	</div>
 <?php endif; ?>
 
 <?php echo wp_kses( $args['after_widget'], wp_kses_allowed_html( 'post' ) ); ?>

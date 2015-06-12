@@ -8,6 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 
+<?php if ( ! empty( $instance['classes'] ) ) : ?>
+	<div class="<?php echo $instance['classes']; ?>">
+<?php endif; ?>
 
 <?php if ( ! empty( $instance['title'] ) ) : ?>
     <?php echo wp_kses( $args['before_title'], wp_kses_allowed_html( 'post' ) ); ?>
@@ -48,6 +51,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="alert alert-warning">
 		<?php echo __( 'No agents found.', 'realia' ); ?>
 	</div><!-- /.alert -->
+<?php endif; ?>
+
+<?php if ( ! empty( $instance['classes'] ) ) : ?>
+	</div>
 <?php endif; ?>
 
 <?php echo wp_kses( $args['after_widget'], wp_kses_allowed_html( 'post' ) ); ?>
