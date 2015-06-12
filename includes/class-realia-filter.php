@@ -21,11 +21,48 @@ class Realia_Filter {
     public static function init() {
         add_action( 'pre_get_posts', array( __CLASS__, 'archive' ) );
         add_action( 'pre_get_posts', array( __CLASS__, 'taxonomy') );
-	    add_action( 'realia_before_property_archive', array( __CLASS__, 'sort_template') );
+	    add_action( 'realia_before_property_archive', array( __CLASS__, 'sort_template' ) );
     }
 
+	/**
+	 * Gets sort template
+	 *
+	 * @access public
+	 * @return void
+	 * @throws Exception
+	 */
 	public static function sort_template() {
 		include Realia_Template_Loader::locate( 'properties/sort' );
+	}
+
+	/**
+	 * Returns list of available filter fields templates
+	 *
+	 * @access public
+	 * @return array
+	 */
+	public static function get_fields() {
+		return array(
+			'id'            => __( 'Property ID', 'realia' ),
+			'location'      => __( 'Location', 'realia' ),
+			'property_type' => __( 'Property type', 'realia' ),
+			'amenity'       => __( 'Amenity', 'realia' ),
+			'status'        => __( 'Statys', 'realia' ),
+			'contract'      => __( 'Contract', 'realia' ),
+			'material'      => __( 'Material', 'realia' ),
+			'price'         => __( 'Price', 'realia' ),
+			'rooms'         => __( 'Rooms', 'realia' ),
+			'baths'         => __( 'Baths', 'realia' ),
+			'beds'          => __( 'Beds', 'realia' ),
+			'year_built'    => __( 'Year built', 'realia' ),
+			'home_area'     => __( 'Home area', 'realia' ),
+			'lot_area'      => __( 'Lot area', 'realia' ),
+			'garages'       => __( 'Garages', 'realia' ),
+			'featured'      => __( 'Featured', 'realia' ),
+			'reduced'       => __( 'Reduced', 'realia' ),
+			'sticky'        => __( 'Sticky', 'realia' ),
+			'sold'          => __( 'Sold', 'realia' ),
+		);
 	}
 
     /**

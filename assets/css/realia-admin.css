@@ -48,3 +48,48 @@
 .center {
 	text-align: center;
 }
+
+.realia-filter-fields li {
+    background: #fafafa;
+    border: 1px solid #dfdfdf;
+    cursor: move;
+}
+
+.realia-filter-fields li.invisible {
+    opacity: .4;
+}
+
+.realia-filter-fields li p {
+    font-size: 12px;
+    margin: 7px 15px;
+}
+
+.realia-filter-fields li i {
+    font-size: 10px;
+    margin: 0px 5px 0px 0px;
+}
+
+.realia-filter-fields li .visibility {
+    cursor: pointer;
+    float: right;
+    position: relative;
+}
+
+.realia-filter-fields li .visibility i {
+    cursor: pointer;
+    font-size: 15px;
+    left: 0px;
+    position: absolute;
+    pointer-events: none;
+    top: 2px;
+}
+
+.realia-filter-fields li .visibility .field-visibility {
+    background-color: transparent !important;
+    border: 0px !important;
+    box-shadow: none !important;
+}
+
+.realia-filter-fields li .visibility .field-visibility:before {
+    display: none;
+}
