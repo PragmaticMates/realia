@@ -47,7 +47,7 @@ class Realia_Taxonomies_Locations {
             'labels'            => $property_locations_labels,
             'hierarchical'      => true,
             'query_var'         => 'location',
-            'rewrite'           => array( 'slug' => __( 'location', 'realia' ) ),
+            'rewrite'           => array( 'slug' => __( 'location', 'realia' ), 'hierarchical' => true ),
             'public'            => true,
             'show_ui'           => true,
             'show_admin_column' => true,
