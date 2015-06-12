@@ -35,4 +35,4 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div><!-- /.agent-box-phone -->
         <?php endif; ?>
     </div><!-- /.agent-box-content -->
-</div>
+</div><!-- /.agent-box-->

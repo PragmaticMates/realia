@@ -11,14 +11,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( ! empty( $instance['title'] ) ) : ?>
     <?php echo wp_kses( $args['before_title'], wp_kses_allowed_html( 'post' ) ); ?>
-    <?php echo esc_attr( $instance['title'] ); ?>
+	<?php echo wp_kses( $instance['title'], wp_kses_allowed_html( 'post' ) ); ?>
     <?php echo wp_kses( $args['after_title'], wp_kses_allowed_html( 'post' ) ); ?>
 <?php endif; ?>
 
 <?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php include Realia_Template_Loader::locate( 'agents/small' ); ?>
-	<?php endwhile; ?>
+	<?php if ( ! empty( $instance['description'] ) ) : ?>
+		<div class="description">
+			<?php echo wp_kses( $instance['description'], wp_kses_allowed_html( 'post' ) ); ?>
+		</div><!-- /.description -->
+	<?php endif; ?>
+
+	<div class="type-<?php echo esc_attr( $instance['display'] ); ?> item-per-row-<?php echo esc_attr( $instance['per_row'] ); ?>">
+		<?php if ( $instance['per_row'] != 1 ) : ?>
+			<div class="agents-row">
+		<?php endif; ?>
+
+		<?php $index = 0; ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<div class="agents-container">
+				<?php include Realia_Template_Loader::locate( 'agents/' . $instance['display'] ); ?>
+			</div><!-- /.property-container -->
+
+			<?php if ( ( $index + 1 ) % $instance['per_row'] == 0 && $instance['per_row'] != 1 && Realia_Query::loop_has_next() ) : ?>
+				</div><div class="agents-row">
+			<?php endif; ?>
+
+			<?php $index++; ?>
+		<?php endwhile; ?>
+
+		<?php if ( $instance['per_row'] != 1 ) : ?>
+			</div><!-- /.properties-row -->
+		<?php endif; ?>
+	</div>
 <?php else : ?>
 	<div class="alert alert-warning">
 		<?php echo __( 'No agents found.', 'realia' ); ?>

@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php $title = ! empty( $instance['title'] ) ? $instance['title'] : ''; ?>
+<?php $description = ! empty( $instance['description'] ) ? $instance['description'] : ''; ?>
 <?php $count = ! empty( $instance['count'] ) ? $instance['count'] : 3; ?>
 <?php $per_row = ! empty( $instance['per_row'] ) ? $instance['per_row'] : 3; ?>
 <?php $attribute = ! empty( $instance['attribute'] ) ? $instance['attribute'] : ''; ?>
@@ -21,6 +22,18 @@ if ( ! defined( 'ABSPATH' ) ) {
             name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
             type="text"
             value="<?php echo esc_attr( $title ); ?>">
+</p>
+
+<!-- DESCRIPTION -->
+<p>
+	<label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>">
+		<?php echo __( 'Description', 'realia' ); ?>
+	</label>
+
+	<textarea class="widefat"
+	          rows="4"
+	          id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"
+	          name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"><?php echo esc_attr( $description ); ?></textarea>
 </p>
 
 <!-- COUNT -->

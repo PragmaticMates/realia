@@ -140,7 +140,7 @@ class Realia_Query {
 	        'orderby'   => 'parent',
 	        'order'     => 'DESC'
         ) );
-	    
+
         if ( is_array( $locations ) && count( $locations ) > 0 ) {
             $output = '';
 
