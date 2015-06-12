@@ -47,7 +47,7 @@ class Realia_Filter {
 			'location'      => __( 'Location', 'realia' ),
 			'property_type' => __( 'Property type', 'realia' ),
 			'amenity'       => __( 'Amenity', 'realia' ),
-			'status'        => __( 'Statys', 'realia' ),
+			'status'        => __( 'Status', 'realia' ),
 			'contract'      => __( 'Contract', 'realia' ),
 			'material'      => __( 'Material', 'realia' ),
 			'price'         => __( 'Price', 'realia' ),
