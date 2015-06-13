@@ -8,13 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="agency-row-content">
         <div class="agency-row-content-inner">
             <div class="agency-row-main">
-                <div class="agency-thumbnail">
-                    <?php if ( has_post_thumbnail() ) : ?>
+                <?php if ( has_post_thumbnail() ) : ?>
+		            <div class="agency-thumbnail">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail( 'thumbnail' ); ?>
                         </a>
-                    <?php endif; ?>
-                </div>
+		            </div>
+                <?php endif; ?>
 
                 <div class="agency-row-body">
 	                <?php $agents_count = Realia_Query::get_agency_agents()->post_count; ?>
