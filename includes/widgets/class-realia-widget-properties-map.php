@@ -20,13 +20,37 @@ class Realia_Widget_Properties_Map extends WP_Widget {
      */
     function Realia_Widget_Properties_Map() {
         parent::__construct(
-            'properties_map_widget',
+            'properties_map',
             __( 'Properties Map', 'realia' ),
             array(
                 'description' => __( 'Displays properties in the map.', 'realia' ),
             )
         );
+
+	    add_action( 'body_class', array( __CLASS__, 'add_body_class' ) );
     }
+
+	/**
+	 * Adds classes to body
+	 *
+	 * @param $classes array
+	 *
+	 * @access public
+	 * @return array
+	 */
+	public static function add_body_class( $classes ) {
+		$settings = get_option( 'widget_properties_map' );
+		foreach( $settings as $key => $value ) {
+			if ( is_active_widget( false, 'properties_map-' . $key, 'properties_map' ) ) {
+				if ( ! empty( $value['classes'] ) ) {
+					$parts = explode( ',', $value['classes'] );
+					$classes = array_merge( $classes, $parts );
+				}
+			}
+		}
+
+		return $classes;
+	}
 
     /**
      * Frontend

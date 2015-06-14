@@ -4,11 +4,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php $latitude = ! empty( $instance['latitude'] ) ? $instance['latitude'] : 37.439826; ?>
-<?php $longitude = ! empty( $instance['longitude'] ) ? $instance['longitude'] : -122.132088; ?>
-<?php $zoom = ! empty( $instance['zoom'] ) ? $instance['zoom'] : 11; ?>
-<?php $grid_size = ! empty( $instance['grid_size'] ) ? $instance['grid_size'] : 60; ?>
-<?php $style = ! empty( $instance['style'] ) ? $instance['style'] : ''; ?>
+<?php
+$latitude = ! empty( $instance['latitude'] ) ? $instance['latitude'] : 37.439826;
+$longitude = ! empty( $instance['longitude'] ) ? $instance['longitude'] : -122.132088;
+$zoom = ! empty( $instance['zoom'] ) ? $instance['zoom'] : 11;
+$grid_size = ! empty( $instance['grid_size'] ) ? $instance['grid_size'] : 60;
+$style = ! empty( $instance['style'] ) ? $instance['style'] : '';
+$height = ! empty( $instance['height'] ) ? $instance['height'] : '400px';
+$classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
+?>
+
 
 <!-- LATITUDE -->
 <p>
@@ -35,6 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             type="text"
             value="<?php echo esc_attr( $longitude ); ?>">
 </p>
+
 
 <!-- ZOOM -->
 <p>
@@ -78,3 +84,32 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php endif; ?>
     </select>
 </p>
+
+<!-- HEIGHT -->
+<p>
+	<label for="<?php echo esc_attr( $this->get_field_id( 'height' ) ); ?>">
+		<?php echo __( 'Height', 'realia' ); ?>
+	</label>
+
+	<input  class="widefat"
+	        id="<?php echo esc_attr( $this->get_field_id( 'height' ) ); ?>"
+	        name="<?php echo esc_attr( $this->get_field_name( 'height' ) ); ?>"
+	        type="text"
+	        value="<?php echo esc_attr( $height ); ?>">
+</p>
+
+<!-- CLASSES -->
+<p>
+	<label for="<?php echo esc_attr( $this->get_field_id( 'classes' ) ); ?>">
+		<?php echo __( 'Classes', 'realia' ); ?>
+	</label>
+
+	<input  class="widefat"
+	        id="<?php echo esc_attr( $this->get_field_id( 'classes' ) ); ?>"
+	        name="<?php echo esc_attr( $this->get_field_name( 'classes' ) ); ?>"
+	        type="text"
+	        value="<?php echo esc_attr( $classes ); ?>">
+	<br>
+	<small><?php echo __( 'Additional classes appended to body class and separated by , e.g. <i>transparent-header, property-map-append-top</i>', 'realia' ); ?></small>
+</p>
+
