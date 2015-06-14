@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div><!-- /.property-row-main -->
 
 			<?php $price = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'price', true ); ?>
-			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_area', true ); ?>
+			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_home_area', true ); ?>
 			<?php $status = Realia_Query::get_property_status_name(); ?>
 			<?php $type = Realia_Query::get_property_type_name(); ?>
 
@@ -56,29 +56,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<footer class="entry-footer">
 					<div class="property-row-meta">
 						<?php if ( ! empty( $price ) ) : ?>
-							<span class="property-row-meta-item">
+							<span class="property-row-meta-item property-row-meta-item-price">
 								<span><?php echo __( 'Price', 'realia' ); ?>:</span>
 								<strong><?php echo Realia_Price::get_property_price(); ?></strong>
 							</span><!-- /.property-box-meta-item -->
 						<?php endif; ?>
 
 						<?php if ( ! empty( $type ) ) : ?>
-							<span class="property-row-meta-item">
+							<span class="property-row-meta-item property-row-meta-item-type">
 								<span><?php echo __( 'Type', 'realia' ); ?>:</span>
 								<strong><?php echo esc_attr( $type ); ?></strong>
 							</span><!-- /.property-box-meta-item -->
 						<?php endif; ?>
 
 						<?php if ( ! empty( $area ) ) : ?>
-							<span class="property-row-meta-item">
+							<span class="property-row-meta-item property-row-meta-item-area">
 								<span><?php echo __( 'Area', 'realia' ); ?>:</span>
 								<strong><?php echo esc_attr( $area ); ?> <?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></strong>
 							</span><!-- /.property-box-meta-item -->
 						<?php endif; ?>
 
-
 						<?php if ( ! empty( $status ) ) : ?>
-							<span class="property-row-meta-item">
+							<span class="property-row-meta-item property-row-meta-status">
 								<span><?php echo __( 'Status', 'realia' ); ?>:</span>
 								<strong><?php echo esc_attr( $status ); ?></strong>
 							</span><!-- /.property-box-meta-item -->
