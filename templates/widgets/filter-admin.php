@@ -80,7 +80,7 @@ $sort = ! empty( $instance['sort'] ) ? $instance['sort'] : '';
 	<input type="hidden"
 	       value="<?php echo esc_attr( $sort ); ?>"
 	       id="<?php echo esc_attr( $this->get_field_id( 'sort' ) ); ?>"
-	       name="<?php echo esc_attr( $this->get_field_name( 'sort' ) ); ?>" value="<?php ?>">
+	       name="<?php echo esc_attr( $this->get_field_name( 'sort' ) ); ?>" value="<?php echo esc_attr( $sort ); ?>">
 
 	<?php foreach ( $fields as $key => $value ) : ?>
 		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'hide_' . $key] ) ) : ?>class="invisible"<?php endif; ?>>

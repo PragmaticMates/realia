@@ -1,6 +1,17 @@
 jQuery(document).ready(function($) {
     'use strict';
 
+
+    $('.tabs-navigation a').on('click', function(e) {
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+        var tab = $(this).attr("href");
+        $('.tab-content').not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+
     /**
      * Property gallery
      */
