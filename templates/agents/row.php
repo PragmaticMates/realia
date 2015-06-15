@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="agent-row-content">
         <div class="agent-row-content-inner">
             <div class="agent-row-main">
-	            <?php if ( has_thumbnail() ): ?>
+	            <?php if ( has_post_thumbnail() ): ?>
 		            <div class="agent-thumbnail">
 			            <?php if ( has_post_thumbnail() ) : ?>
 				            <a href="<?php the_permalink() ?>">
