@@ -16,16 +16,79 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="tabs">
 	<ul class="tabs-navigation">
-		<li class="rent active"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-rent"><?php echo __( 'For Rent', 'realia' ); ?></a></li>
-		<li class="sale"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-sale"><?php echo __( 'For Sale', 'realia' ); ?></a></li>
+		<li class="rent <?php if ( empty( $_GET['filter-contract'] ) || $_GET['filter-contract'] == 'RENT' ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-rent"><?php echo __( 'For Rent', 'realia' ); ?></a></li>
+		<li class="sale <?php if ( ! empty( $_GET['filter-contract'] ) && $_GET['filter-contract'] == 'SALE' ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-sale"><?php echo __( 'For Sale', 'realia' ); ?></a></li>
 	</ul>
 
+	<?php $fields = Realia_Filter::get_fields(); ?>
+
 	<div class="tabs-content">
-		<div class="tab-content rent-tab active" id="<?php echo esc_attr( $args['widget_id'] ); ?>-rent">
-			aaa
+		<div class="tab-content rent-tab <?php if ( empty( $_GET['filter-contract'] ) || $_GET['filter-contract'] == 'RENT' ) : ?>active<?php endif; ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>-rent">
+			<form method="get" action="<?php echo get_post_type_archive_link( 'property' ); ?>">
+				<?php $skip = Realia_Filter::get_field_names(); ?>
+
+				<?php foreach ( $_GET as $key => $value ) : ?>
+					<?php if ( ! in_array( $key, $skip ) ) : ?>
+						<input type="hidden" name="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_html( $value ); ?>">
+					<?php endif; ?>
+				<?php endforeach; ?>
+
+				<input type="hidden" name="filter-contract" value="RENT">
+
+				<?php if ( ! empty( $instance['sort_rent'] ) ) : ?>
+					<?php
+					$keys = explode( ',', $instance['sort_rent'] );
+					$filtered_keys = array_filter( $keys );
+					$fields = array_merge( array_flip( $filtered_keys ), $fields );
+					?>
+				<?php endif; ?>
+
+				<?php foreach( $fields as $key => $value ) : ?>
+					<?php $template = str_replace( '_', '-', $key ); ?>
+					<?php $instance['hide_' . $key] = $instance['rent_hide_' . $key]; ?>
+					<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>
+				<?php endforeach; ?>
+
+				<?php if ( ! empty( $instance['button_text'] ) ) : ?>
+					<div class="form-group">
+						<button class="btn"><?php echo esc_attr( $instance['button_text'] ); ?></button>
+					</div><!-- /.form-group -->
+				<?php endif; ?>
+			</form>
 		</div>
-		<div class="tab-content sale-tab" id="<?php echo esc_attr( $args['widget_id'] ); ?>-sale">
-			bbb
+
+		<div class="tab-content sale-tab <?php if ( ! empty( $_GET['filter-contract'] ) && $_GET['filter-contract'] == 'SALE' ) : ?>active<?php endif; ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>-sale">
+			<form method="get" action="<?php echo get_post_type_archive_link( 'property' ); ?>">
+				<?php $skip = Realia_Filter::get_field_names(); ?>
+
+				<?php foreach ( $_GET as $key => $value ) : ?>
+					<?php if ( ! in_array( $key, $skip ) ) : ?>
+						<input type="hidden" name="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_html( $value ); ?>">
+					<?php endif; ?>
+				<?php endforeach; ?>
+
+				<input type="hidden" name="filter-contract" value="SALE">
+
+				<?php if ( ! empty( $instance['sort_sale'] ) ) : ?>
+					<?php
+					$keys = explode( ',', $instance['sort_sale'] );
+					$filtered_keys = array_filter( $keys );
+					$fields = array_merge( array_flip( $filtered_keys ), $fields );
+					?>
+				<?php endif; ?>
+
+				<?php foreach( $fields as $key => $value ) : ?>
+					<?php $template = str_replace( '_', '-', $key ); ?>
+					<?php $instance['hide_' . $key] = $instance['sale_hide_' . $key]; ?>
+					<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>
+				<?php endforeach; ?>
+
+				<?php if ( ! empty( $instance['button_text'] ) ) : ?>
+					<div class="form-group">
+						<button class="btn"><?php echo esc_attr( $instance['button_text'] ); ?></button>
+					</div><!-- /.form-group -->
+				<?php endif; ?>
+			</form>
 		</div>
 	</div>
 </div>

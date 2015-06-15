@@ -65,6 +65,21 @@ class Realia_Filter {
 		);
 	}
 
+	/**
+	 * Return all filter field names
+	 *
+	 * @access public
+	 * @return array
+	 */
+	public static function get_field_names() {
+		return array(
+			'filter-id', 'filter-location', 'filter-property-type', 'filter-amenity', 'filter-status', 'filter-contract',
+			'filter-material', 'filter-price-from', 'filter-price-to', 'filter-rooms', 'filter-baths', 'filter-beds', 'filter-year-built',
+			'filter-home-area-from', 'filter-home-area-to', 'filter-garages', 'filter-featured', 'filter-reduced', 'filter-sticky', 'filter-sold',
+			'filter-lot-area-from', 'filter-lot-area-to',
+		);
+	}
+
     /**
      * Checks if in URI are filter conditions
      *
