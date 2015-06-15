@@ -4,7 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<?php $input_titles = ! empty( $instance['input_titles'] ) ? $instance['input_titles'] : 'labels'; ?>
+<?php
+$input_titles = ! empty( $instance['input_titles'] ) ? $instance['input_titles'] : 'labels';
+$classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
+?>
 
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 
@@ -14,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php echo wp_kses( $args['after_title'], wp_kses_allowed_html( 'post' ) ); ?>
 <?php endif; ?>
 
-<div class="tabs">
+<div class="tabs <?php echo esc_attr( $classes );?>">
 	<ul class="tabs-navigation">
 		<li class="rent <?php if ( empty( $_GET['filter-contract'] ) || $_GET['filter-contract'] == 'RENT' ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-rent"><?php echo __( 'For Rent', 'realia' ); ?></a></li>
 		<li class="sale <?php if ( ! empty( $_GET['filter-contract'] ) && $_GET['filter-contract'] == 'SALE' ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-sale"><?php echo __( 'For Sale', 'realia' ); ?></a></li>

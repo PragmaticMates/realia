@@ -8,6 +8,7 @@ $button_text = ! empty( $instance['button_text'] ) ? $instance['button_text'] : 
 $input_titles = ! empty( $instance['input_titles'] ) ? $instance['input_titles'] : '';
 $sort_rent = ! empty( $instance['sort_rent'] ) ? $instance['sort_rent'] : '';
 $sort_sale = ! empty( $instance['sort_sale'] ) ? $instance['sort_sale'] : '';
+$classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 ?>
 
 <!-- TITLE -->
@@ -64,6 +65,22 @@ $sort_sale = ! empty( $instance['sort_sale'] ) ? $instance['sort_sale'] : '';
 		</label>
 	</li>
 </ul>
+
+<!-- CLASSES -->
+<p>
+	<label for="<?php echo esc_attr( $this->get_field_id( 'classes' ) ); ?>">
+		<?php echo __( 'Classes', 'realia' ); ?>
+	</label>
+
+	<input  class="widefat"
+	        id="<?php echo esc_attr( $this->get_field_id( 'classes' ) ); ?>"
+	        name="<?php echo esc_attr( $this->get_field_name( 'classes' ) ); ?>"
+	        type="text"
+	        value="<?php echo esc_attr( $classes ); ?>">
+	<br>
+	<small><?php echo __( 'Additional classes e.g. <i>transparent-background map-overlay</i>', 'realia' ); ?></small>
+</p>
+
 
 <hr>
 
