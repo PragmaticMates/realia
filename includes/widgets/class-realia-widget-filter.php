@@ -5,25 +5,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Realia_Widget_Vertical_Filter
+ * Class Realia_Widget_Filter
  *
- * @class Realia_Widget_Vertical_Filter
+ * @class Realia_Widget_Filter
  * @package Realia/Classes/Widgets
  * @author Pragmatic Mates
  */
-class Realia_Widget_Vertical_Filter extends WP_Widget {
+class Realia_Widget_Filter extends WP_Widget {
     /**
      * Initialize widget
      *
      * @access public
      * @return void
      */
-    function Realia_Widget_Vertical_Filter() {
+    function Realia_Widget_Filter() {
         parent::__construct(
-            'vertical_filter_widget',
-            __( 'Vertical Filter', 'realia' ),
+            'filter_widget',
+            __( 'Filter', 'realia' ),
             array(
-                'description' => __( 'Vertical filter for filtering properties.', 'realia' ),
+                'description' => __( 'Filter for filtering properties.', 'realia' ),
             )
         );
     }
@@ -37,7 +37,7 @@ class Realia_Widget_Vertical_Filter extends WP_Widget {
      * @return void
      */
     function widget( $args, $instance ) {
-        include Realia_Template_Loader::locate( 'widgets/vertical-filter' );
+        include Realia_Template_Loader::locate( 'widgets/filter' );
     }
 
     /**
@@ -60,6 +60,6 @@ class Realia_Widget_Vertical_Filter extends WP_Widget {
      * @return void
      */
     function form( $instance ) {
-        include Realia_Template_Loader::locate( 'widgets/vertical-filter-admin' );
+        include Realia_Template_Loader::locate( 'widgets/filter-admin' );
     }
 }
