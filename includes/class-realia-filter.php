@@ -32,7 +32,7 @@ class Realia_Filter {
 	 * @throws Exception
 	 */
 	public static function sort_template() {
-		if ( is_singular( 'property' ) ) {
+		if ( is_post_type_archive( array( 'property' ) ) ) {
 			include Realia_Template_Loader::locate( 'properties/sort' );
 		}
 	}
