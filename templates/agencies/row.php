@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 	                </h2>
 
-	                <p><?php the_excerpt(); ?></p>
+	                <?php the_excerpt(); ?>
                 </div><!-- /.agency-row-body -->
 
 	            <?php $email = get_post_meta( get_the_ID(), REALIA_AGENCY_PREFIX . 'email', true ); ?>
