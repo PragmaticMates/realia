@@ -39,6 +39,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	            </div><!-- /.agent-row-body -->
 
                 <div class="agent-overview">
+	                <h2 class="agent-row-overview-title">
+		                <?php echo __( 'Contact Information', 'realia' ); ?>
+	                </h2><!-- /.agency-row-overview -->
+
                     <dl>
                         <?php $email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true ); ?>
                         <?php if ( ! empty ( $email ) ) : ?>
