@@ -23,7 +23,9 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php $email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true ); ?>
         <?php if ( ! empty ( $email ) ) : ?>
             <div class="agent-box-email">
-                <?php echo esc_attr( $email ); ?>
+	            <a href="mailto:<?php echo esc_attr( $email ); ?>">
+                    <?php echo esc_attr( $email ); ?>
+	            </a>
             </div><!-- /.agent-box-email -->
         <?php endif; ?>
 
@@ -37,7 +39,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    <?php $web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true ); ?>
 	    <?php if ( ! empty ( $web ) ) : ?>
 		    <div class="agent-box-web">
-			    <?php echo esc_attr( $web ); ?>
+			    <a href="<?php echo esc_attr( $web ); ?>">
+			        <?php echo esc_attr( $web ); ?>
+			    </a>
 		    </div><!-- /.agent-box-web -->
 	    <?php endif; ?>
     </div><!-- /.agent-box-content -->

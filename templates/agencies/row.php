@@ -49,14 +49,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	                    <dl>
 	                        <?php if ( ! empty ( $email ) ) : ?>
-	                            <dt><?php echo __( 'Email', 'realia' ); ?></dt><dd><?php echo esc_attr( $email ); ?></dd>
+	                            <dt><?php echo __( 'Email', 'realia' ); ?></dt>
+		                        <dd>
+			                        <a href="mailto:<?php echo $email; ?>">
+			                            <?php echo esc_attr( $email ); ?>
+			                        </a>
+		                        </dd>
 	                        <?php endif; ?>
 
-	                        <?php if ( ! empty ( $email ) ) : ?>
-	                            <dt><?php echo __( 'Web', 'realia' ); ?></dt><dd><?php echo esc_attr( $web ); ?></dd>
+	                        <?php if ( ! empty ( $web ) ) : ?>
+	                            <dt><?php echo __( 'Web', 'realia' ); ?></dt>
+		                        <dd>
+			                        <a href="<?php echo esc_attr( $web ); ?>">
+			                            <?php echo esc_attr( $web ); ?>
+			                        </a>
+		                        </dd>
 	                        <?php endif; ?>
 
-	                        <?php if ( ! empty ( $email ) ) : ?>
+	                        <?php if ( ! empty ( $phone ) ) : ?>
 	                            <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
 	                        <?php endif; ?>
 

@@ -42,12 +42,22 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <dl>
                         <?php $email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true ); ?>
                         <?php if ( ! empty ( $email ) ) : ?>
-                            <dt><?php echo __( 'Email', 'realia' ); ?></dt><dd><?php echo esc_attr( $email ); ?></dd>
+                            <dt><?php echo __( 'Email', 'realia' ); ?></dt>
+	                        <dd>
+		                        <a href="mailto:<?php echo esc_attr( $email ); ?>">
+		                            <?php echo esc_attr( $email ); ?>
+		                        </a>
+	                        </dd>
                         <?php endif; ?>
 
                         <?php $web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true ); ?>
                         <?php if ( ! empty ( $email ) ) : ?>
-                            <dt><?php echo __( 'Web', 'realia' ); ?></dt><dd><?php echo esc_attr( $web ); ?></dd>
+                            <dt><?php echo __( 'Web', 'realia' ); ?></dt>
+	                        <dd>
+		                        <a href="<?php echo esc_attr( $web ); ?>">
+		                            <?php echo esc_attr( $web ); ?>
+		                        </a>
+	                        </dd>
                         <?php endif; ?>
 
                         <?php $phone = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'phone', true ); ?>
