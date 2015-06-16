@@ -16,9 +16,7 @@ You can try it out by visiting a preview demo at [http://preview.wprealia.com/pl
 ### WP REST API integration
 
 Plugin offers option to search for properties via API. Plugin adds options to filter properties by custom fields. Realia
-extends default API output by new fields as well. Check an API request at
-[http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3](http://wprealia.com "WP Realia") to see how
-easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are
+extends default API output by new fields as well. Check an API request at [http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3](http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3) to see how easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are
 available more than 20+ fields.
 
 > Interested in iOS app written in Swift? Don't hesitate and contact us and we can offer you Realia Browser app for your site.
@@ -133,7 +131,6 @@ purposes or directory listings.
 * realia_after_agency_archive
 * realia_before_agent_archive
 * realia_after_agent_archive
-
 * realia_before_property_box_title
 * realia_after_property_box_title
 * realia_before_property_box_body
