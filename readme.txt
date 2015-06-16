@@ -13,6 +13,18 @@ Complete real estate solution in one plugin. Create your real estate website or 
 
 You can try it out by visiting a preview demo at [http://preview.wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia "Demo").
 
+### WP REST API integration
+
+Plugin offers option to search for properties via API. Plugin adds options to filter properties by custom fields. Realia
+extends default API output by new fields as well. Check an API request at
+[http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3](http://wprealia.com "WP Realia") to see how
+easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are
+available more than 20+ fields.
+
+> Interested in iOS app written in Swift? Don't hesitate and contact us and we can offer you Realia Browser app for your site.
+>
+> Check the app documentation: [http://wprealia.com/en/documentation/realia-browser/overview/](http://wprealia.com/en/documentation/realia-browser/overview/ "Realia Browser")
+
 ### Front end submission system
 
 Realia allows to add properties by your users. Create the property directory by few clicks. If you want you can review
