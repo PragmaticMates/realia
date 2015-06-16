@@ -840,7 +840,7 @@ h2.agency-row-title {
 /*******************************************************************
  * Map
  *******************************************************************/
- .widget_properties_map {
+ .widget.widget_properties_map {
      margin: 0px 0px 60px 0px;
      padding: 0px;
      list-style: none;
