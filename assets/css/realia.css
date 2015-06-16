@@ -181,6 +181,60 @@
 }
 
 /*******************************************************************
+ * Rent/Sale Filter
+ *******************************************************************/
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation {
+     margin: 0px;
+ }
+
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation:after {
+     content: '';
+     clear: both;
+     display: block;
+ }
+
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation ul {
+     list-style: none;
+ }
+
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation li {
+     border: 1px solid #eaeaea;
+     border-bottom: 0px;
+     display: block;
+     float: left;
+     list-style: none;
+     margin: 0px 3px 0px 0px;
+     position: relative;
+ }
+
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation li a {
+     background-color: rgba(0, 0, 0, .01);
+     display: block;
+     outline: 0px;
+     padding: 8px 15px;
+ }
+
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation li.active {
+     border-bottom: 1px solid #fff;
+     margin-bottom: -1px;
+     z-index: 9999
+ }
+
+ .widget_filter_rent_sale_widget .tabs .tabs-navigation li.active a {
+     background-color: #fff;
+ }
+
+ .widget_filter_rent_sale_widget .tab-content {
+     border: 1px solid #eaeaea;
+     display: none;
+     padding: 15px;
+ }
+
+ .widget_filter_rent_sale_widget .tab-content.active {
+     display: block;
+ }
+
+/*******************************************************************
  * Property Row
  *******************************************************************/
 .type-property .property-row-image {
