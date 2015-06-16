@@ -106,7 +106,7 @@ purposes or directory listings.
 * Amenities
 * Materials
 
-### Custom action
+### Custom actions
 
 * realia_before_property_archive
 * realia_after_property_archive
@@ -174,10 +174,18 @@ Create at least one agent at first and then choose the one you wish to assign in
 
 **0.5.0**
 
-*Release Date - TODO, 2015*
+*Release Date - 16th Jine, 2015*
 
 * WP API for agents
 * WP API for agencies
+* Added Rent/Sale search widget
+* All search fields are orderable
+* Added multiple search fields
+* Refactored agents, agencies and properties templates
+* Agent custom post type admin columns
+* Location taxonomies are now hierarchical
+* Breadcrumb now has better structure
+* Other small improvements and fixes
 
 **0.4.0**
 

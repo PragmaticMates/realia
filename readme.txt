@@ -184,10 +184,18 @@ Just be sure you are running at least PHP 5.3.4
 
 = 0.5.0 =
 
-*Release Date - TODO, 2015*
+*Release Date - 16th June, 2015*
 
 * WP API for agents
 * WP API for agencies
+* Added Rent/Sale search widget
+* All search fields are orderable
+* Added multiple search fields
+* Refactored agents, agencies and properties templates
+* Agent custom post type admin columns
+* Location taxonomies are now hierarchical
+* Breadcrumb now has better structure
+* Other small improvements and fixes
 
 = 0.4.0 =
 

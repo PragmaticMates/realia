@@ -840,6 +840,12 @@ h2.agency-row-title {
 /*******************************************************************
  * Map
  *******************************************************************/
+ .widget_properties_map {
+     margin: 0px 0px 60px 0px;
+     padding: 0px;
+     list-style: none;
+ }
+
 .map-wrapper {
     background-color: #fff;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), inset 0px 0px 30px 0px rgba(0, 0, 0, .08);
