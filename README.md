@@ -16,7 +16,7 @@ available more than 20+ fields.
 
 > Interested in iOS app written in Swift? Don't hesitate and contact us and we can offer you Realia Browser app for your site.
 >
-> Check the app documentation: [http://wprealia.com/en/documentation/realia-browser/overview/]("Realia Browser")
+> Check the app documentation: [http://wprealia.com/en/documentation/realia-browser/overview/](http://wprealia.com/en/documentation/realia-browser/overview/ "Realia Browser")
 
 
 ### Front end submission system
