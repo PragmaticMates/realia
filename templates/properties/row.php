@@ -30,21 +30,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="property-row-content">
 		<div class="property-row-content-inner">
 			<div class="property-row-main">
-				<header class="entry-header">
-					<h2 class="property-row-title entry-title">
-						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-					</h2>
-				</header>
+				<h2 class="property-row-title entry-title">
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				</h2>
 
-				<div class="entry-content">
+				<?php $location = Realia_Query::get_property_location_name(); ?>
+				<?php if ( ! empty( $location ) ) : ?>
 					<div class="property-row-location">
-						<?php echo Realia_Query::get_property_location_name(); ?>
+						<?php echo wp_kses( $location, wp_kses_allowed_html( 'post' ) ); ?>
 					</div>
+				<?php endif; ?>
 
-					<div class="property-row-body">
-						<p><?php the_excerpt(); ?></p>
-					</div><!-- /.property-row-body -->
-				</div><!-- /.entry-content -->
+				<div class="property-row-body">
+					<p><?php the_excerpt(); ?></p>
+				</div><!-- /.property-row-body -->
 			</div><!-- /.property-row-main -->
 
 			<?php $price = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'price', true ); ?>
@@ -53,37 +52,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php $type = Realia_Query::get_property_type_name(); ?>
 
 			<?php if ( ! empty( $price ) || ! empty( $area ) || ! empty( $status ) || ! empty( $type ) ) :?>
-				<footer class="entry-footer">
-					<div class="property-row-meta">
-						<?php if ( ! empty( $price ) ) : ?>
-							<span class="property-row-meta-item property-row-meta-item-price">
-								<span><?php echo __( 'Price', 'realia' ); ?>:</span>
-								<strong><?php echo Realia_Price::get_property_price(); ?></strong>
-							</span><!-- /.property-box-meta-item -->
-						<?php endif; ?>
+				<div class="property-row-meta">
+					<?php if ( ! empty( $price ) ) : ?>
+						<span class="property-row-meta-item property-row-meta-item-price">
+							<span><?php echo __( 'Price', 'realia' ); ?>:</span>
+							<strong><?php echo Realia_Price::get_property_price(); ?></strong>
+						</span><!-- /.property-box-meta-item -->
+					<?php endif; ?>
 
-						<?php if ( ! empty( $type ) ) : ?>
-							<span class="property-row-meta-item property-row-meta-item-type">
-								<span><?php echo __( 'Type', 'realia' ); ?>:</span>
-								<strong><?php echo esc_attr( $type ); ?></strong>
-							</span><!-- /.property-box-meta-item -->
-						<?php endif; ?>
+					<?php if ( ! empty( $type ) ) : ?>
+						<span class="property-row-meta-item property-row-meta-item-type">
+							<span><?php echo __( 'Type', 'realia' ); ?>:</span>
+							<strong><?php echo esc_attr( $type ); ?></strong>
+						</span><!-- /.property-box-meta-item -->
+					<?php endif; ?>
 
-						<?php if ( ! empty( $area ) ) : ?>
-							<span class="property-row-meta-item property-row-meta-item-area">
-								<span><?php echo __( 'Area', 'realia' ); ?>:</span>
-								<strong><?php echo esc_attr( $area ); ?> <?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></strong>
-							</span><!-- /.property-box-meta-item -->
-						<?php endif; ?>
+					<?php if ( ! empty( $area ) ) : ?>
+						<span class="property-row-meta-item property-row-meta-item-area">
+							<span><?php echo __( 'Area', 'realia' ); ?>:</span>
+							<strong><?php echo esc_attr( $area ); ?> <?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></strong>
+						</span><!-- /.property-box-meta-item -->
+					<?php endif; ?>
 
-						<?php if ( ! empty( $status ) ) : ?>
-							<span class="property-row-meta-item property-row-meta-status">
-								<span><?php echo __( 'Status', 'realia' ); ?>:</span>
-								<strong><?php echo esc_attr( $status ); ?></strong>
-							</span><!-- /.property-box-meta-item -->
-						<?php endif; ?>
-					</div><!-- /.property-row-meta -->
-				</footer>
+					<?php if ( ! empty( $status ) ) : ?>
+						<span class="property-row-meta-item property-row-meta-status">
+							<span><?php echo __( 'Status', 'realia' ); ?>:</span>
+							<strong><?php echo esc_attr( $status ); ?></strong>
+						</span><!-- /.property-box-meta-item -->
+					<?php endif; ?>
+				</div><!-- /.property-row-meta -->
 			<?php endif; ?>
 		</div><!-- /.property-row-content-inner -->
 	</div><!-- /.property-row-content -->
