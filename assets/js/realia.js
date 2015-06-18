@@ -2,6 +2,9 @@ jQuery(document).ready(function($) {
     'use strict';
 
 
+    /**
+     * Tabs
+     */
     $('.tabs-navigation a').on('click', function(e) {
         e.preventDefault();
 

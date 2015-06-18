@@ -325,9 +325,10 @@ class Realia_Query {
      *
      * @access public
      * @param null|int $post_id
+     * @param null|int $count
      * @return void
      */
-    public static function loop_agency_agents( $post_id = null ) {
+    public static function loop_agency_agents( $post_id = null, $count = null ) {
         if ( $post_id == null ) {
             $post_id = get_the_ID();
         }
@@ -342,6 +343,10 @@ class Realia_Query {
                 ),
             ),
         );
+
+	    if ( ! empty( $count ) ) {
+		    $args['posts_per_page'] = $count;
+	    }
 
         query_posts( $args );
     }
