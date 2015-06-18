@@ -15,5 +15,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<input type="password" name="password" class="form-control" required="required">
 	</div><!-- /.form-group -->
 
-	<button type="submit" class="btn" name="login_form"><?php echo __( 'Log in', 'realia' ); ?></button>
+	<button type="submit" name="login_form"><?php echo __( 'Log in', 'realia' ); ?></button>
 </form>

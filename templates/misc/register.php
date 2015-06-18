@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- /.form-group -->
 
 
-	<button type="submit" name="register_form" class="btn"><?php echo __( 'Sign Up', 'realia' ); ?></button>
+	<button type="submit" name="register_form"><?php echo __( 'Sign Up', 'realia' ); ?></button>
 	<?php $terms = get_theme_mod( 'realia_submission_terms' ); ?>
 
 	<?php if ( ! empty( $terms ) ) : ?>
