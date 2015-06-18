@@ -143,9 +143,6 @@ class Realia_Filter {
             return;
         }
 
-        $taxonomies = array();
-        $meta = array();
-
         if ( ! empty( $_GET['filter-sort-order'] ) ) {
             $query->set( 'order', $_GET['filter-sort-order']);
         }
