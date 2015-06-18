@@ -24,6 +24,8 @@ class Realia_Shortcodes {
         add_shortcode( 'realia_logout', array( __CLASS__, 'logout' ) );
 	    add_shortcode( 'realia_login', array( __CLASS__, 'login' ) );
 	    add_shortcode( 'realia_register', array( __CLASS__, 'register' ) );
+	    add_shortcode( 'realia_change_password', array( __CLASS__, 'change_password' ) );
+	    add_shortcode( 'realia_change_profile', array( __CLASS__, 'change_profile' ) );
 	    add_shortcode( 'realia_breadcrumb', array( __CLASS__, 'breadcrumb' ) );
 	    add_shortcode( 'realia_transactions', array( __CLASS__, 'transactions' ) );
         add_shortcode( 'realia_submission', array( __CLASS__, 'submission' ) );
@@ -218,6 +220,40 @@ class Realia_Shortcodes {
 		}
 
 		echo Realia_Template_Loader::load( 'misc/transactions' );
+	}
+
+	/**
+	 * Change password
+	 *
+	 * @access public
+	 * @param $atts
+	 * @return void
+	 */
+	public static function change_password( $atts ) {
+		if ( ! is_user_logged_in() ) {
+			echo Realia_Template_Loader::load( 'misc/not-allowed' );
+
+			return;
+		}
+
+		echo Realia_Template_Loader::load( 'misc/password-form' );
+	}
+
+	/**
+	 * Change profile
+	 *
+	 * @access public
+	 * @param $atts
+	 * @return void
+	 */
+	public static function change_profile( $atts ) {
+		if ( ! is_user_logged_in() ) {
+			echo Realia_Template_Loader::load( 'misc/not-allowed' );
+
+			return;
+		}
+
+		echo Realia_Template_Loader::load( 'misc/profile-form' );
 	}
 }
 
