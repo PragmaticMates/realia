@@ -17,8 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     <br>
 
 <?php $permalink = get_permalink( $post->ID ); ?>
-<?php if ( ! empty( $permanlink ) ) : ?>
-    <strong><?php echo __( 'URL', 'realia' ); ?>: </strong> <?php echo esc_attr( get_permalink( $post->ID ) ); ?><br>
+<?php if ( ! empty( $permalink ) ) : ?>
+    <strong><?php echo __( 'URL', 'realia' ); ?>: </strong> <?php echo esc_attr( $permalink ) ); ?><br>
 <?php endif; ?>
 
     <br>
