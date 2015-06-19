@@ -190,139 +190,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 
         <!-- VALUATION -->
-        <?php $crime = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'valuation_crime', true ); ?>
-        <?php $traffic = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'valuation_traffic', true ); ?>
-        <?php $pollution = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'valuation_pollution', true ); ?>
-        <?php $education = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'valuation_education', true ); ?>
-        <?php $health = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'valuation_health', true ); ?>
+   		<?php $valuation = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'valuation_group', true ); ?>
 
-        <?php if ( ! empty( $crime ) || ! empty( $traffic ) || ! empty( $pollution ) || ! empty( $education ) || ! empty( $health ) ) : ?>
-	        <div class="property-valuation">
-	            <?php if ( ! empty( $crime ) ) : ?>
-	                <dt><?php echo __( 'Crime', 'realia' ); ?></dt>
-	                <dd><span style="width: <?php echo esc_attr( $crime ); ?>%;"><strong><?php echo esc_attr( $crime ); ?> %</strong></span></dd>
-	            <?php endif; ?>
-
-	            <?php if ( ! empty( $traffic ) ) : ?>
-	                <dt><?php echo __( 'Traffic', 'realia' ); ?></dt>
-	                <dd><span style="width: <?php echo esc_attr( $traffic ); ?>%;"><strong><?php echo esc_attr( $traffic ); ?> %</strong></span></dd>
-	            <?php endif; ?>
-
-	            <?php if ( ! empty( $pollution ) ) : ?>
-	                <dt><?php echo __( 'Pollution', 'realia' ); ?></dt>
-	                <dd><span style="width: <?php echo esc_attr( $pollution ); ?>%;"><strong><?php echo esc_attr( $pollution ); ?> %</strong></span></dd>
-	            <?php endif; ?>
-
-	            <?php if ( ! empty( $education ) ) : ?>
-	                <dt><?php echo __( 'Education', 'realia' ); ?></dt>
-	                <dd><span style="width: <?php echo esc_attr( $education ); ?>%;"><strong><?php echo esc_attr( $education ); ?> %</strong></span></dd>
-	            <?php endif; ?>
-
-	            <?php if ( ! empty( $health ) ) : ?>
-	                <dt><?php echo __( 'Health', 'realia' ); ?></dt>
-	                <dd><span style="width: <?php echo esc_attr( $health ); ?>%;"><strong><?php echo esc_attr( $health ); ?> %</strong></span></dd>
-	            <?php endif; ?>
-	        </div><!-- /.property-valuation -->
-
-        <?php endif; ?>
-
+		<?php if ( ! empty( $valuation ) && is_array( $valuation ) ) : ?>
+		    <div class="property-valuation">
+		        <?php foreach( $valuation as $group ) : ?>            
+		            <div class="property-valuation-item">
+		                <dt><?php echo esc_attr( $group[REALIA_PROPERTY_PREFIX . 'valuation_key'] ); ?></dt>
+		                <dd>
+		                    <div class="bar-valuation" 
+		                         style="width: <?php echo esc_attr( $group[REALIA_PROPERTY_PREFIX . 'valuation_value'] ); ?>%" 
+		                         data-percentage="<?php echo esc_attr( $group[REALIA_PROPERTY_PREFIX . 'valuation_value'] ); ?>">
+		                    </div>
+		                </dd>
+		                <span class="percentage-valuation"><?php echo esc_attr( $group[REALIA_PROPERTY_PREFIX . 'valuation_value'] ); ?> %</span>
+		            </div><!-- /.property-valuation-item -->            
+		        <?php endforeach; ?>
+		    </div><!-- /.property-valuation -->
+		<?php endif; ?>
 
         <!-- PUBLIC FACILITIES -->
-        <?php $city = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_city', true ); ?>
-        <?php $shop = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_shop', true ); ?>
-        <?php $hospital = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_hospital', true ); ?>
-        <?php $school = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_school', true ); ?>
-        <?php $cpt = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_cpt', true ); ?>
-        <?php $airport = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_airport', true ); ?>
+        <?php $facilities = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_group', true ); ?>
 
-        <?php if ( ! empty( $city ) || ! empty( $shop ) || ! empty( $hospital ) || ! empty( $school ) || ! empty( $cpt )  || ! empty( $airport ) ) : ?>
+        <?php if ( ! empty( $facilities ) && is_array( $facilities ) ) : ?>
+            <h2 class='section-title'><?php echo __( 'Public facilities', 'aviators' ); ?></h2>
+
             <div class="property-public-facilities">
-                <?php if ( ! empty( $city ) ) : ?>
+                <?php foreach( $facilities as $facility ) : ?>
                     <div class="property-public-facility-wrapper">
                         <div class="property-public-facility">
-                            <div class="property-public-facility-info">
-                                <?php echo esc_attr( $city ); ?>
-                            </div><!-- /.property-public-facility-info -->
-
-                            <div class="property-public-facility-title">
-                                <span><?php echo __( 'City center', 'realia' ); ?></span>
+                            <div class="property-public-facility-title">                        
+                                <span><?php echo esc_attr( $facility[REALIA_PROPERTY_PREFIX . 'public_facilities_key'] ); ?></span>
                             </div><!-- /.property-public-facility-title -->
-                        </div><!-- /.property-public-facility -->
-                    </div><!-- /.property-public-facility-wrapper -->
-                <?php endif; ?>
 
-                <?php if ( ! empty( $shop ) ) : ?>
-                    <div class="property-public-facility-wrapper">
-                        <div class="property-public-facility">
                             <div class="property-public-facility-info">
-                                <?php echo esc_attr( $shop ); ?>
+                                <?php echo esc_attr( $facility[REALIA_PROPERTY_PREFIX . 'public_facilities_value'] ); ?>
                             </div><!-- /.property-public-facility-info -->
-
-                            <div class="property-public-facility-title">
-                                <span><?php echo __( 'Shop', 'realia' ); ?></span>
-                            </div><!-- /.property-public-facility-title -->
                         </div><!-- /.property-public-facility -->
-                    </div><!-- /.col-* -->
-                <?php endif; ?>
-
-                <?php if ( ! empty( $hospital ) ) : ?>
-                    <div class="property-public-facility-wrapper">
-                        <div class="property-public-facility">
-                            <div class="property-public-facility-info">
-                                <?php echo esc_attr( $hospital ); ?>
-                            </div><!-- /.property-public-facility-info -->
-
-                            <div class="property-public-facility-title">
-                                <span><?php echo __( 'Hospital', 'realia' ); ?></span>
-                            </div><!-- /.property-public-facility-title -->
-                        </div><!-- /.property-public-facility -->
-                    </div><!-- /.property-public-facility-wrapper -->
-                <?php endif; ?>
-
-                <?php if ( ! empty( $school ) ) : ?>
-                    <div class="property-public-facility-wrapper">
-                        <div class="property-public-facility">
-                            <div class="property-public-facility-info">
-                                <?php echo esc_attr( $school ); ?>
-                            </div><!-- /.property-public-facility-info -->
-
-                            <div class="property-public-facility-title">
-                                <span><?php echo __( 'School', 'realia' ); ?></span>
-                            </div><!-- /.property-public-facility-title -->
-                        </div><!-- /.property-public-facility -->
-                    </div><!-- /.property-public-facility-wrapper -->
-                <?php endif; ?>
-
-                <?php if ( ! empty( $cpt ) ) : ?>
-                    <div class="property-public-facility-wrapper">
-                        <div class="property-public-facility">
-                            <div class="property-public-facility-info">
-                                <?php echo esc_attr( $cpt ); ?>
-                            </div><!-- /.property-public-facility-info -->
-
-                            <div class="property-public-facility-title">
-                                <span><?php echo __( 'CPT stop', 'realia' ); ?></span>
-                            </div><!-- /.property-public-facility-title -->
-                        </div><!-- /.property-public-facility -->
-                    </div><!-- /.property-public-facility-wrapper -->
-                <?php endif; ?>
-
-                <?php if ( ! empty( $airport ) ) : ?>
-                    <div class="property-public-facility-wrapper">
-                        <div class="property-public-facility">
-                            <div class="property-public-facility-info">
-                                <?php echo esc_attr( $airport ); ?>
-                            </div><!-- /.property-public-facility-info -->
-
-                            <div class="property-public-facility-title">
-                                <span><?php echo __( 'Airport', 'realia' ); ?></span>
-                            </div><!-- /.property-public-facility-title -->
-                        </div><!-- /.property-public-facility -->
-                    </div><!-- /.property-public-facility-wrapper -->
-                <?php endif; ?>
+                    </div><!-- /.property-public-facility-wrapper -->            
+                <?php endforeach; ?>
             </div><!-- /.property-public-facilities -->
-        <?php endif; ?>
-
+        <?php endif; ?> 
 
         <!-- SIMILAR PROPERTIES -->
         <?php Realia_Query::loop_properties_similar(); ?>
