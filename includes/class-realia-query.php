@@ -101,20 +101,20 @@ class Realia_Query {
      *
      * @access public
      * @param null $post_id
-     * @return bool|null|WP_Post
+     * @return array
      */
     public static function get_property_agents( $post_id = null ) {
         if ( $post_id == null ) {
             $post_id = get_the_ID();
         }
 
-        $agent_id = get_post_meta( $post_id, REALIA_PROPERTY_PREFIX . 'agents', true );
+        $agents_ids = get_post_meta( $post_id, REALIA_PROPERTY_PREFIX . 'agents', true );        
 
-        if ( is_array( $agent_id ) && ! empty( $agent_id[0] ) ) {
-            return get_post( $agent_id[0] );
+        if ( is_array( $agents_ids ) && ! empty( $agents_ids[0] ) ) {
+            return $agents_ids;
         }
 
-        return false;
+        return array();
     }
 
     /**
