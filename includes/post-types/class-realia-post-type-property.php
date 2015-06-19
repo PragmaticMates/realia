@@ -245,35 +245,21 @@ class Realia_Post_Type_Property {
             'show_names'                => true,
             'fields'                    => array(
                 array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'valuation_crime',
-                    'name'              => __( 'Crime', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'In percentage.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'valuation_traffic',
-                    'name'              => __( 'Traffic', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'In percentage.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'valuation_pollution',
-                    'name'              => __( 'Pollution', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'In percentage.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'valuation_education',
-                    'name'              => __( 'Education', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'In percentage.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'valuation_health',
-                    'name'              => __( 'Health', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'In percentage.', 'realia' ),
-                ),
+                    'id'                => REALIA_PROPERTY_PREFIX . 'valuation_group',
+                    'type'              => 'group',
+                    'fields'            => array(
+                        array(
+                            'id'                => REALIA_PROPERTY_PREFIX . 'valuation_key',
+                            'name'              => __( 'Key', 'realia' ),
+                            'type'              => 'text',
+                        ),                        
+                        array(
+                            'id'                => REALIA_PROPERTY_PREFIX . 'valuation_value',
+                            'name'              => __( 'Value', 'realia' ),
+                            'type'              => 'text',
+                        ),                                                
+                    ),
+                ),            
             )
         );
 
@@ -285,42 +271,22 @@ class Realia_Post_Type_Property {
             'priority'                  => 'high',
             'show_names'                => true,
             'fields'                    => array(
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_city',
-                    'name'              => __( 'City center', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'Any text. For example distance: 2 km, or 10 min.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_shop',
-                    'name'              => __( 'Shop', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'Any text. For example distance: 2 km, or 10 min.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_hospital',
-                    'name'              => __( 'Hospital', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'Any text. For example distance: 2 km, or 10 min.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_school',
-                    'name'              => __( 'School', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'Any text. For example distance: 2 km, or 10 min.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_cpt',
-                    'name'              => __( 'CPT stop', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( '(City Public Transport). Any text. For example distance: 2 km, or 10 min.', 'realia' ),
-                ),
-                array(
-                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_airport',
-                    'name'              => __( 'Airport', 'realia' ),
-                    'type'              => 'text',
-                    'description'       => __( 'Any text. For example distance: 2 km, or 10 min.', 'realia' ),
-                ),
+               array(
+                    'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_group',
+                    'type'              => 'group',
+                    'fields'            => array(
+                        array(
+                            'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_key',
+                            'name'              => __( 'Key', 'realia' ),
+                            'type'              => 'text',
+                        ),                        
+                        array(
+                            'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_value',
+                            'name'              => __( 'Value', 'realia' ),
+                            'type'              => 'text',
+                        ),                                                
+                    ),
+                ),   
             )
         );
 
