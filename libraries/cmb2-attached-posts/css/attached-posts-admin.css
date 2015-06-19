@@ -28,6 +28,11 @@
 	margin-bottom: 5px;
 }
 
+.cmb-type-custom-attached-posts .search-wrap .regular-text {
+	width: 100%;
+	margin: 0 0 7px 0;
+}
+
 .cmb-type-custom-attached-posts .connected {
 	background: #F4F4F4;
 	cursor: pointer;
@@ -35,6 +40,24 @@
 	overflow-y: scroll;
 	padding: 0;
 	width: 100%;
+}
+
+.cmb-type-custom-attached-posts .has-thumbnails.connected {
+	height: 600px;
+}
+
+.cmb-type-custom-attached-posts .has-thumbnails li {
+	clear: both;
+}
+
+.cmb-type-custom-attached-posts .has-thumbnails li img {
+	margin-right: 10px;
+	vertical-align: middle;
+	float: left;
+}
+
+.cmb-type-custom-attached-posts .has-thumbnails li a {
+	text-indent: 55px;
 }
 
 .attached-posts-wrap .attached {
