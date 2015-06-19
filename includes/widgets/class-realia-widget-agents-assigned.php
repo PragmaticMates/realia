@@ -37,8 +37,8 @@ class Realia_Widget_Agents_Assigned extends WP_Widget {
      * @return void
      */
     function widget( $args, $instance ) {
-        $agents = Realia_Query::get_assigned_agents( get_the_ID() );
-        
+        $agents = Realia_Query::get_property_agents( get_the_ID() );
+
         query_posts( array(
             'post_type' => 'agent',
             'post__in'  => array( $agents ),
