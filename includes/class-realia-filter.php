@@ -327,7 +327,7 @@ class Realia_Filter {
 	    // Rooms
 	    if ( ! empty( $_GET['filter-rooms'] ) ) {
 		    $meta[] = array(
-			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_rooms',
+			    'key'       => REALIA_PROPERTY_PREFIX . 'rooms',
 			    'value'     => $_GET['filter-rooms'],
 			    'compare'   => '>=',
 			    'type'      => 'NUMERIC',
@@ -337,7 +337,7 @@ class Realia_Filter {
         // Beds
         if ( ! empty( $_GET['filter-beds'] ) ) {
             $meta[] = array(
-                'key'       => REALIA_PROPERTY_PREFIX . 'attributes_beds',
+                'key'       => REALIA_PROPERTY_PREFIX . 'beds',
                 'value'     => $_GET['filter-beds'],
                 'compare'   => '>=',
                 'type'      => 'NUMERIC',
@@ -357,7 +357,7 @@ class Realia_Filter {
         // Baths
         if ( ! empty( $_GET['filter-baths'] ) ) {
             $meta[] = array(
-                'key'       => REALIA_PROPERTY_PREFIX . 'attributes_baths',
+                'key'       => REALIA_PROPERTY_PREFIX . 'baths',
                 'value'     => $_GET['filter-baths'],
                 'compare'   => '>=',
                 'type'      => 'NUMERIC',
@@ -367,7 +367,7 @@ class Realia_Filter {
         // Home area from
         if ( ! empty( $_GET['filter-home-area-from'] ) ) {
             $meta[] = array(
-                'key'       => REALIA_PROPERTY_PREFIX . 'attributes_home_area',
+                'key'       => REALIA_PROPERTY_PREFIX . 'home_area',
                 'value'     => $_GET['filter-home-area-from'],
                 'compare'   => '>=',
                 'type'      => 'NUMERIC',
@@ -377,7 +377,7 @@ class Realia_Filter {
 	    // Home area to
 	    if ( ! empty( $_GET['filter-home-area-to'] ) ) {
 		    $meta[] = array(
-			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_home_area',
+			    'key'       => REALIA_PROPERTY_PREFIX . 'home_area',
 			    'value'     => $_GET['filter-home-area-to'],
 			    'compare'   => '<=',
 			    'type'      => 'NUMERIC',
@@ -387,7 +387,7 @@ class Realia_Filter {
 	    // Lot area from
 	    if ( ! empty( $_GET['filter-lot-area-from'] ) ) {
 		    $meta[] = array(
-			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_lot_area',
+			    'key'       => REALIA_PROPERTY_PREFIX . 'lot_area',
 			    'value'     => $_GET['filter-lot-area-from'],
 			    'compare'   => '>=',
 			    'type'      => 'NUMERIC',
@@ -397,7 +397,7 @@ class Realia_Filter {
 	    // Lot area to
 	    if ( ! empty( $_GET['filter-lot-area-to'] ) ) {
 		    $meta[] = array(
-			    'key'       => REALIA_PROPERTY_PREFIX . 'attributes_lot_area',
+			    'key'       => REALIA_PROPERTY_PREFIX . 'lot_area',
 			    'value'     => $_GET['filter-lot-area-to'],
 			    'compare'   => '<=',
 			    'type'      => 'NUMERIC',
@@ -407,7 +407,7 @@ class Realia_Filter {
         // Garages
         if ( ! empty( $_GET['filter-garages'] ) ) {
             $meta[] = array(
-                'key'       => REALIA_PROPERTY_PREFIX . 'attributes_garages',
+                'key'       => REALIA_PROPERTY_PREFIX . 'garages',
                 'value'     => $_GET['filter-garages'],
                 'compare'   => '>=',
                 'type'      => 'NUMERIC',

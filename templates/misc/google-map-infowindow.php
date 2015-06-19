@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php echo Realia_Query::get_property_location_name(); ?>
 			</div>
 
-			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_area', true ); ?>
+			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'area', true ); ?>
 			<?php if ( ! empty( $area ) ) : ?>
 				<div class="infobox-content-body-area">
 					<span><?php echo __( 'Area', 'realia' ); ?>:</span>
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			<?php endif; ?>
 
-			<?php $beds = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_beds', true ); ?>
+			<?php $beds = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'beds', true ); ?>
 			<?php if ( ! empty( $beds ) ) : ?>
 				<div class="infobox-content-body-beds">
 					<span><?php echo __( 'Beds', 'realia' ); ?>:</span>
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 			<?php endif; ?>
 
-			<?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_baths', true ); ?>
+			<?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'baths', true ); ?>
 			<?php if ( ! empty( $beds ) ) : ?>
 				<div class="infobox-content-body-baths">
 					<span><?php echo __( 'Baths', 'realia' ); ?>:</span>

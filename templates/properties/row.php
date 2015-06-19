@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div><!-- /.property-row-main -->
 
 			<?php $price = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'price', true ); ?>
-			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_home_area', true ); ?>
+			<?php $area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'home_area', true ); ?>
 			<?php $status = Realia_Query::get_property_status_name(); ?>
 			<?php $type = Realia_Query::get_property_type_name(); ?>
 

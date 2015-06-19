@@ -107,19 +107,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<dt><?php echo __( 'Location', 'realia' ); ?></dt><dd><?php echo wp_kses( $location, wp_kses_allowed_html( 'post' ) ); ?></dd>
 				<?php endif; ?>
 
-				<?php $home_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_home_area', true ); ?>
+				<?php $home_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'home_area', true ); ?>
 				<?php if ( ! empty( $home_area ) ) : ?>
 					<dt><?php echo __( 'Home area', 'realia' ); ?></dt><dd><?php echo esc_attr( $home_area ); ?>
 						<?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></dd>
 				<?php endif; ?>
 
-				<?php $lot_dimensions = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_lot_dimensions', true ); ?>
+				<?php $lot_dimensions = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'lot_dimensions', true ); ?>
 				<?php if ( ! empty( $lot_dimensions ) ) : ?>
 					<dt><?php echo __( 'Lot dimensions', 'realia' ); ?></dt><dd><?php echo esc_attr( $lot_dimensions ); ?>
 						<?php echo get_theme_mod( 'realia_measurement_distance_unit', 'ft' ); ?></dd>
 				<?php endif; ?>
 
-				<?php $lot_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_lot_area', true ); ?>
+				<?php $lot_area = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'lot_area', true ); ?>
 				<?php if ( ! empty( $lot_area ) ) : ?>
 					<dt><?php echo __( 'Lot area', 'realia' ); ?></dt><dd><?php echo esc_attr( $lot_area ); ?>
 						<?php echo get_theme_mod( 'realia_measurement_area_unit', 'sqft' ); ?></dd>
@@ -130,22 +130,22 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <dt><?php echo __( 'Material', 'realia' ); ?></dt><dd><?php echo wp_kses( $material, wp_kses_allowed_html( 'post' ) ); ?></dd>
                 <?php endif; ?>
 
-                <?php $rooms = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_rooms', true ); ?>
+                <?php $rooms = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'rooms', true ); ?>
                 <?php if ( ! empty( $rooms ) ) : ?>
                     <dt><?php echo __( 'Rooms', 'realia' ); ?></dt><dd><?php echo esc_attr( $rooms ); ?></dd>
                 <?php endif; ?>
 
-				<?php $beds = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_beds', true ); ?>
+				<?php $beds = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'beds', true ); ?>
 				<?php if ( ! empty( $beds ) ) : ?>
 					<dt><?php echo __( 'Beds', 'realia' ); ?></dt><dd><?php echo esc_attr( $beds ); ?></dd>
 				<?php endif; ?>
 
-                <?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_baths', true ); ?>
+                <?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'baths', true ); ?>
                 <?php if ( ! empty( $baths ) ) : ?>
                     <dt><?php echo __( 'Baths', 'realia' ); ?></dt><dd><?php echo esc_attr( $baths ); ?></dd>
                 <?php endif; ?>
 
-				<?php $garages = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'attributes_garages', true ); ?>
+				<?php $garages = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'garages', true ); ?>
 				<?php if ( ! empty( $garages ) ) : ?>
 					<dt><?php echo __( 'Garages', 'realia' ); ?></dt><dd><?php echo esc_attr( $garages ); ?></dd>
 				<?php endif; ?>

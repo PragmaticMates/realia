@@ -74,19 +74,19 @@ class Realia_Api {
             $post_response['price'] = Realia_Price::get_property_price( $post['ID'] );
 
             // Rooms
-            $post_response['rooms'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_rooms', true );
+            $post_response['rooms'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'rooms', true );
 
             // Beds
-            $post_response['beds'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_beds', true );
+            $post_response['beds'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'beds', true );
 
             // Baths
-            $post_response['baths'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_baths', true );
+            $post_response['baths'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'baths', true );
 
             // Garages
-            $post_response['garages'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_garages', true );
+            $post_response['garages'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'garages', true );
 
             // Home area
-            $home_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_home_area', true );
+            $home_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'home_area', true );
             if ( ! empty( $home_area ) ) {
                 $post_response['home_area'] = $home_area . ' ' . get_theme_mod( 'realia_measurement_area_unit', 'sqft' );
             } else {
@@ -94,7 +94,7 @@ class Realia_Api {
             }
 
             // Lot dimensions
-            $lot_dimensions = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_lot_dimensions', true );
+            $lot_dimensions = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'lot_dimensions', true );
             if ( ! empty( $lot_dimensions ) ) {
                 $post_response['lot_dimensions'] = $lot_dimensions . ' ' . get_theme_mod( 'realia_measurement_distance_unit', 'ft' );
             } else {
@@ -102,7 +102,7 @@ class Realia_Api {
             }
 
             // Lot area
-            $lot_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'attributes_lot_area', true );
+            $lot_area = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'lot_area', true );
             if ( ! empty( $lot_area ) ) {
                 $post_response['lot_area'] = $lot_area . ' ' . get_theme_mod( 'realia_measurement_area_unit', 'sqft' );
             } else {
