@@ -5,25 +5,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class Realia_Widget_Agent_Assigned
+ * Class Realia_Widget_Agents_Assigned
  *
- * @class Realia_Widget_Agent_Assigned
+ * @class Realia_Widget_Agents_Assigned
  * @package Realia/Classes/Widgets
  * @author Pragmatic Mates
  */
-class Realia_Widget_Agent_Assigned extends WP_Widget {
+class Realia_Widget_Agents_Assigned extends WP_Widget {
     /**
      * Initialize widget
      *
      * @access public
      * @return void
      */
-    function Realia_Widget_Agent_Assigned() {
+    function Realia_Widget_Agents_Assigned() {
         parent::__construct(
-            'agent_assigned_widget',
-            __( 'Assigned Agent', 'realia' ),
+            'agents_assigned_widget',
+            __( 'Assigned Agents', 'realia' ),
             array(
-                'description' => __( 'Displays assigned agent. Plugin is displaying agent card only on property detail.To show it only on property detail use is_singular(\'property\') in Widget Logic.', 'realia' ),
+                'description' => __( 'Displays assigned agents.', 'realia' ),
             )
         );
     }
@@ -37,7 +37,16 @@ class Realia_Widget_Agent_Assigned extends WP_Widget {
      * @return void
      */
     function widget( $args, $instance ) {
-        include Realia_Template_Loader::locate( 'widgets/agent-assigned' );
+        $agents = Realia_Query::get_assigned_agents( get_the_ID() );
+        
+        query_posts( array(
+            'post_type' => 'agent',
+            'post__in'  => array( $agents ),
+        ) ); 
+
+        include Realia_Template_Loader::locate( 'widgets/agents-assigned' );
+
+        wp_reset_query();
     }
 
     /**
@@ -60,6 +69,6 @@ class Realia_Widget_Agent_Assigned extends WP_Widget {
      * @return void
      */
     function form( $instance ) {
-        include Realia_Template_Loader::locate( 'widgets/agent-assigned-admin' );
+        include Realia_Template_Loader::locate( 'widgets/agents-assigned-admin' );
     }
 }

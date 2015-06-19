@@ -660,7 +660,7 @@ class Realia_Post_Type_Property {
 
         // Agent
         if ( ! empty( $_POST['receive_agent'] ) ) {
-            $agent = Realia_Query::get_property_agent( $post->ID );
+            $agent = Realia_Query::get_property_agents( $post->ID );
             if ( ! empty( $agent ) ) {
                 $email = get_post_meta( $agent->ID, REALIA_AGENT_PREFIX . 'email', true);
 

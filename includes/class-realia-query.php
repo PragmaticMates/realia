@@ -103,7 +103,7 @@ class Realia_Query {
      * @param null $post_id
      * @return bool|null|WP_Post
      */
-    public static function get_property_agent( $post_id = null ) {
+    public static function get_property_agents( $post_id = null ) {
         if ( $post_id == null ) {
             $post_id = get_the_ID();
         }
