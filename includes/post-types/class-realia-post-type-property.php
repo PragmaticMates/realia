@@ -325,10 +325,12 @@ class Realia_Post_Type_Property {
             'priority'                  => 'high',
             'show_names'                => true,
             'fields'                    => array(
-                'name'              => __( 'Agents', 'realia' ),
-                'id'                => REALIA_PROPERTY_PREFIX . 'agents',
-                'type'              => 'multicheck',
-                'options'           => $agents,
+                array(
+                    'name'              => __( 'Agents', 'realia' ),
+                    'id'                => REALIA_PROPERTY_PREFIX . 'agents',
+                    'type'              => 'multicheck',
+                    'options'           => $agents,
+                ),
             )
         );
 
