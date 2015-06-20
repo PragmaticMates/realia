@@ -152,7 +152,7 @@ class Realia_Shortcodes {
         }
 
         if ( wp_delete_post( $_GET['id'] ) ) {
-            $_SESSION['messages'][] = array( 'success', __( 'Item has been successfully removed.', 'realia' ) );
+            $_SESSION['messages'][] = array( 'success', __( 'Property has been successfully removed.', 'realia' ) );
         } else {
             $_SESSION['messages'][] = array( 'danger', __( 'An error occured when removing an item.', 'realia' ) );
         }

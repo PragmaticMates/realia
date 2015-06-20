@@ -712,6 +712,11 @@ class Realia_Post_Type_Property {
             }
 
             $post_id = wp_insert_post( $data, true );
+            $agent_id = Realia_Query::get_current_user_assigned_agent_id();
+
+            if ( ! empty( $agent_id ) ) {
+                Realia_Query::set_property_agent( $post_id, $agent_id );
+            }
 
             if ( ! empty( $post_id ) && ! empty( $_POST['object_id'] ) ) {
                 $_POST['object_id'] = $post_id;

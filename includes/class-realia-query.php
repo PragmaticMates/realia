@@ -49,6 +49,29 @@ class Realia_Query {
     }
 
     /**
+     * Sets property agent
+     *
+     * @access public
+     * @param int $property_id
+     * @param int $agent_id
+     * @return void
+     */
+    public static function set_property_agent( $property_id, $agent_id ) {
+        $agents = get_post_meta( $property_id, REALIA_PROPERTY_PREFIX . 'agents', true );
+
+        // We have already assigned agents so just add new one
+        if ( ! empty( $agents ) && is_array( $agents )) {
+            $agents[] = $agent_id;
+        } 
+        // Add first agent
+        else {
+            $agents = array( $agent_id );
+        }
+
+        update_post_meta( $property_id, REALIA_PROPERTY_PREFIX . 'agents', $agents );        
+    }
+
+    /**
      * Sets all properties into query
      *
      * @access public
