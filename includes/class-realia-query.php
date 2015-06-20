@@ -13,6 +13,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Realia_Query {
     /**
+     * Gets agent ID of currently signed in user
+     *
+     * @access public
+     * @return int
+     */
+    public static function get_current_user_assigned_agent_id() {
+        $user_id = get_current_user_id(); 
+
+        if ( ! empty( $user_id ) ) {
+            $agent_id = get_user_meta( $user_id, REALIA_USER_PREFIX . 'agent_object', true );
+
+            if ( ! empty( $agent_id ) ) {
+                return $agent_id;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Gets user properties
      *
      * @access public

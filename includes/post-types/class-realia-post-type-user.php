@@ -77,10 +77,11 @@ class Realia_Post_Type_User {
                 );
 
                 $fields[] = array(
-                    'id'        => REALIA_USER_PREFIX . 'agent_object',
-                    'name'      => __( 'Agent object', 'realia' ),
-                    'type'      => 'select',
-                    'options'   => $agents,
+                    'id'                => REALIA_USER_PREFIX . 'agent_object',
+                    'name'              => __( 'Agent object', 'realia' ),
+                    'type'              => 'select',
+                    'show_option_none'  => true,
+                    'options'           => $agents,
                 );                   
             }
 

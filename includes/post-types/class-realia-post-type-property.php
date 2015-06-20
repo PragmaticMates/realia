@@ -360,6 +360,11 @@ class Realia_Post_Type_Property {
                 'show_names'                => true,
                 'fields'                    => array(
                     array(
+                        'id'                => REALIA_PROPERTY_PREFIX . 'post_type',
+                        'type'              => 'hidden',
+                        'default'           => 'property',
+                    ),                         
+                    array(
                         'name'              => __( 'Title', 'realia' ),
                         'id'                => REALIA_PROPERTY_PREFIX . 'title',
                         'type'              => 'text_medium',
@@ -375,7 +380,7 @@ class Realia_Post_Type_Property {
                         'name'              => __( 'Featured Image', 'realia' ),
                         'id'                => REALIA_PROPERTY_PREFIX . 'featured_image',
                         'type'              => 'file',
-                        'default'           => ! empty( $featured_image) ? $featured_image[0] : '',
+                        'default'           => ! empty( $featured_image ) ? $featured_image[0] : '',
                     ),
                     array(
                         'name'              => __( 'ID', 'realia' ),
@@ -669,7 +674,7 @@ class Realia_Post_Type_Property {
      * @return void
      */
     public static function process_property_form() {
-        if ( ! isset( $_POST['submit-cmb'] ) )  {
+        if ( ! isset( $_POST['submit-cmb'] ) && ! empty( $_POST['post_type'] ) && $_POST['post_type'] == 'property' )  {
             return;
         }
 
