@@ -37,6 +37,21 @@ class Realia_Customizations_Submission {
             'priority'  => 1,
         ) );
 
+
+        // Enable agents
+        $wp_customize->add_setting( 'realia_submission_enable_agents', array(
+            'default'           => false,
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'sanitize_text_field',
+        ) );
+
+        $wp_customize->add_control( 'realia_submission_enable_agents', array(
+            'type'      => 'checkbox',
+            'label'     => __( 'Enable agents', 'realia' ),
+            'section'   => 'realia_submission',
+            'settings'  => 'realia_submission_enable_agents',
+        ) );
+
         // Type
         $wp_customize->add_setting( 'realia_submission_type', array(
             'default'           => null,

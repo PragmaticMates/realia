@@ -308,17 +308,14 @@ class Realia_Post_Type_Property {
             )
         );
 
-	    $relations = array(
-		    array(
-			    'name'              => __( 'Agents', 'realia' ),
-			    'id'                => REALIA_PROPERTY_PREFIX . 'agents',
-			    'type'              => 'custom_attached_posts',
-			    'options'           => array(
-				    'single'        => true,
-				    'query_args'    => array( 'posts_per_page' => -1, 'post_type' => 'agent' ),
-			    ),
-		    )
-	    );
+        $agents = array();
+        $agents_objects = Realia_Query::get_agents();
+
+        if ( ! empty( $agents_objects->posts ) && is_array( $agents_objects->posts ) ) {
+            foreach ( $agents_objects->posts as $object ) {
+                $agents[$object->ID] = $object->post_title;
+            }
+        }
 
         $metaboxes[REALIA_PROPERTY_PREFIX . 'relations'] = array(
             'id'                        => REALIA_PROPERTY_PREFIX . 'relations',
@@ -327,7 +324,12 @@ class Realia_Post_Type_Property {
             'context'                   => 'normal',
             'priority'                  => 'high',
             'show_names'                => true,
-            'fields'                    => $relations,
+            'fields'                    => array(
+                'name'              => __( 'Agents', 'realia' ),
+                'id'                => REALIA_PROPERTY_PREFIX . 'agents',
+                'type'              => 'multicheck',
+                'options'           => $agents,
+            )
         );
 
         return $metaboxes;

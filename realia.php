@@ -90,8 +90,7 @@ if ( ! class_exists( 'Realia' ) ) {
          * @return void
          */
         public static function libraries() {
-            require_once REALIA_DIR . 'libraries/cmb_field_map/cmb-field-map.php';
-            require_once REALIA_DIR . 'libraries/cmb2-attached-posts/cmb2-attached-posts-field.php';
+            require_once REALIA_DIR . 'libraries/cmb_field_map/cmb-field-map.php';        
             require_once REALIA_DIR . 'libraries/class-tgm-plugin-activation.php';
         }
 

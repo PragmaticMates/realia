@@ -69,6 +69,15 @@ class Realia_Post_Type_Agent {
      * @return array
      */
     public static function fields( array $metaboxes ) {
+        $agencies = array();
+        $agencies_objects = Realia_Query::get_agencies();
+
+        if ( ! empty( $agencies_objects->posts ) && is_array( $agencies_objects->posts ) ) {
+            foreach ( $agencies_objects->posts as $object ) {
+                $agencies[$object->ID] = $object->post_title;
+            }
+        }
+
         $metaboxes[REALIA_AGENT_PREFIX . 'general'] = array(
             'id'              => REALIA_AGENT_PREFIX . 'general',
             'title'           => __( 'General Options', 'realia' ),
@@ -100,11 +109,8 @@ class Realia_Post_Type_Agent {
                 array(
                     'name'              => __( 'Agencies', 'realia' ),
                     'id'                => REALIA_AGENT_PREFIX . 'agencies',
-                    'type'              => 'custom_attached_posts',
-                    'options'           => array(
-                        'single'        => true,
-                        'query_args'    => array( 'posts_per_page' => -1, 'post_type' => 'agency' ),
-                    ),
+                    'type'              => 'multicheck',
+                    'options'           => $agencies,
                 ),
             )
         );

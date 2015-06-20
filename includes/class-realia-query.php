@@ -321,6 +321,22 @@ class Realia_Query {
     }
 
     /**
+     * Gets agencies
+     * 
+     * @access public
+     * @param int $count
+     * @return void
+     */
+    public static function get_agencies( $count = -1 ) {
+        $args = array(
+            'post_type'         => 'agency',
+            'posts_per_page'    => $count
+        );
+
+        return new WP_Query( $args );
+    }
+
+    /**
      * Sets agency agents into loop
      *
      * @access public
@@ -372,6 +388,22 @@ class Realia_Query {
                     'compare'   => 'LIKE'
                 ),
             ),
+        );
+
+        return new WP_Query( $args );
+    }
+
+    /**
+     * Gets all agents
+     *
+     * @access public
+     * @param int $count
+     * @return WP_Query
+     */
+    public static function get_agents( $count = -1) {
+        $args = array(
+            'post_type'         => 'agent',
+            'posts_per_page'    => $count,
         );
 
         return new WP_Query( $args );
