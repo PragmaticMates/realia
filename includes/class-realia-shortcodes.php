@@ -91,7 +91,7 @@ class Realia_Shortcodes {
      */
     public static function breadcrumb( $atts ) {
         $atts = shortcode_atts( array(), $atts, 'realia_breadcrumb' );
-        return Realia_Template_Loader::load( 'misc/breadcrumb' );
+        echo Realia_Template_Loader::load( 'misc/breadcrumb' );
     }
 
     /**
