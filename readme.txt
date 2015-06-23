@@ -144,6 +144,7 @@ purposes or directory listings.
 * `[realia_register]` Register page.
 * `[realia_change_password]` Change password page.
 * `[realia_change_profile]` Change profile page.
+* `[realia_change_agent_profile]` Change agent profile page.
 * `[realia_submission]` Create and edit property form.
 * `[realia_submission_list]` List of properties added by current user.
 * `[realia_submission_remove]` Remove property.

@@ -39,32 +39,60 @@ class Realia_Post_Type_User {
      * @return array
      */
     public static function fields( array $metaboxes ) {
-        if ( is_super_admin() ) {
-            $metaboxes['user_general'] = array(
-                'id' => REALIA_USER_PREFIX .'general',
-                'title' => __( 'General', 'realia' ),
-                'object_types' => array( 'user' ),
-                'context' => 'normal',
-                'priority' => 'high',
-                'show_names' => true,
-                'fields' => array(
-                    array(
-                        'id' => REALIA_USER_PREFIX . 'package_title',
-                        'name' => __( 'Package Information', 'realia' ),
-                        'type' => 'title',
-                    ),
-                    array(
-                        'id' => REALIA_USER_PREFIX . 'package',
-                        'name' => __( 'Package', 'realia' ),
-                        'type' => 'select',
-                        'options' => Realia_Packages::get_packages( true ),
-                    ),
-                    array(
-                        'id' => REALIA_USER_PREFIX . 'package_valid',
-                        'name' => __( 'Valid', 'realia' ),
-                        'type' => 'text_date_timestamp',
-                    ),
+        if ( is_super_admin() ) {            
+            $fields = array(
+                array(
+                    'id'        => REALIA_USER_PREFIX . 'package_title',
+                    'name'      => __( 'Package Information', 'realia' ),
+                    'type'      => 'title',
                 ),
+                array(
+                    'id'        => REALIA_USER_PREFIX . 'package',
+                    'name'      => __( 'Package', 'realia' ),
+                    'type'      => 'select',
+                    'options'   => Realia_Packages::get_packages( true ),
+                ),
+                array(
+                    'id'        => REALIA_USER_PREFIX . 'package_valid',
+                    'name'      => __( 'Valid', 'realia' ),
+                    'type'      => 'text_date_timestamp',
+                ),                                   
+            );
+
+            if ( get_theme_mod( 'realia_submission_enable_agents', false ) ) {
+                $agents = array();
+                $agents_objects = Realia_Query::get_agents();
+                
+
+                if ( ! empty( $agents_objects->posts ) && is_array( $agents_objects->posts ) ) {                                                
+                    foreach ( $agents_objects->posts as $agent ) {
+                        $agents[$agent->ID] = $agent->post_title;
+                    }
+                }    
+
+                $fields[] = array(
+                    'id'        => REALIA_USER_PREFIX . 'agent_title',
+                    'name'      => __( 'Agent', 'realia' ),
+                    'type'      => 'title',
+                );
+
+                $fields[] = array(
+                    'id'                => REALIA_USER_PREFIX . 'agent_object',
+                    'name'              => __( 'Agent object', 'realia' ),
+                    'type'              => 'select',
+                    'show_option_none'  => true,
+                    'options'           => $agents,
+                );                   
+            }
+
+            $metaboxes['user_general'] = array(
+                'id'            => REALIA_USER_PREFIX .'general',
+                'title'         => __( 'General', 'realia' ),
+                'object_types'  => array( 'user' ),
+                'context'       => 'normal',
+                'priority'      => 'high',
+                'show_names'    => true,
+                'fields'        => $fields,
             );
         }
 

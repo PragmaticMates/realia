@@ -308,17 +308,14 @@ class Realia_Post_Type_Property {
             )
         );
 
-	    $relations = array(
-		    array(
-			    'name'              => __( 'Agents', 'realia' ),
-			    'id'                => REALIA_PROPERTY_PREFIX . 'agents',
-			    'type'              => 'custom_attached_posts',
-			    'options'           => array(
-				    'single'        => true,
-				    'query_args'    => array( 'posts_per_page' => -1, 'post_type' => 'agent' ),
-			    ),
-		    )
-	    );
+        $agents = array();
+        $agents_objects = Realia_Query::get_agents();
+
+        if ( ! empty( $agents_objects->posts ) && is_array( $agents_objects->posts ) ) {
+            foreach ( $agents_objects->posts as $object ) {
+                $agents[$object->ID] = $object->post_title;
+            }
+        }
 
         $metaboxes[REALIA_PROPERTY_PREFIX . 'relations'] = array(
             'id'                        => REALIA_PROPERTY_PREFIX . 'relations',
@@ -327,7 +324,14 @@ class Realia_Post_Type_Property {
             'context'                   => 'normal',
             'priority'                  => 'high',
             'show_names'                => true,
-            'fields'                    => $relations,
+            'fields'                    => array(
+                array(
+                    'name'              => __( 'Agents', 'realia' ),
+                    'id'                => REALIA_PROPERTY_PREFIX . 'agents',
+                    'type'              => 'multicheck',
+                    'options'           => $agents,
+                ),
+            )
         );
 
         return $metaboxes;
@@ -356,6 +360,11 @@ class Realia_Post_Type_Property {
                 'show_names'                => true,
                 'fields'                    => array(
                     array(
+                        'id'                => REALIA_PROPERTY_PREFIX . 'post_type',
+                        'type'              => 'hidden',
+                        'default'           => 'property',
+                    ),                         
+                    array(
                         'name'              => __( 'Title', 'realia' ),
                         'id'                => REALIA_PROPERTY_PREFIX . 'title',
                         'type'              => 'text_medium',
@@ -371,7 +380,7 @@ class Realia_Post_Type_Property {
                         'name'              => __( 'Featured Image', 'realia' ),
                         'id'                => REALIA_PROPERTY_PREFIX . 'featured_image',
                         'type'              => 'file',
-                        'default'           => ! empty( $featured_image) ? $featured_image[0] : '',
+                        'default'           => ! empty( $featured_image ) ? $featured_image[0] : '',
                     ),
                     array(
                         'name'              => __( 'ID', 'realia' ),
@@ -665,7 +674,7 @@ class Realia_Post_Type_Property {
      * @return void
      */
     public static function process_property_form() {
-        if ( ! isset( $_POST['submit-cmb'] ) )  {
+        if ( ! isset( $_POST['submit-cmb'] ) && ! empty( $_POST['post_type'] ) && $_POST['post_type'] == 'property' )  {
             return;
         }
 
@@ -703,6 +712,11 @@ class Realia_Post_Type_Property {
             }
 
             $post_id = wp_insert_post( $data, true );
+            $agent_id = Realia_Query::get_current_user_assigned_agent_id();
+
+            if ( ! empty( $agent_id ) ) {
+                Realia_Query::set_property_agent( $post_id, $agent_id );
+            }
 
             if ( ! empty( $post_id ) && ! empty( $_POST['object_id'] ) ) {
                 $_POST['object_id'] = $post_id;
