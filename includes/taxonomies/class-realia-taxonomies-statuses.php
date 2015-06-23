@@ -32,8 +32,8 @@ class Realia_Taxonomies_Statuses {
         $property_statuses_labels = array(
             'name'              => __( 'Statuses', 'realia' ),
             'singular_name'     => __( 'Status', 'realia' ),
-            'search_items'      => __( 'Search Status Types', 'realia' ),
-            'all_items'         => __( 'All Status Types', 'realia' ),
+            'search_items'      => __( 'Search Statuses', 'realia' ),
+            'all_items'         => __( 'All Statuses', 'realia' ),
             'parent_item'       => __( 'Parent Status', 'realia' ),
             'parent_item_colon' => __( 'Parent Status:', 'realia' ),
             'edit_item'         => __( 'Edit Status', 'realia' ),
