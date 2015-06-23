@@ -196,6 +196,7 @@ class Realia_Post_Type_Agent {
 
         return $metaboxes;                    
     }
+
 	/**
 	 * Custom admin columns for post type
 	 *
@@ -210,6 +211,7 @@ class Realia_Post_Type_Agent {
 			'email'      		=> __( 'E-mail', 'realia' ),
 			'web'      		    => __( 'Web', 'realia' ),
 			'phone'      		=> __( 'Phone', 'realia' ),
+			'properties'  		=> __( 'Properties', 'realia' ),
 			'author' 			=> __( 'Author', 'realia' ),
 		);
 
@@ -261,6 +263,10 @@ class Realia_Post_Type_Agent {
 					echo '-';
 				}
 				break;
+            case 'properties':
+                $properties_count = Realia_Query::get_agent_properties( $post_id = get_the_ID() )->post_count;
+                echo $properties_count;
+                break;
 		}
 	}
 
