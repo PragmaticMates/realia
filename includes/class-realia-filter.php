@@ -77,7 +77,8 @@ class Realia_Filter {
 	 * @return array
 	 */
 	public static function get_fields() {
-        return apply_filters( 'realia_filter_fields', $value );
+        $fields = self::default_fields();
+        return apply_filters( 'realia_filter_fields', array() );
 	}
 
     /**
@@ -101,8 +102,8 @@ class Realia_Filter {
 	 * @access public
 	 * @return array
 	 */
-	public static function get_field_names() {
-		return apply_filters( 'realia_filter_field_names', $value );
+	public static function get_field_names() {        
+		return apply_filters( 'realia_filter_field_names', array() );
 	}
 
     /**
