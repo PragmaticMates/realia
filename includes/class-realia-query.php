@@ -368,7 +368,7 @@ class Realia_Query {
      * 
      * @access public
      * @param int $count
-     * @return void
+     * @return WP_Query
      */
     public static function get_agencies( $count = -1 ) {
         $args = array(
@@ -394,6 +394,7 @@ class Realia_Query {
 
         $args = array(
             'post_type'         => 'agent',
+            'posts_per_page'    => -1,
             'meta_query'        => array(
                 array(
                     'key'       => REALIA_AGENT_PREFIX . 'agencies',
@@ -424,6 +425,7 @@ class Realia_Query {
 
         $args = array(
             'post_type'         => 'agent',
+            'posts_per_page'    => -1,
             'meta_query'        => array(
                 array(
                     'key'       => REALIA_AGENT_PREFIX . 'agencies',
@@ -466,6 +468,7 @@ class Realia_Query {
 
         $args = array(
             'post_type'         => 'property',
+            'posts_per_page'    => -1,
             'meta_query'        => array(
                 array(
                     'key'       => REALIA_PROPERTY_PREFIX . 'agents',
@@ -492,6 +495,7 @@ class Realia_Query {
 
         $args = array(
             'post_type'         => 'property',
+            'posts_per_page'    => -1,
             'meta_query'        => array(
                 array(
                     'key'       => REALIA_PROPERTY_PREFIX . 'agents',
