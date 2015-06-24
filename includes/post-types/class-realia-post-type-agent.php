@@ -297,11 +297,11 @@ class Realia_Post_Type_Agent {
                 $data['ID'] = $post_id;
             }
 
-            $post_id = wp_insert_post( $data, true );
-
-            update_user_meta( get_current_user_id(), REALIA_USER_PREFIX . 'agent_object', $post_id );
+            $post_id = wp_insert_post( $data, true );            
 
             if ( ! empty( $post_id ) && ! empty( $_POST['object_id'] ) ) {
+                update_user_meta( get_current_user_id(), REALIA_USER_PREFIX . 'agent_object', $post_id );
+                
                 $_POST['object_id'] = $post_id;
                 $post_id = $_POST['object_id'];
                 $metaboxes = apply_filters( 'cmb2_meta_boxes', array() );
