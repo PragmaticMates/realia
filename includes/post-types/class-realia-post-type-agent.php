@@ -290,7 +290,7 @@ class Realia_Post_Type_Agent {
                 'post_author'    => get_current_user_id(),
                 'post_status'    => 'publish',
                 'post_type'      => 'agent',
-                'post_content'   => wp_kses( $_POST[ REALIA_PROPERTY_PREFIX . 'text' ], '<b><strong><i><em><h1><h2><h3><h4><h5><h6><pre><code><span>' ),
+                'post_content'   => wp_kses( $_POST[ REALIA_AGENT_PREFIX . 'text' ], '<b><strong><i><em><h1><h2><h3><h4><h5><h6><pre><code><span>' ),
             );
 
             if ( ! empty( $post_id ) ) {
