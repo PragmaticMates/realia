@@ -6,6 +6,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( method_exists( 'Realia_Utilities', 'protect' ) ) { Realia_Utilities::protect(); } ?>
 
+<?php $user = wp_get_current_user(); ?>
+<?php $data = get_userdata( $user->ID ); ?>
 
 <form method="post" action="<?php the_permalink(); ?>" class="change-profile-form">
 	<div class="form-group">
