@@ -309,7 +309,7 @@ class Realia_Post_Type_Agent {
 
                 // Create featured image
                 $featured_image = get_post_meta( $post_id, REALIA_AGENT_PREFIX . 'featured_image', true );
-                if ( ! empty( $_POST[REALIA_AGENT_PREFIX . 'featured_image'] ) ) {
+                if ( ! empty( $featured_image ) ) {
                     $featured_image_id = get_post_meta( $post_id, REALIA_AGENT_PREFIX . 'featured_image_id', true );
                     set_post_thumbnail( $post_id, $featured_image_id );
                 } else {
