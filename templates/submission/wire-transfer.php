@@ -3,7 +3,7 @@ $payment_type = ! empty( $_POST['payment_type'] ) ? $_POST['payment_type'] : nul
 $object_id = ! empty( $_POST['object_id'] ) ? $_POST['object_id'] : null;
 $title = get_the_title( $object_id );
 $variable_symbol = $object_id;
-$reference = $property->post_title;
+$reference = $title;
 ?>
 
 <?php if ( $payment_type == 'pay_for_featured' ) : ?>
