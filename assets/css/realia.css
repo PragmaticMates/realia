@@ -334,6 +334,14 @@
     margin-top: 12px !important;
 }
 
+.entry-content .property-box-title h3 {
+    margin: 0px !important;
+}
+
+.entry-content .property-box-read-more a {
+    border-bottom: 0px;
+}
+
 .property-box-title a {
     border-bottom: 0px !important;
 }
