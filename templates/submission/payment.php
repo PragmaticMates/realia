@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( get_theme_mod( 'realia_paypal_credit_card', false ) == '1' ): ?>
 				<div class="payment">
 
-					<?php if ( in_array( $currency_code, Realia_PayPal::get_supported_currencies('card') ) ): ?>
+					<?php if ( in_array( $currency_code, Realia_PayPal::get_supported_currencies( 'card' ) ) ): ?>
 
 						<div class="payment-header">
 							<div class="radio-wrapper">
@@ -143,7 +143,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endif; ?>
 			<?php endif; ?>
 
-			<?php if ( in_array( $currency_code, Realia_PayPal::get_supported_currencies('account') ) ): ?>
+			<?php if ( in_array( $currency_code, Realia_PayPal_Logic::get_supported_currencies('account') ) ): ?>
 
 				<div class="payment">
 					<div class="payment-header">
