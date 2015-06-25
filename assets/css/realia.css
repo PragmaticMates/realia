@@ -925,6 +925,13 @@ h2.agency-row-title {
     width: 100%;
 }
 
+.property-map-position {
+    border-top: 1px solid #eaeaea;
+    margin-top: 60px;
+    overflow: hidden;
+    padding-top: 40px;
+}
+
 /*******************************************************************
  * Marker
  *******************************************************************/
