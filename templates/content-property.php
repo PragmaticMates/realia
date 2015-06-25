@@ -230,7 +230,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div><!-- /.property-public-facility-wrapper -->            
                 <?php endforeach; ?>
             </div><!-- /.property-public-facilities -->
-        <?php endif; ?> 
+        <?php endif; ?>
 
         <!-- SIMILAR PROPERTIES -->
         <?php Realia_Query::loop_properties_similar(); ?>
