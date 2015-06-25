@@ -34,6 +34,7 @@ class Realia_Customizations {
         require_once REALIA_DIR . 'includes/customizations/class-realia-customizations-measurement.php';
         require_once REALIA_DIR . 'includes/customizations/class-realia-customizations-recaptcha.php';
         require_once REALIA_DIR . 'includes/customizations/class-realia-customizations-submission.php';
+        require_once REALIA_DIR . 'includes/customizations/class-realia-customizations-wire-transfer.php';
     }
 }
 

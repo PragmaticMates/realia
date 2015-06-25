@@ -128,4 +128,4 @@ class Realia_Customizations_General {
     }
 }
 
-Realia_customizations_General::init();
+Realia_Customizations_General::init();
