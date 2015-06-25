@@ -194,6 +194,119 @@ msgstr ""
 msgid "1 year"
 msgstr ""
 
+<<<<<<< HEAD
+=======
+#: includes/class-realia-paypal.php:69
+msgid "First name is required."
+msgstr ""
+
+#: includes/class-realia-paypal.php:74
+msgid "Last name is required."
+msgstr ""
+
+#: includes/class-realia-paypal.php:79
+msgid "Card number is required."
+msgstr ""
+
+#: includes/class-realia-paypal.php:84
+msgid "CVV is required."
+msgstr ""
+
+#: includes/class-realia-paypal.php:89
+msgid "Expires month is required."
+msgstr ""
+
+#: includes/class-realia-paypal.php:94
+msgid "Expires year is required."
+msgstr ""
+
+#: includes/class-realia-paypal.php:99
+msgid "Credit card number is not valid."
+msgstr ""
+
+#: includes/class-realia-paypal.php:104
+msgid "CVV number is not valid."
+msgstr ""
+
+#: includes/class-realia-paypal.php:136
+msgid "Property has been featured."
+msgstr ""
+
+#: includes/class-realia-paypal.php:140
+msgid "Property has been sticked."
+msgstr ""
+
+#: includes/class-realia-paypal.php:147
+msgid "Property has been published."
+msgstr ""
+
+#: includes/class-realia-paypal.php:149
+msgid "Property will be published after review."
+msgstr ""
+
+#: includes/class-realia-paypal.php:155
+msgid "Package has been upgraded."
+msgstr ""
+
+#: includes/class-realia-paypal.php:158
+msgid "Undefined payment type."
+msgstr ""
+
+#: includes/class-realia-paypal.php:192
+msgid "Payment has been successful."
+msgstr ""
+
+#: includes/class-realia-paypal.php:196
+msgid "Error processing payment."
+msgstr ""
+
+#: includes/class-realia-paypal.php:306
+msgid "Payment has been successful."
+msgstr ""
+
+#: includes/class-realia-paypal.php:310
+msgid "There was an error processing payment."
+msgstr ""
+
+#: includes/class-realia-paypal.php:408
+#: includes/post-types/class-realia-post-type-transaction.php:160
+#: templates/misc/transactions.php:47
+msgid "Feature property"
+msgstr ""
+
+#: includes/class-realia-paypal.php:409
+#, php-format
+msgid "Feature property %s"
+msgstr ""
+
+#: includes/class-realia-paypal.php:420
+msgid "Sticky property"
+msgstr ""
+
+#: includes/class-realia-paypal.php:421
+#, php-format
+msgid "Sticky property %s"
+msgstr ""
+
+#: includes/class-realia-paypal.php:431
+msgid "Publish property"
+msgstr ""
+
+#: includes/class-realia-paypal.php:432
+#, php-format
+msgid "Publish property %s"
+msgstr ""
+
+#: includes/class-realia-paypal.php:443
+msgid "Purchase package"
+msgstr ""
+
+#: includes/class-realia-paypal.php:444
+#, php-format
+msgid "Upgrade package to %s"
+msgstr ""
+
+>>>>>>> e11128433bf410b8c36c4aa95d31a35f0eeb4702
 #: includes/class-realia-shortcodes.php:51
 msgid "You have been successfully logged out."
 msgstr ""

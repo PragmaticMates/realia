@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
     'use strict';
 
-
     /**
      * Tabs
      */
@@ -114,4 +113,24 @@ jQuery(document).ready(function($) {
             }]
         });
     }
+
+    /*
+     * Submission form gateway proceed button toggler
+     */
+    $(".payment-form input[id^='gateway-']").change(function() {
+        var proceed = $(this).data('proceed');
+        var form = $(this).parents('form:first');
+        var submit = form.find('[name="process-payment"]');
+        var info = form.find('#non-proceed-info');
+
+        if($(this).is(':checked')) {
+            if (proceed) {
+                info.addClass('hidden');
+                submit.removeClass('hidden');
+            } else {
+                info.removeClass('hidden');
+                submit.addClass('hidden');
+            }
+        }
+    }).change();
 });
