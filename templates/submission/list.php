@@ -170,9 +170,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</tbody>
 	</table>
 
-	<div class="nav-previous alignleft"><?php next_posts_link( __( 'Older posts', 'realia' ) ); ?></div>
-	<div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts', 'realia' ) ); ?></div>
-	<?php Realia_Query::loop_reset(); ?>
+	<?php the_posts_pagination( array(
+		'prev_text'          => __( 'Previous page', 'realia' ),
+		'next_text'          => __( 'Next page', 'realia' ),
+		'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'realia' ) . ' </span>',
+	) ); ?>
+
+	<?php wp_reset_query(); ?>
 <?php else : ?>
 	<div class="alert alert-warning">
 		<p><?php echo __( 'You don\'t have any properties, yet. Start by creating new one.' )?></p>
