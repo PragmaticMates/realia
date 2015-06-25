@@ -108,9 +108,11 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php $submission_page_id = get_theme_mod( 'realia_submission_list_page' ); ?>
 
             <?php if ( ! empty( $submission_page_id ) ) : ?>
-                <a href="<?php echo get_permalink( $submission_page_id); ?>" class="submission-payment-back">
-                    <?php echo get_the_title( $submission_page_id ); ?>
-                </a>
+                <p class="submission-payment-back">
+                    <?php echo __( 'Back to:', 'realia' ); ?> <a href="<?php echo get_permalink( $submission_page_id); ?>">
+                        <?php echo get_the_title( $submission_page_id ); ?>
+                    </a>
+                </p>
             <?php endif; ?>
         </form>
     <?php endif; ?>
