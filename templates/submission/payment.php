@@ -8,9 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	$payment_type = ! empty( $_POST['payment_type'] ) ? $_POST['payment_type'] : null;
 	$object_id = ! empty( $_POST['object_id'] ) ? $_POST['object_id'] : null;
-	$payment = ! empty( $_POST['payment'] ) ? $_POST['payment'] : false;
-	$expires_month = ! empty( $_POST['expires_month'] ) ? $_POST['expires_month'] : null;
-	$expires_year = ! empty( $_POST['expires_year'] ) ? $_POST['expires_year'] : null;
+	$payment_gateway = ! empty( $_POST['payment_gateway'] ) ? $_POST['payment_gateway'] : false;
 	?>
 
 	<?php if ( $payment_type == 'pay_for_featured' ) : ?>
@@ -61,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.payment-info -->
 	<?php endif; ?>
 
-	<?php if ( Realia_Utilities::is_paypal_enabled() && Realia_PayPal::is_active() && ! empty( $payment_type ) && ! empty( $object_id )) : ?>
+	<?php if ( ! empty( $payment_type ) && ! empty( $object_id )) : ?>
 		<form class="payment-form" method="post" action="?">
 			<?php if ( ! empty( $payment_type ) ) : ?>
 				<input type="hidden" name="payment_type" value="<?php echo esc_attr( $payment_type ); ?>">
@@ -71,108 +69,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<input type="hidden" name="object_id" value="<?php echo esc_attr( $object_id ); ?>">
 			<?php endif; ?>
 
-			<?php
-			$currencies = get_theme_mod( 'realia_currencies', array() );
+			<?php $payment_gateways = apply_filters( 'realia_payment_gateways', array() ); ?>
 
-			if ( ! empty( $currencies ) && is_array( $currencies ) ) {
-				$currency = array_shift( $currencies );
-				$currency_code = $currency['code'];
-			} else {
-				$currency_code = 'USD';
-			}
-			?>
-
-			<?php if ( get_theme_mod( 'realia_paypal_credit_card', false ) == '1' ): ?>
-				<div class="payment">
-
-					<?php if ( in_array( $currency_code, Realia_PayPal::get_supported_currencies( 'card' ) ) ): ?>
-
+			<?php if ( is_array( $payment_gateways ) && count( $payment_gateways ) > 0 ) : ?>
+				<?php foreach ( $payment_gateways as $gateway ) : ?>
+					<div class="payment">
 						<div class="payment-header">
 							<div class="radio-wrapper">
-								<input type="radio" id="payment-paypal-credit-card" name="payment" value="paypal-credit-card" <?php if ( $payment == 'paypal-credit-card' ) : ?>checked="checked"<?php endif; ?>>
+								<input type="radio" id="payment-<?php echo $gateway['id']; ?>" name="payment_gateway" value="<?php echo $gateway['id']; ?>" <?php if ( $payment_gateway == $gateway['id'] ) : ?>checked="checked"<?php endif; ?>>
 
-								<label for="payment-paypal-credit-card">
-									<span><?php echo __( 'PayPal Credit Card', 'realia' ); ?></span>
+								<label for="payment-<?php echo $gateway['id']; ?>">
+									<span><?php echo $gateway['title']; ?></span>
 								</label>
 							</div><!-- /.radio-wrapper -->
 						</div><!-- /.payment-header -->
 
-						<div class="payment-content">
-							<div class="form-group payment-paypal-credit-card-first-name">
-								<label for="first-name"><?php echo __( 'First Name', 'realia' ); ?></label>
-								<input type="text" class="form-control" name="first_name" id="first-name" value="<?php echo ! empty( $_POST['first_name'] ) ? esc_attr( $_POST['first_name'] ) : null; ?>" >
-							</div><!-- /.form-group -->
-
-							<div class="form-group payment-paypal-credit-card-last-name">
-								<label for="last-name"><?php echo __( 'Last Name', 'realia' ); ?></label>
-								<input type="text" class="form-control" name="last_name" id="last-name" value="<?php echo ! empty( $_POST['last_name'] ) ? esc_attr( $_POST['last_name'] ) : null; ?>" >
-							</div><!-- /.form-group -->
-
-							<div class="form-group payment-paypal-credit-card-number">
-								<label for="card-number"><?php echo __( 'Credit Card Number', 'realia' ); ?></label>
-								<input type="text" class="form-control" name="card_number" id="card-number" value="<?php echo ! empty( $_POST['card_number'] ) ? esc_attr( $_POST['card_number'] ) : null; ?>" >
-							</div><!-- /.form-group -->
-
-							<div class="form-group payment-paypal-credit-card-cvv">
-								<label for="cvv"><?php echo __( 'CVV', 'realia' ); ?></label>
-								<input type="text" class="form-control" name="cvv" id="cvv" value="<?php echo ! empty( $_POST['cvv'] ) ? esc_attr( $_POST['cvv'] ) : null; ?>" >
-							</div><!-- /.form-group -->
-
-							<div class="form-group payment-paypal-credit-card-expires">
-								<label for="expires-month"><?php echo __( 'Expires', 'realia' ); ?></label>
-
-								<select name="expires_month" id="expires-month" class="form-control payment-paypal-credit-card-expires-month">
-									<option value=""><?php echo __( 'Month', 'realia' ); ?></option>
-									<?php for ( $i = 1; $i <= 12; $i++ ) : ?>
-										<?php $number = sprintf( '%02s', $i ); ?>
-										<option value="<?php echo esc_attr( $number ); ?>" <?php echo ( $expires_month == $number ) ? 'selected="selected"' : ''; ?>><?php echo esc_attr( $number ); ?></option>
-									<?php endfor; ?>
-								</select>
-
-								<select name="expires_year" class="form-control payment-paypal-credit-card-expires-year">
-									<option value=""><?php echo __( 'Year', 'realia' ); ?></option>
-
-									<?php for ( $i = 0; $i < 10; $i++ ) : ?>
-										<?php $number = date( 'Y' ) + $i; ?>
-										<option value="<?php echo esc_attr( $number ); ?>" <?php echo ( $expires_year == $number ) ? 'selected="selected"' : ''; ?>><?php echo esc_attr( $number ); ?></option>
-									<?php endfor; ?>
-								</select>
-							</div><!-- /.form-group -->
-						</div><!-- /.payment-content -->
+						<?php if ( ! empty ( $gateway['content'] ) ) : ?>
+							<div class="payment-content"><?php echo $gateway['content']; ?></div><!-- /.payment-content -->
+						<?php endif; ?>
 					</div><!-- /.payment -->
-				<?php endif; ?>
-			<?php endif; ?>
-
-			<?php if ( in_array( $currency_code, Realia_PayPal_Logic::get_supported_currencies('account') ) ): ?>
-
-				<div class="payment">
-					<div class="payment-header">
-						<div class="radio-wrapper">
-							<input type="radio" id="payment-paypal-account" name="payment" value="paypal-account" <?php if ( $payment == 'paypal-account' ) : ?>checked="checked"<?php endif; ?>>
-
-							<label for="payment-paypal-account">
-								<span><?php echo __( 'PayPal Account', 'realia' ); ?></span>
-							</label>
-						</div><!-- /.radio-wrapper -->
-					</div><!-- /.payment-header -->
-				</div><!-- /.payment -->
-			<?php endif; ?>
-
-			<?php if ( in_array( $currency_code, Realia_PayPal::get_supported_currencies('account') ) || in_array( $currency_code, Realia_PayPal::get_supported_currencies('card') ) ): ?>
+				<?php endforeach; ?>
 
 				<?php if ( ! empty( $payment_type ) ) : ?>
 					<button type="submit" name="process-payment" class="submission-payment-process">
 						<?php echo __( 'Proceed payment', 'realia' ); ?>
 					</button>
 				<?php endif; ?>
-
-			<?php else: ?>
-				<div class="payment-info">
-					<?php echo sprintf(
-						__( 'Currency <strong>%s</strong> is not supported by PayPal.', 'realia' ),
-						$currency_code); ?>
-				</div><!-- /.payment-info -->
+			<?php else : ?>
+				<div class="alert alert-warning">
+					<?php echo __( 'No payment gateways found.', 'realia' ); ?>
+				</div><!-- /.alert -->
 			<?php endif; ?>
+
 
 			<?php $submission_page_id = get_theme_mod( 'realia_submission_list_page' ); ?>
 
