@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Realia\n"
-"POT-Creation-Date: 2015-06-23 16:05+0100\n"
-"PO-Revision-Date: 2015-06-23 16:05+0100\n"
+"POT-Creation-Date: 2015-06-25 16:23+0100\n"
+"PO-Revision-Date: 2015-06-25 16:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __\n"
@@ -194,116 +194,6 @@ msgstr ""
 msgid "1 year"
 msgstr ""
 
-#: includes/class-realia-paypal.php:69
-msgid "First name is required."
-msgstr ""
-
-#: includes/class-realia-paypal.php:74
-msgid "Last name is required."
-msgstr ""
-
-#: includes/class-realia-paypal.php:79
-msgid "Card number is required."
-msgstr ""
-
-#: includes/class-realia-paypal.php:84
-msgid "CVV is required."
-msgstr ""
-
-#: includes/class-realia-paypal.php:89
-msgid "Expires month is required."
-msgstr ""
-
-#: includes/class-realia-paypal.php:94
-msgid "Expires year is required."
-msgstr ""
-
-#: includes/class-realia-paypal.php:99
-msgid "Credit card number is not valid."
-msgstr ""
-
-#: includes/class-realia-paypal.php:104
-msgid "CVV number is not valid."
-msgstr ""
-
-#: includes/class-realia-paypal.php:136
-msgid "Property has been featured."
-msgstr ""
-
-#: includes/class-realia-paypal.php:140
-msgid "Property has been sticked."
-msgstr ""
-
-#: includes/class-realia-paypal.php:147
-msgid "Property has been published."
-msgstr ""
-
-#: includes/class-realia-paypal.php:149
-msgid "Property will be published after review."
-msgstr ""
-
-#: includes/class-realia-paypal.php:155
-msgid "Package has been upgraded."
-msgstr ""
-
-#: includes/class-realia-paypal.php:158
-msgid "Undefined payment type."
-msgstr ""
-
-#: includes/class-realia-paypal.php:192
-msgid "Payment has been successfull."
-msgstr ""
-
-#: includes/class-realia-paypal.php:196
-msgid "Error processing payment."
-msgstr ""
-
-#: includes/class-realia-paypal.php:306
-msgid "Payment has been successful."
-msgstr ""
-
-#: includes/class-realia-paypal.php:310
-msgid "There was an error processing payment."
-msgstr ""
-
-#: includes/class-realia-paypal.php:408
-#: includes/post-types/class-realia-post-type-transaction.php:160
-#: templates/misc/transactions.php:47
-msgid "Feature property"
-msgstr ""
-
-#: includes/class-realia-paypal.php:409
-#, php-format
-msgid "Feature property %s"
-msgstr ""
-
-#: includes/class-realia-paypal.php:420
-msgid "Sticky property"
-msgstr ""
-
-#: includes/class-realia-paypal.php:421
-#, php-format
-msgid "Sticky property %s"
-msgstr ""
-
-#: includes/class-realia-paypal.php:431
-msgid "Publish property"
-msgstr ""
-
-#: includes/class-realia-paypal.php:432
-#, php-format
-msgid "Publish property %s"
-msgstr ""
-
-#: includes/class-realia-paypal.php:443
-msgid "Purchase package"
-msgstr ""
-
-#: includes/class-realia-paypal.php:444
-#, php-format
-msgid "Upgrade package to %s"
-msgstr ""
-
 #: includes/class-realia-shortcodes.php:51
 msgid "You have been successfully logged out."
 msgstr ""
@@ -322,6 +212,10 @@ msgstr ""
 
 #: includes/class-realia-shortcodes.php:157
 msgid "An error occured when removing an item."
+msgstr ""
+
+#: includes/class-realia-submission.php:35
+msgid "Wire Transfer"
 msgstr ""
 
 #: includes/class-realia-utilities.php:45
@@ -404,26 +298,6 @@ msgstr ""
 msgid "Distance Unit"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-paypal.php:34
-msgid "Realia PayPal"
-msgstr ""
-
-#: includes/customizations/class-realia-customizations-paypal.php:46
-msgid "Client ID"
-msgstr ""
-
-#: includes/customizations/class-realia-customizations-paypal.php:60
-msgid "Client Secret"
-msgstr ""
-
-#: includes/customizations/class-realia-customizations-paypal.php:73
-msgid "Live Mode"
-msgstr ""
-
-#: includes/customizations/class-realia-customizations-paypal.php:87
-msgid "Credit Card"
-msgstr ""
-
 #: includes/customizations/class-realia-customizations-recaptcha.php:34
 msgid "Realia reCAPTCHA"
 msgstr ""
@@ -440,11 +314,11 @@ msgstr ""
 msgid "Realia Submission"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:50
+#: includes/customizations/class-realia-customizations-submission.php:49
 msgid "Enable agents"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:64
+#: includes/customizations/class-realia-customizations-submission.php:63
 #: includes/post-types/class-realia-post-type-property.php:481
 #: includes/post-types/class-realia-post-type-transaction.php:116
 #: includes/taxonomies/class-realia-taxonomies-property-types.php:34
@@ -452,80 +326,140 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:68
+#: includes/customizations/class-realia-customizations-submission.php:67
 msgid "Free for all"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:69
+#: includes/customizations/class-realia-customizations-submission.php:68
 #: includes/post-types/class-realia-post-type-transaction.php:166
 #: templates/misc/transactions.php:53
 msgid "Pay per post"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:70
+#: includes/customizations/class-realia-customizations-submission.php:69
 #: includes/post-types/class-realia-post-type-package.php:34
 #: includes/post-types/class-realia-post-type-package.php:46
 msgid "Packages"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:82
+#: includes/customizations/class-realia-customizations-submission.php:81
 msgid "Pay per post - Post price"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:85
-#: includes/customizations/class-realia-customizations-submission.php:113
-#: includes/customizations/class-realia-customizations-submission.php:141
+#: includes/customizations/class-realia-customizations-submission.php:84
+#: includes/customizations/class-realia-customizations-submission.php:112
+#: includes/customizations/class-realia-customizations-submission.php:140
 msgid ""
 "Enter price without any currency. As main currency will be used primary one "
 "(first defined)."
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:97
+#: includes/customizations/class-realia-customizations-submission.php:96
 msgid "Enable pay for featured"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:110
+#: includes/customizations/class-realia-customizations-submission.php:109
 msgid "Featured price"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:125
+#: includes/customizations/class-realia-customizations-submission.php:124
 msgid "Enable pay for sticky"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:138
+#: includes/customizations/class-realia-customizations-submission.php:137
 msgid "Sticky price"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:153
+#: includes/customizations/class-realia-customizations-submission.php:152
 msgid "Payment Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:168
+#: includes/customizations/class-realia-customizations-submission.php:167
 msgid "List Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:183
+#: includes/customizations/class-realia-customizations-submission.php:182
 msgid "Create Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:198
+#: includes/customizations/class-realia-customizations-submission.php:197
 msgid "Edit Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:213
+#: includes/customizations/class-realia-customizations-submission.php:212
 msgid "Remove Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:228
+#: includes/customizations/class-realia-customizations-submission.php:227
 msgid "Transactions Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:243
+#: includes/customizations/class-realia-customizations-submission.php:242
 msgid "Terms &amp; Conditions Page"
 msgstr ""
 
-#: includes/customizations/class-realia-customizations-submission.php:258
+#: includes/customizations/class-realia-customizations-submission.php:257
 msgid "Review Before Submission"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:34
+msgid "Realia Wire Transfer"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:46
+msgid "Account number"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:49
+msgid "Bank account number [mandatory]"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:60
+msgid "Bank code"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:63
+msgid "SWIFT or BIC of your bank [mandatory]"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:74
+msgid "Full name"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:77
+msgid "Your full name [mandatory]"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:88
+msgid "Street / P.O.Box"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:91
+msgid "Enter your street."
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:102
+msgid "Postcode"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:105
+msgid "Enter your postcode (ZIP)."
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:116
+msgid "City"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:119
+msgid "Enter your city."
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:130
+msgid "Country"
+msgstr ""
+
+#: includes/customizations/class-realia-customizations-wire-transfer.php:133
+msgid "Enter your country [mandatory]"
 msgstr ""
 
 #: includes/post-types/class-realia-post-type-agency.php:36
@@ -589,7 +523,7 @@ msgstr ""
 #: includes/post-types/class-realia-post-type-agent.php:175
 #: includes/post-types/class-realia-post-type-agent.php:211
 #: templates/agents/contact-form.php:40 templates/mails/enquire.php:14
-#: templates/misc/profile-form.php:17 templates/misc/register.php:14
+#: templates/misc/profile-form.php:19 templates/misc/register.php:14
 #: templates/widgets/enquire.php:35
 msgid "E-mail"
 msgstr ""
@@ -939,7 +873,6 @@ msgid "Value"
 msgstr ""
 
 #: includes/post-types/class-realia-post-type-property.php:268
-#: templates/content-property.php:216
 msgid "Public facilities"
 msgstr ""
 
@@ -1084,6 +1017,11 @@ msgstr ""
 #: includes/post-types/class-realia-post-type-transaction.php:119
 #: templates/misc/transactions.php:65
 msgid "Date"
+msgstr ""
+
+#: includes/post-types/class-realia-post-type-transaction.php:160
+#: templates/misc/transactions.php:47
+msgid "Feature property"
 msgstr ""
 
 #: includes/post-types/class-realia-post-type-transaction.php:163
@@ -1427,22 +1365,25 @@ msgid "Send message"
 msgstr ""
 
 #: templates/archive-agency.php:35 templates/archive-agent.php:35
-#: templates/archive-property.php:47 templates/single-agency.php:16
-#: templates/single-agent.php:16 templates/single-property.php:16
+#: templates/archive-property.php:47 templates/misc/transactions.php:73
+#: templates/single-agency.php:16 templates/single-agent.php:16
+#: templates/single-property.php:16 templates/submission/list.php:174
 msgid "Previous page"
 msgstr ""
 
 #: templates/archive-agency.php:36 templates/archive-agent.php:36
-#: templates/archive-property.php:48 templates/single-agency.php:17
-#: templates/single-agent.php:17 templates/single-property.php:17
+#: templates/archive-property.php:48 templates/misc/transactions.php:74
+#: templates/single-agency.php:17 templates/single-agent.php:17
+#: templates/single-property.php:17 templates/submission/list.php:175
 msgid "Next page"
 msgstr ""
 
 #: templates/archive-agency.php:37 templates/archive-agent.php:37
 #: templates/archive-property.php:49 templates/content-agency.php:97
-#: templates/content-agent.php:82 templates/content-property.php:258
-#: templates/single-agency.php:18 templates/single-agent.php:18
-#: templates/single-property.php:18
+#: templates/content-agent.php:82 templates/content-property.php:271
+#: templates/misc/transactions.php:75 templates/single-agency.php:18
+#: templates/single-agent.php:18 templates/single-property.php:18
+#: templates/submission/list.php:176
 msgid "Page"
 msgstr ""
 
@@ -1453,12 +1394,12 @@ msgid "Continue reading %s"
 msgstr ""
 
 #: templates/content-agency.php:93 templates/content-agent.php:78
-#: templates/content-property.php:254
+#: templates/content-property.php:267
 msgid "Pages:"
 msgstr ""
 
 #: templates/content-agency.php:117 templates/content-agent.php:102
-#: templates/content-property.php:278 templates/submission/list.php:158
+#: templates/content-property.php:291 templates/submission/list.php:158
 msgid "Edit"
 msgstr ""
 
@@ -1474,7 +1415,7 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: templates/content-property.php:240
+#: templates/content-property.php:253
 msgid "Similar properties"
 msgstr ""
 
@@ -1490,24 +1431,24 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: templates/misc/breadcrumb.php:40
+#: templates/misc/breadcrumb.php:44
 msgid "Page not found"
 msgstr ""
 
-#: templates/misc/breadcrumb.php:47 templates/misc/breadcrumb.php:49
-#: templates/misc/breadcrumb.php:51
+#: templates/misc/breadcrumb.php:51 templates/misc/breadcrumb.php:53
+#: templates/misc/breadcrumb.php:55
 msgid "Archive for"
 msgstr ""
 
-#: templates/misc/breadcrumb.php:53
+#: templates/misc/breadcrumb.php:57
 msgid "Author Archive"
 msgstr ""
 
-#: templates/misc/breadcrumb.php:55
+#: templates/misc/breadcrumb.php:59
 msgid "Blog Archives"
 msgstr ""
 
-#: templates/misc/breadcrumb.php:57
+#: templates/misc/breadcrumb.php:61
 msgid "Search Results"
 msgstr ""
 
@@ -1547,19 +1488,19 @@ msgstr ""
 msgid "Change Password"
 msgstr ""
 
-#: templates/misc/profile-form.php:12
+#: templates/misc/profile-form.php:14
 msgid "Nickname"
 msgstr ""
 
-#: templates/misc/profile-form.php:22
+#: templates/misc/profile-form.php:24
 msgid "First name"
 msgstr ""
 
-#: templates/misc/profile-form.php:27
+#: templates/misc/profile-form.php:29
 msgid "Last name"
 msgstr ""
 
-#: templates/misc/profile-form.php:31
+#: templates/misc/profile-form.php:33
 msgid "Change Profile"
 msgstr ""
 
@@ -1588,15 +1529,7 @@ msgstr ""
 msgid "TOP property"
 msgstr ""
 
-#: templates/misc/transactions.php:72 templates/submission/list.php:173
-msgid "Older posts"
-msgstr ""
-
-#: templates/misc/transactions.php:73 templates/submission/list.php:174
-msgid "Newer posts"
-msgstr ""
-
-#: templates/misc/transactions.php:75
+#: templates/misc/transactions.php:78
 msgid "No transactions found."
 msgstr ""
 
@@ -1652,7 +1585,7 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: templates/submission/list.php:178
+#: templates/submission/list.php:182
 msgid "You don't have any properties, yet. Start by creating new one."
 msgstr ""
 
@@ -1708,84 +1641,47 @@ msgstr ""
 msgid "Upgrade"
 msgstr ""
 
-#: templates/submission/payment.php:22
+#: templates/submission/payment.php:20
 #, php-format
 msgid ""
 "You are going to pay <strong>%s</strong> for featuring property <strong>\"%s"
 "\"</strong>."
 msgstr ""
 
-#: templates/submission/payment.php:31
+#: templates/submission/payment.php:29
 #, php-format
 msgid ""
 "You are going to pay <strong>%s</strong> for TOP property <strong>\"%s\"</"
 "strong>."
 msgstr ""
 
-#: templates/submission/payment.php:40
+#: templates/submission/payment.php:38
 #, php-format
 msgid ""
 "You are going to pay <strong>%s</strong> for publishing property <strong>\"%s"
 "\"</strong>."
 msgstr ""
 
-#: templates/submission/payment.php:50
+#: templates/submission/payment.php:48
 #, php-format
 msgid ""
 "You are going to pay <strong>%s</strong> for package <strong>\"%s\"</strong>."
 msgstr ""
 
-#: templates/submission/payment.php:55
+#: templates/submission/payment.php:53
 msgid "Missing package."
 msgstr ""
 
-#: templates/submission/payment.php:60
+#: templates/submission/payment.php:58
 msgid "You are missing payment type."
 msgstr ""
 
 #: templates/submission/payment.php:95
-msgid "PayPal Credit Card"
-msgstr ""
-
-#: templates/submission/payment.php:102
-msgid "First Name"
-msgstr ""
-
-#: templates/submission/payment.php:107
-msgid "Last Name"
-msgstr ""
-
-#: templates/submission/payment.php:112
-msgid "Credit Card Number"
-msgstr ""
-
-#: templates/submission/payment.php:117
-msgid "CVV"
-msgstr ""
-
-#: templates/submission/payment.php:122
-msgid "Expires"
-msgstr ""
-
-#: templates/submission/payment.php:125
-msgid "Month"
-msgstr ""
-
-#: templates/submission/payment.php:133
-msgid "Year"
-msgstr ""
-
-#: templates/submission/payment.php:154
-msgid "PayPal Account"
-msgstr ""
-
-#: templates/submission/payment.php:165
 msgid "Proceed payment"
 msgstr ""
 
-#: templates/submission/payment.php:172
-#, php-format
-msgid "Currency <strong>%s</strong> is not supported by PayPal."
+#: templates/submission/payment.php:100
+msgid "No payment gateways found."
 msgstr ""
 
 #: templates/widgets/agents-admin.php:42
