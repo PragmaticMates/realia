@@ -61,4 +61,4 @@ class Realia_Customizations_Recaptcha {
     }
 }
 
-Realia_customizations_Recaptcha::init();
+Realia_Customizations_Recaptcha::init();
