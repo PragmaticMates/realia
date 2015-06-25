@@ -30,8 +30,6 @@ class Realia_Customizations_Wire_Transfer {
      * @return void
      */
     public static function customizations( $wp_customize ) {
-        $pages = Realia_Pages::get_pages();
-
         $wp_customize->add_section( 'realia_wire_transfer', array(
             'title'     => __( 'Realia Wire Transfer', 'realia' ),
             'priority'  => 1,
@@ -93,20 +91,6 @@ class Realia_Customizations_Wire_Transfer {
             'description'   => __( 'Enter your street.', 'realia' )
         ) );
 
-        // City
-        $wp_customize->add_setting( 'realia_wire_transfer_city', array(
-            'default'           => null,
-            'capability'        => 'edit_theme_options',
-            'sanitize_callback' => 'sanitize_text_field',
-        ) );
-
-        $wp_customize->add_control( 'realia_wire_transfer_city', array(
-            'label'         => __( 'City', 'realia' ),
-            'section'       => 'realia_wire_transfer',
-            'settings'      => 'realia_wire_transfer_city',
-            'description'   => __( 'Enter your city.', 'realia' )
-        ) );
-
         // Postcode
         $wp_customize->add_setting( 'realia_wire_transfer_postcode', array(
             'default'           => null,
@@ -119,6 +103,20 @@ class Realia_Customizations_Wire_Transfer {
             'section'       => 'realia_wire_transfer',
             'settings'      => 'realia_wire_transfer_postcode',
             'description'   => __( 'Enter your postcode (ZIP).', 'realia' )
+        ) );
+
+        // City
+        $wp_customize->add_setting( 'realia_wire_transfer_city', array(
+            'default'           => null,
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => 'sanitize_text_field',
+        ) );
+
+        $wp_customize->add_control( 'realia_wire_transfer_city', array(
+            'label'         => __( 'City', 'realia' ),
+            'section'       => 'realia_wire_transfer',
+            'settings'      => 'realia_wire_transfer_city',
+            'description'   => __( 'Enter your city.', 'realia' )
         ) );
 
         // Country
