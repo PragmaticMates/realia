@@ -44,7 +44,7 @@ class Realia_Filter {
      * List of default fields defined by plugin
      *
      * @access public
-     * @return void
+     * @return array
      */
     public static function default_fields() {
         return array(
@@ -77,7 +77,6 @@ class Realia_Filter {
 	 * @return array
 	 */
 	public static function get_fields() {
-        $fields = self::default_fields();
         return apply_filters( 'realia_filter_fields', array() );
 	}
 

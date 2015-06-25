@@ -74,6 +74,7 @@ if ( ! class_exists( 'Realia' ) ) {
             require_once REALIA_DIR . 'includes/class-realia-pages.php';
             require_once REALIA_DIR . 'includes/class-realia-currencies.php';
             require_once REALIA_DIR . 'includes/class-realia-shortcodes.php';
+	        require_once REALIA_DIR . 'includes/class-realia-submission.php';
             require_once REALIA_DIR . 'includes/class-realia-google-maps-styles.php';
             require_once REALIA_DIR . 'includes/class-realia-packages.php';
 	        require_once REALIA_DIR . 'includes/class-realia-api.php';
