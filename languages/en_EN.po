@@ -251,7 +251,7 @@ msgid "Undefined payment type."
 msgstr ""
 
 #: includes/class-realia-paypal.php:192
-msgid "Payment has been successfull."
+msgid "Payment has been successful."
 msgstr ""
 
 #: includes/class-realia-paypal.php:196

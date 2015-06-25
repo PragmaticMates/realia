@@ -258,7 +258,7 @@ msgid "Undefined payment type."
 msgstr "Nedefinovaný typ platby."
 
 #: includes/class-realia-paypal.php:192
-msgid "Payment has been successfull."
+msgid "Payment has been successful."
 msgstr "Platba bola úspešná."
 
 #: includes/class-realia-paypal.php:196
