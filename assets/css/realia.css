@@ -537,20 +537,32 @@
     padding-top: 40px;
 }
 
+.property-valuation-item {
+    margin-bottom: 15px;
+}
+
 .property-valuation dt {
-    float: left;
+    display: inline-block;
     font-weight: normal;
-    width: 30%;
+    width: 140px;
 }
 
 .property-valuation dd {
-    margin-left: 30%;
+    display: inline-block;
+    height: 15px;
+    margin: 0px 15px 0px 0px;
+    position: relative;
+    width: 60%;
+}
+
+.property-valuation dd .bar-valuation {
+    background-color: silver;
+    height: 100%;
 }
 
 .property-valuation dd span {
     background-color: rgba(0, 0, 0, .1);
-    display: block;
-    height: 31px;
+    margin-left: 40px;
 }
 
 .property-valuation dd strong {
