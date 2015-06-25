@@ -69,8 +69,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endwhile; ?>
 	</table>
 
-	<div class="nav-previous alignleft"><?php next_posts_link( __( 'Older posts', 'realia' ) ); ?></div>
-	<div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts', 'realia' ) ); ?></div>
+	<?php the_posts_pagination( array(
+		'prev_text'          => __( 'Previous page', 'realia' ),
+		'next_text'          => __( 'Next page', 'realia' ),
+		'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'realia' ) . ' </span>',
+	) ); ?>
 <?php else: ?>
 	<div class="alert alert-warning"><?php echo __( 'No transactions found.', 'realia' ); ?></div>
 <?php endif; ?>
