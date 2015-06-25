@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Realia
-Version: 0.5.0
+Version: 0.6.0
 Description: Complete real estate office in WordPress plugin. Realia is covering all needs of real estate agencies or portals. No problem for Realia to turn your website into directory solution with payment options. It allows you to create and customize website in just few clicks by using setting manager in customizer. For full list of plugin features visit <a href="http://wprealia.com">wprealia.com</a>.
 Author: Pragmatic Mates
 Author URI: http://wprealia.com
@@ -48,7 +48,6 @@ if ( ! class_exists( 'Realia' ) ) {
             define( 'REALIA_PACKAGE_PREFIX', 'user_' );
             define( 'REALIA_USER_PREFIX', 'user_' );
             define( 'REALIA_RECAPTCHA_URL', 'https://www.google.com/recaptcha/api/siteverify' );
-
 	        define( 'REALIA_CONTRACT_SALE', 'SALE' );
 	        define( 'REALIA_CONTRACT_RENT', 'RENT' );
         }
