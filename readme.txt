@@ -93,7 +93,6 @@ purposes or directory listings.
 * Package system
 * Review before submission
 * Pay for featured or sticky property
-* PayPal integration - PayPal account and credit card
 * Google map support
 * Received transactions
 * Advanced price formatting
