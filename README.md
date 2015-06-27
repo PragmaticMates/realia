@@ -80,7 +80,6 @@ With Realia plugin you are able to assign agents to properties and create agenci
 * Package system
 * Review before submission
 * Pay for featured or sticky property
-* PayPal integration - PayPal account and credit card
 * Google map support
 * Received transactions
 * Advanced price formatting
@@ -177,6 +176,17 @@ Create at least one agent at first and then choose one or more you wish to assig
 9. User properties
 
 ## Changelog
+
+**0.7.0**
+
+*Release Date - 27th June, 2015*
+
+* wire transfer
+* removed PayPal library
+* added better paginations
+* template loader fix
+* property map position in detail
+* minor CSS fixes
 
 **0.6.0**
 
