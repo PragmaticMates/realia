@@ -213,8 +213,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php $facilities = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'public_facilities_group', true ); ?>
 
         <?php if ( ! empty( $facilities ) && is_array( $facilities ) ) : ?>
-            <h2 class='section-title'><?php echo __( 'Public facilities', 'aviators' ); ?></h2>
-
             <div class="property-public-facilities">
                 <?php foreach( $facilities as $facility ) : ?>
                     <div class="property-public-facility-wrapper">
@@ -230,7 +228,22 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </div><!-- /.property-public-facility-wrapper -->            
                 <?php endforeach; ?>
             </div><!-- /.property-public-facilities -->
-        <?php endif; ?> 
+        <?php endif; ?>
+
+        <!-- MAP LOCATION -->
+        <?php $map_location = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'map_location', true ); ?>
+
+        <?php if ( ! empty( $map_location ) && count( $map_location ) == 2) : ?>
+            <!-- MAP -->
+            <div class="property-map-position">
+                <div class="map" id="simple-map" style="height: 300px"
+                     data-latitude="<?php echo esc_attr( $map_location['latitude'] ); ?>"
+                     data-longitude="<?php echo esc_attr( $map_location['longitude'] ); ?>"
+                     data-zoom="15"
+                    >
+                </div><!-- /.map -->
+            </div><!-- /.map-position -->
+        <?php endif; ?>
 
         <!-- SIMILAR PROPERTIES -->
         <?php Realia_Query::loop_properties_similar(); ?>

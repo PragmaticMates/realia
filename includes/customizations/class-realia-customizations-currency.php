@@ -116,4 +116,4 @@ class Realia_Customizations_Currency {
     }
 }
 
-Realia_customizations_Currency::init();
+Realia_Customizations_Currency::init();

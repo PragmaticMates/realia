@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Realia
-Version: 0.5.0
+Version: 0.6.0
 Description: Complete real estate office in WordPress plugin. Realia is covering all needs of real estate agencies or portals. No problem for Realia to turn your website into directory solution with payment options. It allows you to create and customize website in just few clicks by using setting manager in customizer. For full list of plugin features visit <a href="http://wprealia.com">wprealia.com</a>.
 Author: Pragmatic Mates
 Author URI: http://wprealia.com
@@ -30,6 +30,7 @@ if ( ! class_exists( 'Realia' ) ) {
             $this->includes();
 	        $this->load_plugin_textdomain();
 
+	        add_action( 'activated_plugin', array( __CLASS__, 'plugin_order' ) );
             add_action( 'tgmpa_register', array( __CLASS__, 'register_plugins' ) );
         }
 
@@ -48,7 +49,6 @@ if ( ! class_exists( 'Realia' ) ) {
             define( 'REALIA_PACKAGE_PREFIX', 'user_' );
             define( 'REALIA_USER_PREFIX', 'user_' );
             define( 'REALIA_RECAPTCHA_URL', 'https://www.google.com/recaptcha/api/siteverify' );
-
 	        define( 'REALIA_CONTRACT_SALE', 'SALE' );
 	        define( 'REALIA_CONTRACT_RENT', 'RENT' );
         }
@@ -74,13 +74,10 @@ if ( ! class_exists( 'Realia' ) ) {
             require_once REALIA_DIR . 'includes/class-realia-pages.php';
             require_once REALIA_DIR . 'includes/class-realia-currencies.php';
             require_once REALIA_DIR . 'includes/class-realia-shortcodes.php';
+	        require_once REALIA_DIR . 'includes/class-realia-submission.php';
             require_once REALIA_DIR . 'includes/class-realia-google-maps-styles.php';
             require_once REALIA_DIR . 'includes/class-realia-packages.php';
 	        require_once REALIA_DIR . 'includes/class-realia-api.php';
-
-	        if ( Realia_Utilities::is_paypal_enabled() ) {
-		        require_once REALIA_DIR . 'includes/class-realia-paypal.php';
-	        }
         }
 
         /**
@@ -102,6 +99,24 @@ if ( ! class_exists( 'Realia' ) ) {
 	     */
 	    public function load_plugin_textdomain() {
 		    load_plugin_textdomain( 'realia', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
+	    }
+
+	    /**
+	     * Loads this plugin first
+	     *
+	     * @access public
+	     * @return void
+	     */
+	    public static function plugin_order() {
+		    $wp_path_to_this_file = preg_replace('/(.*)plugins\/(.*)$/', WP_PLUGIN_DIR."/$2", __FILE__);
+		    $this_plugin = plugin_basename(trim($wp_path_to_this_file));
+		    $active_plugins = get_option('active_plugins');
+		    $this_plugin_key = array_search($this_plugin, $active_plugins);
+			    if ($this_plugin_key) { // if it's 0 it's the first plugin already, no need to continue
+				    array_splice($active_plugins, $this_plugin_key, 1);
+				    array_unshift($active_plugins, $this_plugin);
+			    update_option('active_plugins', $active_plugins);
+		    }
 	    }
 
         /**
@@ -127,6 +142,6 @@ if ( ! class_exists( 'Realia' ) ) {
             tgmpa( $plugins );
         }
     }
-}
 
-new Realia();
+	new Realia();
+}

@@ -19,6 +19,9 @@ class Realia_Filter {
      * @return void
      */
     public static function init() {
+        add_filter( 'realia_filter_fields', array( __CLASS__, 'default_fields' ) );
+        add_filter( 'realia_filter_field_names', array( __CLASS__, 'default_field_names' ) );
+
         add_action( 'pre_get_posts', array( __CLASS__, 'archive' ) );
         add_action( 'pre_get_posts', array( __CLASS__, 'taxonomy') );
 	    add_action( 'realia_before_property_archive', array( __CLASS__, 'sort_template' ) );
@@ -37,6 +40,36 @@ class Realia_Filter {
 		}
 	}
 
+    /**
+     * List of default fields defined by plugin
+     *
+     * @access public
+     * @return array
+     */
+    public static function default_fields() {
+        return array(
+            'id'            => __( 'Property ID', 'realia' ),
+            'location'      => __( 'Location', 'realia' ),
+            'property_type' => __( 'Property type', 'realia' ),
+            'amenity'       => __( 'Amenity', 'realia' ),
+            'status'        => __( 'Status', 'realia' ),
+            'contract'      => __( 'Contract', 'realia' ),
+            'material'      => __( 'Material', 'realia' ),
+            'price'         => __( 'Price', 'realia' ),
+            'rooms'         => __( 'Rooms', 'realia' ),
+            'baths'         => __( 'Baths', 'realia' ),
+            'beds'          => __( 'Beds', 'realia' ),
+            'year_built'    => __( 'Year built', 'realia' ),
+            'home_area'     => __( 'Home area', 'realia' ),
+            'lot_area'      => __( 'Lot area', 'realia' ),
+            'garages'       => __( 'Garages', 'realia' ),
+            'featured'      => __( 'Featured', 'realia' ),
+            'reduced'       => __( 'Reduced', 'realia' ),
+            'sticky'        => __( 'Sticky', 'realia' ),
+            'sold'          => __( 'Sold', 'realia' ),
+        );
+    }
+
 	/**
 	 * Returns list of available filter fields templates
 	 *
@@ -44,28 +77,23 @@ class Realia_Filter {
 	 * @return array
 	 */
 	public static function get_fields() {
-		return array(
-			'id'            => __( 'Property ID', 'realia' ),
-			'location'      => __( 'Location', 'realia' ),
-			'property_type' => __( 'Property type', 'realia' ),
-			'amenity'       => __( 'Amenity', 'realia' ),
-			'status'        => __( 'Status', 'realia' ),
-			'contract'      => __( 'Contract', 'realia' ),
-			'material'      => __( 'Material', 'realia' ),
-			'price'         => __( 'Price', 'realia' ),
-			'rooms'         => __( 'Rooms', 'realia' ),
-			'baths'         => __( 'Baths', 'realia' ),
-			'beds'          => __( 'Beds', 'realia' ),
-			'year_built'    => __( 'Year built', 'realia' ),
-			'home_area'     => __( 'Home area', 'realia' ),
-			'lot_area'      => __( 'Lot area', 'realia' ),
-			'garages'       => __( 'Garages', 'realia' ),
-			'featured'      => __( 'Featured', 'realia' ),
-			'reduced'       => __( 'Reduced', 'realia' ),
-			'sticky'        => __( 'Sticky', 'realia' ),
-			'sold'          => __( 'Sold', 'realia' ),
-		);
+        return apply_filters( 'realia_filter_fields', array() );
 	}
+
+    /**
+     * Default filter field names
+     *
+     * @access public
+     * @return array
+     */
+    public static function default_field_names() {
+        return array(
+            'filter-id', 'filter-location', 'filter-property-type', 'filter-amenity', 'filter-status', 'filter-contract',
+            'filter-material', 'filter-price-from', 'filter-price-to', 'filter-rooms', 'filter-baths', 'filter-beds', 'filter-year-built',
+            'filter-home-area-from', 'filter-home-area-to', 'filter-garages', 'filter-featured', 'filter-reduced', 'filter-sticky', 'filter-sold',
+            'filter-lot-area-from', 'filter-lot-area-to',
+        );
+    }
 
 	/**
 	 * Return all filter field names
@@ -73,13 +101,8 @@ class Realia_Filter {
 	 * @access public
 	 * @return array
 	 */
-	public static function get_field_names() {
-		return array(
-			'filter-id', 'filter-location', 'filter-property-type', 'filter-amenity', 'filter-status', 'filter-contract',
-			'filter-material', 'filter-price-from', 'filter-price-to', 'filter-rooms', 'filter-baths', 'filter-beds', 'filter-year-built',
-			'filter-home-area-from', 'filter-home-area-to', 'filter-garages', 'filter-featured', 'filter-reduced', 'filter-sticky', 'filter-sold',
-			'filter-lot-area-from', 'filter-lot-area-to',
-		);
+	public static function get_field_names() {        
+		return apply_filters( 'realia_filter_field_names', array() );
 	}
 
     /**

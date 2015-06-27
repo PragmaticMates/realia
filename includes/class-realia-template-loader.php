@@ -92,15 +92,16 @@ class Realia_Template_Loader {
      *
      * @param string $name
      * @param array $args
+     * @param string $plugin_dir
      * @return string
      * @throws Exception
      */
-    public static function load( $name, $args = array() ) {
+    public static function load( $name, $args = array(), $plugin_dir = REALIA_DIR ) {
         if ( is_array( $args ) && count( $args ) > 0 ) {
             extract( $args, EXTR_SKIP );
         }
 
-        $path = self::locate( $name );
+        $path = self::locate( $name, $plugin_dir );
         ob_start();
         include $path;
         $result = ob_get_contents();

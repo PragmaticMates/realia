@@ -4,10 +4,10 @@
 		<li><?php bloginfo( 'name' ); ?></li>
 	<?php elseif ( ! is_home() ) : ?>
         <li><a href="<?php echo site_url(); ?>"><?php echo __( 'Home', 'realia' ); ?></a></li>
-        
-        <?php if ( is_archive() && is_tax() ) : ?>        	
+
+        <?php if ( is_archive() && is_tax() ) : ?>
         	<?php if ( is_tax() ) : ?>
-        		<?php 
+        		<?php
 	        	global $wp_query;
         		$tax = $wp_query->get_queried_object();
  				$term = get_term_by( 'slug', get_query_var( 'term' ), $tax->taxonomy );
@@ -22,17 +22,21 @@
 						</li>
 					<?php endforeach; ?>
 				<?php endif; ?>
-				
-				<li><?php echo single_cat_title(); ?></li>				
+
+				<li><?php echo single_cat_title(); ?></li>
         	<?php else: ?>
 	        	<li><?php echo single_cat_title(); ?></li>
 	        <?php endif; ?>
-        <?php elseif ( is_archive() ) : ?>        	
+        <?php elseif ( is_archive() ) : ?>
         	<li><?php post_type_archive_title(); ?></li>
         <?php endif; ?>
 
         <?php if ( is_category() || is_single() ) : ?>
-        		<li><?php echo get_post_type_object( get_post_type() )->labels->name; ?></li>
+        		<li>
+                    <a href="<?php echo get_post_type_archive_link( get_post_type() ); ?>">
+                        <?php echo get_post_type_object( get_post_type() )->labels->name; ?>
+                    </a>
+                </li>
                 <?php if ( is_single() ) : ?>
 					<li><?php the_title(); ?></li>
                 <?php endif; ?>
@@ -41,13 +45,13 @@
         <?php elseif ( is_page() ): ?>
                 <li><?php the_title(); ?></li>
         <?php endif; ?>
-	<?php elseif ( is_tag() ) : ?> 		
+	<?php elseif ( is_tag() ) : ?>
 		<li><?php single_tag_title() ?></li>
 	<?php elseif ( is_day() ) : ?>
 		<li><?php echo __( 'Archive for', 'realia'); ?>  <?php the_time( 'F jS, Y' ); ?></li>
 	<?php elseif ( is_month() ): ?>
 		<li><?php echo __( 'Archive for', 'realia'); ?>  <?php the_time( 'F, Y' ); ?></li>
-	<?php elseif (is_year()) : ?> 
+	<?php elseif (is_year()) : ?>
 		<li><?php echo __( 'Archive for', 'realia'); ?>  <?php the_time( 'Y' ); ?></li>
 	<?php elseif ( is_author() ): ?>
 		<li><?php echo __( 'Author Archive', 'realia' ); ?></li>

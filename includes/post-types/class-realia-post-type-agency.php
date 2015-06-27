@@ -21,6 +21,8 @@ class Realia_Post_Type_Agency {
     public static function init() {
         add_action( 'init', array( __CLASS__, 'definition' ) );
         add_filter( 'cmb2_meta_boxes', array( __CLASS__, 'fields' ) );
+        add_filter( 'manage_edit-agency_columns', array( __CLASS__, 'custom_columns' ) );
+        add_action( 'manage_agency_posts_custom_column', array( __CLASS__, 'custom_columns_manage' ) );
     }
 
     /**
@@ -119,6 +121,79 @@ class Realia_Post_Type_Agency {
         );
 
         return $metaboxes;
+    }
+
+    /**
+     * Custom admin columns for post type
+     *
+     * @access public
+     * @return array
+     */
+    public static function custom_columns() {
+        $fields = array(
+            'cb' 				=> '<input type="checkbox" />',
+            'title' 			=> __( 'Title', 'realia' ),
+            'thumbnail' 		=> __( 'Thumbnail', 'realia' ),
+            'email'      		=> __( 'E-mail', 'realia' ),
+            'web'      		    => __( 'Web', 'realia' ),
+            'phone'      		=> __( 'Phone', 'realia' ),
+            'agents'         	=> __( 'Agents', 'realia' ),
+            'author' 			=> __( 'Author', 'realia' ),
+        );
+
+        return $fields;
+    }
+
+    /**
+     * Custom admin columns implementation
+     *
+     * @access public
+     * @param string $column
+     * @return array
+     */
+    public static function custom_columns_manage( $column ) {
+        switch ( $column ) {
+            case 'thumbnail':
+                if ( has_post_thumbnail() ) {
+                    the_post_thumbnail( 'thumbnail', array(
+                        'class'     => 'attachment-thumbnail attachment-thumbnail-small'
+                    ) );
+                } else {
+                    echo '-';
+                }
+                break;
+            case 'email':
+                $email = get_post_meta( get_the_ID(), REALIA_AGENCY_PREFIX . 'email', true );
+
+                if ( ! empty( $email ) ) {
+                    echo $email;
+                } else {
+                    echo '-';
+                }
+                break;
+            case 'web':
+                $web = get_post_meta( get_the_ID(), REALIA_AGENCY_PREFIX  . 'web', true );
+
+                if ( ! empty( $web ) ) {
+                    echo $web;
+                } else {
+                    echo '-';
+                }
+                break;
+            case 'phone':
+                $phone = get_post_meta( get_the_ID(), REALIA_AGENCY_PREFIX  . 'phone', true );
+
+                if ( ! empty( $phone ) ) {
+                    echo $phone;
+                } else {
+                    echo '-';
+                }
+                break;
+            case 'agents':
+                $agents_count = Realia_Query::get_agency_agents( $post_id = get_the_ID() )->post_count;
+                echo $agents_count;
+                break;
+        }
     }
 }
 

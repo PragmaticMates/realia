@@ -63,4 +63,4 @@ class Realia_Customizations_Measurement {
     }
 }
 
-Realia_customizations_Measurement::init();
+Realia_Customizations_Measurement::init();

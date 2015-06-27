@@ -8,25 +8,19 @@ You can try it out by visiting a preview demo at [http://preview.wprealia.com/pl
 
 ### WP REST API integration
 
-Plugin offers option to search for properties via API. Plugin adds options to filter properties by custom fields. Realia
-extends default API output by new fields as well. Check an API request at [http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3](http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3) to see how easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are
-available more than 20+ fields.
+Plugin offers option to search for properties via API. Plugin adds options to filter properties by custom fields. Realia extends default API output by new fields as well. Check an API request at [http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3](http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3) to see how easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are available more than 20+ fields.
 
 > Interested in iOS app written in Swift? Don't hesitate and contact us and we can offer you Realia Browser app for your site.
 >
 > Check the app documentation: [http://wprealia.com/en/documentation/realia-browser/overview/](http://wprealia.com/en/documentation/realia-browser/overview/ "Realia Browser")
 
-
 ### Front end submission system
 
-Realia allows to add properties by your users. Create the property directory by few clicks. If you want you can review
-newly added properties before publishing. Of course it is possible to charge users for using your website. Plugins has
-builtin pay per post and package system.
+Realia allows to add properties by your users. Create the property directory by few clicks. If you want you can review newly added properties before publishing. Of course it is possible to charge users for using your website. Plugins has builtin pay per post and package system.
 
 ### Property management
 
-Manage properties from WordPress admin. Custom version of table display is containing all important information about
-properties like featured image, price and assigned taxonomy terms.
+Manage properties from WordPress admin. Custom version of table display is containing all important information about properties like featured image, price and assigned taxonomy terms.
 
 ### Price formatting options
 
@@ -38,8 +32,7 @@ Are you developer and still not satisfied with price formatting? Don't worry. Ev
 
 ### Agencies & Agents
 
-With Realia plugin you are able to assign agent to properties and create agencies grouping agents. Great for internal
-purposes or directory listings.
+With Realia plugin you are able to assign agents to properties and create agencies grouping agents. Great for internal purposes or directory listings.
 
 ### Widgets
 
@@ -47,7 +40,7 @@ purposes or directory listings.
 * Vertical filter
 * Properties
 * Agents
-* Assigned agent to property
+* Assigned agents to property
 * Enquire form
 
 ### Property Attributes
@@ -167,9 +160,9 @@ Put a `Properties Map` widget into widget area. In widget settings set latitude 
 
 You are able to set custom price text of each property in its detail. You can also set price prefix and suffix if you wish.
 
-**How do I assign an agent to property ?**
+**How do I assign agents to property ?**
 
-Create at least one agent at first and then choose the one you wish to assign in property detail.
+Create at least one agent at first and then choose one or more you wish to assign in property detail.
 
 ## Screenshots
 
@@ -185,9 +178,23 @@ Create at least one agent at first and then choose the one you wish to assign in
 
 ## Changelog
 
+**0.6.0**
+
+*Release Date - 24th June, 2015*
+
+* user can be registered as agent
+* breadcrumb update
+* slovak translation
+* agents and agencies admin table update
+* custom public facilities and valuations
+* property can have more assigned agents
+* refactored property fields with 'attributes_' prefix
+* realia_change_password, realia_change_profile, realia_change_agent_profile shortcodes
+* some fixes
+
 **0.5.0**
 
-*Release Date - 16th Jine, 2015*
+*Release Date - 16th June, 2015*
 
 * WP API for agents
 * WP API for agencies

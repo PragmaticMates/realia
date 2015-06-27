@@ -1,0 +1,3508 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Realsite\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-23 16:04+0100\n"
+"PO-Revision-Date: 2015-06-23 16:05+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Loco-Source-Locale: en_GB\n"
+"X-Loco-Target-Locale: sk_SK\n"
+"X-Loco-Project-Id: 6221\n"
+"X-Loco-Api-Version: 1.0.9\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: libraries\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+
+#: includes/class-realia-filter.php:51
+#: templates/widgets/filter-fields/id.php:4
+#: templates/widgets/filter-fields/id.php:8
+msgid "Property ID"
+msgstr "ID nehnuteľnosti"
+
+#: includes/class-realia-filter.php:52
+#: includes/post-types/class-realia-post-type-agency.php:107
+#: includes/post-types/class-realia-post-type-agency.php:115
+#: includes/post-types/class-realia-post-type-property.php:295
+#: includes/post-types/class-realia-post-type-property.php:303
+#: includes/post-types/class-realia-post-type-property.php:428
+#: includes/post-types/class-realia-post-type-property.php:480
+#: includes/taxonomies/class-realia-taxonomies-locations.php:34
+#: templates/content-property.php:107
+#: templates/widgets/filter-fields/location.php:4
+#: templates/widgets/filter-fields/location.php:10
+msgid "Location"
+msgstr "Poloha"
+
+#: includes/class-realia-filter.php:53
+#: templates/widgets/filter-fields/property-type.php:4
+#: templates/widgets/filter-fields/property-type.php:11
+msgid "Property type"
+msgstr "Typ nehnuteľnosti"
+
+#: includes/class-realia-filter.php:54
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:34
+#: templates/widgets/filter-fields/amenity.php:4
+#: templates/widgets/filter-fields/amenity.php:11
+msgid "Amenity"
+msgstr "Vybavenie"
+
+#: includes/class-realia-filter.php:55
+#: includes/post-types/class-realia-post-type-property.php:482
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:34
+#: templates/content-property.php:102 templates/properties/row.php:79
+#: templates/widgets/filter-fields/status.php:4
+#: templates/widgets/filter-fields/status.php:12
+msgid "Status"
+msgstr "Stav"
+
+#: includes/class-realia-filter.php:56
+#: includes/post-types/class-realia-post-type-property.php:122
+#: templates/content-property.php:90
+#: templates/widgets/filter-fields/contract.php:4
+msgid "Contract"
+msgstr "Zmluva"
+
+#: includes/class-realia-filter.php:57
+#: includes/taxonomies/class-realia-taxonomies-materials.php:34
+#: templates/content-property.php:130
+#: templates/widgets/filter-fields/material.php:4
+#: templates/widgets/filter-fields/material.php:12
+msgid "Material"
+msgstr "Materiál"
+
+#: includes/class-realia-filter.php:58
+#: includes/post-types/class-realia-post-type-package.php:84
+#: includes/post-types/class-realia-post-type-property.php:165
+#: includes/post-types/class-realia-post-type-property.php:397
+#: includes/post-types/class-realia-post-type-property.php:479
+#: includes/post-types/class-realia-post-type-transaction.php:114
+#: templates/content-property.php:59 templates/misc/transactions.php:31
+#: templates/properties/row.php:58 templates/properties/sort.php:21
+msgid "Price"
+msgstr "Cena"
+
+#: includes/class-realia-filter.php:59
+#: includes/post-types/class-realia-post-type-property.php:200
+#: includes/post-types/class-realia-post-type-property.php:403
+#: templates/content-property.php:135
+#: templates/widgets/filter-fields/rooms.php:5
+#: templates/widgets/filter-fields/rooms.php:9
+msgid "Rooms"
+msgstr "Rooms"
+
+#: includes/class-realia-filter.php:60
+#: includes/post-types/class-realia-post-type-property.php:210
+#: includes/post-types/class-realia-post-type-property.php:413
+#: templates/content-property.php:145
+#: templates/misc/google-map-infowindow.php:46
+#: templates/widgets/filter-fields/baths.php:4
+#: templates/widgets/filter-fields/baths.php:8
+msgid "Baths"
+msgstr "Kúpeľne"
+
+#: includes/class-realia-filter.php:61
+#: includes/post-types/class-realia-post-type-property.php:205
+#: includes/post-types/class-realia-post-type-property.php:408
+#: templates/content-property.php:140
+#: templates/misc/google-map-infowindow.php:38
+#: templates/widgets/filter-fields/beds.php:4
+#: templates/widgets/filter-fields/beds.php:8
+msgid "Beds"
+msgstr "Postele"
+
+#: includes/class-realia-filter.php:62
+#: includes/post-types/class-realia-post-type-property.php:92
+#: templates/content-property.php:69
+#: templates/widgets/filter-fields/year-built.php:4
+#: templates/widgets/filter-fields/year-built.php:8
+msgid "Year built"
+msgstr "Rok výstavby"
+
+#: includes/class-realia-filter.php:63
+#: includes/post-types/class-realia-post-type-property.php:220
+#: templates/content-property.php:112
+msgid "Home area"
+msgstr "Plocha domu"
+
+#: includes/class-realia-filter.php:64
+#: includes/post-types/class-realia-post-type-property.php:232
+#: templates/content-property.php:124
+msgid "Lot area"
+msgstr "Plocha pozemku"
+
+#: includes/class-realia-filter.php:65
+#: includes/post-types/class-realia-post-type-property.php:215
+#: includes/post-types/class-realia-post-type-property.php:418
+#: templates/content-property.php:150
+#: templates/widgets/filter-fields/garages.php:5
+#: templates/widgets/filter-fields/garages.php:9
+msgid "Garages"
+msgstr "Garáže"
+
+#: includes/class-realia-filter.php:66
+#: includes/post-types/class-realia-post-type-property.php:107
+#: includes/post-types/class-realia-post-type-property.php:484
+#: templates/content-property.php:20 templates/content-property.php:22
+#: templates/properties/box.php:21 templates/properties/box.php:23
+#: templates/properties/row.php:14 templates/properties/row.php:16
+#: templates/submission/list.php:119
+#: templates/widgets/filter-fields/featured.php:7
+msgid "Featured"
+msgstr "Promo"
+
+#: includes/class-realia-filter.php:67
+#: includes/post-types/class-realia-post-type-property.php:117
+#: includes/post-types/class-realia-post-type-property.php:485
+#: templates/content-property.php:20 templates/content-property.php:24
+#: templates/properties/box.php:21 templates/properties/box.php:25
+#: templates/properties/row.php:14 templates/properties/row.php:18
+#: templates/widgets/filter-fields/reduced.php:7
+msgid "Reduced"
+msgstr "Zľavnené"
+
+#: includes/class-realia-filter.php:68
+#: includes/post-types/class-realia-post-type-property.php:112
+#: templates/submission/list.php:95
+msgid "Sticky"
+msgstr "TOP"
+
+#: includes/class-realia-filter.php:69
+#: includes/post-types/class-realia-post-type-property.php:132
+#: templates/content-property.php:78
+#: templates/widgets/filter-fields/sold.php:7
+msgid "Sold"
+msgstr "Predané"
+
+#: includes/class-realia-packages.php:38 includes/class-realia-packages.php:62
+#: includes/class-realia-pages.php:31
+msgid "Not set"
+msgstr "Nenastavené"
+
+#: includes/class-realia-packages.php:66
+msgid "1 week"
+msgstr "1 týždeň"
+
+#: includes/class-realia-packages.php:67
+msgid "1 month"
+msgstr "1 mesiac"
+
+#: includes/class-realia-packages.php:68
+msgid "1 year"
+msgstr "1 rok"
+
+#: includes/class-realia-paypal.php:69
+msgid "First name is required."
+msgstr "Krstné meno je povinné."
+
+#: includes/class-realia-paypal.php:74
+msgid "Last name is required."
+msgstr "Priezvisko je povinné."
+
+#: includes/class-realia-paypal.php:79
+msgid "Card number is required."
+msgstr "Číslo karty je povinné."
+
+#: includes/class-realia-paypal.php:84
+msgid "CVV is required."
+msgstr "CVV je povinné."
+
+#: includes/class-realia-paypal.php:89
+msgid "Expires month is required."
+msgstr "Mesiac expirácie je povinný."
+
+#: includes/class-realia-paypal.php:94
+msgid "Expires year is required."
+msgstr "Rok expirácie je povinný."
+
+#: includes/class-realia-paypal.php:99
+msgid "Credit card number is not valid."
+msgstr "Číslo karty je neplatné."
+
+#: includes/class-realia-paypal.php:104
+msgid "CVV number is not valid."
+msgstr "CVV číslo je neplatné."
+
+#: includes/class-realia-paypal.php:136
+msgid "Property has been featured."
+msgstr "Nehnuteľnosť bola promovaná."
+
+#: includes/class-realia-paypal.php:140
+msgid "Property has been sticked."
+msgstr "Nehnuteľnosť bola ozačená ako TOP."
+
+#: includes/class-realia-paypal.php:147
+msgid "Property has been published."
+msgstr "Nehnuteľnosť bola zverejnená."
+
+#: includes/class-realia-paypal.php:149
+msgid "Property will be published after review."
+msgstr "Nehnuteľnosť bude publikovaná až po skontrolovaní administrátorom."
+
+#: includes/class-realia-paypal.php:155
+msgid "Package has been upgraded."
+msgstr "Balík bol aktualizovaný."
+
+#: includes/class-realia-paypal.php:158
+msgid "Undefined payment type."
+msgstr "Nedefinovaný typ platby."
+
+#: includes/class-realia-paypal.php:192
+msgid "Payment has been successful."
+msgstr "Platba bola úspešná."
+
+#: includes/class-realia-paypal.php:196
+msgid "Error processing payment."
+msgstr "Nepodarilo sa spracovať platbu."
+
+#: includes/class-realia-paypal.php:306
+msgid "Payment has been successful."
+msgstr "Platba bola úspešná."
+
+#: includes/class-realia-paypal.php:310
+msgid "There was an error processing payment."
+msgstr "Pri spracovaní platby nastala chyba."
+
+#: includes/class-realia-paypal.php:408
+#: includes/post-types/class-realia-post-type-transaction.php:160
+#: templates/misc/transactions.php:47
+msgid "Feature property"
+msgstr "Promo nehnuteľnosť"
+
+#: includes/class-realia-paypal.php:409
+#, php-format
+msgid "Feature property %s"
+msgstr "Promovať nehnuteľnosť %s"
+
+#: includes/class-realia-paypal.php:420
+msgid "Sticky property"
+msgstr "Označiť nehnuteľnosť za TOP"
+
+#: includes/class-realia-paypal.php:421
+#, php-format
+msgid "Sticky property %s"
+msgstr "Označiť nehnuteľnosť %s za TOP"
+
+#: includes/class-realia-paypal.php:431
+msgid "Publish property"
+msgstr "Zverejniť nehnuteľnosť"
+
+#: includes/class-realia-paypal.php:432
+#, php-format
+msgid "Publish property %s"
+msgstr "Zverejniť nehnuteľnosť %s"
+
+#: includes/class-realia-paypal.php:443
+msgid "Purchase package"
+msgstr "Zakúpiť balík"
+
+#: includes/class-realia-paypal.php:444
+#, php-format
+msgid "Upgrade package to %s"
+msgstr "Zmena balíka na %s"
+
+#: includes/class-realia-shortcodes.php:51
+msgid "You have been successfully logged out."
+msgstr "Úspešne ste sa odhlásili"
+
+#: includes/class-realia-shortcodes.php:112
+msgid "A metabox with the specified 'metabox_id' doesn't exist."
+msgstr ""
+"Metabox so zadaným \n"
+"'metabox_id' neexistuje."
+
+#: includes/class-realia-shortcodes.php:132
+msgid "Save property"
+msgstr "Uložiť nehnuteľnosť"
+
+#: includes/class-realia-shortcodes.php:155
+msgid "Property has been successfully removed."
+msgstr "Nehnuteľnosť bola úspešne zmazaná."
+
+#: includes/class-realia-shortcodes.php:157
+msgid "An error occured when removing an item."
+msgstr "Pri odstraňovaní položky nastala chyba."
+
+#: includes/class-realia-utilities.php:45
+msgid "Please sign in before accessing this page."
+msgstr "Pred vstupom na túto stránku sa prosím prihláste."
+
+#: includes/class-realia-utilities.php:56 templates/misc/not-allowed.php:8
+msgid "You are not allowed to access this page."
+msgstr "Nemáte povolený prístup na túto stránku."
+
+#: includes/customizations/class-realia-customizations-currency.php:34
+msgid "Realia Currency"
+msgstr "Realia Mena"
+
+#: includes/customizations/class-realia-customizations-currency.php:46
+msgid "Currency Symbol"
+msgstr "Symbol meny"
+
+#: includes/customizations/class-realia-customizations-currency.php:59
+msgid "Currency Code"
+msgstr "Kód meny"
+
+#: includes/customizations/class-realia-customizations-currency.php:73
+msgid "Show Symbol After Amount"
+msgstr "Zobraziť symbol po sume"
+
+#: includes/customizations/class-realia-customizations-currency.php:85
+msgid "Decimal places"
+msgstr "Desatinné miesta"
+
+#: includes/customizations/class-realia-customizations-currency.php:98
+msgid "Decimal Separator"
+msgstr "Desatinný oddeľovač"
+
+#: includes/customizations/class-realia-customizations-currency.php:111
+msgid "Thousands Separator"
+msgstr "Oddeľovač tisícov"
+
+#: includes/customizations/class-realia-customizations-currency.php:114
+msgid "If you need space, enter &amp;nbsp;"
+msgstr "Ak potrebujete medzeru, zadajte  &amp;nbsp;"
+
+#: includes/customizations/class-realia-customizations-general.php:37
+msgid "Realia General"
+msgstr "Realia Všeobecné"
+
+#: includes/customizations/class-realia-customizations-general.php:50
+msgid "Login Required Page"
+msgstr "Potrebné prihlásenie"
+
+#: includes/customizations/class-realia-customizations-general.php:65
+msgid "After Login Page"
+msgstr "Po prihlásení"
+
+#: includes/customizations/class-realia-customizations-general.php:80
+msgid "Profile Page"
+msgstr "Profilová stránka"
+
+#: includes/customizations/class-realia-customizations-general.php:95
+msgid "Password Page"
+msgstr "Stránka s heslom"
+
+#: includes/customizations/class-realia-customizations-general.php:110
+msgid "Hide Unassigned Amenities"
+msgstr "Skryť nepridelené vybavenie"
+
+#: includes/customizations/class-realia-customizations-general.php:124
+msgid "Show property archive as grid"
+msgstr "Zobraziť archív nehnuteľností ako mriežku"
+
+#: includes/customizations/class-realia-customizations-measurement.php:34
+msgid "Realia Measurement"
+msgstr "Realia Miera"
+
+#: includes/customizations/class-realia-customizations-measurement.php:46
+msgid "Area Unit"
+msgstr "Plošná jednotka"
+
+#: includes/customizations/class-realia-customizations-measurement.php:59
+msgid "Distance Unit"
+msgstr "Jednotka vzdialenosti"
+
+#: includes/customizations/class-realia-customizations-paypal.php:34
+msgid "Realia PayPal"
+msgstr "Realia PayPal"
+
+#: includes/customizations/class-realia-customizations-paypal.php:46
+msgid "Client ID"
+msgstr "Client ID"
+
+#: includes/customizations/class-realia-customizations-paypal.php:60
+msgid "Client Secret"
+msgstr "Client Secret"
+
+#: includes/customizations/class-realia-customizations-paypal.php:73
+msgid "Live Mode"
+msgstr "Live Mode"
+
+#: includes/customizations/class-realia-customizations-paypal.php:87
+msgid "Credit Card"
+msgstr "Kreditná karta"
+
+#: includes/customizations/class-realia-customizations-recaptcha.php:34
+msgid "Realia reCAPTCHA"
+msgstr "Realia reCAPTCHA"
+
+#: includes/customizations/class-realia-customizations-recaptcha.php:45
+msgid "Site Key"
+msgstr "Kľúč stránky"
+
+#: includes/customizations/class-realia-customizations-recaptcha.php:57
+msgid "Secret Key"
+msgstr "Tajný kľúč"
+
+#: includes/customizations/class-realia-customizations-submission.php:36
+msgid "Realia Submission"
+msgstr "Realia Inzercia"
+
+#: includes/customizations/class-realia-customizations-submission.php:50
+msgid "Enable agents"
+msgstr "Povoliť agentov"
+
+#: includes/customizations/class-realia-customizations-submission.php:64
+#: includes/post-types/class-realia-post-type-property.php:481
+#: includes/post-types/class-realia-post-type-transaction.php:116
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:34
+#: templates/content-property.php:74 templates/properties/row.php:65
+msgid "Type"
+msgstr "Typ"
+
+#: includes/customizations/class-realia-customizations-submission.php:68
+msgid "Free for all"
+msgstr "Zdarma pre všetkých"
+
+#: includes/customizations/class-realia-customizations-submission.php:69
+#: includes/post-types/class-realia-post-type-transaction.php:166
+#: templates/misc/transactions.php:53
+msgid "Pay per post"
+msgstr "Platba za príspevok"
+
+#: includes/customizations/class-realia-customizations-submission.php:70
+#: includes/post-types/class-realia-post-type-package.php:34
+#: includes/post-types/class-realia-post-type-package.php:46
+msgid "Packages"
+msgstr "Balíky"
+
+#: includes/customizations/class-realia-customizations-submission.php:82
+msgid "Pay per post - Post price"
+msgstr "Platba za post - Cena za post"
+
+#: includes/customizations/class-realia-customizations-submission.php:85
+#: includes/customizations/class-realia-customizations-submission.php:113
+#: includes/customizations/class-realia-customizations-submission.php:141
+msgid ""
+"Enter price without any currency. As main currency will be used primary one "
+"(first defined)."
+msgstr ""
+"Zadajte cenu bez meny. Ako hlavná mena sa použije primárna (prvá definovaná)."
+
+#: includes/customizations/class-realia-customizations-submission.php:97
+msgid "Enable pay for featured"
+msgstr "Povoliť platbu za promo"
+
+#: includes/customizations/class-realia-customizations-submission.php:110
+msgid "Featured price"
+msgstr "Promo cena"
+
+#: includes/customizations/class-realia-customizations-submission.php:125
+msgid "Enable pay for sticky"
+msgstr "Povoliť platbu za TOP"
+
+#: includes/customizations/class-realia-customizations-submission.php:138
+msgid "Sticky price"
+msgstr "TOP cena"
+
+#: includes/customizations/class-realia-customizations-submission.php:153
+msgid "Payment Page"
+msgstr "Stránka platby"
+
+#: includes/customizations/class-realia-customizations-submission.php:168
+msgid "List Page"
+msgstr "Zoznam"
+
+#: includes/customizations/class-realia-customizations-submission.php:183
+msgid "Create Page"
+msgstr "Vytvoriť"
+
+#: includes/customizations/class-realia-customizations-submission.php:198
+msgid "Edit Page"
+msgstr "Upraviť"
+
+#: includes/customizations/class-realia-customizations-submission.php:213
+msgid "Remove Page"
+msgstr "Odstrániť"
+
+#: includes/customizations/class-realia-customizations-submission.php:228
+msgid "Transactions Page"
+msgstr "Transakcie"
+
+#: includes/customizations/class-realia-customizations-submission.php:243
+msgid "Terms &amp; Conditions Page"
+msgstr "Všeobecné obchodné podmienky"
+
+#: includes/customizations/class-realia-customizations-submission.php:258
+msgid "Review Before Submission"
+msgstr "Preskúmanie pred odovzdaním"
+
+#: includes/post-types/class-realia-post-type-agency.php:36
+#: includes/post-types/class-realia-post-type-agency.php:48
+#: includes/post-types/class-realia-post-type-agent.php:112
+msgid "Agencies"
+msgstr "Agentúry"
+
+#: includes/post-types/class-realia-post-type-agency.php:37
+msgid "Agency"
+msgstr "Agentúra"
+
+#: includes/post-types/class-realia-post-type-agency.php:38
+#: includes/post-types/class-realia-post-type-agency.php:39
+msgid "Add New Agency"
+msgstr "Pridať novú agentúru"
+
+#: includes/post-types/class-realia-post-type-agency.php:40
+msgid "Edit Agency"
+msgstr "Upraviť agentúru"
+
+#: includes/post-types/class-realia-post-type-agency.php:41
+msgid "New Agency"
+msgstr "Upraviť agentúru"
+
+#: includes/post-types/class-realia-post-type-agency.php:42
+msgid "All Agencies"
+msgstr "Všetky agentúry"
+
+#: includes/post-types/class-realia-post-type-agency.php:43
+msgid "View Agency"
+msgstr "Zobraziť agentúru"
+
+#: includes/post-types/class-realia-post-type-agency.php:44
+msgid "Search Agency"
+msgstr "Vyhľadať agentúru"
+
+#: includes/post-types/class-realia-post-type-agency.php:45
+msgid "No agencies found"
+msgstr "Nenašli sa žiadne agentúry"
+
+#: includes/post-types/class-realia-post-type-agency.php:46
+msgid "No agencies found in Trash"
+msgstr "V koši sa nenašli žiadne agentúry"
+
+#: includes/post-types/class-realia-post-type-agency.php:58
+msgid "agencies"
+msgstr "agentúry"
+
+#: includes/post-types/class-realia-post-type-agency.php:76
+#: includes/post-types/class-realia-post-type-agent.php:85
+#: includes/post-types/class-realia-post-type-agent.php:144
+#: includes/post-types/class-realia-post-type-property.php:80
+#: includes/post-types/class-realia-post-type-property.php:356
+msgid "General Options"
+msgstr "Všeobecné možnosti"
+
+#: includes/post-types/class-realia-post-type-agency.php:84
+#: includes/post-types/class-realia-post-type-agency.php:137
+#: includes/post-types/class-realia-post-type-agent.php:93
+#: includes/post-types/class-realia-post-type-agent.php:175
+#: includes/post-types/class-realia-post-type-agent.php:211
+#: templates/agents/contact-form.php:40 templates/mails/enquire.php:14
+#: templates/misc/profile-form.php:17 templates/misc/register.php:14
+#: templates/widgets/enquire.php:35
+msgid "E-mail"
+msgstr "E-mail"
+
+#: includes/post-types/class-realia-post-type-agency.php:89
+#: includes/post-types/class-realia-post-type-agency.php:138
+#: includes/post-types/class-realia-post-type-agent.php:98
+#: includes/post-types/class-realia-post-type-agent.php:180
+#: includes/post-types/class-realia-post-type-agent.php:212
+#: templates/agencies/row.php:61 templates/agents/row.php:59
+#: templates/content-agency.php:36 templates/content-agent.php:36
+msgid "Web"
+msgstr "Web"
+
+#: includes/post-types/class-realia-post-type-agency.php:94
+#: includes/post-types/class-realia-post-type-agency.php:139
+#: includes/post-types/class-realia-post-type-agent.php:103
+#: includes/post-types/class-realia-post-type-agent.php:185
+#: includes/post-types/class-realia-post-type-agent.php:213
+#: templates/agencies/row.php:70 templates/agents/row.php:69
+#: templates/content-agency.php:41 templates/content-agent.php:41
+msgid "Phone"
+msgstr "Telefón"
+
+#: includes/post-types/class-realia-post-type-agency.php:99
+#: includes/post-types/class-realia-post-type-agent.php:108
+#: includes/post-types/class-realia-post-type-agent.php:190
+#: includes/post-types/class-realia-post-type-property.php:97
+#: templates/agencies/row.php:74 templates/agents/row.php:74
+#: templates/content-agency.php:46 templates/content-agent.php:46
+msgid "Address"
+msgstr "Adresa"
+
+#: includes/post-types/class-realia-post-type-agency.php:116
+msgid "Drag the marker to set the exact location"
+msgstr "Posuňte značku na nastavenie presnej polohy"
+
+#: includes/post-types/class-realia-post-type-agency.php:135
+#: includes/post-types/class-realia-post-type-agent.php:156
+#: includes/post-types/class-realia-post-type-agent.php:209
+#: includes/post-types/class-realia-post-type-property.php:368
+#: includes/post-types/class-realia-post-type-property.php:477
+#: includes/post-types/class-realia-post-type-transaction.php:111
+#: templates/properties/sort.php:22 templates/widgets/agents-admin.php:17
+#: templates/widgets/agents-assigned-admin.php:12
+#: templates/widgets/enquire-admin.php:16
+#: templates/widgets/filter-admin.php:15
+#: templates/widgets/filter-rent-sale-admin.php:17
+#: templates/widgets/properties-admin.php:18
+msgid "Title"
+msgstr "Názov"
+
+#: includes/post-types/class-realia-post-type-agency.php:136
+#: includes/post-types/class-realia-post-type-agent.php:210
+#: includes/post-types/class-realia-post-type-property.php:478
+msgid "Thumbnail"
+msgstr "Náhľad"
+
+#: includes/post-types/class-realia-post-type-agency.php:140
+#: includes/post-types/class-realia-post-type-agent.php:38
+#: includes/post-types/class-realia-post-type-agent.php:50
+#: includes/post-types/class-realia-post-type-property.php:329
+#: includes/widgets/class-realia-widget-agents.php:24
+msgid "Agents"
+msgstr "Agenti"
+
+#: includes/post-types/class-realia-post-type-agency.php:141
+#: includes/post-types/class-realia-post-type-agent.php:215
+#: includes/post-types/class-realia-post-type-property.php:486
+#: includes/post-types/class-realia-post-type-transaction.php:118
+msgid "Author"
+msgstr "Autor"
+
+#: includes/post-types/class-realia-post-type-agent.php:39
+#: includes/post-types/class-realia-post-type-user.php:75
+msgid "Agent"
+msgstr "Agent"
+
+#: includes/post-types/class-realia-post-type-agent.php:40
+#: includes/post-types/class-realia-post-type-agent.php:41
+msgid "Add New Agent"
+msgstr "Pridať nového agenta"
+
+#: includes/post-types/class-realia-post-type-agent.php:42
+msgid "Edit Agent"
+msgstr "Upraviť agenta"
+
+#: includes/post-types/class-realia-post-type-agent.php:43
+msgid "New Agent"
+msgstr "Nový agent"
+
+#: includes/post-types/class-realia-post-type-agent.php:44
+msgid "All Agents"
+msgstr "Všetci agenti"
+
+#: includes/post-types/class-realia-post-type-agent.php:45
+msgid "View Agent"
+msgstr "Zobraziť agenta"
+
+#: includes/post-types/class-realia-post-type-agent.php:46
+msgid "Search Agent"
+msgstr "Vyhľadať agenta"
+
+#: includes/post-types/class-realia-post-type-agent.php:47
+msgid "No agents found"
+msgstr "Nenašli sa žiadni agenti"
+
+#: includes/post-types/class-realia-post-type-agent.php:48
+msgid "No agents found in Trash"
+msgstr "V koši sa nenašli žiadni agenti"
+
+#: includes/post-types/class-realia-post-type-agent.php:59
+#: templates/agencies/row.php:26
+msgid "agents"
+msgstr "agenti"
+
+#: includes/post-types/class-realia-post-type-agent.php:163
+#: includes/post-types/class-realia-post-type-property.php:374
+#: templates/widgets/agents-admin.php:30
+#: templates/widgets/properties-admin.php:31
+msgid "Description"
+msgstr "Opis"
+
+#: includes/post-types/class-realia-post-type-agent.php:169
+msgid "Image"
+msgstr "Obrázok"
+
+#: includes/post-types/class-realia-post-type-agent.php:214
+#: includes/post-types/class-realia-post-type-property.php:41
+#: includes/post-types/class-realia-post-type-property.php:53
+#: includes/widgets/class-realia-widget-properties.php:24
+msgid "Properties"
+msgstr "Nehnuteľnosti"
+
+#: includes/post-types/class-realia-post-type-agent.php:320
+msgid "Agent has been successfully updated."
+msgstr "Agent bol úspešne zmenený."
+
+#: includes/post-types/class-realia-post-type-package.php:35
+#: includes/post-types/class-realia-post-type-transaction.php:169
+#: includes/post-types/class-realia-post-type-user.php:51
+#: templates/misc/transactions.php:56
+msgid "Package"
+msgstr "Balík"
+
+#: includes/post-types/class-realia-post-type-package.php:36
+#: includes/post-types/class-realia-post-type-package.php:37
+msgid "Add New Package"
+msgstr "Pridať nový balík"
+
+#: includes/post-types/class-realia-post-type-package.php:38
+msgid "Edit Package"
+msgstr "Upraviť balík"
+
+#: includes/post-types/class-realia-post-type-package.php:39
+msgid "New Package"
+msgstr "Nový balík"
+
+#: includes/post-types/class-realia-post-type-package.php:40
+msgid "All Packages"
+msgstr "Všetky balíky"
+
+#: includes/post-types/class-realia-post-type-package.php:41
+msgid "View Package"
+msgstr "Zobraziť balík"
+
+#: includes/post-types/class-realia-post-type-package.php:42
+msgid "Search Package"
+msgstr "Vyhľadať balík"
+
+#: includes/post-types/class-realia-post-type-package.php:43
+msgid "No Packages found"
+msgstr "Nenašiel sa žiadny balík"
+
+#: includes/post-types/class-realia-post-type-package.php:44
+msgid "No Items Found in Trash"
+msgstr "Žiadne položky sa v koši nenašli"
+
+#: includes/post-types/class-realia-post-type-package.php:76
+#: includes/post-types/class-realia-post-type-transaction.php:75
+#: includes/post-types/class-realia-post-type-user.php:90
+msgid "General"
+msgstr "Všeobecné"
+
+#: includes/post-types/class-realia-post-type-package.php:86
+#: includes/post-types/class-realia-post-type-property.php:167
+#: includes/post-types/class-realia-post-type-property.php:399
+msgid "Enter amount without currency."
+msgstr "Zadajte sumu bez meny."
+
+#: includes/post-types/class-realia-post-type-package.php:90
+msgid "Duration"
+msgstr "Trvanie"
+
+#: includes/post-types/class-realia-post-type-package.php:96
+msgid "Of properties"
+msgstr "Nehnuteľností"
+
+#: includes/post-types/class-realia-post-type-package.php:98
+msgid "Use -1 for unlimited amount of properties."
+msgstr "Používajte -1 pre neobmedzené množstvo nehnuteľností."
+
+#: includes/post-types/class-realia-post-type-property.php:42
+msgid "Property"
+msgstr "Nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:43
+#: includes/post-types/class-realia-post-type-property.php:44
+msgid "Add New Property"
+msgstr "Pridať novú nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:45
+msgid "Edit Property"
+msgstr "Upraviť nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:46
+msgid "New Property"
+msgstr "Nová nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:47
+msgid "All Properties"
+msgstr "Všetky nehnuteľnosti"
+
+#: includes/post-types/class-realia-post-type-property.php:48
+msgid "View Property"
+msgstr "Zobraziť nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:49
+msgid "Search Property"
+msgstr "Vyhľadať nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:50
+msgid "No Properties found"
+msgstr "Nenašla sa žiadna nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:51
+msgid "No Properties found in Trash"
+msgstr "V koši sa nenašla žiadna nehnuteľnosť"
+
+#: includes/post-types/class-realia-post-type-property.php:62
+#: templates/agents/row.php:28
+msgid "properties"
+msgstr "nehnuteľnosti"
+
+#: includes/post-types/class-realia-post-type-property.php:87
+#: includes/post-types/class-realia-post-type-property.php:386
+#: includes/post-types/class-realia-post-type-transaction.php:112
+#: templates/content-property.php:64 templates/misc/transactions.php:27
+msgid "ID"
+msgstr "ID"
+
+#: includes/post-types/class-realia-post-type-property.php:102
+msgid "ZIP"
+msgstr "PSČ"
+
+#: includes/post-types/class-realia-post-type-property.php:127
+#: templates/content-property.php:93
+#: templates/widgets/filter-fields/contract.php:10
+msgid "Rent"
+msgstr "Prenájom"
+
+#: includes/post-types/class-realia-post-type-property.php:128
+#: templates/content-property.php:95
+#: templates/widgets/filter-fields/contract.php:9
+msgid "Sale"
+msgstr "Predaj"
+
+#: includes/post-types/class-realia-post-type-property.php:137
+#: includes/post-types/class-realia-post-type-property.php:391
+msgid "Gallery"
+msgstr "Galéria"
+
+#: includes/post-types/class-realia-post-type-property.php:142
+msgid "Floor Plans"
+msgstr "Pôdorysy"
+
+#: includes/post-types/class-realia-post-type-property.php:147
+msgid "Video link"
+msgstr "Video odkaz"
+
+#: includes/post-types/class-realia-post-type-property.php:150
+msgid ""
+"For more information about embeding videos and video links support please "
+"read this <a href=\"http://codex.wordpress.org/Embeds\">article</a>."
+msgstr ""
+"Viac informácií o vkladaní videí sa dočítate v tomto <a href=\"http://codex."
+"wordpress.org/Embeds\">článku</a>."
+
+#: includes/post-types/class-realia-post-type-property.php:157
+msgid "Pricing"
+msgstr "Cenník"
+
+#: includes/post-types/class-realia-post-type-property.php:171
+msgid "Prefix"
+msgstr "Predpona"
+
+#: includes/post-types/class-realia-post-type-property.php:173
+msgid "Any text shown before price (for example \"from\")."
+msgstr "Ľubovoľný text zobrazený pred cenou (napríklad \"od\")."
+
+#: includes/post-types/class-realia-post-type-property.php:177
+msgid "Suffix"
+msgstr "Prípona"
+
+#: includes/post-types/class-realia-post-type-property.php:179
+msgid "Any text shown after price (for example \"per night\")."
+msgstr "Ľubovoľný text zobrazený po cene (napríklad \"za noc\")."
+
+#: includes/post-types/class-realia-post-type-property.php:183
+msgid "Custom"
+msgstr "Vlastné"
+
+#: includes/post-types/class-realia-post-type-property.php:185
+msgid ""
+"Any text instead of price (for example \"by agreement\"). Prefix and Suffix "
+"will be ignored."
+msgstr ""
+"Ľubovoľný text namiesto ceny (napríklad \"dohodou\"). Predpona a prípona "
+"budú odignorované."
+
+#: includes/post-types/class-realia-post-type-property.php:192
+msgid "Attributes"
+msgstr "Atribúty"
+
+#: includes/post-types/class-realia-post-type-property.php:222
+#: includes/post-types/class-realia-post-type-property.php:234
+msgid "In unit set in settings."
+msgstr "V nastavených jednotkách."
+
+#: includes/post-types/class-realia-post-type-property.php:226
+#: templates/content-property.php:118
+msgid "Lot dimensions"
+msgstr "Rozmery pozemku"
+
+#: includes/post-types/class-realia-post-type-property.php:228
+msgid "e.g. 20x30, 20x30x40, 20x30x40x50"
+msgstr "napr. 20x30, 20x30x40, 20x30x40x50"
+
+#: includes/post-types/class-realia-post-type-property.php:241
+msgid "Valuation"
+msgstr "Hodnotenie"
+
+#: includes/post-types/class-realia-post-type-property.php:253
+#: includes/post-types/class-realia-post-type-property.php:280
+msgid "Key"
+msgstr "Kľúč"
+
+#: includes/post-types/class-realia-post-type-property.php:258
+#: includes/post-types/class-realia-post-type-property.php:285
+msgid "Value"
+msgstr "Hodnota"
+
+#: includes/post-types/class-realia-post-type-property.php:268
+#: templates/content-property.php:216
+msgid "Public facilities"
+msgstr "Občianska vybavenosť"
+
+#: includes/post-types/class-realia-post-type-property.php:322
+msgid "Relations"
+msgstr "Vzťahy"
+
+#: includes/post-types/class-realia-post-type-property.php:380
+msgid "Featured Image"
+msgstr "Promo obrázok"
+
+#: includes/post-types/class-realia-post-type-property.php:423
+#: templates/misc/google-map-infowindow.php:30 templates/properties/row.php:72
+msgid "Area"
+msgstr "Výmera"
+
+#: includes/post-types/class-realia-post-type-property.php:433
+#: includes/taxonomies/class-realia-taxonomies-locations.php:33
+#: includes/taxonomies/class-realia-taxonomies-locations.php:43
+msgid "Locations"
+msgstr "Polohy"
+
+#: includes/post-types/class-realia-post-type-property.php:439
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:33
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:43
+msgid "Statuses"
+msgstr "Stavy"
+
+#: includes/post-types/class-realia-post-type-property.php:445
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:33
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:43
+msgid "Types"
+msgstr "Typy"
+
+#: includes/post-types/class-realia-post-type-property.php:451
+#: includes/taxonomies/class-realia-taxonomies-materials.php:33
+#: includes/taxonomies/class-realia-taxonomies-materials.php:43
+msgid "Materials"
+msgstr "Materiály"
+
+#: includes/post-types/class-realia-post-type-property.php:457
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:33
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:43
+msgid "Amenities"
+msgstr "Vybavenie"
+
+#: includes/post-types/class-realia-post-type-property.php:483
+#: templates/content-property.php:28 templates/properties/box.php:29
+#: templates/properties/row.php:22
+#: templates/widgets/filter-fields/sticky.php:7
+msgid "TOP"
+msgstr "TOP"
+
+#: includes/post-types/class-realia-post-type-property.php:490
+msgid "Paid"
+msgstr "Zaplatené"
+
+#: includes/post-types/class-realia-post-type-property.php:613
+msgid "Message from enquire form"
+msgstr "Správa z formulára"
+
+#: includes/post-types/class-realia-post-type-property.php:656
+msgid "CAPTCHA is not valid."
+msgstr "CAPTCHA je neplatná."
+
+#: includes/post-types/class-realia-post-type-property.php:664
+msgid "Message has been successfully sent."
+msgstr "Správa bola úspešne odoslaná."
+
+#: includes/post-types/class-realia-post-type-property.php:666
+msgid "Unable to send a message."
+msgstr "Nepodarilo sa odoslať správu."
+
+#: includes/post-types/class-realia-post-type-property.php:737
+msgid "Property has been successfully updated."
+msgstr "Nehnuteľnosť bola úspešne upravená."
+
+#: includes/post-types/class-realia-post-type-transaction.php:36
+#: includes/post-types/class-realia-post-type-transaction.php:48
+msgid "Transactions"
+msgstr "Transakcie"
+
+#: includes/post-types/class-realia-post-type-transaction.php:37
+msgid "Transaction"
+msgstr "Transakcia"
+
+#: includes/post-types/class-realia-post-type-transaction.php:38
+#: includes/post-types/class-realia-post-type-transaction.php:39
+msgid "Add New Transaction"
+msgstr "Pridať novú transakciu"
+
+#: includes/post-types/class-realia-post-type-transaction.php:40
+msgid "Edit Transaction"
+msgstr "Upraviť transakciu"
+
+#: includes/post-types/class-realia-post-type-transaction.php:41
+msgid "New Transaction"
+msgstr "Nová transakcia"
+
+#: includes/post-types/class-realia-post-type-transaction.php:42
+msgid "All Transactions"
+msgstr "Všetky transakcie"
+
+#: includes/post-types/class-realia-post-type-transaction.php:43
+msgid "View Transaction"
+msgstr "Zobraziť transakciu"
+
+#: includes/post-types/class-realia-post-type-transaction.php:44
+msgid "Search Transaction"
+msgstr "Vyhľadať transakciu"
+
+#: includes/post-types/class-realia-post-type-transaction.php:45
+msgid "No Transactions found"
+msgstr "Nenašli sa žiadne transakcie"
+
+#: includes/post-types/class-realia-post-type-transaction.php:46
+msgid "No Transactions Found in Trash"
+msgstr "V koši sa nenašli žiadne transakcie"
+
+#: includes/post-types/class-realia-post-type-transaction.php:83
+msgid "Payment type"
+msgstr "Typ platby"
+
+#: includes/post-types/class-realia-post-type-transaction.php:88
+msgid "Object ID"
+msgstr "ID objektu"
+
+#: includes/post-types/class-realia-post-type-transaction.php:93
+#: includes/post-types/class-realia-post-type-transaction.php:115
+#: templates/misc/transactions.php:39
+msgid "Object"
+msgstr "Objekt"
+
+#: includes/post-types/class-realia-post-type-transaction.php:113
+msgid "Success"
+msgstr "Úspech"
+
+#: includes/post-types/class-realia-post-type-transaction.php:117
+msgid "Payment Gateway"
+msgstr "Platobná brána"
+
+#: includes/post-types/class-realia-post-type-transaction.php:119
+#: templates/misc/transactions.php:65
+msgid "Date"
+msgstr "Dátum"
+
+#: includes/post-types/class-realia-post-type-transaction.php:163
+msgid "Sticky post"
+msgstr "TOP post"
+
+#: includes/post-types/class-realia-post-type-user.php:46
+msgid "Package Information"
+msgstr "Informácie o balíku"
+
+#: includes/post-types/class-realia-post-type-user.php:57
+msgid "Valid"
+msgstr "Platný"
+
+#: includes/post-types/class-realia-post-type-user.php:81
+msgid "Agent object"
+msgstr "Objekt agenta"
+
+#: includes/post-types/class-realia-post-type-user.php:120
+msgid "Nickname is required."
+msgstr "Prezývka je povinná."
+
+#: includes/post-types/class-realia-post-type-user.php:125
+msgid "E-mail is required."
+msgstr "E-mail je povinný."
+
+#: includes/post-types/class-realia-post-type-user.php:139
+msgid "Profile has been successfully updated."
+msgstr "Profil bol úspešne zmenený."
+
+#: includes/post-types/class-realia-post-type-user.php:158
+msgid "All fields are required."
+msgstr "Všetky polia sú povinné."
+
+#: includes/post-types/class-realia-post-type-user.php:163
+msgid "New and retyped password are not same."
+msgstr "Nové a prepísané heslo sa nezhodujú."
+
+#: includes/post-types/class-realia-post-type-user.php:169
+msgid "Your old password is not correct."
+msgstr "Vaše staré heslo je nesprávne."
+
+#: includes/post-types/class-realia-post-type-user.php:174
+msgid "Your password has been successfully changed."
+msgstr "Vaše heslo bolo úspešne zmenené."
+
+#: includes/post-types/class-realia-post-type-user.php:194
+msgid "Login and password are required."
+msgstr "Login a heslo sú povinné."
+
+#: includes/post-types/class-realia-post-type-user.php:210
+msgid "You have been successfully logged in."
+msgstr "Úspešne ste sa prihlásili."
+
+#: includes/post-types/class-realia-post-type-user.php:228
+msgid "Username and e-mail are required."
+msgstr "Používateľské meno a e-mail sú povinné."
+
+#: includes/post-types/class-realia-post-type-user.php:236
+msgid "User already exists."
+msgstr "Používateľ už existuje."
+
+#: includes/post-types/class-realia-post-type-user.php:242
+#: includes/post-types/class-realia-post-type-user.php:256
+msgid "Passwords must be same."
+msgstr "Heslá sa musia zhodovať."
+
+#: includes/post-types/class-realia-post-type-user.php:250
+msgid "You must agree terms &amp; conditions."
+msgstr "Musíte súhlasiť s všeobecnými obchodnými podmienkami."
+
+#: includes/post-types/class-realia-post-type-user.php:270
+msgid "You have been successfully registered."
+msgstr "Úspešne ste sa zaregistrovali."
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:35
+msgid "Search Amenity"
+msgstr "Vyhľadať vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:36
+msgid "All Amenities"
+msgstr "Všetky vybavenia"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:37
+msgid "Parent Amenity"
+msgstr "Rodičovské vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:38
+msgid "Parent Amenity:"
+msgstr "Rodičovské vybavenie:"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:39
+msgid "Edit Amenity"
+msgstr "Upraviť vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:40
+msgid "Update Amenity"
+msgstr "Zmeniť vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:41
+msgid "Add New Amenity"
+msgstr "Pridať nové vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:42
+msgid "New Amenity"
+msgstr "Nové vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-amenities.php:50
+msgid "amenity"
+msgstr "vybavenie"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:35
+msgid "Search Location"
+msgstr "Vyhľadať polohu"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:36
+msgid "All Locations"
+msgstr "Všetky polohy"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:37
+msgid "Parent Location"
+msgstr "Rodičovská poloha"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:38
+msgid "Parent Location:"
+msgstr "Rodičovská poloha:"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:39
+msgid "Edit Location"
+msgstr "Upraviť polohu"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:40
+msgid "Update Location"
+msgstr "Zmeniť polohu"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:41
+msgid "Add New Location"
+msgstr "Pridať novú polohu"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:42
+msgid "New Location"
+msgstr "Nová poloha"
+
+#: includes/taxonomies/class-realia-taxonomies-locations.php:50
+msgid "location"
+msgstr "poloha"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:35
+msgid "Search Materials"
+msgstr "Hľadať materiály"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:36
+msgid "All Materials"
+msgstr "Všetky materiály"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:37
+msgid "Parent Material"
+msgstr "Nadradený materiál"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:38
+msgid "Parent Material:"
+msgstr "Nadradený materiál:"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:39
+msgid "Edit Material"
+msgstr "Upraviť materiál"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:40
+msgid "Update Material"
+msgstr "Upraviť materiál"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:41
+msgid "Add New Material"
+msgstr "Pridať nový materiál"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:42
+msgid "New Material"
+msgstr "Nový materiál"
+
+#: includes/taxonomies/class-realia-taxonomies-materials.php:50
+msgid "material"
+msgstr "materiál"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:35
+msgid "Search Types"
+msgstr "Hľadať typy"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:36
+msgid "All Types"
+msgstr "Všetky typy"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:37
+msgid "Parent Type"
+msgstr "Rodičovský typ"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:38
+msgid "Parent Type:"
+msgstr "Rodičovský typ:"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:39
+msgid "Edit Type"
+msgstr "Upraviť typ"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:40
+msgid "Update Type"
+msgstr "Zmeniť typ"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:41
+msgid "Add New Type"
+msgstr "Pridať nový typ"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:42
+msgid "New Type"
+msgstr "Nový typ"
+
+#: includes/taxonomies/class-realia-taxonomies-property-types.php:50
+msgid "property-type"
+msgstr "typ-nehnutelnosti"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:35
+msgid "Search Statuses"
+msgstr "Hľadať stavy"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:36
+msgid "All Statuses"
+msgstr "Všetky stavy"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:37
+msgid "Parent Status"
+msgstr "Nadradený stav"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:38
+msgid "Parent Status:"
+msgstr "Nadradený stav:"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:39
+msgid "Edit Status"
+msgstr "Upraviť stav"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:40
+msgid "Update Status"
+msgstr "Zmeniť stav"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:41
+msgid "Add New Status"
+msgstr "Pridať nový stav"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:42
+msgid "New Status"
+msgstr "Nový stav"
+
+#: includes/taxonomies/class-realia-taxonomies-statuses.php:50
+msgid "status"
+msgstr "stav"
+
+#: includes/widgets/class-realia-widget-agents-assigned.php:24
+msgid "Assigned Agents"
+msgstr "Pridelení agenti"
+
+#: includes/widgets/class-realia-widget-agents-assigned.php:26
+msgid "Displays assigned agents."
+msgstr "Zobrazí pridelených agentov."
+
+#: includes/widgets/class-realia-widget-agents.php:26
+msgid "Displays agents in multiple ways."
+msgstr "Zobrazuje agentov rôznymi spôsobmi."
+
+#: includes/widgets/class-realia-widget-enquire.php:24
+msgid "Enquire Form"
+msgstr "Odoslať dopyt"
+
+#: includes/widgets/class-realia-widget-enquire.php:26
+msgid ""
+"Displays enquire form. To show it only on property detail use "
+"is_singular('property') in Widget Logic."
+msgstr ""
+"Zobrazí formulár po dopyte. Pre zobrazenie iba na detaile nehnuteľnosti "
+"použite \n"
+"is_singular('property') vo Widget Logic."
+
+#: includes/widgets/class-realia-widget-filter-rent-sale.php:24
+msgid "Rent/Sale Filter"
+msgstr "Prenájom/Predaj filter"
+
+#: includes/widgets/class-realia-widget-filter-rent-sale.php:26
+msgid "Rent/Sale Filter for filtering properties."
+msgstr "Prenájom/Predaj filter na filtrovanie nehnuteľností."
+
+#: includes/widgets/class-realia-widget-filter.php:24
+msgid "Filter"
+msgstr "Filtrovať"
+
+#: includes/widgets/class-realia-widget-filter.php:26
+msgid "Filter for filtering properties."
+msgstr "Filter na hľadanie nehnuteľností."
+
+#: includes/widgets/class-realia-widget-properties-map.php:24
+msgid "Properties Map"
+msgstr "Mapa nehnuteľností"
+
+#: includes/widgets/class-realia-widget-properties-map.php:26
+msgid "Displays properties in the map."
+msgstr "Zobrazuje nehnuteľnosti na mape."
+
+#: includes/widgets/class-realia-widget-properties.php:26
+msgid "Displays properties in multiple ways."
+msgstr "Zobrazuje nehnuteľností viacerými spôsobmi."
+
+#: templates/agencies/row.php:47 templates/agents/row.php:43
+msgid "Contact Information"
+msgstr "Kontaktné informácie"
+
+#: templates/agencies/row.php:52 templates/agents/row.php:49
+#: templates/content-agency.php:31 templates/content-agent.php:31
+msgid "Email"
+msgstr "Email"
+
+#: templates/agents/contact-form.php:18
+msgid "Your message has been successfully sent."
+msgstr "Vaša správa bola úspešne odoslaná."
+
+#: templates/agents/contact-form.php:20
+msgid "An error occured when sending an email."
+msgstr "Pri odosielaní emailu nastala chyba."
+
+#: templates/agents/contact-form.php:23
+msgid "Form has been not filled correctly."
+msgstr "Formulár nebol korektne vyplnený."
+
+#: templates/agents/contact-form.php:31
+msgid "Contact Form"
+msgstr "Kontaktný formulár"
+
+#: templates/agents/contact-form.php:36
+msgid "Subject"
+msgstr "Predmet"
+
+#: templates/agents/contact-form.php:44 templates/widgets/enquire.php:39
+msgid "Message"
+msgstr "Správa"
+
+#: templates/agents/contact-form.php:51
+msgid "Send message"
+msgstr "Odoslať správu"
+
+#: templates/archive-agency.php:35 templates/archive-agent.php:35
+#: templates/archive-property.php:47 templates/single-agency.php:16
+#: templates/single-agent.php:16 templates/single-property.php:16
+msgid "Previous page"
+msgstr "Predchádzajúca strana"
+
+#: templates/archive-agency.php:36 templates/archive-agent.php:36
+#: templates/archive-property.php:48 templates/single-agency.php:17
+#: templates/single-agent.php:17 templates/single-property.php:17
+msgid "Next page"
+msgstr "Nasledujúca strana"
+
+#: templates/archive-agency.php:37 templates/archive-agent.php:37
+#: templates/archive-property.php:49 templates/content-agency.php:97
+#: templates/content-agent.php:82 templates/content-property.php:258
+#: templates/single-agency.php:18 templates/single-agent.php:18
+#: templates/single-property.php:18
+msgid "Page"
+msgstr "Strana"
+
+#: templates/content-agency.php:53 templates/content-agent.php:53
+#: templates/content-property.php:156
+#, php-format
+msgid "Continue reading %s"
+msgstr "Pokračovať v čítaní %s"
+
+#: templates/content-agency.php:93 templates/content-agent.php:78
+#: templates/content-property.php:254
+msgid "Pages:"
+msgstr "Strany:"
+
+#: templates/content-agency.php:117 templates/content-agent.php:102
+#: templates/content-property.php:278 templates/submission/list.php:158
+msgid "Edit"
+msgstr "Upraviť"
+
+#: templates/content-property.php:36
+msgid "Show"
+msgstr "Zobraziť"
+
+#: templates/content-property.php:81
+msgid "Yes"
+msgstr "Áno"
+
+#: templates/content-property.php:83
+msgid "No"
+msgstr "Nie"
+
+#: templates/content-property.php:240
+msgid "Similar properties"
+msgstr "Podobné nehnuteľnosti"
+
+#: templates/mails/enquire.php:8 templates/widgets/enquire.php:31
+msgid "Name"
+msgstr "Meno"
+
+#: templates/mails/enquire.php:21
+msgid "URL"
+msgstr "URL"
+
+#: templates/misc/breadcrumb.php:3 templates/misc/breadcrumb.php:6
+msgid "Home"
+msgstr "Domov"
+
+#: templates/misc/breadcrumb.php:40
+msgid "Page not found"
+msgstr "Stránka sa nenašla"
+
+#: templates/misc/breadcrumb.php:47 templates/misc/breadcrumb.php:49
+#: templates/misc/breadcrumb.php:51
+msgid "Archive for"
+msgstr "Archív pre"
+
+#: templates/misc/breadcrumb.php:53
+msgid "Author Archive"
+msgstr "Archív autorov"
+
+#: templates/misc/breadcrumb.php:55
+msgid "Blog Archives"
+msgstr "Archív blogov"
+
+#: templates/misc/breadcrumb.php:57
+msgid "Search Results"
+msgstr "Výsledky hľadania"
+
+#: templates/misc/comment.php:19
+msgid "Reply"
+msgstr "Odpovedať"
+
+#: templates/misc/comment.php:30
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentár čaká na prehodnotenie."
+
+#: templates/misc/login.php:9 templates/misc/register.php:9
+msgid "Username"
+msgstr "Používateľské meno"
+
+#: templates/misc/login.php:14 templates/misc/register.php:19
+msgid "Password"
+msgstr "Heslo"
+
+#: templates/misc/login.php:18
+msgid "Log in"
+msgstr "Prihlásiť sa"
+
+#: templates/misc/password-form.php:9
+msgid "Old password"
+msgstr "Staré heslo"
+
+#: templates/misc/password-form.php:14
+msgid "New password"
+msgstr "Nové heslo"
+
+#: templates/misc/password-form.php:19
+msgid "Retype password"
+msgstr "Prepíšte heslo"
+
+#: templates/misc/password-form.php:23
+msgid "Change Password"
+msgstr "Zmeniť heslo"
+
+#: templates/misc/profile-form.php:12
+msgid "Nickname"
+msgstr "Prezývka"
+
+#: templates/misc/profile-form.php:22
+msgid "First name"
+msgstr "Krstné meno"
+
+#: templates/misc/profile-form.php:27
+msgid "Last name"
+msgstr "Priezvisko"
+
+#: templates/misc/profile-form.php:31
+msgid "Change Profile"
+msgstr "Zmeniť profil"
+
+#: templates/misc/register.php:24
+msgid "Retype Password"
+msgstr "Prepíšte heslo"
+
+#: templates/misc/register.php:29
+msgid "Sign Up"
+msgstr "Zaregistrovať"
+
+#: templates/misc/register.php:36
+#, php-format
+msgid "I agree with <a href=\"%s\">terms & conditions</a>"
+msgstr ""
+"Súhlasím s \n"
+"<a href=\"%s\">všeobecnými obchodnými podmienkami</a>"
+
+#: templates/misc/transactions.php:35
+msgid "Gateway"
+msgstr "Brána"
+
+#: templates/misc/transactions.php:43
+msgid "Payment Type"
+msgstr "Typ platby"
+
+#: templates/misc/transactions.php:50
+msgid "TOP property"
+msgstr "TOP nehnuteľnosť"
+
+#: templates/misc/transactions.php:72 templates/submission/list.php:173
+msgid "Older posts"
+msgstr "Staršie príspevky"
+
+#: templates/misc/transactions.php:73 templates/submission/list.php:174
+msgid "Newer posts"
+msgstr "Novšie príspevky"
+
+#: templates/misc/transactions.php:75
+msgid "No transactions found."
+msgstr "Nenašli sa žiadne transakcie."
+
+#: templates/properties/box.php:76
+msgid "Read More"
+msgstr "Čítať viac"
+
+#: templates/properties/sort.php:15
+msgid "Sorting options"
+msgstr "Možnosti zoradenia"
+
+#: templates/properties/sort.php:20
+msgid "Sort by"
+msgstr "Zoradiť podľa"
+
+#: templates/properties/sort.php:23 templates/submission/list.php:128
+msgid "Published"
+msgstr "Zverejnené"
+
+#: templates/properties/sort.php:29
+msgid "Order"
+msgstr "Poradie"
+
+#: templates/properties/sort.php:30
+msgid "ASC"
+msgstr "Vzostupne"
+
+#: templates/properties/sort.php:31
+msgid "DESC"
+msgstr "Zostupne"
+
+#: templates/submission/list.php:11
+msgid "Create Property"
+msgstr "Vytvoriť nehnuteľnosť"
+
+#: templates/submission/list.php:45
+msgid "No image"
+msgstr "Bez obrázka"
+
+#: templates/submission/list.php:88
+msgid "Make TOP"
+msgstr "TOP"
+
+#: templates/submission/list.php:112
+msgid "Make featured"
+msgstr "Urobiť promo"
+
+#: templates/submission/list.php:140
+msgid "Publish"
+msgstr "Zverejniť"
+
+#: templates/submission/list.php:164
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: templates/submission/list.php:178
+msgid "You don't have any properties, yet. Start by creating new one."
+msgstr "Nemáte ešte žiadne nehnuteľnosti. Pridajte nejaké."
+
+#: templates/submission/package-info.php:13
+msgid ""
+"Site is using packages. Before you can post property, please upgrade your "
+"package."
+msgstr ""
+"Stránka používa balíky. Pred vytvorením nehnuteľnosti si prosím zakúpte "
+"balík."
+
+#: templates/submission/package-info.php:17
+#, php-format
+msgid "You are using <strong>%s</strong> package."
+msgstr "Používate balík <strong>%s</strong>."
+
+#: templates/submission/package-info.php:22
+#, php-format
+msgid "Your subscription is valid until <strong>%s</strong>."
+msgstr "Vaše predplatné končí <strong>%s</strong>."
+
+#: templates/submission/package-info.php:27
+msgid "You can add <strong>unlimited</strong> amount of items"
+msgstr "Môžete pridať <strong>neobmedzene</strong> veľa položiek"
+
+#: templates/submission/package-info.php:29
+#, php-format
+msgid ""
+"You can not add any properties because you spent all of your available "
+"properties. Change your package. First <strong>%s</strong> items has been "
+"disabled from listing."
+msgstr ""
+"Nemôžete pridať ďalšiu nehnuteľnosť, pretože ste vyčerpali všetky svoje "
+"dostupné nehnuteľnosti. Zmeňte si balík. Prvých <strong>%s</strong> položiek "
+"bolo deaktivovaných."
+
+#: templates/submission/package-info.php:31
+#, php-format
+msgid "You can add <strong>%s</strong> items."
+msgstr "Môžete pridať <strong>%s</strong> položiek."
+
+#: templates/submission/package-info.php:34
+#, php-format
+msgid ""
+"Your subscription already expired at <strong>%s</strong>. All your items has "
+"been deactivated until you pay for new subscription."
+msgstr ""
+"Vaše predplatné vypršalo <strong>%s</strong>. Všetky Vaše položky boli "
+"deaktivované pokiaľ si nepredĺžite predplatné."
+
+#: templates/submission/package-info.php:43
+msgid "Payment page has been not set."
+msgstr "Platobná stránka nebola nastavená."
+
+#: templates/submission/package-info.php:52
+msgid "Select Package"
+msgstr "Zvoliť balík"
+
+#: templates/submission/package-info.php:62
+msgid "Upgrade"
+msgstr "Navýšiť"
+
+#: templates/submission/payment.php:22
+#, php-format
+msgid ""
+"You are going to pay <strong>%s</strong> for featuring property <strong>\"%s"
+"\"</strong>."
+msgstr ""
+"Chystáte sa zaplatiť <strong>%s</strong> za promo nehnuteľnosť <strong>\"%s"
+"\"</strong>."
+
+#: templates/submission/payment.php:31
+#, php-format
+msgid ""
+"You are going to pay <strong>%s</strong> for TOP property <strong>\"%s\"</"
+"strong>."
+msgstr ""
+"Chystáte sa zaplatiť <strong>%s</strong> za TOP nehnuteľnosť <strong>\"%s\"</"
+"strong>."
+
+#: templates/submission/payment.php:40
+#, php-format
+msgid ""
+"You are going to pay <strong>%s</strong> for publishing property <strong>\"%s"
+"\"</strong>."
+msgstr ""
+"Chystáte sa zaplatiť <strong>%s</strong> za zverejnenie nehnuteľnosti "
+"<strong>\"%s\"</strong>."
+
+#: templates/submission/payment.php:50
+#, php-format
+msgid ""
+"You are going to pay <strong>%s</strong> for package <strong>\"%s\"</strong>."
+msgstr ""
+"Chystáte sa zaplatiť <strong>%s</strong> za balík <strong>\"%s\"</strong>."
+
+#: templates/submission/payment.php:55
+msgid "Missing package."
+msgstr "Chýba balík."
+
+#: templates/submission/payment.php:60
+msgid "You are missing payment type."
+msgstr "Chýba typ platby."
+
+#: templates/submission/payment.php:95
+msgid "PayPal Credit Card"
+msgstr "PayPal - kreditná karta"
+
+#: templates/submission/payment.php:102
+msgid "First Name"
+msgstr "Krstné meno"
+
+#: templates/submission/payment.php:107
+msgid "Last Name"
+msgstr "Priezvisko"
+
+#: templates/submission/payment.php:112
+msgid "Credit Card Number"
+msgstr "Číslo kreditnej karty"
+
+#: templates/submission/payment.php:117
+msgid "CVV"
+msgstr "CVV"
+
+#: templates/submission/payment.php:122
+msgid "Expires"
+msgstr "Expirácia"
+
+#: templates/submission/payment.php:125
+msgid "Month"
+msgstr "Mesiac"
+
+#: templates/submission/payment.php:133
+msgid "Year"
+msgstr "Rok"
+
+#: templates/submission/payment.php:154
+msgid "PayPal Account"
+msgstr "PayPal účet"
+
+#: templates/submission/payment.php:165
+msgid "Proceed payment"
+msgstr "Pokračovať v platbe"
+
+#: templates/submission/payment.php:172
+#, php-format
+msgid "Currency <strong>%s</strong> is not supported by PayPal."
+msgstr "Mena <strong>%s</strong> nie je podporovaná bránou PayPal."
+
+#: templates/widgets/agents-admin.php:42
+#: templates/widgets/filter-rent-sale-admin.php:72
+#: templates/widgets/properties-admin.php:43
+#: templates/widgets/properties-map-admin.php:104
+msgid "Classes"
+msgstr "Triedy"
+
+#: templates/widgets/agents-admin.php:51
+#: templates/widgets/properties-admin.php:52
+msgid "Additional classes e.g. <i>fullwidth background-gray</i>"
+msgstr "Dodatočné triedy napr. <i>fullwidth background-gray</i>"
+
+#: templates/widgets/agents-admin.php:58
+#: templates/widgets/properties-admin.php:58
+msgid "Count"
+msgstr "Počet"
+
+#: templates/widgets/agents-admin.php:71
+#: templates/widgets/properties-admin.php:71
+msgid "Items per row"
+msgstr "Položiek na riadok"
+
+#: templates/widgets/agents-admin.php:88
+#: templates/widgets/properties-admin.php:130
+msgid "Display as"
+msgstr "Zobraziť ako"
+
+#: templates/widgets/agents-admin.php:93
+#: templates/widgets/properties-admin.php:135
+msgid "Select"
+msgstr "Vybrať"
+
+#: templates/widgets/agents-admin.php:94
+#: templates/widgets/properties-admin.php:136
+msgid "Box"
+msgstr "Box"
+
+#: templates/widgets/agents-admin.php:95
+#: templates/widgets/properties-admin.php:137
+msgid "Small"
+msgstr "Malý"
+
+#: templates/widgets/agents-admin.php:96
+#: templates/widgets/properties-admin.php:138
+msgid "Row"
+msgstr "Riadok"
+
+#: templates/widgets/agents.php:52
+msgid "No agents found."
+msgstr "Nenašli sa žiadni agenti."
+
+#: templates/widgets/enquire-admin.php:28
+msgid "Who will receive an e-mail?"
+msgstr "Kto dostane e-mail?"
+
+#: templates/widgets/enquire-admin.php:40
+msgid "Site admin"
+msgstr "Administrátor stránky"
+
+#: templates/widgets/enquire-admin.php:53
+msgid "Property author"
+msgstr "Autor nehnuteľnosti"
+
+#: templates/widgets/enquire-admin.php:66
+msgid "Assigned agent"
+msgstr "Pridelený agent"
+
+#: templates/widgets/enquire-admin.php:71
+msgid "If none selected, post author will receive an email by default."
+msgstr "Ak nie je zvolený žiaden, email príde autorovi príspevku."
+
+#: templates/widgets/enquire-admin.php:83
+msgid "Disable reCAPTCHA"
+msgstr "Zakázať reCAPTCHA"
+
+#: templates/widgets/enquire.php:49
+msgid "Send Message"
+msgstr "Poslať správu"
+
+#: templates/widgets/filter-admin.php:28
+#: templates/widgets/filter-rent-sale-admin.php:30
+msgid "Button text"
+msgstr "Text tlačidla"
+
+#: templates/widgets/filter-admin.php:39
+#: templates/widgets/filter-rent-sale-admin.php:41
+msgid "Input titles"
+msgstr "Nadpisy formulárových polí"
+
+#: templates/widgets/filter-admin.php:50
+#: templates/widgets/filter-rent-sale-admin.php:52
+msgid "Labels"
+msgstr "Štítky"
+
+#: templates/widgets/filter-admin.php:62
+#: templates/widgets/filter-rent-sale-admin.php:64
+msgid "Placeholders"
+msgstr "Placeholder"
+
+#: templates/widgets/filter-fields/amenity.php:13
+msgid "All amenities"
+msgstr "Všetky vybavenia"
+
+#: templates/widgets/filter-fields/contract.php:8
+msgid "All contracts"
+msgstr "Všetky zmluvy"
+
+#: templates/widgets/filter-fields/home-area.php:4
+#: templates/widgets/filter-fields/home-area.php:8
+msgid "Home area from"
+msgstr "Plocha domu od"
+
+#: templates/widgets/filter-fields/home-area.php:15
+#: templates/widgets/filter-fields/home-area.php:19
+msgid "Home area to"
+msgstr "Plocha domu do"
+
+#: templates/widgets/filter-fields/location.php:12
+msgid "All locations"
+msgstr "Všetky polohy"
+
+#: templates/widgets/filter-fields/lot-area.php:4
+#: templates/widgets/filter-fields/lot-area.php:8
+msgid "Lot area from"
+msgstr "Plocha pozemku od"
+
+#: templates/widgets/filter-fields/lot-area.php:15
+#: templates/widgets/filter-fields/lot-area.php:19
+msgid "Lot area to"
+msgstr "Plocha pozemku do"
+
+#: templates/widgets/filter-fields/material.php:14
+msgid "All materials"
+msgstr "Všetky materiály"
+
+#: templates/widgets/filter-fields/price.php:4
+#: templates/widgets/filter-fields/price.php:8
+msgid "Price from"
+msgstr "Od ceny"
+
+#: templates/widgets/filter-fields/price.php:15
+#: templates/widgets/filter-fields/price.php:19
+msgid "Price to"
+msgstr "Po cenu"
+
+#: templates/widgets/filter-fields/property-type.php:13
+msgid "All property types"
+msgstr "Všetky typy nehnuteľností"
+
+#: templates/widgets/filter-fields/status.php:14
+msgid "All statuses"
+msgstr "Všetky stavy"
+
+#: templates/widgets/filter-rent-sale-admin.php:81
+msgid "Additional classes e.g. <i>transparent-background map-overlay</i>"
+msgstr "Dodatočné triedy napr. <i>transparent-background map-overlay</i>"
+
+#: templates/widgets/filter-rent-sale-admin.php:90
+msgid "Rent Fields"
+msgstr "Prenájom polia"
+
+#: templates/widgets/filter-rent-sale-admin.php:126
+msgid "Sale Fields"
+msgstr "Predaj polia"
+
+#: templates/widgets/filter-rent-sale.php:22
+msgid "For Rent"
+msgstr "Na prenájom"
+
+#: templates/widgets/filter-rent-sale.php:23
+msgid "For Sale"
+msgstr "Na predaj"
+
+#: templates/widgets/properties-admin.php:87
+msgid "Choose attribute"
+msgstr "Zvoľte atribút"
+
+#: templates/widgets/properties-admin.php:96
+msgid "It doesn't matter"
+msgstr "Nezáleží"
+
+#: templates/widgets/properties-admin.php:108
+msgid "Featured only"
+msgstr "Iba promo"
+
+#: templates/widgets/properties-admin.php:121
+msgid "Reduced only"
+msgstr "Iba zľavnené"
+
+#: templates/widgets/properties-map-admin.php:21
+msgid "Latitude"
+msgstr "Zemepisná šírka"
+
+#: templates/widgets/properties-map-admin.php:34
+msgid "Longitude"
+msgstr "Zemepisná dĺžka"
+
+#: templates/widgets/properties-map-admin.php:48
+msgid "Zoom"
+msgstr "Zoom"
+
+#: templates/widgets/properties-map-admin.php:61
+msgid "Grid size"
+msgstr "Veľkosť mriežky"
+
+#: templates/widgets/properties-map-admin.php:74
+msgid "Style"
+msgstr "Štýl"
+
+#: templates/widgets/properties-map-admin.php:78
+msgid "Default"
+msgstr "Štandardný"
+
+#: templates/widgets/properties-map-admin.php:91
+msgid "Height"
+msgstr "Výška"
+
+#: templates/widgets/properties-map-admin.php:113
+msgid ""
+"Additional classes appended to body class and separated by , e.g. "
+"<i>transparent-header, property-map-append-top</i>"
+msgstr ""
+"Dodatočné triedy pre body element oddelené čiarkou, napr. <i>transparent-"
+"header, property-map-append-top</i>"
+
+#: templates/widgets/properties.php:52
+msgid "No properties found."
+msgstr "Nenašli sa žiadne nehnuteľnosti."
+
+#~ msgid "Search Status Types"
+#~ msgstr "Hľadať typ stavov"
+
+#~ msgid "You have several options"
+#~ msgstr "Máte niekoľko možností"
+
+#~ msgid "Return back to <a href=\"%s\">homepage</a>"
+#~ msgstr "Vrátiť sa späť na <a href=\"%s\">úvodnú stránku</a>"
+
+#~ msgid "Check our most recent <a href=\"%s\">properties</a>"
+#~ msgstr "Pozrieť si naše posledné <a href=\"%s\">nehnuteľnosti</a>"
+
+#~ msgid "Use the <a href=\"#header\">menu</a> above to change the location"
+#~ msgstr "Pomocou <a href=\"#header\"> ponuky </a> vyššie zmeniť umiestnenie"
+
+#~ msgid "Contact us via our contact page"
+#~ msgstr "Kontaktovať nás prostredníctvom našej kontaktnej stránky"
+
+#~ msgid "Click on the location at right"
+#~ msgstr "Kliknite na polohu vpravo"
+
+#~ msgid "Choose a location"
+#~ msgstr "Zvoľte polohu"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+
+#~ msgid "Comment navigation"
+#~ msgstr "Navigácia v komentároch"
+
+#~ msgid "&larr; Older Comments"
+#~ msgstr "&larr; Staršie komentáre"
+
+#~ msgid "Newer Comments &rarr;"
+#~ msgstr "Novšie komentáre &rarr;"
+
+#~ msgid "Comments are closed."
+#~ msgstr "Komentáre sú uzavreté."
+
+#~ msgid "Main"
+#~ msgstr "Hlavný"
+
+#~ msgid "Topbar Anonymous"
+#~ msgstr "Vrch anonymný"
+
+#~ msgid "Topbar Authenticated"
+#~ msgstr "Vrch prihlásený"
+
+#~ msgid "Primary"
+#~ msgstr "Primárny"
+
+#~ msgid "Header Topbar Left"
+#~ msgstr "Vrch v hlavičke vľavo"
+
+#~ msgid "Header Topbar Right"
+#~ msgstr "Vrch v hlavičke vpravo"
+
+#~ msgid "Top Fullwidth"
+#~ msgstr "Top na plnú šírku"
+
+#~ msgid "Top"
+#~ msgstr "Vrch"
+
+#~ msgid "Content Top"
+#~ msgstr "Vrch v obsahu"
+
+#~ msgid "Content Bottom"
+#~ msgstr "Spodok v obsahu"
+
+#~ msgid "Bottom"
+#~ msgstr "Spodok"
+
+#~ msgid "Footer First"
+#~ msgstr "Päta prvý"
+
+#~ msgid "Footer Second"
+#~ msgstr "Päta druhý"
+
+#~ msgid "Footer Third"
+#~ msgstr "Päta tretí"
+
+#~ msgid "Footer Fourth"
+#~ msgstr "Päta štvrtý"
+
+#~ msgid "Property Carousel"
+#~ msgstr "Kolotoč nehnuteľností"
+
+#~ msgid "Property Map"
+#~ msgstr "Mapa nehnuteľností"
+
+#~ msgid "Header Ad Space"
+#~ msgstr "Miesto na reklamu v hlavičke"
+
+#~ msgid "Sidenav"
+#~ msgstr "Bočná navigácia"
+
+#~ msgid "Realsite General"
+#~ msgstr "Realsite Všeobecné"
+
+#~ msgid "Color Combination"
+#~ msgstr "Farebná kombinácia"
+
+#~ msgid ""
+#~ "Set your color combination. You can use predefined colors but if you are "
+#~ "interested in custom colors please check our documentation."
+#~ msgstr ""
+#~ "Zvoľte svoju farebnú kombináciu. Možete použiť preddefinované farby, no "
+#~ "ak máte záujem o vlastné, prečítajte si prosím našu dokumentáciu."
+
+#~ msgid "None"
+#~ msgstr "Žiadne"
+
+#~ msgid "Cyan - Blue Grey"
+#~ msgstr "Azúrová - modro šedá"
+
+#~ msgid "Light Blue - Amber"
+#~ msgstr "Svetlo modrá - jantárová"
+
+#~ msgid "Blue - Pink"
+#~ msgstr "Modrá - ružová"
+
+#~ msgid "Blue - Light Green"
+#~ msgstr "Modrá - svetlo zelená"
+
+#~ msgid "Indigo - Red"
+#~ msgstr "Indigová - červená"
+
+#~ msgid "Indigo - Green"
+#~ msgstr "Indigová - zelená"
+
+#~ msgid "Brown - Light Green"
+#~ msgstr "Hnedá - Svetlo zelená"
+
+#~ msgid "Brown - Red"
+#~ msgstr "Hnedá - červená"
+
+#~ msgid "Green - Deep Orange"
+#~ msgstr "Zelená - sýto oranžová"
+
+#~ msgid "Green - Amber"
+#~ msgstr "Zelená - jantárová"
+
+#~ msgid "Red - Brown"
+#~ msgstr "Červená - hnedá"
+
+#~ msgid "Pink - Amber"
+#~ msgstr "Ružová - jantárová"
+
+#~ msgid "Teal - Amber"
+#~ msgstr "Modrozelená - jantárová"
+
+#~ msgid "Teal - Cyan"
+#~ msgstr "Modrozelená - azúrová"
+
+#~ msgid "Blue Grey - Amber"
+#~ msgstr "Modro šedá - jantárová"
+
+#~ msgid "Blue Grey - Lime"
+#~ msgstr "Modro šedá - limetková"
+
+#~ msgid "Deep Purple - Light Green"
+#~ msgstr "Sýto purpurová - svetlo zelená"
+
+#~ msgid "Deep Purple - Purple"
+#~ msgstr "Sýto purpurová - purpurová"
+
+#~ msgid "Deep Purple - Light Blue"
+#~ msgstr "Sýto purpurová - svetlo modrá"
+
+#~ msgid "Action Page"
+#~ msgstr "Strana akcií"
+
+#~ msgid "Page where the action button will point to."
+#~ msgstr "Stránka na ktorú bude smerovať akcia tlačidla."
+
+#~ msgid "Action Icon"
+#~ msgstr "Ikona akcie"
+
+#~ msgid "Use an icon from Font Awesome. For example \"fa-plus\"."
+#~ msgstr "Použite ikonu z Font Awesome. Napríklad \"fa-plus\"."
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid ""
+#~ "Logo displayed in header. By default it has some opacity added by CSS "
+#~ "which will change after hover."
+#~ msgstr ""
+#~ "Logo zobrazené v hlavičke. Štandardne má nastavenú priehľadnosť (cez "
+#~ "CSS), ktorá sa zmení pri prechode myšou."
+
+#~ msgid "Enable Customizer"
+#~ msgstr "Povoliť kustomizér"
+
+#~ msgid ""
+#~ "Helper displayed in bottom right corner for showing color combinations. "
+#~ "It is recommended to disable it on production."
+#~ msgstr ""
+#~ "Pomocník zobrazený v pravom dolnom rohu na zobrazenie farebných "
+#~ "kombinácií. V produkčnej prevádzke ho odporúčame vypnúť."
+
+#~ msgid "Realsite Header"
+#~ msgstr "Realsite hlavička"
+
+#~ msgid "Header Variant"
+#~ msgstr "Variant hlavičky"
+
+#~ msgid "Standard"
+#~ msgstr "Štandard"
+
+#~ msgid "Information"
+#~ msgstr "Informácia"
+
+#~ msgid "Large Search"
+#~ msgstr "Veľké vyhľadávanie"
+
+#~ msgid "Ad Space"
+#~ msgstr "Miesto pre reklamu"
+
+#~ msgid "Information Header Icon"
+#~ msgstr "Ikona informácie v hlavičke"
+
+#~ msgid "Information Header Title"
+#~ msgstr "Nadpis informácie v hlavičke"
+
+#~ msgid "Information Header Subtitle"
+#~ msgstr "Podnadpis informácie v hlavičke"
+
+#~ msgid "Footer"
+#~ msgstr "Päta"
+
+#~ msgid "Allow top"
+#~ msgstr "Povoliť top"
+
+#~ msgid "Read more"
+#~ msgstr "Čítať viac"
+
+#~ msgid "Install Required Plugins"
+#~ msgstr "Inštalovať požadované moduly"
+
+#~ msgid "Install Plugins"
+#~ msgstr "Inštalovať moduly"
+
+#~ msgid "Installing Plugin: %s"
+#~ msgstr "Inštaluje sa modul: %s"
+
+#~ msgid "Something went wrong with the plugin API."
+#~ msgstr "Niečo sa pokazilo s API modulu."
+
+#~ msgid "Return to Required Plugins Installer"
+#~ msgstr "Vrátiť sa späť do inštalátora požadovaných modulov"
+
+#~ msgid "Plugin activated successfully."
+#~ msgstr "Modul bol úspešne aktivovaný."
+
+#~ msgid "All plugins installed and activated successfully. %s"
+#~ msgstr "Všetky moduly boli úspešne nainštalované a aktivované. %s"
+
+#~ msgid "Content Import"
+#~ msgstr "Import obsahu"
+
+#~ msgid "Theme Options"
+#~ msgstr "Možnosti témy"
+
+#~ msgid "Widget settings"
+#~ msgstr "Nastavenia widgetu"
+
+#~ msgid "Widget Logic"
+#~ msgstr "Logika widgetu"
+
+#~ msgid "Theme Options Export"
+#~ msgstr "Export možností témy"
+
+#~ msgid "Widget Logic Export"
+#~ msgstr "Export logiky widgetu"
+
+#~ msgid "Export Your Theme Options"
+#~ msgstr "Export Vašich možností témy"
+
+#~ msgid "Click the button below to download JSON file with theme options."
+#~ msgstr ""
+#~ "Kliknite na tlačidlo nižsie na stiahnutie JSON súboru s možnosťami témy"
+
+#~ msgid "Download Export File"
+#~ msgstr "Stiahnuť export"
+
+#~ msgid "Export Widget Logic settings"
+#~ msgstr "Export nastavení logiky widgetu"
+
+#~ msgid ""
+#~ "Click the button below to download JSON file with Widget Logic settings."
+#~ msgstr ""
+#~ "Kliknite na tlačidlo nižsie na stiahnutie JSON súboru s nastaveniami "
+#~ "logiky widgetu."
+
+#~ msgid "Sorry, there has been an error."
+#~ msgstr "Ospravedľnujeme sa, nastala chyba."
+
+#~ msgid "The file does not exist, please try again."
+#~ msgstr "Súbor neexistuje, skúste znova."
+
+#~ msgid "All done."
+#~ msgstr "Hotovo."
+
+#~ msgid "Have fun!"
+#~ msgstr "Bavte sa!"
+
+#~ msgid "Remember to update the passwords and roles of imported users."
+#~ msgstr "Nezabudnite zmeniť heslá a role naimportovaných používateľov."
+
+#~ msgid ""
+#~ "The export file could not be found at <code>%s</code>. It is likely that "
+#~ "this was caused by a permissions problem."
+#~ msgstr ""
+#~ "Export <code>%s</code> sa nenašiel. Možno to bolo zapríčinené nedostatkom "
+#~ "oprávnení."
+
+#~ msgid ""
+#~ "This WXR file (version %s) may not be supported by this version of the "
+#~ "importer. Please consider updating."
+#~ msgstr ""
+#~ "Tento WXR súbor (verzia %s) nemusí byť podporovaný touto verziou "
+#~ "importéra. Zvážte aktualizáciu."
+
+#~ msgid ""
+#~ "Failed to import author %s. Their posts will be attributed to the current "
+#~ "user."
+#~ msgstr ""
+#~ "Nepodarilo sa naimportovať autora %s. Príspevky budú pridelené aktuálnemu "
+#~ "používateľovi."
+
+#~ msgid ""
+#~ "If a new user is created by WordPress, a new password will be randomly "
+#~ "generated and the new user&#8217;s role will be set as %s. Manually "
+#~ "changing the new user&#8217;s details will be necessary."
+#~ msgstr ""
+#~ "Ak bol nový používateľ vytvorený WordPress-om, bude bu vygenerované "
+#~ "náhodne heslo a bude mu pridelená rola %s. Bude potrebné manuálne upraviť "
+#~ "údaje nového používateľa."
+
+#~ msgid "- Select -"
+#~ msgstr "- Zvoliť -"
+
+#~ msgid ""
+#~ "Failed to create new user for %s. Their posts will be attributed to the "
+#~ "current user."
+#~ msgstr ""
+#~ "Nepodarilo sa vytvoriť nového používateľa %s. Príspevky budú pridelené "
+#~ "aktuálnemu používateľovi."
+
+#~ msgid "Failed to import category %s"
+#~ msgstr "Nepodarilo sa naimportovať kategóriu %s"
+
+#~ msgid "Failed to import post tag %s"
+#~ msgstr "Nepodarilo sa naimportovať post tag %s"
+
+#~ msgid "Failed to import %s %s"
+#~ msgstr "Nepodarilo sa naimportovať %s %s"
+
+#~ msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+#~ msgstr "Nepodarilo sa naimportovať &#8220;%s&#8221;: Neplatný post type %s"
+
+#~ msgid "%s &#8220;%s&#8221; already exists."
+#~ msgstr "%s &#8220;%s&#8221; už existuje."
+
+#~ msgid "Failed to import %s &#8220;%s&#8221;"
+#~ msgstr "Nepodarilo sa naimportovať %s &#8220;%s&#8221;"
+
+#~ msgid "Menu item skipped due to invalid menu slug: %s"
+#~ msgstr "Položka menu bola preskočená kvôli neplatnému slugu: %s"
+
+#~ msgid "Fetching attachments is not enabled"
+#~ msgstr "Načítanie príloh nie je povolené"
+
+#~ msgid "Invalid file type"
+#~ msgstr "Neplatný typ súboru"
+
+#~ msgid "Remote server did not respond"
+#~ msgstr "Vzdialený server neodpovedal"
+
+#~ msgid "Remote server returned error response %1$d %2$s"
+#~ msgstr "Vzdialený server vrátil chybnú odpoveď %1$d %2$s"
+
+#~ msgid "Remote file is incorrect size"
+#~ msgstr "Vzdialený súbor má nesprávnu veľkosť"
+
+#~ msgid "Zero size file downloaded"
+#~ msgstr "Stiahol sa prázdny súbor"
+
+#~ msgid "Remote file is too large, limit is %s"
+#~ msgstr "Vzdialený súbor je príliš veľký, limit je %s"
+
+#~ msgid "Import WordPress"
+#~ msgstr "WordPress import"
+
+#~ msgid ""
+#~ "A new version of this importer is available. Please update to version %s "
+#~ "to ensure compatibility with newer export files."
+#~ msgstr ""
+#~ "Je k dispozícii nová verzia importera. Na zaistenie kompatibility "
+#~ "aktualizujte na verziu %s."
+
+#~ msgid ""
+#~ "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll "
+#~ "import the posts, pages, comments, custom fields, categories, and tags "
+#~ "into this site."
+#~ msgstr ""
+#~ "Na naimportovanie príspevkov, stránok, komentárov, vlastných polí, "
+#~ "kategórií a značiek do tejto stránky nahrajte svoj WordPress eXtended RSS "
+#~ "(WXR) súbor."
+
+#~ msgid ""
+#~ "Choose a WXR (.xml) file to upload, then click Upload file and import."
+#~ msgstr "Zvoľte WXR (.xml) súbor, potom kliknite na načítať súbor a import."
+
+#~ msgid ""
+#~ "Import <strong>posts, pages, comments, custom fields, categories, and "
+#~ "tags</strong> from a WordPress export file."
+#~ msgstr ""
+#~ "Naimportovať <strong>články, stránky, komentáre, vlastné polia, kategórie "
+#~ "a značky</strong> z WordPress export súboru."
+
+#~ msgid "Demo Content"
+#~ msgstr "Demo obsah"
+
+#~ msgid "Widget Data"
+#~ msgstr "Dáta widgetu"
+
+#~ msgid "Revolution Slider"
+#~ msgstr "Revolution Slider"
+
+#~ msgid "One-Click Install"
+#~ msgstr "Inštalácia jedným klikom"
+
+#~ msgid "One Click Installation"
+#~ msgstr "Inštalácia jedným klikom"
+
+#~ msgid "Please activate following plugins before installation:"
+#~ msgstr "Pred inštaláciou aktivujte nasledujúce moduly:"
+
+#~ msgid "Back to Plugins"
+#~ msgstr "Späť na moduly"
+
+#~ msgid ""
+#~ "<p>If you are stucked on one step please check "
+#~ "<strong>max_execution_time</strong> in <strong>php.ini</strong> and set "
+#~ "higher value.</p><code>max_execution_time = 60</code>"
+#~ msgstr ""
+#~ "<p>Ak sa zaseknete na jednom kroku, skontrolujte "
+#~ "<strong>max_execution_time</strong> v <strong>php.ini</strong> a nastavte "
+#~ "vyššiu hodnotu.</p><code>max_execution_time = 60</code>"
+
+#~ msgid ""
+#~ "Note that this process might overwrite your existing installation "
+#~ "settings, use only on <strong>fresh</strong> installations!"
+#~ msgstr ""
+#~ "Tento proces môže prepísať Vaše aktuálne nastavenia. Použite ho iba na "
+#~ "<strong>nové</strong> inštalácie!"
+
+#~ msgid ""
+#~ "Note that some steps might execute for several minutes, do not reload "
+#~ "this page, until the process is done!"
+#~ msgstr ""
+#~ "Niektoré kroky môžu trvať niekoľko minút. Neobnovujte stránku pokiaľ sa "
+#~ "proces nedokončí!"
+
+#~ msgid ""
+#~ "Do not run this installation multiple times, all the settings will be "
+#~ "reverted to defaults!"
+#~ msgstr ""
+#~ "Nespúštajte túto inštaláciu viackrát, ináč sa všetky nastavenia vrátia na "
+#~ "východiskové hodnoty!"
+
+#~ msgid "Start Demo Setup"
+#~ msgstr "Spustiť demo inštaláciu"
+
+#~ msgid "Show Report"
+#~ msgstr "Zobraziť správu"
+
+#~ msgid "You don't have any favorite properties, yet. Start by adding some."
+#~ msgstr "Nemáte ešte žiadne obľúbené nehnuteľnosti. Pridajte si ich."
+
+#~ msgid "Sign in or register"
+#~ msgstr "Prihláste sa alebo sa zaregistrujte."
+
+#~ msgid ""
+#~ "Create new account or use already existing credentials to access "
+#~ "submission."
+#~ msgstr ""
+#~ "Na sprístupnenie funkcie si vytvorte nový účet alebo použite existujúce "
+#~ "prihlasovacie údaje."
+
+#~ msgid "Submit property"
+#~ msgstr "Potvrdiť nehnuteľnosť"
+
+#~ msgid ""
+#~ "Upload new property with galleries, attributes and all mandatory data."
+#~ msgstr ""
+#~ "Nahrať novú nehnuteľnosť s galériami, atribútmi a všetkými povinnými "
+#~ "údajmi."
+
+#~ msgid "Get approved"
+#~ msgstr "Počkajte na schválenie"
+
+#~ msgid ""
+#~ "Once it will be reviewed, your property will be published at the "
+#~ "front&nbsp;end by admin."
+#~ msgstr "Vaša nehnuteľnosť bude zverejnená po preskúmaní administrátorom."
+
+#~ msgid "Login"
+#~ msgstr "Prihlásenie"
+
+#~ msgid "Register"
+#~ msgstr "Zaregistrovať sa"
+
+#~ msgid "Back"
+#~ msgstr "Späť"
+
+#~ msgid "You are not allowed to add property."
+#~ msgstr "Nemáte povolené pridať nehnuteľnosť."
+
+#~ msgid "No properties found in favorites."
+#~ msgstr "Nenašli sa žiadne obľúbené nehnuteľnosti."
+
+#~ msgid "Property ID is missing."
+#~ msgstr "Chýba ID nehnuteľnosti."
+
+#~ msgid "This is not property ID."
+#~ msgstr "Toto nie je ID nehnuteľnosti."
+
+#~ msgid "Property is already in list"
+#~ msgstr "Nehnuteľnosť je už v zozname."
+
+#~ msgid "No properties found in compare list."
+#~ msgstr "V zozname na porovnanie sa nenašli žiadne nehnuteľnosti."
+
+#~ msgid "You can have max %s properties in list."
+#~ msgstr "Možete mať v zozname maximálne %s nehnuteľností."
+
+#~ msgid "Under Construction Page"
+#~ msgstr "Stránka údržby"
+
+#~ msgid "Cookie Policy Page"
+#~ msgstr "Cookies politika"
+
+#~ msgid "Compare Page"
+#~ msgstr "Porovnanie"
+
+#~ msgid "Favorites Page"
+#~ msgstr "Obľubené"
+
+#~ msgid "Enable Search Query Logging"
+#~ msgstr "Povoliť záznamy dotazov hľadaní"
+
+#~ msgid "Enable Property Views Logging"
+#~ msgstr "Povoliť záznamy zobrazení nehnuteľností"
+
+#~ msgid "Enable Compare"
+#~ msgstr "Povoliť porovnanie"
+
+#~ msgid "Enable Favorites"
+#~ msgstr "Povoliť obľúbené"
+
+#~ msgid "Number of additional currencies"
+#~ msgstr "Počet ďalších mien"
+
+#~ msgid "Input positive integer or 0 for no other currencies."
+#~ msgstr "Zadajte kladné číslo, alebo 0 pre žiadne iné meny."
+
+#~ msgid "Realia"
+#~ msgstr "Realia"
+
+#~ msgid "Currency"
+#~ msgstr "Mena"
+
+#~ msgid "CSV Import"
+#~ msgstr "CSV import"
+
+#~ msgid "No file selected."
+#~ msgstr "Nebol zvolený žiadny súbor."
+
+#~ msgid "This is not CSV file."
+#~ msgstr "Toto nie je CSV súbor."
+
+#~ msgid "%s properties has been successfully imported."
+#~ msgstr "%s nehnuteľností bolo úspešne naimportovaných."
+
+#~ msgid "Your PayPal is running in <strong>live</strong> mode."
+#~ msgstr ""
+#~ "Váš PayPal beží v \n"
+#~ "<strong>produkčnom</strong> móde."
+
+#~ msgid "Your PayPal is running in <strong>sandbox</strong> mode."
+#~ msgstr ""
+#~ "Váš PayPal beží v \n"
+#~ "<strong>sandbox</strong> móde."
+
+#~ msgid "Image for slider"
+#~ msgstr "Obrázok pre slider"
+
+#~ msgid "Image for header"
+#~ msgstr "Obrázok pre hlavičku"
+
+#~ msgid "Crime"
+#~ msgstr "Kriminalita"
+
+#~ msgid "In percentage."
+#~ msgstr "V percentách."
+
+#~ msgid "Traffic"
+#~ msgstr "Doprava"
+
+#~ msgid "Pollution"
+#~ msgstr "Znečistenie"
+
+#~ msgid "Education"
+#~ msgstr "Vzdelanie"
+
+#~ msgid "Health"
+#~ msgstr "Zdravotníctvo"
+
+#~ msgid "City center"
+#~ msgstr "Centrum mesta"
+
+#~ msgid "Any text. For example distance: 2 km, or 10 min."
+#~ msgstr "Ľubovoľný text. Napríklad vzdialenosť: 2 km, alebo 10 min."
+
+#~ msgid "Shop"
+#~ msgstr "Obchod"
+
+#~ msgid "Hospital"
+#~ msgstr "Nemocnica"
+
+#~ msgid "School"
+#~ msgstr "Škola"
+
+#~ msgid "CPT stop"
+#~ msgstr "MHD zastávka"
+
+#~ msgid ""
+#~ "(City Public Transport). Any text. For example distance: 2 km, or 10 min."
+#~ msgstr ""
+#~ "(Mestská hromadná doprava). Ľubovoľný text. Napríklad vzdialenosť: 2 km, "
+#~ "alebo 10 min."
+
+#~ msgid "Airport"
+#~ msgstr "Letisko"
+
+#~ msgid "Landlords"
+#~ msgstr "Majitelia nehnuteľností"
+
+#~ msgid "Contracts"
+#~ msgstr "Zmluvy"
+
+#~ msgid "CRM"
+#~ msgstr "CRM"
+
+#~ msgid "Landlord"
+#~ msgstr "Majiteľ nehnuteľnosti"
+
+#~ msgid "Add New"
+#~ msgstr "Pridať nový"
+
+#~ msgid "Add New Landlord"
+#~ msgstr "Pridať nového majiteľa nehnuteľnosti"
+
+#~ msgid "Edit Landlord"
+#~ msgstr "Upraviť majiteľa nehnuteľnosti"
+
+#~ msgid "New Landlord"
+#~ msgstr "Nový majiteľ nehnuteľnosti"
+
+#~ msgid "All Landlords"
+#~ msgstr "Všetci majitelia nehnuteľností"
+
+#~ msgid "View Landlord"
+#~ msgstr "Zobraziť majiteľa nehnuteľnosti"
+
+#~ msgid "Search Landlord"
+#~ msgstr "Vyhľadať majiteľa nehnuteľnosti"
+
+#~ msgid "No landlords found"
+#~ msgstr "Nenašli sa žiadni majitelia nehnuteľností"
+
+#~ msgid "No landlords found in Trash"
+#~ msgstr "V koši sa nenašli žiadni majitelia nehnuteľností"
+
+#~ msgid "Partners"
+#~ msgstr "Partneri"
+
+#~ msgid "Partner"
+#~ msgstr "Partner"
+
+#~ msgid "Add New Partner"
+#~ msgstr "Pridať nového partnera"
+
+#~ msgid "Edit Partner"
+#~ msgstr "Upraviť partnera"
+
+#~ msgid "New Partner"
+#~ msgstr "Nový partner"
+
+#~ msgid "All Partners"
+#~ msgstr "Všetci partneri"
+
+#~ msgid "View Partner"
+#~ msgstr "Zobraziť parnera"
+
+#~ msgid "Search Partner"
+#~ msgstr "Vyhľadať parnera"
+
+#~ msgid "No Partners found"
+#~ msgstr "Nenašli sa žiadni partneri"
+
+#~ msgid "No Partners found in Trash"
+#~ msgstr "V koši sa nenašli žiadni parneri"
+
+#~ msgid "Partner's URL"
+#~ msgstr "URL partnera"
+
+#~ msgid "Add New FAQ"
+#~ msgstr "Pridať nové FAQ"
+
+#~ msgid "Edit FAQ"
+#~ msgstr "Upraviť FAQ"
+
+#~ msgid "New FAQ"
+#~ msgstr "Nové FAQ"
+
+#~ msgid "All FAQ"
+#~ msgstr "Všetky FAQ"
+
+#~ msgid "View FAQ"
+#~ msgstr "Zobraziť FAQ"
+
+#~ msgid "Search FAQ"
+#~ msgstr "Vyhľadať FAQ"
+
+#~ msgid "No FAQ found"
+#~ msgstr "Nenašli sa žiadne FAQ"
+
+#~ msgid "No FAQ found in Trash"
+#~ msgstr "V koši sa nenašli žiadne FAQ"
+
+#~ msgid "faq"
+#~ msgstr "faq"
+
+#~ msgid "Add New Pricing"
+#~ msgstr "Pridať nový cenník"
+
+#~ msgid "Edit Pricing"
+#~ msgstr "Upraviť cenník"
+
+#~ msgid "New Pricing"
+#~ msgstr "Nový cenník"
+
+#~ msgid "All Pricing"
+#~ msgstr "Všetky cenníky"
+
+#~ msgid "View Pricing"
+#~ msgstr "Zobraziť cenník"
+
+#~ msgid "Search Pricing"
+#~ msgstr "Vyhľadať cenník"
+
+#~ msgid "No pricing found"
+#~ msgstr "Nenašiel sa žiadny cenník"
+
+#~ msgid "No pricing found in Trash"
+#~ msgstr "V koši sa nenašiel žiadny cenník"
+
+#~ msgid "pricing"
+#~ msgstr "cenník"
+
+#~ msgid "Basic Settings"
+#~ msgstr "Základné nastavenia"
+
+#~ msgid "Button Text"
+#~ msgstr "Text tlačidla"
+
+#~ msgid "Button Link"
+#~ msgstr "Odkaz tlačidla"
+
+#~ msgid "Label Text"
+#~ msgstr "Text popisu"
+
+#~ msgid "Highlight Table?"
+#~ msgstr "Zvýrazniť tabuľku?"
+
+#~ msgid "Pricing Table Items"
+#~ msgstr "Položky tabuľky cenníkov"
+
+#~ msgid "Item (row)"
+#~ msgstr "Položka (riadok)"
+
+#~ msgid "Views"
+#~ msgstr "Zobrazenia"
+
+#~ msgid "Total"
+#~ msgstr "Celkom"
+
+#~ msgid "Weekly"
+#~ msgstr "Týždenne"
+
+#~ msgid "Search Queries"
+#~ msgstr "Dotazy hľadaní"
+
+#~ msgid "Per day"
+#~ msgstr "Za deň"
+
+#~ msgid "Item has been successfully removed."
+#~ msgstr "Položka bola úspešne odstránená."
+
+#~ msgid "Statistics"
+#~ msgstr "Štatistiky"
+
+#~ msgid "Search Contract Types"
+#~ msgstr "Hľadať typy zmlúv"
+
+#~ msgid "All Contract Types"
+#~ msgstr "Všetky typy zmlúv"
+
+#~ msgid "Parent Contract"
+#~ msgstr "Rodičovská zmluva"
+
+#~ msgid "Parent Contract:"
+#~ msgstr "Rodičovská zmluva:"
+
+#~ msgid "Edit Contract"
+#~ msgstr "Upraviť zmluvu"
+
+#~ msgid "Update Contract"
+#~ msgstr "Zmeniť zmluvu"
+
+#~ msgid "Add New Contract"
+#~ msgstr "Pridať novú zmluvu"
+
+#~ msgid "New Contract"
+#~ msgstr "Upraviť zmluvu"
+
+#~ msgid "contract"
+#~ msgstr "zmluva"
+
+#~ msgid "Vertical Filter"
+#~ msgstr "Vertikálny filter"
+
+#~ msgid "Vertical filter for filtering properties."
+#~ msgstr "Vertikálny filter na filtrovanie nehnuteľností."
+
+#~ msgid "Horizontal Filter"
+#~ msgstr "Horizontálny filter"
+
+#~ msgid "Horizontal filter for filtering properties."
+#~ msgstr "Horizontálny filter na filtrovanie nehnuteľností."
+
+#~ msgid "Property carousel implementing Bootstrap's carousel library."
+#~ msgstr "Kolotoč nehnuteľností implementujúci Bootstrap carousel knižnicu."
+
+#~ msgid "Property Small Carousel"
+#~ msgstr "Malý kolotoč nehnuteľností"
+
+#~ msgid "Small property carousel implementing OwlCarousel."
+#~ msgstr "Malý kolotoč nehnuteľností implementujúci OwlCarousel."
+
+#~ msgid "Simple partners widget."
+#~ msgstr "Jednoduchý widget partnerov."
+
+#~ msgid "Cover"
+#~ msgstr "Pozadie"
+
+#~ msgid "Displays small filter with video or image background."
+#~ msgstr "Zobrazí malý filter s videom alebo obrázkom na pozadí."
+
+#~ msgid "Compare properties"
+#~ msgstr "Porovnať nehnuteľnosti"
+
+#~ msgid "Compare properties."
+#~ msgstr "Porovnať nehnuteľnosti."
+
+#~ msgid "Favorite properties"
+#~ msgstr "Obľúbené nehnuteľnosti"
+
+#~ msgid "Favorite properties."
+#~ msgstr "Obľúbené nehnuteľnosti."
+
+#~ msgid "Simple Map"
+#~ msgstr "Jednoduchá mapa"
+
+#~ msgid "Displays 1 place in the map."
+#~ msgstr "Zobrazuje 1 miesto na mape."
+
+#~ msgid "Contact Info"
+#~ msgstr "Kontaktné informácie"
+
+#~ msgid "Contact info box."
+#~ msgstr "Box kontaktných informácií"
+
+#~ msgid "Search results for"
+#~ msgstr "Výsledky hľadania pre"
+
+#~ msgid "Search ..."
+#~ msgstr "Hľadať ..."
+
+#~ msgid "Medium"
+#~ msgstr "Stredný"
+
+#~ msgid "Large"
+#~ msgstr "Veľký"
+
+#~ msgid "Display type not defined"
+#~ msgstr "Typ zobrazenia nie je určený"
+
+#~ msgid "IDs"
+#~ msgstr "ID hodnoty"
+
+#~ msgid "Property IDs, separated by commas."
+#~ msgstr "ID hodnoty nehnuteľností, oddelené čiarkami."
+
+#~ msgid "Carousel height. Default 500px."
+#~ msgstr "Výška kolotoča. Preddefinovane 500px."
+
+#~ msgid "Hide Property Descriptions"
+#~ msgstr "Skryť popisy nehnuteľností"
+
+#~ msgid "Fullwidth"
+#~ msgstr "Plná šírka"
+
+#~ msgid "No property IDs specified."
+#~ msgstr "Nebolo určené žiadne ID nehnuteľnosti."
+
+#~ msgid "Previous"
+#~ msgstr "Predchádzajúce"
+
+#~ msgid "Next"
+#~ msgstr "Nasledovné"
+
+#~ msgid "Add to compare list"
+#~ msgstr "Pridať do zoznamu na porovnanie"
+
+#~ msgid "Compare"
+#~ msgstr "Porovnať"
+
+#~ msgid "Text"
+#~ msgstr "Text"
+
+#~ msgid "Contact Form (shortcode)"
+#~ msgstr "Kontaktný formulár (shorcode)"
+
+#~ msgid "Skype"
+#~ msgstr "Skype"
+
+#~ msgid "Facebook"
+#~ msgstr "Facebook"
+
+#~ msgid "Twitter"
+#~ msgstr "Twitter"
+
+#~ msgid "Google Plus"
+#~ msgstr "Google Plus"
+
+#~ msgid "LinkedIn"
+#~ msgstr "LinkedIn"
+
+#~ msgid "Youtube"
+#~ msgstr "Youtube"
+
+#~ msgid "Agency overview"
+#~ msgstr "Prehľad agentúry"
+
+#~ msgid "Position on Map"
+#~ msgstr "Pozícia na mape"
+
+#~ msgid "Assigned agents"
+#~ msgstr "Pridelení agenti"
+
+#~ msgid "Assigned properties"
+#~ msgstr "Pridelené nehnuteľnosti"
+
+#~ msgid "Oops, sorry!"
+#~ msgstr "Hups, ospravedľnujeme sa!"
+
+#~ msgid "No results found. Try to use search form below."
+#~ msgstr "Nenašli sa žiadne výsledky. Skúste použiť formulár na vyhľadávanie."
+
+#~ msgid "Property detail"
+#~ msgstr "Detail nehnuteľnosti"
+
+#~ msgid "Share"
+#~ msgstr "Zdieľať"
+
+#~ msgid "Property overview"
+#~ msgstr "Prehľad nehnuteľnosti"
+
+#~ msgid "Video"
+#~ msgstr "Video"
+
+#~ msgid "Floor plans"
+#~ msgstr "Pôdorysy"
+
+#~ msgid "Position"
+#~ msgstr "Pozícia"
+
+#~ msgid ""
+#~ "By using this website you agree with <a href=\"%s\">cookie policy</a>."
+#~ msgstr ""
+#~ "Používaním tejto webstránky súhlasíte s <a href=\"%s\">cookie politikou</"
+#~ "a>."
+
+#~ msgid "I agree"
+#~ msgstr "Súhlasím"
+
+#~ msgid "Subtitle"
+#~ msgstr "Podnadpis"
+
+#~ msgid "Preset Image URL"
+#~ msgstr "URL prednastaveného obrázka"
+
+#~ msgid "Video MP4"
+#~ msgstr "Video MP4"
+
+#~ msgid "Video OGG"
+#~ msgstr "Video OGG"
+
+#~ msgid "Contact information"
+#~ msgstr "Kontaktné informácie"
+
+#~ msgid "Standard layout"
+#~ msgstr "Štandardné rozmiestnenie"
+
+#~ msgid "Large search"
+#~ msgstr "Veľké vyhľadávanie"
+
+#~ msgid "Ad space"
+#~ msgstr "Reklamný priestor"
+
+#~ msgid "Color Combinations"
+#~ msgstr "Farebné kombinácie"
+
+#~ msgid "Remove from favorites"
+#~ msgstr "Vymazať z obľúbených"
+
+#~ msgid "Add to favorites"
+#~ msgstr "Pridať do obľúbených"
+
+#~ msgid "Please <a href=\"%s\"></a> log in."
+#~ msgstr "Prosím <a href=\"%s\"></a> prihláste sa."
+
+#~ msgid "Please log in before."
+#~ msgstr "Najskôr sa prosím prihláste."
+
+#~ msgid "Vew favorites"
+#~ msgstr "Zobraziť obľúbené"
+
+#~ msgid "Search Properties"
+#~ msgstr "Hľadať nehnuteľnosti"
+
+#~ msgid "Fields"
+#~ msgstr "Polia"
+
+#~ msgid "Hide property ID"
+#~ msgstr "Skryť ID nehnuteľnosti"
+
+#~ msgid "Hide location"
+#~ msgstr "Skryť polohu"
+
+#~ msgid "Hide property type"
+#~ msgstr "Skryť typ nehnuteľnost"
+
+#~ msgid "Hide contract"
+#~ msgstr "Skryť zmluvu"
+
+#~ msgid "Hide price"
+#~ msgstr "Skryť cenu"
+
+#~ msgid "Hide baths"
+#~ msgstr "Skryť kúpeľne"
+
+#~ msgid "Hide beds"
+#~ msgstr "Skryť postele"
+
+#~ msgid "Hide area"
+#~ msgstr "Skryť výmeru"
+
+#~ msgid "Hide garages"
+#~ msgstr "Skryť garáže"
+
+#~ msgid "Property Type"
+#~ msgstr "Typ nehnuteľnosti"
+
+#~ msgid "Import"
+#~ msgstr "Import"
+
+#~ msgid "Before importing the properties please consider following notices"
+#~ msgstr ""
+#~ "Pred importovaním nehnuteľností prosím zvážte nasledujúce upozornenie"
+
+#~ msgid "Import is working only for properties."
+#~ msgstr "Import funguje iba pre nehnuteľnosti."
+
+#~ msgid "You can import only image paths, not image data."
+#~ msgstr "Môžete importovať iba cesty k obrázom, nie obrázky samotné."
+
+#~ msgid ""
+#~ "If you rename or add new fields, you need the change import logic too."
+#~ msgstr ""
+#~ "Ak premenujete alebo pridáte nové polia, musíte zmeniť taktiež logiku "
+#~ "importu."
+
+#~ msgid ""
+#~ "Don't upload large files. If you decide to import thousands of properties "
+#~ "per once, change the values below in your php.ini."
+#~ msgstr ""
+#~ "Nenahrávajte veľké súbory. Ak sa rozhodnete importovať tisíce "
+#~ "nehnuteľností naraz, zmeňte hodnoty nižšie vo Vašom php.ini."
+
+#~ msgid "Environment Variables"
+#~ msgstr "Premenné prostredia"
+
+#~ msgid "Memory limit"
+#~ msgstr "Memory limit"
+
+#~ msgid "Max execution time"
+#~ msgstr "Max execution time"
+
+#~ msgid "seconds"
+#~ msgstr "sekúnd"
+
+#~ msgid "Upload max filesize"
+#~ msgstr "Upload max filesize"
+
+#~ msgid "Index"
+#~ msgstr "Index"
+
+#~ msgid "Database table"
+#~ msgstr "Databázová tabuľka"
+
+#~ msgid "Database column"
+#~ msgstr "Databázový stĺpec"
+
+#~ msgid "Extra"
+#~ msgstr "Extra"
+
+#~ msgid "Content"
+#~ msgstr "Obsah"
+
+#~ msgid ""
+#~ "HTTP path to a file. Example of correct path: http://example.com/wp-"
+#~ "uploads/2015/02/01.jpg."
+#~ msgstr ""
+#~ "HTTP cesta k súboru. Príklad správnej cesty: http://example.com/wp-"
+#~ "uploads/2015/02/01.jpg."
+
+#~ msgid ""
+#~ "Provide term name. After that term name is converted to slug and created "
+#~ "if not exists otherwise is used term with same slug."
+#~ msgstr ""
+#~ "Poskytnite názov termu. Následne sa názov prekonvertuje do slugu a v "
+#~ "prípade, že neexistuje, tak sa vytvorí."
+
+#~ msgid ""
+#~ "Space is separator so don't use spaces in filenames. Use HTTP path to a "
+#~ "file. Example of correct path: http://example.com/wp-uploads/2015/02/01."
+#~ "jpg."
+#~ msgstr ""
+#~ "Medzera je oddeľovač, takže ich nepoužívajte v názvoch súborov. Použite "
+#~ "HTTP cestu k súbru. Príklad správnej cesty: http://example.com/wp-"
+#~ "uploads/2015/02/01.jpg."
+
+#~ msgid "Only image"
+#~ msgstr "Iba obrázok"
+
+#~ msgid "Actions"
+#~ msgstr "Akcie"
+
+#~ msgid "View Detail"
+#~ msgstr "Zobraziť detail"
+
+#~ msgid "Search Query Statistics"
+#~ msgstr "Štatistiky vyhľadávaní"
+
+#~ msgid ""
+#~ "Query logging is disabled. If you want to collect queries plase enable "
+#~ "under \"Appearance - Customize\"."
+#~ msgstr ""
+#~ "Záznamy dotazov sú zakázané. Ak chcete zbierať dotazy, prosím povoľte ich "
+#~ "v \"Vzhľad - Prispôsobiť\"."
+
+#~ msgid "Filters per day in the last two weeks"
+#~ msgstr "Za deň v posledných dvoch týždňoch"
+
+#~ msgid "Price searches"
+#~ msgstr "Vyhľadania ceny"
+
+#~ msgid "Property types"
+#~ msgstr "Typy nehnuteľností"
+
+#~ msgid "Height in pixels"
+#~ msgstr "Výška v pixeloch"
+
+#~ msgid "Overall property views for last two weeks"
+#~ msgstr "Celkovo zobrazení nehnuteľností za posledné dva týždne"
+
+#~ msgid "10 most popular properties"
+#~ msgstr "10 najpopulárnejších nehnuteľností"
+
+#~ msgid "views"
+#~ msgstr "zobrazenia"
+
+#~ msgid "10 most popular locations"
+#~ msgstr "10 najpopulárnejších lokácií"
+
+#~ msgid ""
+#~ "Use an icon from <a href=\"http://fortawesome.github.io/Font-Awesome/"
+#~ "icons/\">Font Awesome</a>. For example \"fa-plus\"."
+#~ msgstr ""
+#~ "Použite ikonu z <a href=\"http://fortawesome.github.io/Font-Awesome/icons/"
+#~ "\">Font Awesome</a>. Napríklad \"fa-plus\"."
+
+#~ msgid ""
+#~ "Use an icon from from <a href=\"http://fortawesome.github.io/Font-Awesome/"
+#~ "icons/\">Font Awesome</a>. For example \"fa-plus\"."
+#~ msgstr ""
+#~ "Použite ikonu z <a href=\"http://fortawesome.github.io/Font-Awesome/icons/"
+#~ "\">Font Awesome</a>. Napríklad \"fa-plus\"."
+
+#~ msgid ""
+#~ "The path to a file in the upload directory. Example of correct path: "
+#~ "2015/02/01.jpg."
+#~ msgstr ""
+#~ "Cesta k súboru v upload priečinku. Príklad správnej cesty: 2015/02/01.jpg."
+
+#~ msgid ""
+#~ "All terms must be created before the import. Not matched terms will be "
+#~ "skipped."
+#~ msgstr ""
+#~ "Všetky termy musia byť vytvorené pred importom. Nenájdené budú preskočené."
+
+#~ msgid ""
+#~ "Space is separator so don't use spaces in filenames. File must be "
+#~ "uploaded in uploads directory. Example of correct path: 2015/02/01.jpg."
+#~ msgstr "Medzera je oddeľovač, takže ju nepoužívajte "
+
+#~ msgid "Test Metabox"
+#~ msgstr "Test Metabox"
+
+#~ msgid "Test Text"
+#~ msgstr "Test Text"
+
+#~ msgid "field description (optional)"
+#~ msgstr "opis poľa (voliteľné)"
+
+#~ msgid "Test Text Small"
+#~ msgstr "Test Text Small"
+
+#~ msgid "Test Text Medium"
+#~ msgstr "Test Text Medium"
+
+#~ msgid "Website URL"
+#~ msgstr "URL webstránky"
+
+#~ msgid "Test Text Email"
+#~ msgstr "Test Text Email"
+
+#~ msgid "Test Time"
+#~ msgstr "Test Time"
+
+#~ msgid "Time zone"
+#~ msgstr "Časová zóna"
+
+#~ msgid "Test Date Picker"
+#~ msgstr "Test Date Picker"
+
+#~ msgid "Test Date Picker (UNIX timestamp)"
+#~ msgstr "Test Date Picker (UNIX timestamp)"
+
+#~ msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+#~ msgstr "Test Date/Time Picker Combo (UNIX timestamp)"
+
+#~ msgid "Test Money"
+#~ msgstr "Test Money"
+
+#~ msgid "Test Color Picker"
+#~ msgstr "Test Color Picker"
+
+#~ msgid "Test Text Area"
+#~ msgstr "Test Text Area"
+
+#~ msgid "Test Text Area Small"
+#~ msgstr "Test Text Area Small"
+
+#~ msgid "Test Text Area for Code"
+#~ msgstr "Test Text Area for Code"
+
+#~ msgid "Test Title Weeeee"
+#~ msgstr "Test Title Weeeee"
+
+#~ msgid "This is a title description"
+#~ msgstr "Toto je opis nadpisu"
+
+#~ msgid "Test Select"
+#~ msgstr "Test Select"
+
+#~ msgid "Option One"
+#~ msgstr "Option One"
+
+#~ msgid "Option Two"
+#~ msgstr "Option Two"
+
+#~ msgid "Option Three"
+#~ msgstr "Option Three"
+
+#~ msgid "Test Radio inline"
+#~ msgstr "Test Radio inline"
+
+#~ msgid "Test Radio"
+#~ msgstr "Test Radio"
+
+#~ msgid "Test Taxonomy Radio"
+#~ msgstr "Test Taxonomy Radio"
+
+#~ msgid "Test Taxonomy Select"
+#~ msgstr "Test Taxonomy Select"
+
+#~ msgid "Test Taxonomy Multi Checkbox"
+#~ msgstr "Test Taxonomy Multi Checkbox"
+
+#~ msgid "Test Checkbox"
+#~ msgstr "Test Checkbox"
+
+#~ msgid "Test Multi Checkbox"
+#~ msgstr "Test Multi Checkbox"
+
+#~ msgid "Check One"
+#~ msgstr "Check One"
+
+#~ msgid "Check Two"
+#~ msgstr "Check Two"
+
+#~ msgid "Check Three"
+#~ msgstr "Check Three"
+
+#~ msgid "Test wysiwyg"
+#~ msgstr "Test wysiwyg"
+
+#~ msgid "Test Image"
+#~ msgstr "Test Image"
+
+#~ msgid "Upload an image or enter a URL."
+#~ msgstr "Nahrajte obrázok alebo zadajte URL."
+
+#~ msgid "Multiple Files"
+#~ msgstr "Viacero súborov"
+
+#~ msgid "Upload or add multiple images/attachments."
+#~ msgstr "Nahrať alebo pridať viacero obrázkov/príloh."
+
+#~ msgid "oEmbed"
+#~ msgstr "oEmbed"
+
+#~ msgid ""
+#~ "Enter a youtube, twitter, or instagram URL. Supports services listed at "
+#~ "<a href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+#~ "Embeds</a>."
+#~ msgstr ""
+#~ "Zadajte youtube, twitter alebo instagram URL. Podpora služieb na zozname "
+#~ "<a href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+#~ "Embeds</a>."
+
+#~ msgid "About Page Metabox"
+#~ msgstr "O Metaboxe"
+
+#~ msgid "Repeating Field Group"
+#~ msgstr "Opakujúca sa skupina polí"
+
+#~ msgid "Available %s"
+#~ msgstr "K dispozícii %s"
+
+#~ msgid "Attached %s"
+#~ msgstr "Pripojených %s"
+
+#~ msgid "Real Estate General"
+#~ msgstr "Real Estate Všeobecné"
+
+#~ msgid "Real Estate reCAPTCHA"
+#~ msgstr "Real Estate reCAPTCHA"
+
+#~ msgid "Real Estate Measurement"
+#~ msgstr "Real Estate Miera"
+
+#~ msgid "Real Estate Submission"
+#~ msgstr "Real Estate Inzercia"
+
+#~ msgid "Real Estate PayPal"
+#~ msgstr "Real Estate PayPal"
+
+#~ msgid "Real Estate Currency"
+#~ msgstr "Real Estate Mena"
+
+#~ msgid "Real Estate"
+#~ msgstr "Real Estate"
+
+#~ msgid "Truncate"
+#~ msgstr "Vymazať"
+
+#~ msgid "Export"
+#~ msgstr "Export"
+
+#~ msgid "Real Estate Currencies"
+#~ msgstr "Real Estate Meny"
+
+#~ msgid "Page %s"
+#~ msgstr "Strana %s"
+
+#~ msgid ""
+#~ "You are going to pay <strong>%s</strong> for sticky property <strong>\"%s"
+#~ "\"</strong>."
+#~ msgstr ""
+#~ "Chystáte sa zaplatiť\n"
+#~ " <strong>%s</strong> za TOP nehnuteľnosť <strong>\"%s\"</strong>."
+
+#~ msgid "Make sticky"
+#~ msgstr "Urobiť TOP"
+
+#~ msgid "Property has been sticky."
+#~ msgstr "Nehnuteľnosť bola označená ako TOP."
+
+#~ msgid "Error processing PayPal payment."
+#~ msgstr "Nepodarilo sa spracovať PayPal platbu."
+
+#~ msgid "Of Items"
+#~ msgstr "položiek"
+
+#~ msgid "Show Symbol After"
+#~ msgstr "Zobraziť symbol po"
+
+#~ msgid "Decimals"
+#~ msgstr "Desatinné číslo"
+
+#~ msgid "Decimal Point"
+#~ msgstr "Desatinná čiarka"
+
+#~ msgid "How many other currencies?"
+#~ msgstr "Koľko iných mien?"
+
+#~ msgid "All Agency"
+#~ msgstr "Všetky agentúry"
+
+#~ msgid "All Agent"
+#~ msgstr "Všetci agenti"
+
+#~ msgid ""
+#~ "Query logging is disabled. If you want to collect queries plase enable "
+#~ "under \"Settings - Customize\"."
+#~ msgstr ""
+#~ "Záznamy dopytov sú zakázané. Ak chcete zbierať dopyty, povoľte ich prosím "
+#~ "v \"Nastavenia - Vlastné\"."

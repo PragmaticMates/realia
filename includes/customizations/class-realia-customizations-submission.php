@@ -37,7 +37,6 @@ class Realia_Customizations_Submission {
             'priority'  => 1,
         ) );
 
-
         // Enable agents
         $wp_customize->add_setting( 'realia_submission_enable_agents', array(
             'default'           => false,
@@ -262,4 +261,4 @@ class Realia_Customizations_Submission {
     }
 }
 
-Realia_customizations_Submission::init();
+Realia_Customizations_Submission::init();

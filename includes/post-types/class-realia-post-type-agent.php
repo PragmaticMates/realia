@@ -196,6 +196,7 @@ class Realia_Post_Type_Agent {
 
         return $metaboxes;                    
     }
+
 	/**
 	 * Custom admin columns for post type
 	 *
@@ -210,6 +211,7 @@ class Realia_Post_Type_Agent {
 			'email'      		=> __( 'E-mail', 'realia' ),
 			'web'      		    => __( 'Web', 'realia' ),
 			'phone'      		=> __( 'Phone', 'realia' ),
+			'properties'  		=> __( 'Properties', 'realia' ),
 			'author' 			=> __( 'Author', 'realia' ),
 		);
 
@@ -261,6 +263,10 @@ class Realia_Post_Type_Agent {
 					echo '-';
 				}
 				break;
+            case 'properties':
+                $properties_count = Realia_Query::get_agent_properties( $post_id = get_the_ID() )->post_count;
+                echo $properties_count;
+                break;
 		}
 	}
 
@@ -284,18 +290,18 @@ class Realia_Post_Type_Agent {
                 'post_author'    => get_current_user_id(),
                 'post_status'    => 'publish',
                 'post_type'      => 'agent',
-                'post_content'   => wp_kses( $_POST[ REALIA_PROPERTY_PREFIX . 'text' ], '<b><strong><i><em><h1><h2><h3><h4><h5><h6><pre><code><span>' ),
+                'post_content'   => wp_kses( $_POST[ REALIA_AGENT_PREFIX . 'description' ], '<b><strong><i><em><h1><h2><h3><h4><h5><h6><pre><code><span>' ),
             );
 
             if ( ! empty( $post_id ) ) {
                 $data['ID'] = $post_id;
             }
 
-            $post_id = wp_insert_post( $data, true );
-
-            update_user_meta( get_current_user_id(), REALIA_USER_PREFIX . 'agent_object', $post_id );
+            $post_id = wp_insert_post( $data, true );            
 
             if ( ! empty( $post_id ) && ! empty( $_POST['object_id'] ) ) {
+                update_user_meta( get_current_user_id(), REALIA_USER_PREFIX . 'agent_object', $post_id );
+                
                 $_POST['object_id'] = $post_id;
                 $post_id = $_POST['object_id'];
                 $metaboxes = apply_filters( 'cmb2_meta_boxes', array() );
@@ -303,7 +309,7 @@ class Realia_Post_Type_Agent {
 
                 // Create featured image
                 $featured_image = get_post_meta( $post_id, REALIA_AGENT_PREFIX . 'featured_image', true );
-                if ( ! empty( $_POST[REALIA_AGENT_PREFIX . 'featured_image'] ) ) {
+                if ( ! empty( $featured_image ) ) {
                     $featured_image_id = get_post_meta( $post_id, REALIA_AGENT_PREFIX . 'featured_image_id', true );
                     set_post_thumbnail( $post_id, $featured_image_id );
                 } else {

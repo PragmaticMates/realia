@@ -91,7 +91,7 @@ class Realia_Shortcodes {
      */
     public static function breadcrumb( $atts ) {
         $atts = shortcode_atts( array(), $atts, 'realia_breadcrumb' );
-        return Realia_Template_Loader::load( 'misc/breadcrumb' );
+        echo Realia_Template_Loader::load( 'misc/breadcrumb' );
     }
 
     /**
@@ -267,8 +267,7 @@ class Realia_Shortcodes {
 	public static function change_agent_profile( $atts ) {
 		if ( ! is_user_logged_in() || ! get_theme_mod( 'realia_submission_enable_agents', false ) ) {
 			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-
-			return;
+            return;
 		}
 
 		echo Realia_Template_Loader::load( 'agents/profile-form' );
