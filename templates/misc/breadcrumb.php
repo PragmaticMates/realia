@@ -27,19 +27,22 @@
         	<?php else: ?>
 	        	<li><?php echo single_cat_title(); ?></li>
 	        <?php endif; ?>
+        <?php elseif ( is_category() ) : ?>
+    		<li>
+                <a href="<?php echo get_post_type_archive_link( get_post_type() ); ?>">
+                    <?php echo get_post_type_object( get_post_type() )->labels->name; ?>
+                </a>
+            </li>
+
+        	<li><?php single_cat_title(); ?></li>	        
         <?php elseif ( is_archive() ) : ?>
         	<li><?php post_type_archive_title(); ?></li>
         <?php endif; ?>
 
         <?php if ( is_category() || is_single() ) : ?>
-        		<li>
-                    <a href="<?php echo get_post_type_archive_link( get_post_type() ); ?>">
-                        <?php echo get_post_type_object( get_post_type() )->labels->name; ?>
-                    </a>
-                </li>
-                <?php if ( is_single() ) : ?>
-					<li><?php the_title(); ?></li>
-                <?php endif; ?>
+            <?php if ( is_single() ) : ?>
+				<li><?php the_title(); ?></li>
+            <?php endif; ?>
         <?php elseif ( is_404() ) : ?>
         	<li><?php echo __( 'Page not found', 'realia' ); ?></li>
         <?php elseif ( is_page() ): ?>
