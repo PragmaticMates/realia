@@ -456,7 +456,6 @@
 /*******************************************************************
  * Agent
  *******************************************************************/
-
 .type-agent.has-post-thumbnail .entry-title {
     padding-top: 60px;
 }
@@ -477,6 +476,15 @@
 .agent-overview {
     float: right;
     width: 70%;
+}
+
+.post-type-archive .agent-overview {
+    float: none;
+    width: auto;
+}
+
+.post-type-archive .agent-overview dl {
+    margin: 0px;
 }
 
 .agent-overview dl {
@@ -729,6 +737,10 @@ h2.agent-row-title {
     margin-bottom: 30px;
 }
 
+.agent-row-content {
+    padding: 4.1666% 8.3333%;
+}
+
 .agent-row-body {
     clear: both;
 }
@@ -809,10 +821,17 @@ h2.agency-row-title {
     clear: both;
 }
 
+.agency-row-content {
+    padding: 4.1666% 8.3333%;
+}
+
+.agency-row-overview dl {
+    float: none;
+    margin: 0px !important;
+}
 /*******************************************************************
  * Agency
  *******************************************************************/
-
 .type-agency.has-post-thumbnail .entry-title {
     padding-top: 60px;
 }
@@ -835,6 +854,7 @@ h2.agency-row-title {
     width: 70%;
 }
 
+.agency-row-overview dl,
 .agency-overview dl {
     border: 1px solid #eaeaea;
     font-size: 16px;
@@ -842,6 +862,7 @@ h2.agency-row-title {
     margin-left: 30px;
 }
 
+.agency-row-overview dt,
 .agency-overview dt {
     float: left;
     line-height: 2;
@@ -849,6 +870,7 @@ h2.agency-row-title {
     width: 40%;
 }
 
+.agency-row-overview dd,
 .agency-overview dd {
     display: table-cell;
     line-height: 2;

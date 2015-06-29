@@ -18,7 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		            </div>
 	            <?php endif; ?>
 
-
 	            <div class="agent-row-body">
 		            <?php $properties_count = Realia_Query::get_agent_properties()->post_count; ?>
 		            <?php if ( $properties_count > 0 ) : ?>
@@ -38,43 +37,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 		            <?php the_excerpt(); ?>
 	            </div><!-- /.agent-row-body -->
 
-                <div class="agent-overview">
-	                <h2 class="agent-row-overview-title">
-		                <?php echo __( 'Contact Information', 'realia' ); ?>
-	                </h2><!-- /.agency-row-overview -->
+                <?php $email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true ); ?>
+                <?php $web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true ); ?>
+                <?php $phone = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'phone', true ); ?>
+                <?php $address = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'address', true ); ?>
 
-                    <dl>
-                        <?php $email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true ); ?>
-                        <?php if ( ! empty ( $email ) ) : ?>
-                            <dt><?php echo __( 'Email', 'realia' ); ?></dt>
-	                        <dd>
-		                        <a href="mailto:<?php echo esc_attr( $email ); ?>">
-		                            <?php echo esc_attr( $email ); ?>
-		                        </a>
-	                        </dd>
-                        <?php endif; ?>
+                <?php if ( ! empty( $email ) && ! empty( $web ) && ! empty( $phone ) && ! empty( $address ) ) :?>
+                    <div class="agent-overview">
+    	                <h2 class="agent-row-overview-title">
+    		                <?php echo __( 'Contact Information', 'realia' ); ?>
+    	                </h2><!-- /.agency-row-overview -->
 
-                        <?php $web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true ); ?>
-                        <?php if ( ! empty ( $email ) ) : ?>
-                            <dt><?php echo __( 'Web', 'realia' ); ?></dt>
-	                        <dd>
-		                        <a href="<?php echo esc_attr( $web ); ?>">
-		                            <?php echo esc_attr( $web ); ?>
-		                        </a>
-	                        </dd>
-                        <?php endif; ?>
+                        <dl>
+                            <?php if ( ! empty ( $email ) ) : ?>
+                                <dt><?php echo __( 'Email', 'realia' ); ?></dt>
+    	                        <dd>
+    		                        <a href="mailto:<?php echo esc_attr( $email ); ?>">
+    		                            <?php echo esc_attr( $email ); ?>
+    		                        </a>
+    	                        </dd>
+                            <?php endif; ?>
 
-                        <?php $phone = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'phone', true ); ?>
-                        <?php if ( ! empty ( $email ) ) : ?>
-                            <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
-                        <?php endif; ?>
+                            <?php if ( ! empty ( $email ) ) : ?>
+                                <dt><?php echo __( 'Web', 'realia' ); ?></dt>
+    	                        <dd>
+    		                        <a href="<?php echo esc_attr( $web ); ?>">
+    		                            <?php echo esc_attr( $web ); ?>
+    		                        </a>
+    	                        </dd>
+                            <?php endif; ?>
 
-                        <?php $address = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'address', true ); ?>
-                        <?php if ( ! empty ( $address ) ) : ?>
-                            <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br($address), wp_kses_allowed_html( 'post' ) ); ?></dd>
-                        <?php endif; ?>
-                    </dl>
-                </div><!-- /.agent-overview -->
+                            <?php if ( ! empty ( $email ) ) : ?>
+                                <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
+                            <?php endif; ?>
+
+                            <?php if ( ! empty ( $address ) ) : ?>
+                                <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br($address), wp_kses_allowed_html( 'post' ) ); ?></dd>
+                            <?php endif; ?>
+                        </dl>
+                    </div><!-- /.agent-overview -->
+                <?php endif;?>
             </div><!-- /.agent-row-main -->
         </div><!-- /.agent-row-content-inner -->
     </div><!-- /.agent-row-content -->
