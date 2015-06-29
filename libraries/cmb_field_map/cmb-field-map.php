@@ -2,6 +2,7 @@
 /*
 Plugin Name: CMB2 Field Type: Google Maps
 Plugin URI: https://github.com/mustardBees/cmb_field_map
+GitHub Plugin URI: https://github.com/mustardBees/cmb_field_map
 Description: Google Maps field type for CMB2.
 Version: 2.1.1
 Author: Phil Wylie
@@ -40,14 +41,14 @@ class PW_CMB2_Field_Google_Maps {
 		$field_type_object->_desc( true, true );
 
 		echo $field_type_object->input( array(
-			'type'       => 'hidden',
+			'type'       => 'text',
 			'name'       => $field->args('_name') . '[latitude]',
 			'value'      => isset( $field_escaped_value['latitude'] ) ? $field_escaped_value['latitude'] : '',
 			'class'      => 'pw-map-latitude',
 			'desc'       => '',
 		) );
 		echo $field_type_object->input( array(
-			'type'       => 'hidden',
+			'type'       => 'text',
 			'name'       => $field->args('_name') . '[longitude]',
 			'value'      => isset( $field_escaped_value['longitude'] ) ? $field_escaped_value['longitude'] : '',
 			'class'      => 'pw-map-longitude',
