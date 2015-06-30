@@ -43,13 +43,13 @@ class Realia_Widget_Properties extends WP_Widget {
 		);
 
 		if ( ! empty( $instance['attribute'] ) ) {
-			if ( $instance['attribute'] == 'featured' ) {
+			if ( 'featured' == $instance['attribute'] ) {
 				$query['meta_query'][] = array(
 					'key'       => REALIA_PROPERTY_PREFIX . 'featured',
 					'value'     => 'on',
 					'compare'   => '==',
 				);
-			} elseif ( $instance['attribute'] == 'reduced' ) {
+			} elseif ( 'reduced' == $instance['attribute'] ) {
 				$query['meta_query'][] = array(
 					'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
 					'value'     => 'on',

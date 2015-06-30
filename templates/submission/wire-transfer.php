@@ -6,13 +6,13 @@ $variable_symbol = $object_id;
 $reference = $title;
 ?>
 
-<?php if ( $payment_type == 'pay_for_featured' ) : ?>
+<?php if ( 'pay_for_featured' == $payment_type ) : ?>
     <?php $reference = sprintf( __( 'for featuring property "%s"', 'realia' ), $title ); ?>
-<?php elseif ( $payment_type == 'pay_for_sticky' ) : ?>
+<?php elseif ( 'pay_for_sticky' == $payment_type ) : ?>
     <?php $reference = sprintf( __( 'for TOP property "%s"', 'realia' ), $title ); ?>
-<?php elseif ( $payment_type == 'pay_per_post' ) : ?>
+<?php elseif ( 'pay_per_post' == $payment_type ) : ?>
     <?php $reference = sprintf( __( 'for publishing property "%s"', 'realia' ), $title ); ?>
-<?php elseif ( $payment_type == 'package' ) : ?>
+<?php elseif ( 'package' == $payment_type ) : ?>
     <?php $reference = sprintf( __( 'for package "%s"', 'realia' ), $title ); ?>
 <?php endif; ?>
 

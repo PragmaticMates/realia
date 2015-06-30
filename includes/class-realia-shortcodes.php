@@ -108,17 +108,17 @@ class Realia_Shortcodes {
 
 		$metaboxes = apply_filters( 'cmb2_meta_boxes', array() );
 
-		if ( ! isset( $metaboxes[REALIA_PROPERTY_PREFIX . 'front'] ) ) {
+		if ( ! isset( $metaboxes[ REALIA_PROPERTY_PREFIX . 'front' ] ) ) {
 			return __( 'A metabox with the specified \'metabox_id\' doesn\'t exist.', 'realia' );
 		}
 
 		// CMB2 is getting fields values from current post what means it will fetch data from submission page
 		// We need to remove all data before.
 		$post_id = ! empty( $_GET['id'] ) ? $_GET['id'] : false;
-		if ( $post_id == false && empty( $_GET['id'] ) ) {
+		if ( false == $post_id && empty( $_GET['id'] ) ) {
 			unset( $_POST );
 
-			foreach ( $metaboxes[REALIA_PROPERTY_PREFIX . 'front']['fields'] as $field_name => $field_value ) {
+			foreach ( $metaboxes[ REALIA_PROPERTY_PREFIX . 'front' ]['fields'] as $field_name => $field_value ) {
 				delete_post_meta( get_the_ID(), $field_value['id'] );
 			}
 		}
@@ -127,7 +127,7 @@ class Realia_Shortcodes {
 			$post_id = $_POST['object_id'];
 		}
 
-		echo cmb2_get_metabox_form( $metaboxes[REALIA_PROPERTY_PREFIX . 'front'], $post_id, array(
+		echo cmb2_get_metabox_form( $metaboxes[ REALIA_PROPERTY_PREFIX . 'front' ], $post_id, array(
 			'form_format' => '<form action="//' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '" class="cmb-form" method="post" id="%1$s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%2$s">%3$s<input type="submit" name="submit-cmb" value="%4$s" class="button-primary"></form>',
 			'save_button' => __( 'Save property', 'realia' ),
 		) );

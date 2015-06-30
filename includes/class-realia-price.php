@@ -20,7 +20,7 @@ class Realia_Price {
 	 * @return bool|string
 	 */
 	public static function get_property_price( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -71,17 +71,17 @@ class Realia_Price {
 		$price_parts_col = explode( ',', $price );
 
 		if ( count( $price_parts_dot ) > 1 || count( $price_parts_col ) > 1 ) {
-			$decimals = ! empty( $currencies[$currency_index]['money_decimals'] ) ? $currencies[$currency_index]['money_decimals'] : '0';
+			$decimals = ! empty( $currencies[ $currency_index ]['money_decimals'] ) ? $currencies[ $currency_index ]['money_decimals'] : '0';
 		} else {
 			$decimals = 0;
 		}
-		$dec_point = ! empty( $currencies[$currency_index]['money_dec_point'] ) ? $currencies[$currency_index]['money_dec_point'] : '.';
-		$thousands_separator = ! empty( $currencies[$currency_index]['money_thousands_separator'] ) ? $currencies[$currency_index]['money_thousands_separator'] : ',';
+		$dec_point = ! empty( $currencies[ $currency_index ]['money_dec_point'] ) ? $currencies[ $currency_index ]['money_dec_point'] : '.';
+		$thousands_separator = ! empty( $currencies[ $currency_index ]['money_thousands_separator'] ) ? $currencies[ $currency_index ]['money_thousands_separator'] : ',';
 
 		$price = number_format( $price, $decimals, $dec_point, $thousands_separator );
 
-		$currency_symbol = ! empty( $currencies[$currency_index]['symbol'] ) ? $currencies[$currency_index]['symbol'] : '$';
-		$currency_show_symbol_after = ! empty( $currencies[$currency_index]['show_after'] ) ? true : false;
+		$currency_symbol = ! empty( $currencies[ $currency_index ]['symbol'] ) ? $currencies[ $currency_index ]['symbol'] : '$';
+		$currency_show_symbol_after = ! empty( $currencies[ $currency_index ]['show_after'] ) ? true : false;
 
 		if ( ! empty( $currency_symbol ) ) {
 			if ( $currency_show_symbol_after ) {

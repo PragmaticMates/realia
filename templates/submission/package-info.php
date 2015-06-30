@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php $remaining = Realia_Packages::get_remaining_properties_count_for_user( get_current_user_id() ); ?>
 
-					<?php if ( $remaining === 'unlimited' ) : ?>
+					<?php if ( 'unlimited' === $remaining ) : ?>
 						<?php echo __( 'You can add <strong>unlimited</strong> amount of items', 'realia' ); ?>
 					<?php elseif ( (int) $remaining < 0 ) :   ?>
 						<?php echo sprintf( __( 'You can not add any properties because you spent all of your available properties. Change your package. First <strong>%s</strong> items has been disabled from listing.', 'realia' ), esc_attr( abs( $remaining ) ) ); ?>

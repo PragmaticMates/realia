@@ -70,7 +70,7 @@ class Realia_Post_Type_Transaction {
 	 * @return array
 	 */
 	public static function fields( array $metaboxes ) {
-		$metaboxes[REALIA_TRANSACTION_PREFIX . 'general'] = array(
+		$metaboxes[ REALIA_TRANSACTION_PREFIX . 'general' ] = array(
 			'id'                        => REALIA_TRANSACTION_PREFIX . 'general',
 			'title'                     => __( 'General', 'realia' ),
 			'object_types'              => array( 'transaction' ),
@@ -147,7 +147,7 @@ class Realia_Post_Type_Transaction {
 				echo sprintf( '<a href="%s">%s</a>', get_permalink( $object_id ), get_the_title( $object_id ) );
 				break;
 			case 'success':
-				if ( $object['success'] == 'true' ) {
+				if ( 'true' == $object['success'] ) {
 					echo '<div class="dashicons-before dashicons-yes green"></div>';
 				} else {
 					echo '<div class="dashicons-before dashicons-no red"></div>';

@@ -48,7 +48,7 @@ class Realia_Recaptcha {
 		$output = curl_exec( $ch );
 		$result = json_decode( $output, true );
 
-		if ( array_key_exists( 'success', $result ) && $result['success'] == 1 ) {
+		if ( array_key_exists( 'success', $result ) && 1 == $result['success'] ) {
 			return true;
 		}
 

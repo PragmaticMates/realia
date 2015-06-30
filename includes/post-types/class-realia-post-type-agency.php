@@ -71,7 +71,7 @@ class Realia_Post_Type_Agency {
 	 * @return array
 	 */
 	public static function fields( array $metaboxes ) {
-		$metaboxes[REALIA_AGENCY_PREFIX . 'general'] = array(
+		$metaboxes[ REALIA_AGENCY_PREFIX . 'general' ] = array(
 			'id'                        => REALIA_AGENCY_PREFIX . 'general',
 			'title'                     => __( 'General Options', 'realia' ),
 			'object_types'              => array( 'agency' ),
@@ -102,7 +102,7 @@ class Realia_Post_Type_Agency {
 			),
 		);
 
-		$metaboxes[REALIA_AGENCY_PREFIX . 'location'] = array(
+		$metaboxes[ REALIA_AGENCY_PREFIX . 'location' ] = array(
 			'id'                        => REALIA_AGENCY_PREFIX . 'location',
 			'title'                     => __( 'Location', 'realia' ),
 			'object_types'              => array( 'agency' ),

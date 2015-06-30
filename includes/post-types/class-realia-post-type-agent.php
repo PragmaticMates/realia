@@ -76,11 +76,11 @@ class Realia_Post_Type_Agent {
 
 		if ( ! empty( $agencies_objects->posts ) && is_array( $agencies_objects->posts ) ) {
 			foreach ( $agencies_objects->posts as $object ) {
-				$agencies[$object->ID] = $object->post_title;
+				$agencies[ $object->ID ] = $object->post_title;
 			}
 		}
 
-		$metaboxes[REALIA_AGENT_PREFIX . 'general'] = array(
+		$metaboxes[ REALIA_AGENT_PREFIX . 'general' ] = array(
 			'id'              => REALIA_AGENT_PREFIX . 'general',
 			'title'           => __( 'General Options', 'realia' ),
 			'object_types'    => array( 'agent' ),
@@ -135,11 +135,11 @@ class Realia_Post_Type_Agent {
 
 			if ( ! empty( $agencies_objects->posts ) && is_array( $agencies_objects->posts ) ) {
 				foreach ( $agencies_objects->posts as $object ) {
-					$agencies[$object->ID] = $object->post_title;
+					$agencies[ $object->ID ] = $object->post_title;
 				}
 			}
 
-			$metaboxes[REALIA_AGENT_PREFIX . 'general_front'] = array(
+			$metaboxes[ REALIA_AGENT_PREFIX . 'general_front' ] = array(
 				'id'              => REALIA_AGENT_PREFIX . 'general_front',
 				'title'           => __( 'General Options', 'realia' ),
 				'object_types'    => array( 'agent' ),
@@ -277,7 +277,7 @@ class Realia_Post_Type_Agent {
 	 * @return void
 	 */
 	public static function process_agent_form() {
-		if ( ! isset( $_POST['submit-cmb'] ) && ! empty( $_POST['post_type'] ) && $_POST['post_type'] == 'agent' ) {
+		if ( ! isset( $_POST['submit-cmb'] ) && ! empty( $_POST['post_type'] ) && 'agent' == $_POST['post_type'] ) {
 			return;
 		}
 
@@ -305,7 +305,7 @@ class Realia_Post_Type_Agent {
 				$_POST['object_id'] = $post_id;
 				$post_id = $_POST['object_id'];
 				$metaboxes = apply_filters( 'cmb2_meta_boxes', array() );
-				cmb2_get_metabox_form( $metaboxes[REALIA_AGENT_PREFIX . 'general_front'], $post_id );
+				cmb2_get_metabox_form( $metaboxes[ REALIA_AGENT_PREFIX . 'general_front' ], $post_id );
 
 				// Create featured image
 				$featured_image = get_post_meta( $post_id, REALIA_AGENT_PREFIX . 'featured_image', true );

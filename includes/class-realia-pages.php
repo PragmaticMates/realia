@@ -31,7 +31,7 @@ class Realia_Pages {
 		$pages[] = __( 'Not set', 'realia' );
 
 		foreach ( get_pages() as $page ) {
-			$pages[$page->ID] = $page->post_title;
+			$pages[ $page->ID ] = $page->post_title;
 		}
 
 		return $pages;

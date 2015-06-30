@@ -19,14 +19,14 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 
 <div class="tabs <?php echo esc_attr( $classes );?>">
 	<ul class="tabs-navigation">
-		<li class="rent <?php if ( empty( $_GET['filter-contract'] ) || $_GET['filter-contract'] == 'RENT' ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-rent"><?php echo __( 'For Rent', 'realia' ); ?></a></li>
-		<li class="sale <?php if ( ! empty( $_GET['filter-contract'] ) && $_GET['filter-contract'] == 'SALE' ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-sale"><?php echo __( 'For Sale', 'realia' ); ?></a></li>
+		<li class="rent <?php if ( empty( $_GET['filter-contract'] ) || 'RENT' == $_GET['filter-contract'] ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-rent"><?php echo __( 'For Rent', 'realia' ); ?></a></li>
+		<li class="sale <?php if ( ! empty( $_GET['filter-contract'] ) && 'SALE' == $_GET['filter-contract'] ) : ?>active<?php endif; ?>"><a href="#<?php echo esc_attr( $args['widget_id'] ); ?>-sale"><?php echo __( 'For Sale', 'realia' ); ?></a></li>
 	</ul>
 
 	<?php $fields = Realia_Filter::get_fields(); ?>
 
 	<div class="tabs-content">
-		<div class="tab-content rent-tab <?php if ( empty( $_GET['filter-contract'] ) || $_GET['filter-contract'] == 'RENT' ) : ?>active<?php endif; ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>-rent">
+		<div class="tab-content rent-tab <?php if ( empty( $_GET['filter-contract'] ) || 'RENT' == $_GET['filter-contract'] ) : ?>active<?php endif; ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>-rent">
 			<form method="get" action="<?php echo get_post_type_archive_link( 'property' ); ?>">
 				<?php $skip = Realia_Filter::get_field_names(); ?>
 
@@ -48,7 +48,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 
 				<?php foreach ( $fields as $key => $value ) : ?>
 					<?php $template = str_replace( '_', '-', $key ); ?>
-					<?php $instance['hide_' . $key] = ! empty( $instance['rent_hide_' . $key] ) ? $instance['rent_hide_' . $key] : null; ?>
+					<?php $instance[ 'hide_' . $key ] = ! empty( $instance[ 'rent_hide_' . $key ] ) ? $instance[ 'rent_hide_' . $key ] : null; ?>
 					<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>
 				<?php endforeach; ?>
 
@@ -60,7 +60,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 			</form>
 		</div>
 
-		<div class="tab-content sale-tab <?php if ( ! empty( $_GET['filter-contract'] ) && $_GET['filter-contract'] == 'SALE' ) : ?>active<?php endif; ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>-sale">
+		<div class="tab-content sale-tab <?php if ( ! empty( $_GET['filter-contract'] ) && 'SALE' == $_GET['filter-contract'] ) : ?>active<?php endif; ?>" id="<?php echo esc_attr( $args['widget_id'] ); ?>-sale">
 			<form method="get" action="<?php echo get_post_type_archive_link( 'property' ); ?>">
 				<?php $skip = Realia_Filter::get_field_names(); ?>
 
@@ -82,7 +82,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 
 				<?php foreach ( $fields as $key => $value ) : ?>
 					<?php $template = str_replace( '_', '-', $key ); ?>
-					<?php $instance['hide_' . $key] = ! empty( $instance['sale_hide_' . $key] ) ? $instance['sale_hide_' . $key] : null; ?>
+					<?php $instance[ 'hide_' . $key ] = ! empty( $instance[ 'sale_hide_' . $key ] ) ? $instance[ 'sale_hide_' . $key ] : null; ?>
 					<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>
 				<?php endforeach; ?>
 

@@ -139,7 +139,7 @@ class Realia_Utilities {
 
 			// If error storing permanently, unlink.
 			if ( is_wp_error( $id ) ) {
-				@unlink( $file_array['tmp_name'] );
+				unlink( $file_array['tmp_name'] );
 				return $id;
 			}
 

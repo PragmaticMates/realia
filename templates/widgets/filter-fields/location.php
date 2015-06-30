@@ -1,12 +1,12 @@
 <?php if ( empty( $instance['hide_location'] ) ) : ?>
 	<div class="form-group">
-		<?php if ( $input_titles == 'labels' ) : ?>
+		<?php if ( 'labels' == $input_titles ) : ?>
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_location"><?php echo __( 'Location', 'realia' ); ?></label>
 		<?php endif; ?>
 
 		<select name="filter-location" id="<?php echo esc_attr( $args['widget_id'] ); ?>_location">
 			<option value="">
-				<?php if ( $input_titles == 'placeholders' ) : ?>
+				<?php if ( 'placeholders' == $input_titles ) : ?>
 					<?php echo __( 'Location', 'realia' ); ?>
 				<?php else : ?>
 					<?php echo __( 'All locations', 'realia' ); ?>
@@ -23,8 +23,8 @@
 					<option value="<?php echo esc_attr( $location->term_id ); ?>" <?php if ( ! empty( $_GET['filter-location'] ) && $_GET['filter-location'] == $location->term_id ) : ?>selected="selected"<?php endif; ?>><?php echo esc_html( $location->name ); ?></option>
 
 					<?php $sublocations = get_terms( 'locations', array(
-						'hide_empty' => false,
-						'parent' => $location->term_id,
+						'hide_empty'    => false,
+						'parent'        => $location->term_id,
 					) ); ?>
 
 					<?php if ( is_array( $sublocations ) ) : ?>

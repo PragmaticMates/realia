@@ -19,17 +19,17 @@
 			<div class="properties-filter-sort-by-wrapper">
 				<select name="filter-sort-by">
 					<option value=""><?php echo __( 'Sort by', 'realia' ); ?></option>
-					<option value="price" <?php if ( ! empty( $_GET['filter-sort-by'] ) && $_GET['filter-sort-by'] == 'price' ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'Price', 'realia' ); ?></option>
-					<option value="title" <?php if ( ! empty( $_GET['filter-sort-by'] ) && $_GET['filter-sort-by'] == 'title' ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'Title', 'realia' ); ?></option>
-					<option value="published" <?php if ( ! empty( $_GET['filter-sort-by'] ) && $_GET['filter-sort-by'] == 'published' ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'Published', 'realia' ); ?></option>
+					<option value="price" <?php if ( ! empty( $_GET['filter-sort-by'] ) && 'price' == $_GET['filter-sort-by'] ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'Price', 'realia' ); ?></option>
+					<option value="title" <?php if ( ! empty( $_GET['filter-sort-by'] ) && 'title' == $_GET['filter-sort-by'] ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'Title', 'realia' ); ?></option>
+					<option value="published" <?php if ( ! empty( $_GET['filter-sort-by'] ) && 'published' == $_GET['filter-sort-by'] ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'Published', 'realia' ); ?></option>
 				</select>
 			</div><!-- /.filter-sort-by-wrapper -->
 
 			<div class="properties-filter-sort-order-wrapper">
 				<select name="filter-sort-order">
 					<option value=""><?php echo __( 'Order', 'realia' ); ?></option>
-					<option value="asc" <?php if ( ! empty( $_GET['filter-sort-order'] ) && $_GET['filter-sort-order'] == 'asc' ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'ASC', 'realia' ); ?></option>
-					<option value="desc" <?php if ( ! empty( $_GET['filter-sort-order'] ) && $_GET['filter-sort-order'] == 'desc' ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'DESC', 'realia' ); ?></option>
+					<option value="asc" <?php if ( ! empty( $_GET['filter-sort-order'] ) && 'asc' == $_GET['filter-sort-order'] ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'ASC', 'realia' ); ?></option>
+					<option value="desc" <?php if ( ! empty( $_GET['filter-sort-order'] ) && 'desc' == $_GET['filter-sort-order'] ) :   ?>selected="selected"<?php endif; ?>><?php echo __( 'DESC', 'realia' ); ?></option>
 				</select>
 			</div><!-- /.filter-sort-order-wrapper-->
 		</div><!-- /.properties-sort-inner -->

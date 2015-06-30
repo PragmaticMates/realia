@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<div class="type-<?php echo esc_attr( $instance['display'] ); ?> item-per-row-<?php echo esc_attr( $instance['per_row'] ); ?>">
-		<?php if ( $instance['per_row'] != 1 ) : ?>
+		<?php if ( 1 != $instance['per_row'] ) : ?>
 			<div class="agents-row">
 		<?php endif; ?>
 
@@ -36,14 +36,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php include Realia_Template_Loader::locate( 'agents/' . $instance['display'] ); ?>
 			</div><!-- /.property-container -->
 
-			<?php if ( ( $index + 1 ) % $instance['per_row'] == 0 && $instance['per_row'] != 1 && Realia_Query::loop_has_next() ) : ?>
+			<?php if ( ( $index + 1 ) % 0 == $instance['per_row'] && 1 != $instance['per_row'] && Realia_Query::loop_has_next() ) : ?>
 				</div><div class="agents-row">
 			<?php endif; ?>
 
 			<?php $index++; ?>
 		<?php endwhile; ?>
 
-		<?php if ( $instance['per_row'] != 1 ) : ?>
+		<?php if ( 1 != $instance['per_row'] ) : ?>
 			</div><!-- /.properties-row -->
 		<?php endif; ?>
 	</div>

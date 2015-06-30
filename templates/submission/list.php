@@ -123,13 +123,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<!-- PUBLISHED -->
 							<?php $submission_type = get_theme_mod( 'realia_submission_type', false ); ?>
 							<?php $property_status = get_post_status(); ?>
-							<?php if ( $property_status == 'publish' ) : ?>
+							<?php if ( 'publish' == $property_status ) : ?>
 								<button class="disabled">
 									<?php echo __( 'Published', 'realia' ); ?>
 								</button>
 							<?php else : ?>
 								<!-- PAY PER POST -->
-								<?php if ( $submission_type == 'pay-per-post' ) : ?>
+								<?php if ( 'pay-per-post' == $submission_type ) : ?>
 									<?php $price = get_theme_mod( 'realia_submission_pay_per_post_price', null ); ?>
 									<?php if ( ! empty( $price ) ) : ?>
 										<form method="post" action="<?php echo get_permalink( $payment_page_id ); ?>">
@@ -141,8 +141,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 											</button>
 										</form>
 									<?php endif; ?>
-								<?php elseif ( $submission_type == 'packages' ) : ?>
-
+								<?php elseif ( 'packages' == $submission_type ) : ?>
+									<?php // Nothing to do ?>
 								<?php endif; ?>
 							<?php endif; ?>
 						<?php endif; ?>

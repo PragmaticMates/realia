@@ -1,13 +1,13 @@
 <?php if ( empty( $instance['hide_amenity'] ) ) : ?>
 	<div class="form-group">
-		<?php if ( $input_titles == 'labels' ) : ?>
+		<?php if ( 'labels' == $input_titles ) : ?>
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type"><?php echo __( 'Amenity', 'realia' ); ?></label>
 		<?php endif; ?>
 
 		<select name="filter-amenity" id="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
 			<?php $amenities = get_terms( 'amenities', array( 'hide_empty' => false ) ); ?>
 			<option value="">
-				<?php if ( $input_titles == 'placeholders' ) : ?>
+				<?php if ( 'placeholders' == $input_titles ) : ?>
 					<?php echo __( 'Amenity', 'realia' ); ?>
 				<?php else : ?>
 					<?php echo __( 'All amenities', 'realia' ); ?>

@@ -46,7 +46,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 			<input  type="radio"
 			        class="radio"
 			        value="labels"
-				<?php echo ( empty( $input_titles ) || $input_titles == 'labels' ) ? 'checked="checked"' : ''; ?>
+				<?php echo ( empty( $input_titles ) || 'labels' == $input_titles ) ? 'checked="checked"' : ''; ?>
 			        id="<?php echo esc_attr( $this->get_field_id( 'input_titles' ) ); ?>"
 			        name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">
 			<?php echo __( 'Labels', 'realia' ); ?>
@@ -58,7 +58,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 			<input  type="radio"
 			        class="radio"
 			        value="placeholders"
-				<?php echo ( $input_titles == 'placeholders' ) ? 'checked="checked"' : ''; ?>
+				<?php echo ( 'placeholders' == $input_titles ) ? 'checked="checked"' : ''; ?>
 			        id="<?php echo esc_attr( $this->get_field_id( 'input_titles' ) ); ?>"
 			        name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">
 			<?php echo __( 'Placeholders', 'realia' ); ?>
@@ -104,7 +104,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 	<?php endif; ?>
 
 	<?php foreach ( $fields as $key => $value ) : ?>
-		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'rent_hide_' . $key] ) ) : ?>class="invisible"<?php endif; ?>>
+		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'rent_hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'rent_hide_' . $key ) ); ?>">
 					<?php echo esc_attr( $value ); ?>
@@ -140,7 +140,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 	<?php endif; ?>
 
 	<?php foreach ( $fields as $key => $value ) : ?>
-		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'sale_hide_' . $key] ) ) : ?>class="invisible"<?php endif; ?>>
+		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'sale_hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'sale_hide_' . $key ) ); ?>">
 					<?php echo esc_attr( $value ); ?>

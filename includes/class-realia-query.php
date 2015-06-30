@@ -92,7 +92,7 @@ class Realia_Query {
 	 * @return void
 	 */
 	public static function loop_properties_similar( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -146,7 +146,7 @@ class Realia_Query {
 	 * @return array
 	 */
 	public static function get_property_agents( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -170,12 +170,12 @@ class Realia_Query {
 	public static function get_property_location_name( $post_id = null, $separator = '/' ) {
 		static $property_locations;
 
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
-		if ( ! empty( $property_locations[$post_id] ) ) {
-			return $property_locations[$post_id];
+		if ( ! empty( $property_locations[ $post_id ] ) ) {
+			return $property_locations[ $post_id ];
 		}
 
 		$locations = wp_get_post_terms( $post_id, 'locations', array(
@@ -196,7 +196,7 @@ class Realia_Query {
 				}
 			}
 
-			$property_locations[$post_id] = $output;
+			$property_locations[ $post_id ] = $output;
 			return $output;
 		}
 
@@ -211,7 +211,7 @@ class Realia_Query {
 	 * @return bool
 	 */
 	public static function get_property_status_name( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -235,12 +235,12 @@ class Realia_Query {
 	public static function get_property_material_name( $post_id = null ) {
 		static $property_materials;
 
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
-		if ( ! empty( $property_materials[$post_id] ) ) {
-			return $property_materials[$post_id];
+		if ( ! empty( $property_materials[ $post_id ] ) ) {
+			return $property_materials[ $post_id ];
 		}
 
 		$materials = wp_get_post_terms( $post_id, 'materials' );
@@ -256,7 +256,7 @@ class Realia_Query {
 				}
 			}
 
-			$property_materials[$post_id] = $output;
+			$property_materials[ $post_id ] = $output;
 			return $output;
 		}
 
@@ -273,19 +273,19 @@ class Realia_Query {
 	public static function get_property_type_name( $post_id = null ) {
 		static $property_type_names;
 
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
-		if ( ! empty( $property_type_names[$post_id] ) ) {
-			return $property_type_names[$post_id];
+		if ( ! empty( $property_type_names[ $post_id ] ) ) {
+			return $property_type_names[ $post_id ];
 		}
 
 		$types = wp_get_post_terms( $post_id, 'property_types' );
 
 		if ( is_array( $types ) && count( $types ) > 0 ) {
 			$type = array_shift( $types );
-			$property_type_names[$post_id] = $type->name;
+			$property_type_names[ $post_id ] = $type->name;
 			return $type->name;
 		}
 
@@ -300,7 +300,7 @@ class Realia_Query {
 	 * @return bool
 	 */
 	public static function is_property_paid( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -387,7 +387,7 @@ class Realia_Query {
 	 * @return void
 	 */
 	public static function loop_agency_agents( $post_id = null, $count = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -418,7 +418,7 @@ class Realia_Query {
 	 * @return WP_Query
 	 */
 	public static function get_agency_agents( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -461,7 +461,7 @@ class Realia_Query {
 	 * @return void
 	 */
 	public static function loop_agent_properties( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 
@@ -488,7 +488,7 @@ class Realia_Query {
 	 * @return WP_Query
 	 */
 	public static function get_agent_properties( $post_id = null ) {
-		if ( $post_id == null ) {
+		if ( null == $post_id ) {
 			$post_id = get_the_ID();
 		}
 

@@ -1,13 +1,13 @@
 <?php if ( empty( $instance['hide_property_type'] ) ) : ?>
 	<div class="form-group">
-		<?php if ( $input_titles == 'labels' ) : ?>
+		<?php if ( 'labels' == $input_titles ) : ?>
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type"><?php echo __( 'Property type', 'realia' ); ?></label>
 		<?php endif; ?>
 
 		<select name="filter-property-type" id="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
 			<?php $property_types = get_terms( 'property_types', array( 'hide_empty' => false ) ); ?>
 			<option value="">
-				<?php if ( $input_titles == 'placeholders' ) : ?>
+				<?php if ( 'placeholders' == $input_titles ) : ?>
 					<?php echo __( 'Property type', 'realia' ); ?>
 				<?php else : ?>
 					<?php echo __( 'All property types', 'realia' ); ?>

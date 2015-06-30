@@ -25,7 +25,7 @@ class Realia_Api {
 	}
 
 	public static function add_fields( $post_response, $post, $context ) {
-		if ( $post['post_type'] == 'property' ) {
+		if ( 'property' == $post['post_type'] ) {
 			// Property ID
 			$post_response['property_id'] = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'id', true );
 
@@ -34,7 +34,7 @@ class Realia_Api {
 
 			// Reduced
 			$reduced = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'reduced', true );
-			if ( $reduced == 'on' ) {
+			if ( 'on' == $reduced ) {
 				$post_response['reduced'] = true;
 			} else {
 				$post_response['reduced'] = false;
@@ -42,7 +42,7 @@ class Realia_Api {
 
 			// Featured
 			$featured = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'featured', true );
-			if ( $featured == 'on' ) {
+			if ( 'on' == $featured ) {
 				$post_response['featured'] = true;
 			} else {
 				$post_response['featured'] = false;
@@ -50,7 +50,7 @@ class Realia_Api {
 
 			// Sticky
 			$sticky = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sticky', true );
-			if ( $sticky == 'on' ) {
+			if ( 'on' == $sticky ) {
 				$post_response['sticky'] = true;
 			} else {
 				$post_response['sticky'] = false;
@@ -58,7 +58,7 @@ class Realia_Api {
 
 			// Sold
 			$sold = get_post_meta( $post['ID'], REALIA_PROPERTY_PREFIX . 'sold', true );
-			if ( $sold == 'on' ) {
+			if ( 'on' == $sold ) {
 				$post_response['sold'] = true;
 			} else {
 				$post_response['sold'] = false;
@@ -117,7 +117,7 @@ class Realia_Api {
 				'latitude'  => ! empty( $latitude ) ? floatval( $latitude ) : null,
 				'longitude' => ! empty( $longitude ) ? floatval( $longitude ) : null,
 			);
-		} else if ( $post['post_type'] == 'agent' ) {
+		} else if ( 'agent' == $post['post_type'] ) {
 			// Email
 			$post_response['email'] = get_post_meta( $post['ID'], REALIA_AGENT_PREFIX. 'email', true );
 
@@ -129,7 +129,7 @@ class Realia_Api {
 
 			// Address
 			$post_response['address'] = get_post_meta( $post['ID'], REALIA_AGENT_PREFIX. 'address', true );
-		} else if ( $post['post_type'] == 'agency' ) {
+		} else if ( 'agency' == $post['post_type'] ) {
 			// Email
 			$post_response['email'] = get_post_meta( $post['ID'], REALIA_AGENCY_PREFIX. 'email', true );
 

@@ -1,6 +1,6 @@
 <?php if ( empty( $instance['hide_material'] ) ) : ?>
 	<div class="form-group">
-		<?php if ( $input_titles == 'labels' ) : ?>
+		<?php if ( 'labels' == $input_titles ) : ?>
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Material', 'realia' ); ?></label>
 		<?php endif; ?>
 
@@ -8,7 +8,7 @@
 			<?php $materials = get_terms( 'materials', array( 'hide_empty' => false ) ); ?>
 
 			<option value="">
-				<?php if ( $input_titles == 'placeholders' ) : ?>
+				<?php if ( 'placeholders' == $input_titles ) : ?>
 					<?php echo __( 'Material', 'realia' ); ?>
 				<?php else : ?>
 					<?php echo __( 'All materials', 'realia' ); ?>

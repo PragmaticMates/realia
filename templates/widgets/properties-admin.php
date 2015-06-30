@@ -73,12 +73,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <select id="<?php echo esc_attr( $this->get_field_id( 'per_row' ) ); ?>"
             name="<?php echo esc_attr( $this->get_field_name( 'per_row' ) ); ?>">
-        <option value="1" <?php echo ( $per_row == '1' ) ? 'selected="selected"' : ''; ?>>1</option>
-        <option value="2" <?php echo ( $per_row == '2' ) ? 'selected="selected"' : ''; ?>>2</option>
-        <option value="3" <?php echo ( $per_row == '3' ) ? 'selected="selected"' : ''; ?>>3</option>
-        <option value="4" <?php echo ( $per_row == '4' ) ? 'selected="selected"' : ''; ?>>4</option>
-        <option value="6" <?php echo ( $per_row == '5' ) ? 'selected="selected"' : ''; ?>>5</option>
-	    <option value="6" <?php echo ( $per_row == '6' ) ? 'selected="selected"' : ''; ?>>6</option>
+        <option value="1" <?php echo ( '1' == $per_row ) ? 'selected="selected"' : ''; ?>>1</option>
+        <option value="2" <?php echo ( '2' == $per_row ) ? 'selected="selected"' : ''; ?>>2</option>
+        <option value="3" <?php echo ( '3' == $per_row ) ? 'selected="selected"' : ''; ?>>3</option>
+        <option value="4" <?php echo ( '4' == $per_row ) ? 'selected="selected"' : ''; ?>>4</option>
+        <option value="6" <?php echo ( '5' == $per_row ) ? 'selected="selected"' : ''; ?>>5</option>
+	    <option value="6" <?php echo ( '6' == $per_row ) ? 'selected="selected"' : ''; ?>>6</option>
     </select>
 </p>
 
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <label>
                 <input  type="radio"
                         class="radio"
-                        <?php echo ( empty( $attribute ) || $attribute == 'on' ) ? 'checked="checked"' : ''; ?>
+                        <?php echo ( empty( $attribute ) || 'on' == $attribute ) ? 'checked="checked"' : ''; ?>
                         id="<?php echo esc_attr( $this->get_field_id( 'attribute' ) ); ?>"
                         name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">
                 <?php echo __( 'It doesn\'t matter', 'realia' ); ?>
@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <input  type="radio"
                         class="radio"
                         value="featured"
-                        <?php echo ( $attribute == 'featured' ) ? 'checked="checked"' : ''; ?>
+                        <?php echo ( 'featured' == $attribute ) ? 'checked="checked"' : ''; ?>
                         id="<?php echo esc_attr( $this->get_field_id( 'attribute' ) ); ?>"
                         name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">
                 <?php echo __( 'Featured only', 'realia' ); ?>
@@ -114,7 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <input  type="radio"
                         class="radio"
                         value="reduced"
-                        <?php echo ( $attribute == 'reduced' ) ? 'checked="checked"' : ''; ?>
+                        <?php echo ( 'reduced' == $attribute ) ? 'checked="checked"' : ''; ?>
                         id="<?php echo esc_attr( $this->get_field_id( 'attribute' ) ); ?>"
                         name="<?php echo esc_attr( $this->get_field_name( 'attribute' ) ); ?>">
 
@@ -133,8 +133,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<select id="<?php echo esc_attr( $this->get_field_id( 'display' ) ); ?>"
 	        name="<?php echo esc_attr( $this->get_field_name( 'display' ) ); ?>">
 		<option value="0"><?php echo __( 'Select', 'realia' ); ?></option>
-		<option value="box" <?php echo ( $display == 'box'  || empty( $display ) ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Box', 'realia' ); ?></option>
-		<option value="small" <?php echo ( $display == 'small' ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Small', 'realia' ); ?></option>
-		<option value="row" <?php echo ( $display == 'row' ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Row', 'realia' ); ?></option>
+		<option value="box" <?php echo ( 'box' == $display  || empty( $display ) ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Box', 'realia' ); ?></option>
+		<option value="small" <?php echo ( 'small' == $display ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Small', 'realia' ); ?></option>
+		<option value="row" <?php echo ( 'row' == $display ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Row', 'realia' ); ?></option>
 	</select>
 </p>

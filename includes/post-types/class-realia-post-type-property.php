@@ -75,7 +75,7 @@ class Realia_Post_Type_Property {
 	 * @return array
 	 */
 	public static function fields( array $metaboxes ) {
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'general'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'general' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'general',
 			'title'                     => __( 'General Options', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -152,7 +152,7 @@ class Realia_Post_Type_Property {
 			),
 		);
 
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'pricing'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'pricing' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'pricing',
 			'title'                     => __( 'Pricing', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -187,7 +187,7 @@ class Realia_Post_Type_Property {
 			),
 		);
 
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'attributes'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'attributes' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'attributes',
 			'title'                     => __( 'Attributes', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -236,7 +236,7 @@ class Realia_Post_Type_Property {
 			),
 		);
 
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'valuation'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'valuation' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'valuation',
 			'title'                     => __( 'Valuation', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -263,7 +263,7 @@ class Realia_Post_Type_Property {
 			),
 		);
 
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'public_facilities'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'public_facilities' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'public_facilities',
 			'title'                     => __( 'Public facilities', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -290,7 +290,7 @@ class Realia_Post_Type_Property {
 			),
 		);
 
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'map_location'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'map_location' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'map_location',
 			'title'                     => __( 'Location', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -313,11 +313,11 @@ class Realia_Post_Type_Property {
 
 		if ( ! empty( $agents_objects->posts ) && is_array( $agents_objects->posts ) ) {
 			foreach ( $agents_objects->posts as $object ) {
-				$agents[$object->ID] = $object->post_title;
+				$agents[ $object->ID ] = $object->post_title;
 			}
 		}
 
-		$metaboxes[REALIA_PROPERTY_PREFIX . 'relations'] = array(
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'relations' ] = array(
 			'id'                        => REALIA_PROPERTY_PREFIX . 'relations',
 			'title'                     => __( 'Relations', 'realia' ),
 			'object_types'              => array( 'property' ),
@@ -351,7 +351,7 @@ class Realia_Post_Type_Property {
 				$featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $_GET['id'] ) );
 			}
 
-			$metaboxes[REALIA_PROPERTY_PREFIX . 'front'] = array(
+			$metaboxes[ REALIA_PROPERTY_PREFIX . 'front' ] = array(
 				'id'                        => REALIA_PROPERTY_PREFIX . 'front',
 				'title'                     => __( 'General Options', 'realia' ),
 				'object_types'              => array( 'property' ),
@@ -486,7 +486,7 @@ class Realia_Post_Type_Property {
 			'author' 			=> __( 'Author', 'realia' ),
 		);
 
-		if ( get_theme_mod( 'realia_submission_type' ) == 'pay-per-post' ) {
+		if ( 'pay-per-post' == get_theme_mod( 'realia_submission_type' ) ) {
 			$fields['paid'] = __( 'Paid', 'realia' );
 		}
 
@@ -505,7 +505,7 @@ class Realia_Post_Type_Property {
 			case 'thumbnail':
 				if ( has_post_thumbnail() ) {
 					the_post_thumbnail( 'thumbnail', array(
-						'class'     => 'attachment-thumbnail attachment-thumbnail-small',
+						'class' => 'attachment-thumbnail attachment-thumbnail-small',
 					) );
 				} else {
 					echo '-';
@@ -660,7 +660,7 @@ class Realia_Post_Type_Property {
 			$status = wp_mail( $email, $subject, $message, $headers );
 		}
 
-		if ( ! empty( $status ) && $status == 1 ) {
+		if ( ! empty( $status ) && 1 == $status ) {
 			$_SESSION['messages'][] = array( 'success', __( 'Message has been successfully sent.', 'realia' ) );
 		} else {
 			$_SESSION['messages'][] = array( 'danger', __( 'Unable to send a message.', 'realia' ) );
@@ -674,7 +674,7 @@ class Realia_Post_Type_Property {
 	 * @return void
 	 */
 	public static function process_property_form() {
-		if ( ! isset( $_POST['submit-cmb'] ) && ! empty( $_POST['post_type'] ) && $_POST['post_type'] == 'property' ) {
+		if ( ! isset( $_POST['submit-cmb'] ) && ! empty( $_POST['post_type'] ) && 'property' == $_POST['post_type'] ) {
 			return;
 		}
 
@@ -722,11 +722,11 @@ class Realia_Post_Type_Property {
 				$_POST['object_id'] = $post_id;
 				$post_id = $_POST['object_id'];
 				$metaboxes = apply_filters( 'cmb2_meta_boxes', array() );
-				cmb2_get_metabox_form( $metaboxes[REALIA_PROPERTY_PREFIX . 'front'], $post_id );
+				cmb2_get_metabox_form( $metaboxes[ REALIA_PROPERTY_PREFIX . 'front' ], $post_id );
 
 				// Create featured image
 				$featured_image = get_post_meta( $post_id, REALIA_PROPERTY_PREFIX . 'featured_image', true );
-				if ( ! empty( $_POST[REALIA_PROPERTY_PREFIX . 'featured_image'] ) ) {
+				if ( ! empty( $_POST[ REALIA_PROPERTY_PREFIX . 'featured_image' ] ) ) {
 					$featured_image_id = get_post_meta( $post_id, REALIA_PROPERTY_PREFIX . 'featured_image_id', true );
 					set_post_thumbnail( $post_id, $featured_image_id );
 				} else {
@@ -783,7 +783,7 @@ class Realia_Post_Type_Property {
 					// many and which properties are at the same position.
 					if ( ! empty( $latitude ) && ! empty( $longitude ) ) {
 						$hash = sha1( $latitude . $longitude );
-						$property_groups[$hash][] = get_the_ID();
+						$property_groups[ $hash ][] = get_the_ID();
 
 					}
 				}

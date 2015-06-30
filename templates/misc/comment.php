@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div <?php comment_class( empty( $args['has_children'] ) ? '' : 'comments' ); ?> id="comment-<?php comment_ID() ?>">
     <div class="comment clearfix">
         <div class="comment-author">
-            <?php if ( $args['avatar_size'] != 0 ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
+            <?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
         </div><!-- /.comment-image -->
 
         <div class="comment-content">

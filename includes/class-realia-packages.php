@@ -41,7 +41,7 @@ class Realia_Packages {
 		foreach ( $packages_query->posts as $package ) {
 			$duration = get_post_meta( $package->ID, REALIA_PACKAGE_PREFIX . 'duration', true );
 			if ( ! empty( $duration ) ) {
-				$packages[$package->ID] = $package->post_title;
+				$packages[ $package->ID ] = $package->post_title;
 			}
 		}
 
@@ -140,7 +140,7 @@ class Realia_Packages {
 		if ( $package && self::is_package_valid_for_user( $user_id ) ) {
 			$of_properties = get_post_meta( $package->ID, REALIA_PACKAGE_PREFIX . 'of_properties', true );
 
-			if ( $of_properties == '-1' ) {
+			if ( '-1' == $of_properties ) {
 				return 'unlimited';
 			}
 
@@ -182,7 +182,7 @@ class Realia_Packages {
 		$duration_key = get_post_meta( $package_id, REALIA_PACKAGE_PREFIX . 'duration', true );
 		$durations = self::get_package_durations();
 
-		return sprintf( '%s (%s/%s)', $package->post_title, $price_formatted, $durations[$duration_key] );
+		return sprintf( '%s (%s/%s)', $package->post_title, $price_formatted, $durations[ $duration_key ] );
 	}
 
 	/**
@@ -369,7 +369,7 @@ class Realia_Packages {
 				// Get remaining posts available to create
 				$remaining = self::get_remaining_properties_count_for_user( $user->ID );
 
-				if ( $remaining === 'unlimited' || $remaining >= 0 ) {
+				if ( 'unlimited' == $remaining || $remaining >= 0 ) {
 					// Publish all properties
 					self::publish_properties( $items );
 				} else {

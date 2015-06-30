@@ -65,7 +65,7 @@ class Realia_Post_Type_User {
 
 				if ( ! empty( $agents_objects->posts ) && is_array( $agents_objects->posts ) ) {
 					foreach ( $agents_objects->posts as $agent ) {
-						$agents[$agent->ID] = $agent->post_title;
+						$agents[ $agent->ID ] = $agent->post_title;
 					}
 				}
 
@@ -305,7 +305,7 @@ class Realia_Post_Type_User {
 
 		$counts = array();
 		foreach ( (array) $count as $row ) {
-			$counts[$row['post_mime_type']] = $row['num_posts'];
+			$counts[ $row['post_mime_type'] ] = $row['num_posts'];
 		}
 
 		$counts['trash'] = $wpdb->get_var( "SELECT COUNT( * ) FROM $wpdb->posts WHERE post_type = 'attachment' AND post_author = {$current_user->ID} AND post_status = 'trash' $and" );

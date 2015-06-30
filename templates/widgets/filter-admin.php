@@ -44,7 +44,7 @@ $sort = ! empty( $instance['sort'] ) ? $instance['sort'] : '';
 			<input  type="radio"
 			        class="radio"
 			        value="labels"
-					<?php echo ( empty( $input_titles ) || $input_titles == 'labels' ) ? 'checked="checked"' : ''; ?>
+					<?php echo ( empty( $input_titles ) || 'labels' == $input_titles ) ? 'checked="checked"' : ''; ?>
 			        id="<?php echo esc_attr( $this->get_field_id( 'input_titles' ) ); ?>"
 			        name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">
 				<?php echo __( 'Labels', 'realia' ); ?>
@@ -56,7 +56,7 @@ $sort = ! empty( $instance['sort'] ) ? $instance['sort'] : '';
 			<input  type="radio"
 			        class="radio"
 			        value="placeholders"
-					<?php echo ( $input_titles == 'placeholders' ) ? 'checked="checked"' : ''; ?>
+					<?php echo ( 'placeholders' == $input_titles ) ? 'checked="checked"' : ''; ?>
 			        id="<?php echo esc_attr( $this->get_field_id( 'input_titles' ) ); ?>"
 			        name="<?php echo esc_attr( $this->get_field_name( 'input_titles' ) ); ?>">
 			<?php echo __( 'Placeholders', 'realia' ); ?>
@@ -83,7 +83,7 @@ $sort = ! empty( $instance['sort'] ) ? $instance['sort'] : '';
 	       name="<?php echo esc_attr( $this->get_field_name( 'sort' ) ); ?>" value="<?php echo esc_attr( $sort ); ?>">
 
 	<?php foreach ( $fields as $key => $value ) : ?>
-		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'hide_' . $key] ) ) : ?>class="invisible"<?php endif; ?>>
+		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'hide_' . $key ) ); ?>">
 					<?php echo esc_attr( $value ); ?>
