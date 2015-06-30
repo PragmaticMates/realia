@@ -4,7 +4,7 @@
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_location"><?php echo __( 'Location', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<select name="filter-location" id="<?php echo esc_attr( $args['widget_id'] ); ?>_location">
+		<select class="form-control" name="filter-location" id="<?php echo esc_attr( $args['widget_id'] ); ?>_location">
 			<option value="">
 				<?php if ( 'placeholders' == $input_titles ) : ?>
 					<?php echo __( 'Location', 'realia' ); ?>

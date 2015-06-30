@@ -18,8 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					'depth'         => $depth,
 					'reply_text'    => __( 'Reply', 'realia' ),
 					'max_depth'     => $args['max_depth'],
-	),
-) ); ?>
+					) ) ); ?>
                 <span class="comment-date"><?php echo get_comment_date(); ?></span>
             </div><!-- /.comment-meta -->
 

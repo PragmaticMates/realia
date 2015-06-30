@@ -4,7 +4,7 @@
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type"><?php echo __( 'Property type', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<select name="filter-property-type" id="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
+		<select class="form-control" name="filter-property-type" id="<?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
 			<?php $property_types = get_terms( 'property_types', array( 'hide_empty' => false ) ); ?>
 			<option value="">
 				<?php if ( 'placeholders' == $input_titles ) : ?>

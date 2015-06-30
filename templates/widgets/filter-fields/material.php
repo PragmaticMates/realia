@@ -4,7 +4,7 @@
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Material', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<select name="filter-material" id="<?php echo esc_attr( $args['widget_id'] ); ?>_status">
+		<select class="form-control" name="filter-material" id="<?php echo esc_attr( $args['widget_id'] ); ?>_status">
 			<?php $materials = get_terms( 'materials', array( 'hide_empty' => false ) ); ?>
 
 			<option value="">
