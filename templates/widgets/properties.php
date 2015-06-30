@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php include Realia_Template_Loader::locate( 'properties/' . $instance['display'] ); ?>
 			</div><!-- /.property-container -->
 
-			<?php if ( ( $index + 1 ) % 0 == $instance['per_row'] && 1 != $instance['per_row'] && Realia_Query::loop_has_next() ) : ?>
+			<?php if ( 0 == ( ( $index + 1 ) % $instance['per_row'] ) && 1 != $instance['per_row'] && Realia_Query::loop_has_next() ) : ?>
 				</div><div class="properties-row">
 			<?php endif; ?>
 
