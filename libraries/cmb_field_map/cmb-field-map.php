@@ -42,14 +42,14 @@ class PW_CMB2_Field_Google_Maps {
 
 		echo $field_type_object->input( array(
 			'type'       => 'text',
-			'name'       => $field->args('_name') . '[latitude]',
+			'name'       => $field->args( '_name' ) . '[latitude]',
 			'value'      => isset( $field_escaped_value['latitude'] ) ? $field_escaped_value['latitude'] : '',
 			'class'      => 'pw-map-latitude',
 			'desc'       => '',
 		) );
 		echo $field_type_object->input( array(
 			'type'       => 'text',
-			'name'       => $field->args('_name') . '[longitude]',
+			'name'       => $field->args( '_name' ) . '[longitude]',
 			'value'      => isset( $field_escaped_value['longitude'] ) ? $field_escaped_value['longitude'] : '',
 			'class'      => 'pw-map-longitude',
 			'desc'       => '',

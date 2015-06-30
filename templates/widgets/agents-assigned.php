@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 <?php if ( have_posts() ) :?>
-    <?php while( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
         <?php include Realia_Template_Loader::locate( 'agents/small' ); ?>
     <?php endwhile; ?>
 <?php endif; ?>

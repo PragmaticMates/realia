@@ -10,7 +10,7 @@
 			<option value="">
 				<?php if ( $input_titles == 'placeholders' ) : ?>
 					<?php echo __( 'Material', 'realia' ); ?>
-				<?php else: ?>
+				<?php else : ?>
 					<?php echo __( 'All materials', 'realia' ); ?>
 				<?php endif; ?>
 			</option>

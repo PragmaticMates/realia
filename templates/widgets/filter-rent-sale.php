@@ -46,7 +46,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 					?>
 				<?php endif; ?>
 
-				<?php foreach( $fields as $key => $value ) : ?>
+				<?php foreach ( $fields as $key => $value ) : ?>
 					<?php $template = str_replace( '_', '-', $key ); ?>
 					<?php $instance['hide_' . $key] = ! empty( $instance['rent_hide_' . $key] ) ? $instance['rent_hide_' . $key] : null; ?>
 					<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>
@@ -80,7 +80,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 					?>
 				<?php endif; ?>
 
-				<?php foreach( $fields as $key => $value ) : ?>
+				<?php foreach ( $fields as $key => $value ) : ?>
 					<?php $template = str_replace( '_', '-', $key ); ?>
 					<?php $instance['hide_' . $key] = ! empty( $instance['sale_hide_' . $key] ) ? $instance['sale_hide_' . $key] : null; ?>
 					<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>

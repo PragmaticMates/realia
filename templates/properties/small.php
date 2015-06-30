@@ -1,12 +1,12 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
 <div class="property-small">
-	<div class="property-small-image <?php if ( ! has_post_thumbnail() ) { echo "without-image"; } ?>">
-		<?php if ( has_post_thumbnail() ): ?>
+	<div class="property-small-image <?php if ( ! has_post_thumbnail() ) { echo 'without-image'; } ?>">
+		<?php if ( has_post_thumbnail() ) :   ?>
 			<a href="<?php the_permalink(); ?>">
 				<?php the_post_thumbnail( 'thumbnail' ); ?>
 			</a>

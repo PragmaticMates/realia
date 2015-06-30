@@ -1,18 +1,18 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
 <?php $create_page_id = get_theme_mod( 'realia_submission_create_page', null ); ?>
 
 <?php if ( ! empty( $create_page_id ) ) : ?>
-	<?php if ( Realia_Packages::is_allowed_to_add_submission( get_current_user_id() ) ): ?>
+	<?php if ( Realia_Packages::is_allowed_to_add_submission( get_current_user_id() ) ) :   ?>
 		<a href="<?php echo get_permalink( $create_page_id ); ?>" class="property-create"><?php echo __( 'Create Property', 'realia' ); ?></a>
 	<?php endif; ?>
 <?php endif; ?>
 
-<?php $paged = ( get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+<?php $paged = ( get_query_var( 'paged' )) ? get_query_var( 'paged' ) : 1; ?>
 
 <?php query_posts( array(
 	'post_type'     => 'property',
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<a href="<?php the_permalink(); ?>" class="property-table-info-image">
 							<?php the_post_thumbnail(); ?>
 						</a><!-- /.property-table-info-image -->
-					<?php else: ?>
+					<?php else : ?>
 						<a href="<?php the_permalink(); ?>" class="property-table-info-image-none">
 							<?php echo __( 'No image', 'realia' ); ?>
 						</a><!-- /.property-table-info-image-none -->
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						</div><!-- /.property-table-info-content-title -->
 
 						<?php $location = Realia_Query::get_property_location_name(); ?>
-						<?php if ( ! empty ( $location ) ) : ?>
+						<?php if ( ! empty( $location ) ) : ?>
 							<div class="property-table-info-content-location">
 								<?php echo wp_kses( $location, wp_kses_allowed_html( 'post' ) ); ?>
 							</div><!-- /.property-table-info-content-location -->
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										</form>
 									<?php endif; ?>
 								<?php endif; ?>
-							<?php else: ?>
+							<?php else : ?>
 								<button class="disabled">
 									<?php echo __( 'Sticky', 'realia' ); ?>
 								</button>
@@ -127,7 +127,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<button class="disabled">
 									<?php echo __( 'Published', 'realia' ); ?>
 								</button>
-							<?php else: ?>
+							<?php else : ?>
 								<!-- PAY PER POST -->
 								<?php if ( $submission_type == 'pay-per-post' ) : ?>
 									<?php $price = get_theme_mod( 'realia_submission_pay_per_post_price', null ); ?>

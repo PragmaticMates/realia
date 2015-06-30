@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 $title = ! empty( $instance['title'] ) ? $instance['title'] : '';
@@ -113,7 +113,7 @@ $sort = ! empty( $instance['sort'] ) ? $instance['sort'] : '';
 						attribute: 'data-field-id'
 					});
 
-					$('#<?php echo esc_attr( $this->get_field_id( 'sort') ); ?>').attr('value', data);
+					$('#<?php echo esc_attr( $this->get_field_id( 'sort' ) ); ?>').attr('value', data);
 				}
 			});
 

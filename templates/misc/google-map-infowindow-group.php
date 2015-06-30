@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="infobox multiple">
 		<div class="infobox-content">
 			<div class="infobox-content-body">
-				<?php while( have_posts() ) : the_post(); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="infobox-content-body-item">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<a href="<?php the_permalink() ?>">

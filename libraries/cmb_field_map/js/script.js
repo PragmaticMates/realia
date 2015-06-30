@@ -92,8 +92,8 @@
 			var arrayLength = maps.length;
 			for (var i = 0; i < arrayLength; i++) {
 				var mapCenter = maps[i].getCenter();
-				google.maps.event.trigger(maps[i], 'resize');
-				maps[i].setCenter(mapCenter);
+				google.maps.event.trigger( maps[i], 'resize' );
+				maps[i].setCenter( mapCenter );
 			}
 		};
 	}

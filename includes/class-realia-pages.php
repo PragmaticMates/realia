@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 /**
@@ -12,13 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author Pragmatic Mates
  */
 class Realia_Pages {
-    /**
-     * Initialize specialty pages
-     *
-     * @access public
-     * @return void
-     */
-    public static function init() {}
+	/**
+	 * Initialize specialty pages
+	 *
+	 * @access public
+	 * @return void
+	 */
+	public static function init() {}
 
 	/**
 	 * Gets all pages list
@@ -28,7 +28,7 @@ class Realia_Pages {
 	 */
 	public static function get_pages() {
 		$pages = array();
-		$pages[] =  __( 'Not set', 'realia' );
+		$pages[] = __( 'Not set', 'realia' );
 
 		foreach ( get_pages() as $page ) {
 			$pages[$page->ID] = $page->post_title;

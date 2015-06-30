@@ -9,7 +9,7 @@
 			<option value="">
 				<?php if ( $input_titles == 'placeholders' ) : ?>
 					<?php echo __( 'Property type', 'realia' ); ?>
-				<?php else: ?>
+				<?php else : ?>
 					<?php echo __( 'All property types', 'realia' ); ?>
 				<?php endif; ?>
 			</option>

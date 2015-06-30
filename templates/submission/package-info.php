@@ -1,10 +1,10 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
-<?php if ( get_theme_mod( 'realia_submission_type', 'free' ) == 'packages' ): ?>
+<?php if ( get_theme_mod( 'realia_submission_type', 'free' ) == 'packages' ) :   ?>
 	<div class="realestate-package-info">
 		<?php $current_package = Realia_Packages::get_package_for_user( get_current_user_id() ); ?>
 
@@ -25,21 +25,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php if ( $remaining === 'unlimited' ) : ?>
 						<?php echo __( 'You can add <strong>unlimited</strong> amount of items', 'realia' ); ?>
-					<?php elseif ( (int) $remaining < 0 ): ?>
+					<?php elseif ( (int) $remaining < 0 ) :   ?>
 						<?php echo sprintf( __( 'You can not add any properties because you spent all of your available properties. Change your package. First <strong>%s</strong> items has been disabled from listing.', 'realia' ), esc_attr( abs( $remaining ) ) ); ?>
-					<?php else: ?>
+					<?php else : ?>
 						<?php echo sprintf( __( 'You can add <strong>%s</strong> items.', 'realia' ), esc_attr( $remaining ) ); ?>
 					<?php endif; ?>
-				<?php else: ?>
+				<?php else : ?>
 					<?php echo sprintf( __( 'Your subscription already expired at <strong>%s</strong>. All your items has been deactivated until you pay for new subscription.', 'realia' ), $date ); ?>
 				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 
 		<?php $packages = Realia_Packages::get_packages(); ?>
-		<?php $package_payment_id = get_theme_mod( 'realia_submission_payment_page', false); ?>
+		<?php $package_payment_id = get_theme_mod( 'realia_submission_payment_page', false ); ?>
 
-		<?php if ( ! $package_payment_id ): ?>
+		<?php if ( ! $package_payment_id ) :   ?>
 			<p><?php echo __( 'Payment page has been not set.', 'realia' ); ?></p>
 		<?php endif; ?>
 
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<option value=""><?php echo __( 'Select Package', 'realia' ); ?></option>
 
 						<?php foreach ( $packages as $package_id => $package_title ) : ?>
-							<option value="<?php echo esc_attr( $package_id ); ?>" <?php if ( ! empty( $current_package->ID) && $current_package->ID == $package_id ) : ?>selected="selected"<?php endif; ?>>
+							<option value="<?php echo esc_attr( $package_id ); ?>" <?php if ( ! empty( $current_package->ID ) && $current_package->ID == $package_id ) : ?>selected="selected"<?php endif; ?>>
 								<?php echo esc_attr( Realia_Packages::get_full_package_title( $package_id ) ); ?>
 							</option>
 						<?php endforeach; ?>

@@ -10,7 +10,7 @@
 			<option value="">
 				<?php if ( $input_titles == 'placeholders' ) : ?>
 					<?php echo __( 'Status', 'realia' ); ?>
-				<?php else: ?>
+				<?php else : ?>
 					<?php echo __( 'All statuses', 'realia' ); ?>
 				<?php endif; ?>
 			</option>

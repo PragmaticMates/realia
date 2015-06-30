@@ -1,13 +1,13 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
 <?php $is_sticky = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'sticky', true ); ?>
 
 <div class="property-box">
-    <div class="property-box-image <?php if ( ! has_post_thumbnail() ) { echo "without-image"; } ?>">
+    <div class="property-box-image <?php if ( ! has_post_thumbnail() ) { echo 'without-image'; } ?>">
 
         <a href="<?php the_permalink(); ?>" class="property-box-image-inner <?php if ( ! empty( $agent ) ) : ?>has-agent<?php endif; ?>">
             <?php if ( has_post_thumbnail() ) : ?>

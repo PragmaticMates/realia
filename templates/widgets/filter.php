@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 	<?php endif; ?>
 
-	<?php foreach( $fields as $key => $value ) : ?>
+	<?php foreach ( $fields as $key => $value ) : ?>
 		<?php $template = str_replace( '_', '-', $key ); ?>
 		<?php include Realia_Template_Loader::locate( 'widgets/filter-fields/' . $template ); ?>
 	<?php endforeach; ?>

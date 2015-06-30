@@ -51,53 +51,53 @@
 
 .realia-filter-rent-sale-fields li,
 .realia-filter-fields li {
-    background: #fafafa;
-    border: 1px solid #dfdfdf;
-    cursor: move;
+	background: #fafafa;
+	border: 1px solid #dfdfdf;
+	cursor: move;
 }
 
 .realia-filter-rent-sale-fields li.invisible,
 .realia-filter-fields li.invisible {
-    opacity: .4;
+	opacity: .4;
 }
 
 .realia-filter-rent-sale-fields li p,
 .realia-filter-fields li p {
-    font-size: 12px;
-    margin: 7px 15px;
+	font-size: 12px;
+	margin: 7px 15px;
 }
 
 .realia-filter-rent-sale-fields li i,
 .realia-filter-fields li i {
-    font-size: 10px;
-    margin: 0px 5px 0px 0px;
+	font-size: 10px;
+	margin: 0px 5px 0px 0px;
 }
 
 .realia-filter-rent-sale-fields li .visibility,
 .realia-filter-fields li .visibility {
-    cursor: pointer;
-    float: right;
-    position: relative;
+	cursor: pointer;
+	float: right;
+	position: relative;
 }
 
 .realia-filter-rent-sale-fields li .visibility i,
 .realia-filter-fields li .visibility i {
-    cursor: pointer;
-    font-size: 15px;
-    left: 0px;
-    position: absolute;
-    pointer-events: none;
-    top: 2px;
+	cursor: pointer;
+	font-size: 15px;
+	left: 0px;
+	position: absolute;
+	pointer-events: none;
+	top: 2px;
 }
 
 .realia-filter-rent-sale-fields li .visibility .field-visibility,
 .realia-filter-fields li .visibility .field-visibility {
-    background-color: transparent !important;
-    border: 0px !important;
-    box-shadow: none !important;
+	background-color: transparent !important;
+	border: 0px !important;
+	box-shadow: none !important;
 }
 
 .realia-filter-rent-sale-fields li .visibility .field-visibility:before,
 .realia-filter-fields li .visibility .field-visibility:before {
-    display: none;
+	display: none;
 }

@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		                </h2><!-- /.agency-row-overview -->
 
 	                    <dl>
-	                        <?php if ( ! empty ( $email ) ) : ?>
+	                        <?php if ( ! empty( $email ) ) : ?>
 	                            <dt><?php echo __( 'Email', 'realia' ); ?></dt>
 		                        <dd>
 			                        <a href="mailto:<?php echo $email; ?>">
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		                        </dd>
 	                        <?php endif; ?>
 
-	                        <?php if ( ! empty ( $web ) ) : ?>
+	                        <?php if ( ! empty( $web ) ) : ?>
 	                            <dt><?php echo __( 'Web', 'realia' ); ?></dt>
 		                        <dd>
 			                        <a href="<?php echo esc_attr( $web ); ?>">
@@ -66,12 +66,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		                        </dd>
 	                        <?php endif; ?>
 
-	                        <?php if ( ! empty ( $phone ) ) : ?>
+	                        <?php if ( ! empty( $phone ) ) : ?>
 	                            <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
 	                        <?php endif; ?>
 
-	                        <?php if ( ! empty ( $address ) ) : ?>
-	                            <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br($address), wp_kses_allowed_html( 'post' ) ); ?></dd>
+	                        <?php if ( ! empty( $address ) ) : ?>
+	                            <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br( $address ), wp_kses_allowed_html( 'post' ) ); ?></dd>
 	                        <?php endif; ?>
 	                    </dl>
 	                </div><!-- /.agency-row-overview -->

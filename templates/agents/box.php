@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="agent-box">
     <?php if ( has_post_thumbnail() ) : ?>
-		<div class="agent-box-image <?php if ( ! has_post_thumbnail() ) { echo "without-image"; } ?>">
+		<div class="agent-box-image <?php if ( ! has_post_thumbnail() ) { echo 'without-image'; } ?>">
 	        <a href="<?php the_permalink(); ?>" class="agent-box-image-inner <?php if ( ! empty( $agent ) ) : ?>has-agent<?php endif; ?>">
                 <?php the_post_thumbnail( 'thumbnail' ); ?>
 	        </a>
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </h3><!-- /.agent-box-title -->
 
         <?php $email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true ); ?>
-        <?php if ( ! empty ( $email ) ) : ?>
+        <?php if ( ! empty( $email ) ) : ?>
             <div class="agent-box-email">
 	            <a href="mailto:<?php echo esc_attr( $email ); ?>">
                     <?php echo esc_attr( $email ); ?>
@@ -30,14 +30,14 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php endif; ?>
 
         <?php $phone = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'phone', true ); ?>
-        <?php if ( ! empty ( $phone ) ) : ?>
+        <?php if ( ! empty( $phone ) ) : ?>
             <div class="agent-box-phone">
                 <?php echo esc_attr( $phone ); ?>
             </div><!-- /.agent-box-phone -->
         <?php endif; ?>
 
 	    <?php $web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true ); ?>
-	    <?php if ( ! empty ( $web ) ) : ?>
+	    <?php if ( ! empty( $web ) ) : ?>
 		    <div class="agent-box-web">
 			    <a href="<?php echo esc_attr( $web ); ?>">
 			        <?php echo esc_attr( $web ); ?>

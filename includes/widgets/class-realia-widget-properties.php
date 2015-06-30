@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 /**
@@ -12,78 +12,78 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @author Pragmatic Mates
  */
 class Realia_Widget_Properties extends WP_Widget {
-    /**
-     * Initialize widget
-     *
-     * @access public
-     * @return void
-     */
-    function Realia_Widget_Properties() {
-        parent::__construct(
-            'properties_widget',
-            __( 'Properties', 'realia' ),
-            array(
-                'description' => __( 'Displays properties in multiple ways.', 'realia' ),
-            )
-        );
-    }
+	/**
+	 * Initialize widget
+	 *
+	 * @access public
+	 * @return void
+	 */
+	function Realia_Widget_Properties() {
+		parent::__construct(
+			'properties_widget',
+			__( 'Properties', 'realia' ),
+			array(
+				'description' => __( 'Displays properties in multiple ways.', 'realia' ),
+			)
+		);
+	}
 
-    /**
-     * Frontend
-     *
-     * @access public
-     * @param array $args
-     * @param array $instance
-     * @return void
-     */
-    function widget( $args, $instance ) {
-        $query = array(
-            'post_type'         => 'property',
-            'posts_per_page'    => ! empty( $instance['count'] ) ? $instance['count'] : 3,
-        );
+	/**
+	 * Frontend
+	 *
+	 * @access public
+	 * @param array $args
+	 * @param array $instance
+	 * @return void
+	 */
+	function widget( $args, $instance ) {
+		$query = array(
+			'post_type'         => 'property',
+			'posts_per_page'    => ! empty( $instance['count'] ) ? $instance['count'] : 3,
+		);
 
-        if ( ! empty( $instance['attribute'] ) ) {
-            if ( $instance['attribute'] == 'featured' ) {
-                $query['meta_query'][] = array(
-                    'key'       => REALIA_PROPERTY_PREFIX . 'featured',
-                    'value'     => 'on',
-                    'compare'   => '==',
-                );
-            } elseif ( $instance['attribute'] == 'reduced' ) {
-                $query['meta_query'][] = array(
-                    'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
-                    'value'     => 'on',
-                    'compare'   => '==',
-                );
-            }
-        }
+		if ( ! empty( $instance['attribute'] ) ) {
+			if ( $instance['attribute'] == 'featured' ) {
+				$query['meta_query'][] = array(
+					'key'       => REALIA_PROPERTY_PREFIX . 'featured',
+					'value'     => 'on',
+					'compare'   => '==',
+				);
+			} elseif ( $instance['attribute'] == 'reduced' ) {
+				$query['meta_query'][] = array(
+					'key'       => REALIA_PROPERTY_PREFIX . 'reduced',
+					'value'     => 'on',
+					'compare'   => '==',
+				);
+			}
+		}
 
-        query_posts( $query );
-        include Realia_Template_Loader::locate( 'widgets/properties' );
+		query_posts( $query );
+		include Realia_Template_Loader::locate( 'widgets/properties' );
 
-        wp_reset_query();
-    }
+		wp_reset_query();
+	}
 
-    /**
-     * Update
-     *
-     * @access public
-     * @param array $new_instance
-     * @param array $old_instance
-     * @return array
-     */
-    function update( $new_instance, $old_instance ) {
-        return $new_instance;
-    }
+	/**
+	 * Update
+	 *
+	 * @access public
+	 * @param array $new_instance
+	 * @param array $old_instance
+	 * @return array
+	 */
+	function update( $new_instance, $old_instance ) {
+		return $new_instance;
+	}
 
-    /**
-     * Backend
-     *
-     * @access public
-     * @param array $instance
-     * @return void
-     */
-    function form( $instance ) {
-        include Realia_Template_Loader::locate( 'widgets/properties-admin' );
-    }
+	/**
+	 * Backend
+	 *
+	 * @access public
+	 * @param array $instance
+	 * @return void
+	 */
+	function form( $instance ) {
+		include Realia_Template_Loader::locate( 'widgets/properties-admin' );
+	}
 }

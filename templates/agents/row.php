@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="agent-row-content">
         <div class="agent-row-content-inner">
             <div class="agent-row-main">
-	            <?php if ( has_post_thumbnail() ): ?>
+	            <?php if ( has_post_thumbnail() ) :   ?>
 		            <div class="agent-thumbnail">
 			            <?php if ( has_post_thumbnail() ) : ?>
 				            <a href="<?php the_permalink() ?>">
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     	                </h2><!-- /.agency-row-overview -->
 
                         <dl>
-                            <?php if ( ! empty ( $email ) ) : ?>
+                            <?php if ( ! empty( $email ) ) : ?>
                                 <dt><?php echo __( 'Email', 'realia' ); ?></dt>
     	                        <dd>
     		                        <a href="mailto:<?php echo esc_attr( $email ); ?>">
@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     	                        </dd>
                             <?php endif; ?>
 
-                            <?php if ( ! empty ( $email ) ) : ?>
+                            <?php if ( ! empty( $email ) ) : ?>
                                 <dt><?php echo __( 'Web', 'realia' ); ?></dt>
     	                        <dd>
     		                        <a href="<?php echo esc_attr( $web ); ?>">
@@ -67,12 +67,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     	                        </dd>
                             <?php endif; ?>
 
-                            <?php if ( ! empty ( $email ) ) : ?>
+                            <?php if ( ! empty( $email ) ) : ?>
                                 <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
                             <?php endif; ?>
 
-                            <?php if ( ! empty ( $address ) ) : ?>
-                                <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br($address), wp_kses_allowed_html( 'post' ) ); ?></dd>
+                            <?php if ( ! empty( $address ) ) : ?>
+                                <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br( $address ), wp_kses_allowed_html( 'post' ) ); ?></dd>
                             <?php endif; ?>
                         </dl>
                     </div><!-- /.agent-overview -->

@@ -29,36 +29,36 @@ class Realia_Submission {
 	 * @return array
 	 */
 	public static function payment_gateways() {
-        $gateways = array();
+		$gateways = array();
 
-        if ( self::is_wire_transfer_active() ) {
-            array_push($gateways,
-                array(
-                    'id'    => 'wire-transfer',
-                    'title' => __( 'Wire Transfer', 'realia' ),
-                    'proceed' => false,
-                    'content' => Realia_Template_Loader::load( 'submission/wire-transfer' )
-                )
-            );
-        }
+		if ( self::is_wire_transfer_active() ) {
+			array_push($gateways,
+				array(
+					'id'    => 'wire-transfer',
+					'title' => __( 'Wire Transfer', 'realia' ),
+					'proceed' => false,
+					'content' => Realia_Template_Loader::load( 'submission/wire-transfer' ),
+				)
+			);
+		}
 
 		return $gateways;
 	}
 
-    /**
-     * Checks if Wire Transfer is active
-     *
-     * @access public
-     * @return bool
-     */
-    public static function is_wire_transfer_active() {
-        $account_number = get_theme_mod( 'realia_wire_transfer_account_number', null );
-        $swift = get_theme_mod( 'realia_wire_transfer_swift', null );
-        $full_name = get_theme_mod( 'realia_wire_transfer_full_name', null );
-        $country = get_theme_mod( 'realia_wire_transfer_country', null );
+	/**
+	 * Checks if Wire Transfer is active
+	 *
+	 * @access public
+	 * @return bool
+	 */
+	public static function is_wire_transfer_active() {
+		$account_number = get_theme_mod( 'realia_wire_transfer_account_number', null );
+		$swift = get_theme_mod( 'realia_wire_transfer_swift', null );
+		$full_name = get_theme_mod( 'realia_wire_transfer_full_name', null );
+		$country = get_theme_mod( 'realia_wire_transfer_country', null );
 
-        return ( ! empty( $account_number ) && ! empty( $swift ) && ! empty( $full_name ) && ! empty( $country ) );
-    }
+		return ( ! empty( $account_number ) && ! empty( $swift ) && ! empty( $full_name ) && ! empty( $country ) );
+	}
 }
 
 Realia_Submission::init();

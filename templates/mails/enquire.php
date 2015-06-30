@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php $permalink = get_permalink( $post->ID ); ?>
 <?php if ( ! empty( $permalink ) ) : ?>
-    <strong><?php echo __( 'URL', 'realia' ); ?>: </strong> <?php echo esc_attr( $permalink ) ; ?><br>
+    <strong><?php echo __( 'URL', 'realia' ); ?>: </strong> <?php echo esc_attr( $permalink ); ?><br>
 <?php endif; ?>
 
     <br>

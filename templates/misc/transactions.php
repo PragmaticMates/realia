@@ -1,10 +1,10 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
-<?php $paged = ( get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+<?php $paged = ( get_query_var( 'paged' )) ? get_query_var( 'paged' ) : 1; ?>
 
 <?php query_posts( array(
 	'post_type' 	=> 'transaction',
@@ -74,7 +74,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		'next_text'          => __( 'Next page', 'realia' ),
 		'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'realia' ) . ' </span>',
 	) ); ?>
-<?php else: ?>
+<?php else : ?>
 	<div class="alert alert-warning"><?php echo __( 'No transactions found.', 'realia' ); ?></div>
 <?php endif; ?>
 

@@ -1,14 +1,13 @@
-
 <?php
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 
 <?php if ( method_exists( 'Realia_Utilities', 'protect' ) ) { Realia_Utilities::protect(); } ?>
 
-<?php 
-$agent_id = Realia_Query::get_current_user_assigned_agent_id(); 
+<?php
+$agent_id = Realia_Query::get_current_user_assigned_agent_id();
 
 if ( empty( $agent_id ) ) {
 	$agent_id = 'fake-agent-id';
