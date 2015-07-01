@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     	                        </dd>
                             <?php endif; ?>
 
-                            <?php if ( ! empty( $email ) ) : ?>
+                            <?php if ( ! empty( $web ) ) : ?>
                                 <dt><?php echo __( 'Web', 'realia' ); ?></dt>
     	                        <dd>
     		                        <a href="<?php echo esc_attr( $web ); ?>">
@@ -67,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     	                        </dd>
                             <?php endif; ?>
 
-                            <?php if ( ! empty( $email ) ) : ?>
+                            <?php if ( ! empty( $phone ) ) : ?>
                                 <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
                             <?php endif; ?>
 
