@@ -7,11 +7,11 @@ jQuery( document ).ready(function($) {
 	$( '.tabs-navigation a' ).on('click', function(e) {
 		e.preventDefault();
 
-		$( this ).parent().addClass( 'active' );
-		$( this ).parent().siblings().removeClass( 'active' );
-		var tab = $( this ).attr( "href" );
-		$( '.tab-content' ).not( tab ).css( "display", "none" );
-		$( tab ).fadeIn();
+		$(this).parent().addClass('active');
+		$(this).parent().siblings().removeClass('active');
+		var tab = $(this).attr('href');
+        $(this).closest('.tabs').find('.tab-content').not(tab).css('display', 'none');
+		$(tab).fadeIn();
 	});
 
 	/**
