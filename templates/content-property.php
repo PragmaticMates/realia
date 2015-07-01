@@ -44,9 +44,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title property-title">', '</h1>' );
 		else :
-			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+			the_title( sprintf( '<h2 class="entry-title property-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		endif;
 		?>
 	</header><!-- .entry-header -->
@@ -152,7 +152,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</dl>
 		</div><!-- /.property-overview -->
 
-		<?php the_content( sprintf( __( 'Continue reading %s', 'realia' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ) ); ?>
+		<div class="property-description">
+			<?php the_content( sprintf( __( 'Continue reading %s', 'realia' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ) ); ?>
+		</div><!-- /.property-description -->
 
         <?php $amenities = get_categories( array(
 			'taxonomy' 		=> 'amenities',
@@ -249,11 +251,21 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div class="similar-properties">
                 <h2><?php echo __( 'Similar properties', 'realia' ); ?></h2>
 
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <div class="property-box-wrapper">
-                        <?php echo Realia_Template_Loader::load( 'properties/box' ); ?>
-                    </div>
-                <?php endwhile; ?>
+	            <div class="type-box item-per-row-3">
+		            <div class="properties-row">
+			            <?php $index = 0; ?>
+		                <?php while ( have_posts() ) : the_post(); ?>
+		                    <div class="property-container">
+		                        <?php echo Realia_Template_Loader::load( 'properties/box' ); ?>
+		                    </div>
+
+			                <?php if ( 0 == ( ( $index + 1 ) % 3 ) && Realia_Query::loop_has_next() ) : ?>
+		                        </div><div class="properties-row">
+			                <?php endif; ?>
+			                <?php $index++; ?>
+		                <?php endwhile; ?>
+		            </div>
+	            </div>
             </div><!-- /.similar-properties -->
 
         <?php endif?>
