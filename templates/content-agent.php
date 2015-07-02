@@ -57,12 +57,21 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php if ( have_posts() ) : ?>
                 <hr>
 
-                <div class="agent-properties">
-                    <?php while ( have_posts() ) : the_post(); ?>
-                        <div class="property-box-wrapper">
-                            <?php include 'properties/box.php'; ?>
-                        </div>
-                    <?php endwhile; ?>
+                <div class="agent-properties type-box item-per-row-3">
+	                <div class="properties-row">
+		                <?php $index = 0; ?>
+	                    <?php while ( have_posts() ) : the_post(); ?>
+	                        <div class="property-container">
+	                            <?php include 'properties/box.php'; ?>
+	                        </div><!-- /.property-container -->
+
+					        <?php if ( 0 == ( ( $index + 1 ) % 3 ) && Realia_Query::loop_has_next() ) : ?>
+						        </div><div class="properties-row">
+					        <?php endif; ?>
+
+					        <?php $index++; ?>
+	                    <?php endwhile; ?>
+	                </div><!-- /.properties-row -->
                 </div><!-- /.agent-properties -->
             <?php endif;?>
 
