@@ -52,7 +52,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php the_content( sprintf( __( 'Continue reading %s', 'realia' ), the_title( '<span class="screen-reader-text">', '</span>', false ) ) ); ?>
 
         <?php if ( is_single() ) : ?>
-
             <!-- Agency's location -->
             <?php $location = get_post_meta( get_the_ID(), REALIA_AGENCY_PREFIX . 'location', true ); ?>
 
