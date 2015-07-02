@@ -303,7 +303,7 @@
  * Property Box
  *******************************************************************/
 .properties-row {
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 30px -15px;
 }
 
@@ -374,6 +374,7 @@
 
 .property-box-price {
 	color: rgba(51, 51, 51, 0.7);
+    font-size: 13px;
 	font-weight: bold;
 }
 
