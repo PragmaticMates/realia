@@ -32,12 +32,12 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <?php endif; ?>
 
                     <?php $web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true ); ?>
-                    <?php if ( ! empty( $email ) ) : ?>
+                    <?php if ( ! empty( $web ) ) : ?>
                         <dt><?php echo __( 'Web', 'realia' ); ?></dt><dd><?php echo esc_attr( $web ); ?></dd>
                     <?php endif; ?>
 
                     <?php $phone = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'phone', true ); ?>
-                    <?php if ( ! empty( $email ) ) : ?>
+                    <?php if ( ! empty( $phone ) ) : ?>
                         <dt><?php echo __( 'Phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $phone ); ?></dd>
                     <?php endif; ?>
 
