@@ -313,19 +313,19 @@
     padding-right: 15px;
 }
 
-.properties-row .item-per-row-2 .property-container {
+.type-box.item-per-row-2 .properties-row .property-container {
     width: 50%;
 }
 
-.properties-row .item-per-row-3 .property-container {
+.type-box.item-per-row-3 .properties-row .property-container {
     width: 33.33%;
 }
 
-.properties-row .item-per-row-4 .property-container {
+.type-box.item-per-row-4 .properties-row .property-container {
     width: 25%;
 }
 
-.properties-row .item-per-row-5 .property-container {
+.type-box.item-per-row-5 .properties-row .property-container {
     width: 20%;
 }
 
