@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php $address = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'address', true ); ?>
 
                 <?php if ( ! empty( $email ) && ! empty( $web ) && ! empty( $phone ) && ! empty( $address ) ) :?>
-                    <div class="agent-overview">
+                    <div class="agent-row-overview">
     	                <h2 class="agent-row-overview-title">
     		                <?php echo __( 'Contact Information', 'realia' ); ?>
     	                </h2><!-- /.agency-row-overview -->
@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <dt><?php echo __( 'Address', 'realia' )?></dt><dd><?php echo wp_kses( nl2br( $address ), wp_kses_allowed_html( 'post' ) ); ?></dd>
                             <?php endif; ?>
                         </dl>
-                    </div><!-- /.agent-overview -->
+                    </div><!-- /.agent-row-overview -->
                 <?php endif;?>
             </div><!-- /.agent-row-main -->
         </div><!-- /.agent-row-content-inner -->
