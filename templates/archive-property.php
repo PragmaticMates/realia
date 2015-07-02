@@ -25,6 +25,7 @@ get_header(); ?>
 					<div class="properties-row">
 			<?php endif; ?>
 
+			<?php $index = 0; ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php if ( get_theme_mod( 'realia_general_show_property_archive_as_grid', null ) == '1' ) : ?>
 					<div class="property-container">
@@ -37,6 +38,7 @@ get_header(); ?>
 				<?php else : ?>
 					<?php echo Realia_Template_Loader::load( 'properties/row' ); ?>
 				<?php endif; ?>
+				<?php $index++; ?>
 			<?php endwhile; ?>
 
 			<?php if ( get_theme_mod( 'realia_general_show_property_archive_as_grid', null ) == '1' ) : ?>
