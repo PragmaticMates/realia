@@ -132,9 +132,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<select id="<?php echo esc_attr( $this->get_field_id( 'display' ) ); ?>"
 	        name="<?php echo esc_attr( $this->get_field_name( 'display' ) ); ?>">
-		<option value="0"><?php echo __( 'Select', 'realia' ); ?></option>
-		<option value="box" <?php echo ( 'box' == $display  || empty( $display ) ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Box', 'realia' ); ?></option>
-		<option value="small" <?php echo ( 'small' == $display ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Small', 'realia' ); ?></option>
+		<option value="small" <?php echo ( 'small' == $display || empty( $display ) ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Small', 'realia' ); ?></option>
+		<option value="box" <?php echo ( 'box' == $display ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Box', 'realia' ); ?></option>
 		<option value="row" <?php echo ( 'row' == $display ) ? 'selected="selected"' : ''; ?>><?php echo __( 'Row', 'realia' ); ?></option>
 	</select>
 </p>
