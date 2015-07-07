@@ -34,6 +34,7 @@ if ( ! class_exists( 'Realia' ) ) {
 
 	        add_action( 'activated_plugin', array( __CLASS__, 'plugin_order' ) );
 			add_action( 'tgmpa_register', array( __CLASS__, 'register_plugins' ) );
+			add_action( 'init', array( __CLASS__, 'image_sizes' ) );
 		}
 
 		/**
@@ -142,6 +143,16 @@ if ( ! class_exists( 'Realia' ) ) {
 			);
 
 			tgmpa( $plugins );
+		}
+
+		/**
+		 * Adds custom image sizes
+		 *
+		 * @access public
+		 * @return void
+		 */
+		public static function image_sizes() {
+			add_image_size( 'property-row-thumbnail', 400, 300, true );
 		}
 	}
 
