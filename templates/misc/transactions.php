@@ -14,59 +14,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( have_posts() ) : ?>
 	<table class="transactions-table">
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php
-			$object = get_post_meta( get_the_ID(), REALIA_TRANSACTION_PREFIX . 'object', true );
-			$object = unserialize( $object );
-			$object_id = get_post_meta( get_the_ID(), REALIA_TRANSACTION_PREFIX . 'object_id', true );
-			$payment_type = get_post_meta( get_the_ID(), REALIA_TRANSACTION_PREFIX . 'payment_type', true );
-			?>
+		<thead>
+			<th><?php echo __( 'ID', 'realia' ); ?></th>
+			<th><?php echo __( 'Price', 'realia' ); ?></th>
+			<th><?php echo __( 'Gateway', 'realia' ); ?></th>
+			<th><?php echo __( 'Object', 'realia' ); ?></th>
+			<th><?php echo __( 'Payment Type', 'realia' ); ?></th>
+			<th><?php echo __( 'Date', 'realia' ); ?></th>
+		</thead>
 
-			<tr>
-				<td>
-					<strong><?php echo __( 'ID', 'realia' ); ?></strong>
-					<b>#<?php the_ID(); ?></b>
-				</td>
-				<td>
-					<strong><?php echo __( 'Price', 'realia' ); ?></strong>
-					<?php echo wp_kses( $object['price_formatted'], wp_kses_allowed_html( 'post' ) ); ?>
-				</td>
-				<td>
-					<strong><?php echo __( 'Gateway', 'realia' ); ?></strong>
-					<?php echo esc_html( $object['gateway'] ); ?>
-				</td>
-				<td>
-					<strong><?php echo __( 'Object', 'realia' ); ?></strong>
-					<?php echo sprintf( '<a href="%s">%s</a>', get_permalink( $object_id ), get_the_title( $object_id ) ); ?>
-				</td>
-				<td>
-					<strong><?php echo __( 'Payment Type', 'realia' ); ?></strong>
-					<?php
-					switch ( $payment_type ) {
-						case 'pay_for_featured':
-							echo __( 'Feature property', 'realia' );
-							break;
-						case 'pay_for_sticky':
-							echo __( 'TOP property', 'realia' );
-							break;
-						case 'pay_per_post':
-							echo __( 'Pay per post', 'realia' );
-							break;
-						case 'package':
-							echo __( 'Package', 'realia' );
-							break;
-						default:
-							echo esc_html( $payment_type );
-							break;
-					}
-					?>
-				</td>
-				<td>
-					<strong><?php echo __( 'Date', 'realia' ); ?></strong>
-					<?php the_date(); ?> <?php the_time(); ?>
-				</td>
-			</tr>
-		<?php endwhile; ?>
+		<tbody>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php
+				$object = get_post_meta( get_the_ID(), REALIA_TRANSACTION_PREFIX . 'object', true );
+				$object = unserialize( $object );
+				$object_id = get_post_meta( get_the_ID(), REALIA_TRANSACTION_PREFIX . 'object_id', true );
+				$payment_type = get_post_meta( get_the_ID(), REALIA_TRANSACTION_PREFIX . 'payment_type', true );
+				?>
+
+				<tr>
+					<td><b>#<?php the_ID(); ?></b></td>
+					<td><?php echo wp_kses( $object['price_formatted'], wp_kses_allowed_html( 'post' ) ); ?></td>
+					<td><?php echo esc_html( $object['gateway'] ); ?></td>
+					<td><?php echo sprintf( '<a href="%s">%s</a>', get_permalink( $object_id ), get_the_title( $object_id ) ); ?></td>
+					<td>
+						<?php
+						switch ( $payment_type ) {
+							case 'pay_for_featured':
+								echo __( 'Feature property', 'realia' );
+								break;
+							case 'pay_for_sticky':
+								echo __( 'TOP property', 'realia' );
+								break;
+							case 'pay_per_post':
+								echo __( 'Pay per post', 'realia' );
+								break;
+							case 'package':
+								echo __( 'Package', 'realia' );
+								break;
+							default:
+								echo esc_html( $payment_type );
+								break;
+						}
+						?>
+					</td>
+					<td><?php the_date(); ?> <?php the_time(); ?></td>
+				</tr>
+			<?php endwhile; ?>
+		</tbody>
 	</table>
 
 	<?php the_posts_pagination( array(
