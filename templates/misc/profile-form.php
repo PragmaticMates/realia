@@ -30,5 +30,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<input type="text" name="last_name" class="form-control" value="<?php echo ! empty( $data->last_name ) ? esc_attr( $data->last_name ) : ''; ?>">
 	</div><!-- /.form-group -->
 
-	<button type="submit" name="change_profile_form"><?php echo __( 'Change Profile', 'realia' ); ?></button>
+	<button type="submit" name="change_profile_form" class="button"><?php echo __( 'Change Profile', 'realia' ); ?></button>
 </form>

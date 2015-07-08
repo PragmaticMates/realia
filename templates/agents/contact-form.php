@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div id="recaptcha-agent-contact" class="recaptcha" data-sitekey="<?php echo get_theme_mod( 'realia_recaptcha_site_key' ); ?>"></div>
                 <?php endif; ?>
 
-                <button class="btn pull-right" name="contact-form"><?php echo __( 'Send message', 'realia' ); ?></button>
+                <button class="button" name="contact-form"><?php echo __( 'Send message', 'realia' ); ?></button>
             </form>
         </div><!-- /.agent-contact-form -->
     </div><!-- /.agent-contact-->

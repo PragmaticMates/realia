@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php if ( has_post_thumbnail() ) : ?>
 						<a href="<?php the_permalink(); ?>" class="property-table-info-image">
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail( 'medium' ); ?>
 						</a><!-- /.property-table-info-image -->
 					<?php else : ?>
 						<a href="<?php the_permalink(); ?>" class="property-table-info-image-none">

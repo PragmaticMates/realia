@@ -20,5 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<input class="form-control" type="password" name="retype_password" required="required" minlength="8">
 	</div><!-- /.form-control -->
 
-	<button type="submit" name="change_password_form"><?php echo __( 'Change Password', 'realia' ); ?></button>
+	<button type="submit" name="change_password_form" class="button"><?php echo __( 'Change Password', 'realia' ); ?></button>
 </form>
