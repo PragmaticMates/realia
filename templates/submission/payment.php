@@ -68,16 +68,16 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div class="gateway">
                         <div class="gateway-header">
                             <div class="radio-wrapper">
-                                <input type="radio" id="gateway-<?php echo $gateway['id']; ?>" name="payment_gateway" value="<?php echo $gateway['id']; ?>" data-proceed="<?php var_export( $gateway['proceed'] ); ?>" <?php if ( $payment_gateway == $gateway['id'] ) : ?>checked="checked"<?php endif; ?>>
+                                <input type="radio" id="gateway-<?php echo esc_attr( $gateway['id'] ); ?>" name="payment_gateway" value="<?php echo esc_attr( $gateway['id'] ); ?>" data-proceed="<?php var_export( $gateway['proceed'] ); ?>" <?php if ( $payment_gateway == $gateway['id'] ) : ?>checked="checked"<?php endif; ?>>
 
-                                <label for="gateway-<?php echo $gateway['id']; ?>">
-                                    <span><?php echo $gateway['title']; ?></span>
+                                <label for="gateway-<?php echo esc_attr( $gateway['id'] ); ?>">
+                                    <span><?php echo esc_attr( $gateway['title'] ); ?></span>
                                 </label>
                             </div><!-- /.radio-wrapper -->
                         </div><!-- /.gateway-header -->
 
                         <?php if ( ! empty( $gateway['content'] ) ) : ?>
-                            <div class="gateway-content"><?php echo $gateway['content']; ?></div><!-- /.payment-content -->
+                            <div class="gateway-content"><?php echo $gateway['content']; ?></div><!-- /.gateway-content -->
                         <?php endif; ?>
                     </div><!-- /.payment -->
                 <?php endforeach; ?>

@@ -240,7 +240,7 @@ class Realia_Post_Type_Agent {
 				$email = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'email', true );
 
 				if ( ! empty( $email ) ) {
-					echo $email;
+					echo esc_attr( $email );
 				} else {
 					echo '-';
 				}
@@ -249,7 +249,7 @@ class Realia_Post_Type_Agent {
 				$web = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'web', true );
 
 				if ( ! empty( $web ) ) {
-					echo $web;
+					echo esc_attr( $web );
 				} else {
 					echo '-';
 				}
@@ -258,14 +258,14 @@ class Realia_Post_Type_Agent {
 				$phone = get_post_meta( get_the_ID(), REALIA_AGENT_PREFIX . 'phone', true );
 
 				if ( ! empty( $phone ) ) {
-					echo $phone;
+					echo esc_attr( $phone );
 				} else {
 					echo '-';
 				}
 				break;
 			case 'properties':
 				$properties_count = Realia_Query::get_agent_properties( $post_id = get_the_ID() )->post_count;
-				echo $properties_count;
+				echo esc_attr( $properties_count );
 				break;
 		}
 	}

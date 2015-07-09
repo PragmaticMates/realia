@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 
 <?php if ( ! empty( $instance['classes'] ) ) : ?>
-	<div class="<?php echo $instance['classes']; ?>">
+	<div class="<?php echo esc_attr( $instance['classes'] ); ?>">
 <?php endif; ?>
 
 <?php if ( ! empty( $instance['title'] ) ) : ?>
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.description -->
 	<?php endif; ?>
 
-	<div class="type-<?php echo esc_attr( $instance['display'] ); ?> item-per-row-<?php echo esc_attr( $instance['per_row'] ); ?> <?php if ( ! empty( $instance['classes'] ) ) : ?><?php echo $instance['classes']; ?><?php endif; ?>">
+	<div class="type-<?php echo esc_attr( $instance['display'] ); ?> item-per-row-<?php echo esc_attr( $instance['per_row'] ); ?>">
 		<?php if ( 1 != $instance['per_row'] ) : ?>
 			<div class="properties-row">
 		<?php endif; ?>

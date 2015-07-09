@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php echo wp_kses( $args['before_widget'], wp_kses_allowed_html( 'post' ) ); ?>
 
 <?php if ( ! empty( $instance['classes'] ) ) : ?>
-	<div class="<?php echo $instance['classes']; ?>">
+	<div class="<?php echo esc_attr($instance['classes']); ?>">
 <?php endif; ?>
 
 <?php if ( ! empty( $instance['title'] ) ) : ?>

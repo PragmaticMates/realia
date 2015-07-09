@@ -30,12 +30,12 @@ $reference = $title;
 
         <div class="wire-transfer-info wire-transfer-variable-symbol">
             <dt><?php echo __( 'Variable symbol', 'realia' ); ?></dt>
-            <dd><?php echo $variable_symbol; ?></dd>
+            <dd><?php echo esc_attr( $variable_symbol ); ?></dd>
         </div><!-- /.wire-transfer-info -->
 
         <div class="wire-transfer-info wire-transfer-reference">
             <dt><?php echo __( 'Information / reference', 'realia' ); ?></dt>
-            <dd><?php echo $reference; ?></dd>
+            <dd><?php echo esc_attr( $reference ); ?></dd>
         </div><!-- /.wire-transfer-info -->
     </div><!-- /.wire-transfer-section -->
 

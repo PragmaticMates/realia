@@ -10,7 +10,7 @@
         		<?php
 	        	global $wp_query;
 				$tax = $wp_query->get_queried_object();
-					$term = get_term_by( 'slug', get_query_var( 'term' ), $tax->taxonomy );
+				$term = get_term_by( 'slug', get_query_var( 'term' ), $tax->taxonomy );
 				$ancestors = get_ancestors( $term->term_id, $tax->taxonomy );
 				?>
 
@@ -18,7 +18,7 @@
 					<?php foreach ( array_reverse( $ancestors ) as $ancestor ) : ?>
 						<li>
 							<?php $term = get_term( $ancestor, $tax->taxonomy ); ?>
-							<a href="<?php echo get_term_link( $term->term_id, $tax->taxonomy ); ?>"><?php echo $term->name; ?></a>
+							<a href="<?php echo get_term_link( $term->term_id, $tax->taxonomy ); ?>"><?php echo esc_attr( $term->name ); ?></a>
 						</li>
 					<?php endforeach; ?>
 				<?php endif; ?>

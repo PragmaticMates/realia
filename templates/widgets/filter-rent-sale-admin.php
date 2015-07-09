@@ -104,7 +104,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 	<?php endif; ?>
 
 	<?php foreach ( $fields as $key => $value ) : ?>
-		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'rent_hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
+		<li data-field-id="<?php echo esc_attr( $key ); ?>" <?php if ( ! empty( $instance[ 'rent_hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'rent_hide_' . $key ) ); ?>">
 					<?php echo esc_attr( $value ); ?>
@@ -140,7 +140,7 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 	<?php endif; ?>
 
 	<?php foreach ( $fields as $key => $value ) : ?>
-		<li data-field-id="<?php echo $key; ?>" <?php if ( ! empty( $instance[ 'sale_hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
+		<li data-field-id="<?php echo esc_attr( $key ); ?>" <?php if ( ! empty( $instance[ 'sale_hide_' . $key ] ) ) : ?>class="invisible"<?php endif; ?>>
 			<p>
 				<label for="<?php echo esc_attr( $this->get_field_id( 'sale_hide_' . $key ) ); ?>">
 					<?php echo esc_attr( $value ); ?>

@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	                        <?php if ( ! empty( $email ) ) : ?>
 	                            <dt><?php echo __( 'Email', 'realia' ); ?></dt>
 		                        <dd>
-			                        <a href="mailto:<?php echo $email; ?>">
+			                        <a href="mailto:<?php echo esc_attr( $email ); ?>">
 			                            <?php echo esc_attr( $email ); ?>
 			                        </a>
 		                        </dd>
