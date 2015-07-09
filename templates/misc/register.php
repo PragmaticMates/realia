@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( ! empty( $terms ) ) : ?>
 		<div class="checkbox terms-conditions-input">
 			<input type="checkbox" name="agree_terms">
-			
+
 			<label>
 				<?php echo sprintf( __( 'I agree with <a href="%s">terms & conditions</a>', 'realia' ), get_permalink( $terms ) ); ?>
 			</label>

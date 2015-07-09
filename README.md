@@ -177,6 +177,19 @@ Create at least one agent at first and then choose one or more you wish to assig
 
 ## Changelog
 
+**0.8.0**
+
+*Release Date - 9th July, 2015*
+
+* default display type for agents and properties widgets
+* property row image size
+* multiple tabs on one page fix
+* latitude and longitude fields for map revealed
+* breadcrumb fix
+* template structure adjustments
+* other minor tweaks and fixes
+
+
 **0.7.0**
 
 *Release Date - 27th June, 2015*
