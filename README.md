@@ -2,11 +2,12 @@
 
 Realia is full featured WordPress real estate plugin. It is completely covering needs of real estate agencies or portals. Plugin allows you to manage all your properties, agents and agencies.
 
+* Official website at [wprealia.com](http://wprealia.com)
 * Check the demo at [wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia)
-* Official documentation at [wprealia.com/documentation/index.html](http://wprealia.com/documentation/index.html)
+* Documentation at [wprealia.com/documentation/index.html](http://wprealia.com/documentation/index.html)
 * Free Bootstrap theme at [wprealia.com/theme/bootstrap](http://wprealia.com/theme/bootstrap) download from [GitHub](http://github.com/pragmaticmates/realia-bootstrap)
 * Premium themes [Megareal](http://themeforest.net/item/megareal-real-estate-portal-theme/full_screen_preview/11965035)
-* Mobile applications [Realia Browser](http://codecanyon.net/item/realia-browser-real-estate-ios-app/11827488)
+* Mobile applications [Realia Browser for iOS](http://codecanyon.net/item/realia-browser-real-estate-ios-app/11827488)
 
 ### Front End Submission
 
@@ -31,6 +32,41 @@ Are you developer and still not satisfied with price formatting? Don't worry. Ev
 ### Agencies & Agents
 
 With Realia plugin you are able to assign agents to properties and create agencies grouping agents. Great for internal purposes or directory listings.
+
+### Features
+
+* Front end submission system
+* Pay per post
+* Package system
+* Review before submission
+* Pay for featured or sticky property
+* Google map support
+* Received transactions
+* Advanced price formatting
+* Agent contact form on property detail
+* Custom measurement
+* Plays nicely with Twenty Fifteen
+* Easy for developers
+* All settings are in customizer
+* OOP architecture
+* row/grid version of property archive
+* reCAPTCHA support for enquire form
+* Terms and conditions link from registration form
+
+### Custom post types
+
+* Property
+* Agent
+* Agency
+* Package
+
+### Custom taxonomies
+
+* Locations
+* Property types
+* Statuses
+* Amenities
+* Materials
 
 ## Changelog
 
