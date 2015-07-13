@@ -3,9 +3,9 @@
 Realia is full featured WordPress real estate plugin. It is completely covering needs of real estate agencies or portals. Plugin allows you to manage all your properties, agents and agencies.
 
 * Official website at [wprealia.com](http://wprealia.com)
-* Check the demo at [wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia)
+* Check the demo at [preview.wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia)
 * Documentation at [wprealia.com/documentation/index.html](http://wprealia.com/documentation/index.html)
-* Free Bootstrap theme at [wprealia.com/theme/bootstrap](http://wprealia.com/theme/bootstrap) download from [GitHub](http://github.com/pragmaticmates/realia-bootstrap)
+* Free Bootstrap theme at [preview.wprealia.com/theme/bootstrap](http://preview.wprealia.com/theme/bootstrap) download from [GitHub](http://github.com/pragmaticmates/realia-bootstrap)
 * Premium themes [Megareal](http://themeforest.net/item/megareal-real-estate-portal-theme/full_screen_preview/11965035)
 * Mobile applications [Realia Browser for iOS](http://codecanyon.net/item/realia-browser-real-estate-ios-app/11827488)
 
