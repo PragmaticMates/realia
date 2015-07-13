@@ -133,7 +133,7 @@ if ( ! class_exists( 'Realia' ) ) {
 	            array(
 		            'name'      => 'CMB2',
 		            'slug'      => 'cmb2',
-		            'required'  => false,
+		            'required'  => true,
 	            ),
 				array(
 					'name'      => 'WP REST API (WP API)',
