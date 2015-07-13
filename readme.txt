@@ -11,17 +11,15 @@ Complete real estate solution in one plugin. Create your real estate website or 
 
 == Description ==
 
-You can try it out by visiting a preview demo at [http://preview.wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia "Demo").
+Realia is full featured WordPress real estate plugin. It is completely covering needs of real estate agencies or portals. Plugin allows you to manage all your properties, agents and agencies.
 
-### WP REST API integration
+* Check the demo at [wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia)
+* Official documentation at [wprealia.com/documentation/index.html](htttp://wprealia.com/documentation/index.html)
+* Free Bootstrap theme at [github.com/pragmaticmates/realia-bootstrap](http://github.com/pragmaticmates/realia-bootstrap)
+* Premium themes [Megareal](http://themeforest.net/item/megareal-real-estate-portal-theme/full_screen_preview/11965035)
+* Mobile applications [Realia Browser](http://codecanyon.net/item/realia-browser-real-estate-ios-app/11827488)
 
-Plugin offers option to search for properties via API. Plugin adds options to filter properties by custom fields. Realia extends default API output by new fields as well. Check an API request at [http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3](http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3) to see how easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are available more than 20+ fields.
-
-> Interested in iOS app written in Swift? Don't hesitate and contact us and we can offer you Realia Browser app for your site.
->
-> Check the app documentation: [http://wprealia.com/en/documentation/realia-browser/overview/](http://wprealia.com/en/documentation/realia-browser/overview/ "Realia Browser")
-
-### Front end submission system
+### Front End Submission
 
 Realia allows to add properties by your users. Create the property directory by few clicks. If you want you can review newly added properties before publishing. Of course it is possible to charge users for using your website. Plugins has builtin pay per post and package system.
 
@@ -29,7 +27,11 @@ Realia allows to add properties by your users. Create the property directory by 
 
 Manage properties from WordPress admin. Custom version of table display is containing all important information about properties like featured image, price and assigned taxonomy terms.
 
-### Price formatting options
+### WP REST API integration
+
+Plugin offers option to search for properties via API. Plugin adds options to filter properties by custom fields. Realia extends default API output by new fields as well. Check an API request at [wprealia.com](http://preview.wprealia.com/plugin/realia/wp-json/posts?type=property&filter-beds=3) to see how easy is to filter by custom fields. It is possible to filter by same fields as plugin uses in front end widgets. So there are available more than 20+ fields.
+
+### Price Formatting Options
 
 Realia supports various price formatting options. You can define the currency where you are able to set currency sign and number formatting options like number of decimal places, decimal point and thousands separator.
 
@@ -40,110 +42,6 @@ Are you developer and still not satisfied with price formatting? Don't worry. Ev
 ### Agencies & Agents
 
 With Realia plugin you are able to assign agents to properties and create agencies grouping agents. Great for internal purposes or directory listings.
-
-### Widgets
-
-* Google Map with properties
-* Vertical filter
-* Properties
-* Agents
-* Assigned agents to property
-* Enquire form
-
-### Property Attributes
-
-* Featured image
-* Image gallery
-* Location
-* Property type
-* Status
-* Contract
-* Material
-* Amenities
-* Address
-* Property ID
-* Year built
-* Featured
-* Sticky
-* Reduced
-* Video link
-* Price
-* Rooms
-* Beds
-* Baths
-* Garages
-* Home area & Lot size (dimensions + area)
-* GPS position
-* Description
-* Floor plans
-* Land valuation
-* Public facilities
-* Agent assignment
-
-### Features
-
-* Front end submission system
-* Pay per post
-* Package system
-* Review before submission
-* Pay for featured or sticky property
-* Google map support
-* Received transactions
-* Advanced price formatting
-* Agent contact form on property detail
-* Custom measurement
-* Plays nicely with Twenty Fifteen
-* Easy for developers
-* All settings are in customizer
-* OOP architecture
-* row/grid version of property archive
-* reCAPTCHA support for enquire form
-* Terms and conditions link from registration form
-* Not other plugins required
-
-### Custom post types
-
-* Property
-* Agent
-* Agency
-* Package
-
-### Custom taxonomies
-
-* Locations
-* Property types
-* Statuses
-* Amenities
-* Materials
-
-### Custom action
-
-* realia_before_property_archive
-* realia_after_property_archive
-* realia_before_agency_archive
-* realia_after_agency_archive
-* realia_before_agent_archive
-* realia_after_agent_archive
-* realia_before_property_box_title
-* realia_after_property_box_title
-* realia_before_property_box_body
-* realia_after_property_box_body
-
-### Shortcodes
-
-* `[realia_breadcrumb]` Displays breadcrumb.
-* `[realia_login]` Login page.
-* `[realia_logout]` Logout page.
-* `[realia_register]` Register page.
-* `[realia_change_password]` Change password page.
-* `[realia_change_profile]` Change profile page.
-* `[realia_change_agent_profile]` Change agent profile page.
-* `[realia_submission]` Create and edit property form.
-* `[realia_submission_list]` List of properties added by current user.
-* `[realia_submission_remove]` Remove property.
-* `[realia_submission_package_info]` Displays package information, if available.
-* `[realia_submission_payment]` Payment page.
-* `[realia_transactions]` Transaction history for current user.
 
 == Installation ==
 
