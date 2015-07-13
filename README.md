@@ -70,6 +70,13 @@ With Realia plugin you are able to assign agents to properties and create agenci
 
 ## Changelog
 
+**0.8.1**
+
+*Release Date - 13th July, 2015*
+
+* forms template structure
+
+
 **0.8.0**
 
 *Release Date - 9th July, 2015*
