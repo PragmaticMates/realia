@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php $description = ! empty( $instance['description'] ) ? $instance['description'] : ''; ?>
 <?php $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : ''; ?>
 <?php $count = ! empty( $instance['count'] ) ? $instance['count'] : 3; ?>
-<?php $per_row = ! empty( $instance['per_row'] ) ? $instance['per_row'] : 3; ?>
+<?php $per_row = ! empty( $instance['per_row'] ) ? $instance['per_row'] : 1; ?>
 <?php $display = ! empty( $instance['display'] ) ? $instance['display'] : 'small'; ?>
 
 <!-- TITLE -->
