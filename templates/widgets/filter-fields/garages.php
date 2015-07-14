@@ -5,9 +5,22 @@
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_garages"><?php echo __( 'Garages', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<input type="text" name="filter-garages"
-				<?php if ( 'placeholders' == $input_titles ) : ?>placeholder="<?php echo __( 'Garages', 'realia' ); ?>"<?php endif; ?>
-		       class="form-control" value="<?php echo ! empty( $_GET['filter-garages'] ) ? $_GET['filter-garages'] : ''; ?>"
-		       id="<?php echo esc_attr( $args['widget_id'] ); ?>_garages">
+		<select name="filter-garages"
+				id="<?php echo esc_attr( $args['widget_id'] ); ?>_garages"
+				class="form-control">
+			<option value="">
+				<?php if ( 'placeholders' == $input_titles ) : ?>
+					<?php echo __( 'Garages: any', 'realia' ); ?>
+				<?php else : ?>
+					<?php echo __( 'Any', 'realia' ); ?>
+				<?php endif; ?>
+			</option>
+
+			<?php for ( $i = 1; $i <= 5; $i++ ) : ?>
+				<option value="<?php echo esc_attr( $i ); ?>" <?php if ( ! empty( $_GET['filter-garages'] ) && $_GET['filter-garages'] == $i ) : ?>selected="selected"<?php endif; ?>>
+					<?php echo esc_attr( $i ); ?>+
+				</option>
+			<?php endfor; ?>
+		</select>
 	</div><!-- /.form-group -->
 <?php endif; ?>

@@ -5,10 +5,23 @@
 				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Rooms', 'realia' ); ?></label>
 			<?php endif; ?>
 
-			<input type="text" name="filter-rooms"
-					<?php if ( 'placeholders' == $input_titles ) : ?>placeholder="<?php echo __( 'Rooms', 'realia' ); ?>"<?php endif; ?>
-			       class="form-control" value="<?php echo ! empty( $_GET['filter-rooms'] ) ? $_GET['filter-rooms'] : ''; ?>"
-			       id="<?php echo esc_attr( $args['widget_id'] ); ?>_baths">
+			<select name="filter-rooms"
+					id="<?php echo esc_attr( $args['widget_id'] ); ?>-rooms"
+					class="form-control">
+				<option value="">
+					<?php if ( 'placeholders' == $input_titles ) : ?>
+						<?php echo __( 'Rooms: any', 'realia' ); ?>
+					<?php else : ?>
+						<?php echo __( 'Any', 'realia' ); ?>
+					<?php endif; ?>
+				</option>
+
+				<?php for ( $i = 1; $i <= 5; $i++ ) : ?>
+					<option value="<?php echo esc_attr( $i ); ?>" <?php if ( ! empty( $_GET['filter-rooms'] ) && $_GET['filter-rooms'] == $i ) : ?>selected="selected"<?php endif; ?>>
+						<?php echo esc_attr( $i ); ?>+
+					</option>
+				<?php endfor; ?>
+			</select>
 		</div><!-- /.form-group -->
 	<?php endif; ?>
 <?php endif; ?>

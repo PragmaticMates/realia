@@ -4,9 +4,22 @@
 			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Baths', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<input type="text" name="filter-baths"
-				<?php if ( 'placeholders' == $input_titles ) : ?>placeholder="<?php echo __( 'Baths', 'realia' ); ?>"<?php endif; ?>
-		       class="form-control" value="<?php echo ! empty( $_GET['filter-baths'] ) ? $_GET['filter-baths'] : ''; ?>"
-		       id="<?php echo esc_attr( $args['widget_id'] ); ?>_baths">
+		<select name="filter-baths"
+				id="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"
+				class="form-control">
+			<option value="">
+				<?php if ( 'placeholders' == $input_titles ) : ?>
+					<?php echo __( 'Baths: any', 'realia' ); ?>
+				<?php else : ?>
+					<?php echo __( 'Any', 'realia' ); ?>
+				<?php endif; ?>
+			</option>
+
+			<?php for ( $i = 1; $i <= 5; $i++ ) : ?>
+				<option value="<?php echo esc_attr( $i ); ?>" <?php if ( ! empty( $_GET['filter-baths'] ) && $_GET['filter-baths'] == $i ) : ?>selected="selected"<?php endif; ?>>
+					<?php echo esc_attr( $i ); ?>+
+				</option>
+			<?php endfor; ?>
+		</select>
 	</div><!-- /.form-group -->
 <?php endif; ?>
