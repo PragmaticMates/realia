@@ -8,11 +8,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="property-box">
     <div class="property-box-image <?php if ( ! has_post_thumbnail() ) { echo 'without-image'; } ?>">
-
         <a href="<?php the_permalink(); ?>" class="property-box-image-inner <?php if ( ! empty( $agent ) ) : ?>has-agent<?php endif; ?>">
+			<?php
+	        /**
+	         * realia_before_property_box_image
+	         */
+	        do_action( 'realia_before_property_box_image', get_the_ID() );
+	        ?>
+
             <?php if ( has_post_thumbnail() ) : ?>
                 <?php the_post_thumbnail( 'property-box-thumbnail' ); ?>
             <?php endif; ?>
+
+			<?php
+	        /**
+	         * realia_after_property_box_image
+	         */
+	        do_action( 'realia_after_property_box_image', get_the_ID() );
+	        ?>
 
             <?php $is_featured = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'featured', true ); ?>
             <?php $is_reduced = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'reduced', true ); ?>
