@@ -153,6 +153,7 @@ if ( ! class_exists( 'Realia' ) ) {
 		 */
 		public static function image_sizes() {
 			add_image_size( 'property-row-thumbnail', 400, 300, true );
+			add_image_size( 'property-grid-thumbnail', 270, 200, true );
 		}
 	}
 
