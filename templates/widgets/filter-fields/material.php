@@ -1,10 +1,10 @@
 <?php if ( empty( $instance['hide_material'] ) ) : ?>
 	<div class="form-group">
 		<?php if ( 'labels' == $input_titles ) : ?>
-			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Material', 'realia' ); ?></label>
+			<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_status"><?php echo __( 'Material', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<select class="form-control" name="filter-material" id="<?php echo esc_attr( $args['widget_id'] ); ?>_status">
+		<select class="form-control" name="filter-material" id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_status">
 			<?php $materials = get_terms( 'materials', array( 'hide_empty' => false ) ); ?>
 
 			<option value="">

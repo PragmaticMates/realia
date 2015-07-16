@@ -1,10 +1,10 @@
 <?php if ( empty( $instance['hide_location'] ) ) : ?>
 	<div class="form-group">
 		<?php if ( 'labels' == $input_titles ) : ?>
-			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_location"><?php echo __( 'Location', 'realia' ); ?></label>
+			<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_location"><?php echo __( 'Location', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<select class="form-control" name="filter-location" id="<?php echo esc_attr( $args['widget_id'] ); ?>_location">
+		<select class="form-control" name="filter-location" id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_location">
 			<option value="">
 				<?php if ( 'placeholders' == $input_titles ) : ?>
 					<?php echo __( 'Location', 'realia' ); ?>

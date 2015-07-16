@@ -2,11 +2,11 @@
 	<!-- GARAGES -->
 	<div class="form-group">
 		<?php if ( 'labels' == $input_titles ) : ?>
-			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_garages"><?php echo __( 'Garages', 'realia' ); ?></label>
+			<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_garages"><?php echo __( 'Garages', 'realia' ); ?></label>
 		<?php endif; ?>
 
 		<select name="filter-garages"
-				id="<?php echo esc_attr( $args['widget_id'] ); ?>_garages"
+				id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_garages"
 				class="form-control">
 			<option value="">
 				<?php if ( 'placeholders' == $input_titles ) : ?>

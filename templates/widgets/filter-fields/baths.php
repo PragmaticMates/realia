@@ -1,11 +1,11 @@
 <?php if ( empty( $instance['hide_baths'] ) ) : ?>
 	<div class="form-group">
 		<?php if ( 'labels' == $input_titles ) : ?>
-			<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Baths', 'realia' ); ?></label>
+			<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Baths', 'realia' ); ?></label>
 		<?php endif; ?>
 
 		<select name="filter-baths"
-				id="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"
+				id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_baths"
 				class="form-control">
 			<option value="">
 				<?php if ( 'placeholders' == $input_titles ) : ?>

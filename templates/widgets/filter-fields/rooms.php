@@ -2,11 +2,11 @@
 	<?php if ( empty( $instance['hide_rooms'] ) ) : ?>
 		<div class="form-group">
 			<?php if ( 'labels' == $input_titles ) : ?>
-				<label for="<?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Rooms', 'realia' ); ?></label>
+				<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_baths"><?php echo __( 'Rooms', 'realia' ); ?></label>
 			<?php endif; ?>
 
 			<select name="filter-rooms"
-					id="<?php echo esc_attr( $args['widget_id'] ); ?>-rooms"
+					id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>-rooms"
 					class="form-control">
 				<option value="">
 					<?php if ( 'placeholders' == $input_titles ) : ?>
