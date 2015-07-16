@@ -1,10 +1,10 @@
 <?php if ( empty( $instance['hide_amenity'] ) ) : ?>
 	<div class="form-group">
 		<?php if ( 'labels' == $input_titles ) : ?>
-			<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_property_type"><?php echo __( 'Amenity', 'realia' ); ?></label>
+			<label for="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_amenity"><?php echo __( 'Amenity', 'realia' ); ?></label>
 		<?php endif; ?>
 
-		<select class="form-control" name="filter-amenity" id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_property_type">
+		<select class="form-control" name="filter-amenity" id="<?php echo ! empty( $field_id_prefix ) ? $field_id_prefix : ''; ?><?php echo esc_attr( $args['widget_id'] ); ?>_amenity">
 			<?php $amenities = get_terms( 'amenities', array( 'hide_empty' => false ) ); ?>
 			<option value="">
 				<?php if ( 'placeholders' == $input_titles ) : ?>
