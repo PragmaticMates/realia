@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php endif; ?>
 
     <div class="button-wrapper">
-        <button type="submit" class="btn" name="enquire_form"><?php echo __( 'Send Message', 'realia' ); ?></button>
+        <button type="submit" class="button" name="enquire_form"><?php echo __( 'Send Message', 'realia' ); ?></button>
     </div><!-- /.button-wrapper -->
 </form>
 

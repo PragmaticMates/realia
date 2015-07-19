@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( ! empty( $instance['button_text'] ) ) : ?>
 		<div class="form-group">
-			<button class="btn"><?php echo esc_attr( $instance['button_text'] ); ?></button>
+			<button class="button"><?php echo esc_attr( $instance['button_text'] ); ?></button>
 		</div><!-- /.form-group -->
 	<?php endif; ?>
 </form>
