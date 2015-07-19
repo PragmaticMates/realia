@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php endif; ?>
 
 					<?php if ( ! empty( $status ) ) : ?>
-						<span class="property-row-meta-item property-row-meta-status">
+						<span class="property-row-meta-item property-row-meta-item-status">
 							<span><?php echo __( 'Status', 'realia' ); ?>:</span>
 							<strong><?php echo esc_attr( $status ); ?></strong>
 						</span><!-- /.property-box-meta-item -->
