@@ -68,6 +68,21 @@ class Realia_Customizations_General {
 			'choices'       => $pages,
 		) );
 
+		// After register page
+		$wp_customize->add_setting( 'realia_general_after_register_page', array(
+			'default'           => null,
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_text_field',
+		) );
+
+		$wp_customize->add_control( 'realia_general_after_register_page', array(
+			'type'          => 'select',
+			'label'         => __( 'After Register Page', 'realia' ),
+			'section'       => 'realia_general',
+			'settings'      => 'realia_general_after_register_page',
+			'choices'       => $pages,
+		) );
+
 		// Profile page
 		$wp_customize->add_setting( 'realia_general_profile_page', array(
 			'default'           => null,

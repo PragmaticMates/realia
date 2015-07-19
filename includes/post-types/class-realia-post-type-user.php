@@ -270,7 +270,8 @@ class Realia_Post_Type_User {
 		__( 'You have been successfully registered.', 'realia' ),
 		);
 
-		wp_redirect( site_url() );
+		$after_register_page_id = get_theme_mod( 'realia_general_after_register_page' );
+		wp_redirect( $after_register_page_id ? get_permalink( $after_register_page_id ) : site_url() );
 		exit();
 	}
 
