@@ -36,6 +36,10 @@ class Realia_Template_Loader {
 
 		if ( in_array( $post_type, $custom_post_types ) ) {
 			if ( is_archive() ) {
+				if ( is_tax() ) {
+					return self::locate( 'taxonomy-' . get_query_var( 'taxonomy' ) );	
+				}
+
 				return self::locate( 'archive-' . $post_type );
 			}
 
