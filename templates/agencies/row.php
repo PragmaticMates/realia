@@ -9,11 +9,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         <div class="agency-row-content-inner">
             <div class="agency-row-main">
                 <?php if ( has_post_thumbnail() ) : ?>
-		            <div class="agency-thumbnail">
+		            <div class="agency-row-thumbnail">
                         <a href="<?php the_permalink(); ?>">
                             <?php the_post_thumbnail( 'thumbnail' ); ?>
                         </a>
-		            </div>
+		            </div><!-- /.agency-row-thumbnail -->
                 <?php endif; ?>
 
                 <div class="agency-row-body">
