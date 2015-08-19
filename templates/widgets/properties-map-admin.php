@@ -12,7 +12,7 @@ $grid_size = ! empty( $instance['grid_size'] ) ? $instance['grid_size'] : 60;
 $style = ! empty( $instance['style'] ) ? $instance['style'] : '';
 $height = ! empty( $instance['height'] ) ? $instance['height'] : '400px';
 $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
-$geolocation = ! empty( $instance['geolocation'] ) ? $instance['geolocation'] : '';
+$geolocation = ! empty( $instance['geolocation'] ) ? $instance['geolocation'] : 'false';
 ?>
 
 
