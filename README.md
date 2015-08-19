@@ -70,6 +70,14 @@ With Realia plugin you are able to assign agents to properties and create agenci
 
 ## Changelog
 
+**0.8.4**
+
+*Release Date - 19th August, 2015*
+
+* user registration fix
+* property map geolocation support
+* agent email fix
+
 **0.8.3**
 
 *Release Date - 30th July, 2015*
