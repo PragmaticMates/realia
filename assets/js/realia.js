@@ -58,6 +58,7 @@ jQuery( document ).ready(function($) {
 			url: '?properties-feed=true',
 			success: function(markers) {
 				map.google_map({
+					geolocation: map.data('geolocation'),
 					infowindow: {
 						borderBottomSpacing: 0,
 						height: 120,

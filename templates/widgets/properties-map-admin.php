@@ -12,6 +12,7 @@ $grid_size = ! empty( $instance['grid_size'] ) ? $instance['grid_size'] : 60;
 $style = ! empty( $instance['style'] ) ? $instance['style'] : '';
 $height = ! empty( $instance['height'] ) ? $instance['height'] : '400px';
 $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
+$geolocation = ! empty( $instance['geolocation'] ) ? $instance['geolocation'] : '';
 ?>
 
 
@@ -113,3 +114,12 @@ $classes = ! empty( $instance['classes'] ) ? $instance['classes'] : '';
 	<small><?php echo __( 'Additional classes appended to body class and separated by , e.g. <i>transparent-header, property-map-append-top</i>', 'realia' ); ?></small>
 </p>
 
+<!-- GEOLOCATION -->
+<label for="<?php echo esc_attr( $this->get_field_id( 'geolocation' ) ); ?>">
+<input 	type="checkbox"
+		<?php if ( ! empty( $geolocation ) ) : ?>checked="checked"<?php endif; ?>
+		name="<?php echo esc_attr( $this->get_field_name( 'geolocation' ) ); ?>"
+		id="<?php echo esc_attr( $this->get_field_id( 'geolocation' ) ); ?>">
+
+		<?php echo __( 'Geolocation', 'realia' ); ?>
+</label>

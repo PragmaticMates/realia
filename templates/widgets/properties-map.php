@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
          data-transparent-marker-image="<?php echo plugins_url( 'realia' ); ?>/assets/img/transparent-marker-image.png"
          data-latitude="<?php echo esc_attr( $instance['latitude'] ); ?>"
          data-longitude="<?php echo esc_attr( $instance['longitude'] ); ?>"
+		 data-geolocation="<?php if ( $instance['geolocation'] == 'on') : ?>true<?php else : ?>false<?php endif; ?>"
          data-zoom="<?php echo esc_attr( $instance['zoom'] ); ?>"
          data-styles='<?php echo Realia_Google_Maps_Styles::get_style( $style_slug ); ?>'>
     </div>
