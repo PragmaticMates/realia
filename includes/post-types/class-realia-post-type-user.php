@@ -219,7 +219,7 @@ class Realia_Post_Type_User {
 	 * @return void
 	 */
 	public static function process_register_form() {
-		if ( ! isset( $_POST['register_form'] ) ) {
+		if ( ! isset( $_POST['register_form'] ) || ! get_option( 'users_can_register' ) ) {
 			return;
 		}
 
