@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Realia\n"
-"POT-Creation-Date: 2015-08-19 15:11+0200\n"
-"PO-Revision-Date: 2015-08-19 15:11+0200\n"
+"POT-Creation-Date: 2015-08-24 14:15+0200\n"
+"PO-Revision-Date: 2015-08-24 14:15+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -17,14 +17,22 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: libraries\n"
 "X-Poedit-SearchPathExcluded-1: assets\n"
 
+#: includes/admin/class-realia-admin-menu.php:43
+msgid "Realia"
+msgstr ""
+
+#: includes/admin/class-realia-admin-notices.php:59
+msgid "Please refresh the page and retry action."
+msgstr ""
+
 #: includes/class-realia-filter.php:51 templates/widgets/filter-fields/id.php:4
 #: templates/widgets/filter-fields/id.php:8
 msgid "Property ID"
 msgstr ""
 
 #: includes/class-realia-filter.php:52
-#: includes/post-types/class-realia-post-type-agency.php:107
-#: includes/post-types/class-realia-post-type-agency.php:115
+#: includes/post-types/class-realia-post-type-agency.php:106
+#: includes/post-types/class-realia-post-type-agency.php:114
 #: includes/post-types/class-realia-post-type-property.php:295
 #: includes/post-types/class-realia-post-type-property.php:303
 #: includes/post-types/class-realia-post-type-property.php:428
@@ -74,11 +82,11 @@ msgid "Material"
 msgstr ""
 
 #: includes/class-realia-filter.php:58
-#: includes/post-types/class-realia-post-type-package.php:84
+#: includes/post-types/class-realia-post-type-package.php:83
 #: includes/post-types/class-realia-post-type-property.php:165
 #: includes/post-types/class-realia-post-type-property.php:397
 #: includes/post-types/class-realia-post-type-property.php:479
-#: includes/post-types/class-realia-post-type-transaction.php:114
+#: includes/post-types/class-realia-post-type-transaction.php:113
 #: templates/content-property.php:60 templates/misc/transactions.php:19
 #: templates/properties/row.php:58 templates/properties/sort.php:22
 msgid "Price"
@@ -318,7 +326,7 @@ msgstr ""
 
 #: includes/customizations/class-realia-customizations-submission.php:63
 #: includes/post-types/class-realia-post-type-property.php:481
-#: includes/post-types/class-realia-post-type-transaction.php:116
+#: includes/post-types/class-realia-post-type-transaction.php:115
 #: includes/taxonomies/class-realia-taxonomies-property-types.php:34
 #: templates/content-property.php:75 templates/properties/row.php:65
 msgid "Type"
@@ -329,13 +337,14 @@ msgid "Free for all"
 msgstr ""
 
 #: includes/customizations/class-realia-customizations-submission.php:68
-#: includes/post-types/class-realia-post-type-transaction.php:166
+#: includes/post-types/class-realia-post-type-transaction.php:165
 #: templates/misc/transactions.php:50
 msgid "Pay per post"
 msgstr ""
 
 #: includes/customizations/class-realia-customizations-submission.php:69
 #: includes/post-types/class-realia-post-type-package.php:34
+#: includes/post-types/class-realia-post-type-package.php:40
 #: includes/post-types/class-realia-post-type-package.php:46
 msgid "Packages"
 msgstr ""
@@ -464,8 +473,9 @@ msgid "Enter your country [mandatory]"
 msgstr ""
 
 #: includes/post-types/class-realia-post-type-agency.php:36
+#: includes/post-types/class-realia-post-type-agency.php:42
 #: includes/post-types/class-realia-post-type-agency.php:48
-#: includes/post-types/class-realia-post-type-agent.php:112
+#: includes/post-types/class-realia-post-type-agent.php:111
 msgid "Agencies"
 msgstr ""
 
@@ -486,10 +496,6 @@ msgstr ""
 msgid "New Agency"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:42
-msgid "All Agencies"
-msgstr ""
-
 #: includes/post-types/class-realia-post-type-agency.php:43
 msgid "View Agency"
 msgstr ""
@@ -506,68 +512,68 @@ msgstr ""
 msgid "No agencies found in Trash"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:58
+#: includes/post-types/class-realia-post-type-agency.php:59
 msgid "agencies"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:76
-#: includes/post-types/class-realia-post-type-agent.php:85
-#: includes/post-types/class-realia-post-type-agent.php:144
+#: includes/post-types/class-realia-post-type-agency.php:75
+#: includes/post-types/class-realia-post-type-agent.php:84
+#: includes/post-types/class-realia-post-type-agent.php:143
 #: includes/post-types/class-realia-post-type-property.php:80
 #: includes/post-types/class-realia-post-type-property.php:356
 msgid "General Options"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:84
-#: includes/post-types/class-realia-post-type-agency.php:137
-#: includes/post-types/class-realia-post-type-agent.php:93
-#: includes/post-types/class-realia-post-type-agent.php:175
-#: includes/post-types/class-realia-post-type-agent.php:211
+#: includes/post-types/class-realia-post-type-agency.php:83
+#: includes/post-types/class-realia-post-type-agency.php:136
+#: includes/post-types/class-realia-post-type-agent.php:92
+#: includes/post-types/class-realia-post-type-agent.php:174
+#: includes/post-types/class-realia-post-type-agent.php:210
 #: templates/agents/contact-form.php:40 templates/mails/enquire.php:14
 #: templates/misc/profile-form.php:19 templates/misc/register.php:15
 #: templates/widgets/enquire.php:35
 msgid "E-mail"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:89
-#: includes/post-types/class-realia-post-type-agency.php:138
-#: includes/post-types/class-realia-post-type-agent.php:98
-#: includes/post-types/class-realia-post-type-agent.php:180
-#: includes/post-types/class-realia-post-type-agent.php:212
+#: includes/post-types/class-realia-post-type-agency.php:88
+#: includes/post-types/class-realia-post-type-agency.php:137
+#: includes/post-types/class-realia-post-type-agent.php:97
+#: includes/post-types/class-realia-post-type-agent.php:179
+#: includes/post-types/class-realia-post-type-agent.php:211
 #: templates/agencies/row.php:61 templates/agents/row.php:62
 #: templates/content-agency.php:36 templates/content-agent.php:36
 msgid "Web"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:94
-#: includes/post-types/class-realia-post-type-agency.php:139
-#: includes/post-types/class-realia-post-type-agent.php:103
-#: includes/post-types/class-realia-post-type-agent.php:185
-#: includes/post-types/class-realia-post-type-agent.php:213
+#: includes/post-types/class-realia-post-type-agency.php:93
+#: includes/post-types/class-realia-post-type-agency.php:138
+#: includes/post-types/class-realia-post-type-agent.php:102
+#: includes/post-types/class-realia-post-type-agent.php:184
+#: includes/post-types/class-realia-post-type-agent.php:212
 #: templates/agencies/row.php:70 templates/agents/row.php:71
 #: templates/content-agency.php:41 templates/content-agent.php:41
 msgid "Phone"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:99
-#: includes/post-types/class-realia-post-type-agent.php:108
-#: includes/post-types/class-realia-post-type-agent.php:190
+#: includes/post-types/class-realia-post-type-agency.php:98
+#: includes/post-types/class-realia-post-type-agent.php:107
+#: includes/post-types/class-realia-post-type-agent.php:189
 #: includes/post-types/class-realia-post-type-property.php:97
 #: templates/agencies/row.php:74 templates/agents/row.php:75
 #: templates/content-agency.php:46 templates/content-agent.php:46
 msgid "Address"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:116
+#: includes/post-types/class-realia-post-type-agency.php:115
 msgid "Drag the marker to set the exact location"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:135
-#: includes/post-types/class-realia-post-type-agent.php:156
-#: includes/post-types/class-realia-post-type-agent.php:209
+#: includes/post-types/class-realia-post-type-agency.php:134
+#: includes/post-types/class-realia-post-type-agent.php:155
+#: includes/post-types/class-realia-post-type-agent.php:208
 #: includes/post-types/class-realia-post-type-property.php:368
 #: includes/post-types/class-realia-post-type-property.php:477
-#: includes/post-types/class-realia-post-type-transaction.php:111
+#: includes/post-types/class-realia-post-type-transaction.php:110
 #: templates/properties/sort.php:23 templates/widgets/agents-admin.php:17
 #: templates/widgets/agents-assigned-admin.php:12
 #: templates/widgets/enquire-admin.php:16 templates/widgets/filter-admin.php:15
@@ -576,24 +582,25 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:136
-#: includes/post-types/class-realia-post-type-agent.php:210
+#: includes/post-types/class-realia-post-type-agency.php:135
+#: includes/post-types/class-realia-post-type-agent.php:209
 #: includes/post-types/class-realia-post-type-property.php:478
 msgid "Thumbnail"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:140
+#: includes/post-types/class-realia-post-type-agency.php:139
 #: includes/post-types/class-realia-post-type-agent.php:38
+#: includes/post-types/class-realia-post-type-agent.php:44
 #: includes/post-types/class-realia-post-type-agent.php:50
 #: includes/post-types/class-realia-post-type-property.php:329
 #: includes/widgets/class-realia-widget-agents.php:24
 msgid "Agents"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agency.php:141
-#: includes/post-types/class-realia-post-type-agent.php:215
+#: includes/post-types/class-realia-post-type-agency.php:140
+#: includes/post-types/class-realia-post-type-agent.php:214
 #: includes/post-types/class-realia-post-type-property.php:486
-#: includes/post-types/class-realia-post-type-transaction.php:118
+#: includes/post-types/class-realia-post-type-transaction.php:117
 msgid "Author"
 msgstr ""
 
@@ -615,10 +622,6 @@ msgstr ""
 msgid "New Agent"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agent.php:44
-msgid "All Agents"
-msgstr ""
-
 #: includes/post-types/class-realia-post-type-agent.php:45
 msgid "View Agent"
 msgstr ""
@@ -635,35 +638,35 @@ msgstr ""
 msgid "No agents found in Trash"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agent.php:59
+#: includes/post-types/class-realia-post-type-agent.php:60
 #: templates/agencies/row.php:26
 msgid "agents"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agent.php:163
+#: includes/post-types/class-realia-post-type-agent.php:162
 #: includes/post-types/class-realia-post-type-property.php:374
 #: templates/widgets/agents-admin.php:30
 #: templates/widgets/properties-admin.php:31
 msgid "Description"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agent.php:169
+#: includes/post-types/class-realia-post-type-agent.php:168
 msgid "Image"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agent.php:214
+#: includes/post-types/class-realia-post-type-agent.php:213
 #: includes/post-types/class-realia-post-type-property.php:41
 #: includes/post-types/class-realia-post-type-property.php:53
 #: includes/widgets/class-realia-widget-properties.php:24
 msgid "Properties"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-agent.php:320
+#: includes/post-types/class-realia-post-type-agent.php:319
 msgid "Agent has been successfully updated."
 msgstr ""
 
 #: includes/post-types/class-realia-post-type-package.php:35
-#: includes/post-types/class-realia-post-type-transaction.php:169
+#: includes/post-types/class-realia-post-type-transaction.php:168
 #: includes/post-types/class-realia-post-type-user.php:51
 #: templates/misc/transactions.php:53
 msgid "Package"
@@ -682,10 +685,6 @@ msgstr ""
 msgid "New Package"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-package.php:40
-msgid "All Packages"
-msgstr ""
-
 #: includes/post-types/class-realia-post-type-package.php:41
 msgid "View Package"
 msgstr ""
@@ -702,27 +701,27 @@ msgstr ""
 msgid "No Items Found in Trash"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-package.php:76
-#: includes/post-types/class-realia-post-type-transaction.php:75
+#: includes/post-types/class-realia-post-type-package.php:75
+#: includes/post-types/class-realia-post-type-transaction.php:74
 #: includes/post-types/class-realia-post-type-user.php:89
 msgid "General"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-package.php:86
+#: includes/post-types/class-realia-post-type-package.php:85
 #: includes/post-types/class-realia-post-type-property.php:167
 #: includes/post-types/class-realia-post-type-property.php:399
 msgid "Enter amount without currency."
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-package.php:90
+#: includes/post-types/class-realia-post-type-package.php:89
 msgid "Duration"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-package.php:96
+#: includes/post-types/class-realia-post-type-package.php:95
 msgid "Of properties"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-package.php:98
+#: includes/post-types/class-realia-post-type-package.php:97
 msgid "Use -1 for unlimited amount of properties."
 msgstr ""
 
@@ -770,7 +769,7 @@ msgstr ""
 
 #: includes/post-types/class-realia-post-type-property.php:87
 #: includes/post-types/class-realia-post-type-property.php:386
-#: includes/post-types/class-realia-post-type-transaction.php:112
+#: includes/post-types/class-realia-post-type-transaction.php:111
 #: templates/content-property.php:65 templates/misc/transactions.php:18
 msgid "ID"
 msgstr ""
@@ -950,6 +949,7 @@ msgid "Property has been successfully updated."
 msgstr ""
 
 #: includes/post-types/class-realia-post-type-transaction.php:36
+#: includes/post-types/class-realia-post-type-transaction.php:42
 #: includes/post-types/class-realia-post-type-transaction.php:48
 msgid "Transactions"
 msgstr ""
@@ -971,10 +971,6 @@ msgstr ""
 msgid "New Transaction"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:42
-msgid "All Transactions"
-msgstr ""
-
 #: includes/post-types/class-realia-post-type-transaction.php:43
 msgid "View Transaction"
 msgstr ""
@@ -991,39 +987,39 @@ msgstr ""
 msgid "No Transactions Found in Trash"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:83
+#: includes/post-types/class-realia-post-type-transaction.php:82
 msgid "Payment type"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:88
+#: includes/post-types/class-realia-post-type-transaction.php:87
 msgid "Object ID"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:93
-#: includes/post-types/class-realia-post-type-transaction.php:115
+#: includes/post-types/class-realia-post-type-transaction.php:92
+#: includes/post-types/class-realia-post-type-transaction.php:114
 #: templates/misc/transactions.php:21
 msgid "Object"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:113
+#: includes/post-types/class-realia-post-type-transaction.php:112
 msgid "Success"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:117
+#: includes/post-types/class-realia-post-type-transaction.php:116
 msgid "Payment Gateway"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:119
+#: includes/post-types/class-realia-post-type-transaction.php:118
 #: templates/misc/transactions.php:23
 msgid "Date"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:160
+#: includes/post-types/class-realia-post-type-transaction.php:159
 #: templates/misc/transactions.php:44
 msgid "Feature property"
 msgstr ""
 
-#: includes/post-types/class-realia-post-type-transaction.php:163
+#: includes/post-types/class-realia-post-type-transaction.php:162
 msgid "Sticky post"
 msgstr ""
 
@@ -1537,6 +1533,26 @@ msgstr ""
 
 #: templates/misc/transactions.php:73
 msgid "No transactions found."
+msgstr ""
+
+#: templates/notices/welcome.php:2
+msgid ""
+"<strong>Welcome to Realia</strong> - please read <a href=\"http://wprealia."
+"com/documentation/index.html\">documentation</a> for more information. If "
+"you does not have real estate theme, use free <a href=\"https://github.com/"
+"pragmaticmates/realia-bootstrap\">Realia Bootstrap</a> starter."
+msgstr ""
+
+#: templates/notices/welcome.php:6
+msgid "Documentation"
+msgstr ""
+
+#: templates/notices/welcome.php:10
+msgid "Realia Bootstrap"
+msgstr ""
+
+#: templates/notices/welcome.php:14
+msgid "Hide"
 msgstr ""
 
 #: templates/properties/box.php:89
