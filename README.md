@@ -6,7 +6,7 @@ Realia is full featured WordPress real estate plugin. It is completely covering 
 * Check the demo at [preview.wprealia.com/plugin/realia](http://preview.wprealia.com/plugin/realia)
 * Documentation at [wprealia.com/documentation/index.html](http://wprealia.com/documentation/index.html)
 * Free Bootstrap theme at [preview.wprealia.com/theme/bootstrap](http://preview.wprealia.com/theme/bootstrap) download from [GitHub](http://github.com/pragmaticmates/realia-bootstrap)
-* Premium themes [Megareal](http://themeforest.net/item/megareal-real-estate-portal-theme/full_screen_preview/11965035?ref=aviators), [Realocation](http://themeforest.net/item/realocation-modern-real-estate-wordpress-theme/7605274?ref=aviators)
+* Premium themes [Megareal](http://themeforest.net/item/megareal-real-estate-portal-theme/full_screen_preview/11965035?ref=aviators), [Realocation](http://themeforest.net/item/realocation-modern-real-estate-wordpress-theme/7605274?ref=aviators), [Realia](http://themeforest.net/item/realia-responsive-real-estate-wordpress-theme/4789838?ref=aviators)
 * Mobile applications [Realia Browser for iOS](http://codecanyon.net/item/realia-browser-real-estate-ios-app/11827488)
 
 ### Front End Submission
