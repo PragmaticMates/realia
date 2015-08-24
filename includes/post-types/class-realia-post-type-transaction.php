@@ -39,7 +39,7 @@ class Realia_Post_Type_Transaction {
 			'add_new_item'          => __( 'Add New Transaction', 'realia' ),
 			'edit_item'             => __( 'Edit Transaction', 'realia' ),
 			'new_item'              => __( 'New Transaction', 'realia' ),
-			'all_items'             => __( 'All Transactions', 'realia' ),
+			'all_items'             => __( 'Transactions', 'realia' ),
 			'view_item'             => __( 'View Transaction', 'realia' ),
 			'search_items'          => __( 'Search Transaction', 'realia' ),
 			'not_found'             => __( 'No Transactions found', 'realia' ),
@@ -51,13 +51,12 @@ class Realia_Post_Type_Transaction {
 		register_post_type( 'transaction',
 			array(
 				'labels'            => $labels,
+				'show_in_menu'	  => 'realia',
 				'supports'          => array( 'title' ),
 				'public'            => false,
 				'has_archive'       => false,
 				'show_ui'           => true,
 				'categories'        => array(),
-				'menu_position'     => 47,
-				'menu_icon'         => 'dashicons-book',
 			)
 		);
 	}

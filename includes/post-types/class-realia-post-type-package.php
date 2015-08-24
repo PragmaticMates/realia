@@ -37,7 +37,7 @@ class Realia_Post_Type_Package {
 			'add_new_item'          => __( 'Add New Package', 'realia' ),
 			'edit_item'             => __( 'Edit Package', 'realia' ),
 			'new_item'              => __( 'New Package', 'realia' ),
-			'all_items'             => __( 'All Packages', 'realia' ),
+			'all_items'             => __( 'Packages', 'realia' ),
 			'view_item'             => __( 'View Package', 'realia' ),
 			'search_items'          => __( 'Search Package', 'realia' ),
 			'not_found'             => __( 'No Packages found', 'realia' ),
@@ -49,13 +49,12 @@ class Realia_Post_Type_Package {
 		register_post_type( 'package',
 			array(
 				'labels'            => $labels,
+				'show_in_menu'	  	=> 'realia',
 				'supports'          => array( 'title' ),
 				'public'            => false,
 				'has_archive'       => false,
 				'show_ui'           => true,
 				'categories'        => array(),
-				'menu_icon'         => 'dashicons-cart',
-				'menu_position'     => 51,
 			)
 		);
 	}

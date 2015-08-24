@@ -60,7 +60,7 @@ class Realia_Post_Type_Property {
 				'public'            => true,
 				'has_archive'       => true,
 				'rewrite'           => array( 'slug' => __( 'properties', 'realia' ) ),
-				'menu_position'     => 43,
+				'menu_position'     => 51,
 				'categories'        => array(),
 				'menu_icon'         => 'dashicons-admin-home',
 			)

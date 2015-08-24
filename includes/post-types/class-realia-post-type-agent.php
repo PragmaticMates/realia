@@ -41,7 +41,7 @@ class Realia_Post_Type_Agent {
 			'add_new_item'       => __( 'Add New Agent', 'realia' ),
 			'edit_item'          => __( 'Edit Agent', 'realia' ),
 			'new_item'           => __( 'New Agent', 'realia' ),
-			'all_items'          => __( 'All Agents', 'realia' ),
+			'all_items'          => __( 'Agents', 'realia' ),
 			'view_item'          => __( 'View Agent', 'realia' ),
 			'search_items'       => __( 'Search Agent', 'realia' ),
 			'not_found'          => __( 'No agents found', 'realia' ),
@@ -52,14 +52,13 @@ class Realia_Post_Type_Agent {
 
 		register_post_type( 'agent', array(
 			'labels'        => $labels,
+			'show_in_menu'	=> 'realia',
 			'supports'      => array( 'title', 'editor', 'thumbnail' ),
 			'public'        => true,
 			'show_ui'       => true,
 			'has_archive'   => true,
 			'rewrite'       => array( 'slug' => __( 'agents', 'realia' ) ),
-			'menu_position' => 45,
 			'categories'    => array(),
-			'menu_icon'     => 'dashicons-businessman',
 		) );
 	}
 

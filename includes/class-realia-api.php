@@ -21,7 +21,6 @@ class Realia_Api {
 	public static function init() {
 		add_filter( 'pre_get_posts', array( __CLASS__, 'filter_fields' ) );
 		add_filter( 'json_prepare_post', array( __CLASS__, 'add_fields' ), 10, 3 );
-
 	}
 
 	public static function add_fields( $post_response, $post, $context ) {

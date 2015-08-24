@@ -81,6 +81,8 @@ if ( ! class_exists( 'Realia' ) ) {
 			require_once REALIA_DIR . 'includes/class-realia-google-maps-styles.php';
 			require_once REALIA_DIR . 'includes/class-realia-packages.php';
 	        require_once REALIA_DIR . 'includes/class-realia-api.php';
+
+			require_once REALIA_DIR . 'includes/admin/class-realia-admin-menu.php';
 		}
 
 		/**
