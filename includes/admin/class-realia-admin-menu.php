@@ -31,7 +31,7 @@ class Realia_Admin_Menu {
 	public static function admin_separator() {
 		global $menu;
 
-		$menu[49] = array( '', 'read', 'separator49', '', 'wp-menu-separator' );
+		$menu[49] = array( '', 'read', 'separator', '', 'wp-menu-separator' );
 	}
 
 	/**

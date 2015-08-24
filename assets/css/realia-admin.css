@@ -1,3 +1,17 @@
+.realia-message {
+	border-color: #2caabd;
+}
+
+.realia-message .button-primary {
+	background-color: #2caabd;
+	border-color: #2c9bac;
+}
+
+.realia-message .button-primary:hover {
+	background-color: #259bad;
+	border-color: #2c9bac;
+}
+
 .subtitle {
 	color: rgba(0, 0, 0, .7);
 	font-style: italic;
