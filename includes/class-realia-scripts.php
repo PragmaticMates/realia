@@ -65,6 +65,9 @@ class Realia_Scripts {
 	public static function enqueue_backend() {
 		wp_register_style( 'realia-admin', plugins_url( '/realia/assets/css/realia-admin.css' ) );
 		wp_enqueue_style( 'realia-admin' );
+
+		wp_register_style( 'realia-font', plugins_url( '/realia/assets/fonts/realia/style.css' ) );
+		wp_enqueue_style( 'realia-font' );		
 	}
 
 	/**
