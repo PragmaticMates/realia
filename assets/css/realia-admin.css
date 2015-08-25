@@ -12,6 +12,10 @@
 	border-color: #2c9bac;
 }
 
+#setting-error-tgmpa {
+    display: block;
+}
+
 .subtitle {
 	color: rgba(0, 0, 0, .7);
 	font-style: italic;
