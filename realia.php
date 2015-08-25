@@ -126,7 +126,7 @@ if ( ! class_exists( 'Realia' ) ) {
 	    }
 
 		/**
-		 * Access public
+		 * Install plugins
 		 *
 		 * @access public
 		 * @return void

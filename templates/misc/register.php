@@ -26,8 +26,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<input id="register-form-retype" type="password" name="password_retype" class="form-control" required="required">
 		</div><!-- /.form-group -->
 
-
-		<button type="submit" class="button" name="register_form"><?php echo __( 'Sign Up', 'realia' ); ?></button>
 		<?php $terms = get_theme_mod( 'realia_submission_terms' ); ?>
 
 		<?php if ( ! empty( $terms ) ) : ?>
@@ -39,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</label>
 			</div><!-- /.form-group -->
 		<?php endif; ?>
+
+		<button type="submit" class="button" name="register_form"><?php echo __( 'Sign Up', 'realia' ); ?></button>
 	</form>
 <?php else: ?>
 	<div class="alert alert-warning">
