@@ -23,6 +23,24 @@
 	text-align: center;
 }
 
+.toplevel_page_realia .wp-menu-image:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	content: '\e600';
+	font-family: 'Realia';
+	font-size: 17px;
+}
+
+#menu-posts-property .wp-menu-image:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	content: '\e601';
+	font-family: 'Realia';
+	font-size: 16px;
+}
+
 .green {
 	color: green;
 }
