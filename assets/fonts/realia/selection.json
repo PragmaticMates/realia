@@ -15,45 +15,45 @@
 			},
 			"attrs": [],
 			"properties": {
-				"order": 2,
-				"id": 1,
+				"order": 1,
+				"id": 0,
 				"prevSize": 32,
 				"code": 58880,
 				"name": "realia-logo"
 			},
 			"setIdx": 0,
-			"setId": 1,
+			"setId": 0,
 			"iconIdx": 0
 		},
 		{
 			"icon": {
 				"paths": [
-					"M1052.256 1024.064h-824.512v-401.376h-227.456l639.712-622.784 639.744 622.784h-330.56v-100.32h81.76l-390.944-380.576-390.912 380.576h81.728v401.376h618.368v-200.672h103.072v300.992z"
+					"M1009.696 1006.944h-751.872l-1.664-371.072h-256.16l633.408-618.816 641.152 619.008-448.896-0.192 0.736-122.88h50.816l-243.040-236.608-243.040 236.608h50.816v311.872h384.448v-61.312h183.296v243.392z"
 				],
 				"attrs": [],
 				"isMulticolor": false,
 				"width": 1280,
 				"grid": 0,
 				"tags": [
-					"realocation_logo"
+					"realocation_logo_bolder"
 				]
 			},
 			"attrs": [],
 			"properties": {
-				"order": 3,
-				"id": 0,
+				"order": 2,
+				"id": 2,
 				"prevSize": 32,
 				"code": 58881,
 				"name": "realia-house"
 			},
 			"setIdx": 0,
-			"setId": 1,
+			"setId": 0,
 			"iconIdx": 1
 		}
 	],
 	"height": 1024,
 	"metadata": {
-		"name": "icomoon"
+		"name": "Realia"
 	},
 	"preferences": {
 		"showGlyphs": true,
@@ -61,15 +61,24 @@
 		"showQuickUse2": true,
 		"showSVGs": true,
 		"fontPref": {
-			"prefix": "icon-",
+			"prefix": "realia-",
 			"metadata": {
-				"fontFamily": "icomoon"
+				"fontFamily": "Realia",
+				"majorVersion": 1,
+				"minorVersion": 0
 			},
 			"metrics": {
 				"emSize": 1024,
 				"baseline": 6.25,
 				"whitespace": 50
 			},
+			"showSelector": true,
+			"selector": "class",
+			"showMetrics": true,
+			"showMetadata": true,
+			"showVersion": true,
+			"resetPoint": 58880,
+			"classSelector": ".realia",
 			"embed": false
 		},
 		"imagePref": {
@@ -81,6 +90,8 @@
 		},
 		"historySize": 100,
 		"showCodes": false,
-		"gridSize": 16
+		"showLiga": false,
+		"gridSize": 16,
+		"showGrid": true
 	}
 }

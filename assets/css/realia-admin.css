@@ -1,5 +1,15 @@
 .realia-message {
 	border-color: #2caabd;
+    padding: 24px 12px;
+}
+
+.realia-message p {
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+}
+
+.realia-message .submit {
+    margin: 0px;
 }
 
 .realia-message .button-primary {
