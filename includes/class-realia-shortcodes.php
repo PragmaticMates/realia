@@ -67,20 +67,20 @@ class Realia_Shortcodes {
 	 * Login
 	 *
 	 * @access public
-	 * @return void
+	 * @return string
 	 */
 	public static function login( $atts ) {
-		echo Realia_Template_Loader::load( 'misc/login' );
+		return Realia_Template_Loader::load( 'misc/login' );
 	}
 
 	/**
 	 * Register
 	 *
 	 * @access public
-	 * @return void
+	 * @return string
 	 */
 	public static function register( $atts ) {
-		echo Realia_Template_Loader::load( 'misc/register' );
+		return Realia_Template_Loader::load( 'misc/register' );
 	}
 
 	/**
@@ -91,7 +91,7 @@ class Realia_Shortcodes {
 	 */
 	public static function breadcrumb( $atts ) {
 		$atts = shortcode_atts( array(), $atts, 'realia_breadcrumb' );
-		echo Realia_Template_Loader::load( 'misc/breadcrumb' );
+		return Realia_Template_Loader::load( 'misc/breadcrumb' );
 	}
 
 	/**
@@ -171,7 +171,7 @@ class Realia_Shortcodes {
 			return;
 		}
 
-		echo Realia_Template_Loader::load( 'submission/list' );
+		return Realia_Template_Loader::load( 'submission/list' );
 	}
 
 	/**
@@ -179,15 +179,14 @@ class Realia_Shortcodes {
 	 *
 	 * @access public
 	 * @param $atts
-	 * @return void
+	 * @return string
 	 */
 	public static function submission_package_info( $atts ) {
 		if ( ! is_user_logged_in() ) {
-			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-			return;
+			return Realia_Template_Loader::load( 'misc/not-allowed' );
 		}
 
-		echo Realia_Template_Loader::load( 'submission/package-info' );
+		return Realia_Template_Loader::load( 'submission/package-info' );
 	}
 
 	/**
@@ -195,15 +194,14 @@ class Realia_Shortcodes {
 	 *
 	 * @access public
 	 * @param $atts
-	 * @return void
+	 * @return string
 	 */
 	public static function submission_payment( $atts ) {
 		if ( ! is_user_logged_in() ) {
-			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-			return;
+			return Realia_Template_Loader::load( 'misc/not-allowed' );
 		}
 
-		echo Realia_Template_Loader::load( 'submission/payment' );
+		return Realia_Template_Loader::load( 'submission/payment' );
 	}
 
 	/**
@@ -211,16 +209,14 @@ class Realia_Shortcodes {
 	 *
 	 * @access public
 	 * @param $atts
-	 * @return void
+	 * @return string
 	 */
 	public static function transactions( $atts ) {
 		if ( ! is_user_logged_in() ) {
-			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-
-			return;
+			return Realia_Template_Loader::load( 'misc/not-allowed' );
 		}
 
-		echo Realia_Template_Loader::load( 'misc/transactions' );
+		return Realia_Template_Loader::load( 'misc/transactions' );
 	}
 
 	/**
@@ -228,16 +224,14 @@ class Realia_Shortcodes {
 	 *
 	 * @access public
 	 * @param $atts
-	 * @return void
+	 * @return string
 	 */
 	public static function change_password( $atts ) {
 		if ( ! is_user_logged_in() ) {
-			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-
-			return;
+			return Realia_Template_Loader::load( 'misc/not-allowed' );
 		}
 
-		echo Realia_Template_Loader::load( 'misc/password-form' );
+		return Realia_Template_Loader::load( 'misc/password-form' );
 	}
 
 	/**
@@ -249,12 +243,10 @@ class Realia_Shortcodes {
 	 */
 	public static function change_profile( $atts ) {
 		if ( ! is_user_logged_in() ) {
-			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-
-			return;
+			return Realia_Template_Loader::load( 'misc/not-allowed' );
 		}
 
-		echo Realia_Template_Loader::load( 'misc/profile-form' );
+		return Realia_Template_Loader::load( 'misc/profile-form' );
 	}
 
 	/**
@@ -266,11 +258,10 @@ class Realia_Shortcodes {
 	 */
 	public static function change_agent_profile( $atts ) {
 		if ( ! is_user_logged_in() || ! get_theme_mod( 'realia_submission_enable_agents', false ) ) {
-			echo Realia_Template_Loader::load( 'misc/not-allowed' );
-			return;
+			return Realia_Template_Loader::load( 'misc/not-allowed' );
 		}
 
-		echo Realia_Template_Loader::load( 'agents/profile-form' );
+		return Realia_Template_Loader::load( 'agents/profile-form' );
 	}
 }
 
