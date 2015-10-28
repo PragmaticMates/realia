@@ -41,10 +41,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 
 			<?php $baths = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'baths', true ); ?>
-			<?php if ( ! empty( $beds ) ) : ?>
+			<?php if ( ! empty( $batgs ) ) : ?>
 				<div class="infobox-content-body-baths">
 					<span><?php echo __( 'Baths', 'realia' ); ?>:</span>
-					<strong><?php echo esc_attr( $beds ); ?></strong>
+					<strong><?php echo esc_attr( $baths ); ?></strong>
 				</div>
 			<?php endif; ?>
 		</div>
