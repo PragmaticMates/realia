@@ -19,7 +19,7 @@ class Realia_Packages {
 	 * @return void
 	 */
 	public static function init() {
-		add_action( 'init', array( __CLASS__, 'check_properties' ) );
+		add_action( 'wp', array( __CLASS__, 'check_properties' ) );
 	}
 
 	/**
@@ -300,16 +300,21 @@ class Realia_Packages {
 	 * @return void
 	 */
 	public static function unpublish_properties( $properties ) {
+		$items_to_unpublish = array();
+
 		foreach ( $properties as $item ) {
 			if ( $item->post_status != 'publish' ) {
 				continue;
 			}
 
-			wp_update_post( array(
-				'ID'            => $item->ID,
-				'post_status'   => 'draft',
-			) );
+			$items_to_unpublish[] += $item->ID;
 		}
+
+		global $wpdb;
+
+		$sql = 'UPDATE ' . $wpdb->prefix . 'posts SET post_status = \'draft\' WHERE ID IN (' . implode( ",", $items_to_unpublish ) . ');';
+
+		$wpdb->get_results( $sql );
 	}
 
 	/**
@@ -322,18 +327,23 @@ class Realia_Packages {
 	public static function publish_properties( $properties ) {
 		$review_before_publish = get_theme_mod( 'realia_submission_review_before', false );
 
+		$items_to_publish = array();
+
 		foreach ( $properties as $item ) {
 			if ( $item->post_status == 'publish' ) {
 				continue;
 			}
 
 			if ( $review_before_publish && $item->post_status == 'draft' || ! $review_before_publish ) {
-				wp_update_post( array(
-					'ID'            => $item->ID,
-					'post_status'   => 'publish',
-				) );
+				$items_to_publish[] += $item->ID;
 			}
 		}
+
+		global $wpdb;
+
+		$sql = 'UPDATE ' . $wpdb->prefix . 'posts SET post_status = \'publish\' WHERE ID IN (' . implode(",", $items_to_publish) . ');';
+
+		$wpdb->get_results( $sql );
 	}
 
 	/**
