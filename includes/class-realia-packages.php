@@ -310,11 +310,13 @@ class Realia_Packages {
 			$items_to_unpublish[] += $item->ID;
 		}
 
-		global $wpdb;
-
-		$sql = 'UPDATE ' . $wpdb->prefix . 'posts SET post_status = \'draft\' WHERE ID IN (' . implode( ",", $items_to_unpublish ) . ');';
-
-		$wpdb->get_results( $sql );
+		if ( count( $items_to_unpublish ) > 0 ) {
+			global $wpdb;
+	
+			$sql = 'UPDATE ' . $wpdb->prefix . 'posts SET post_status = \'draft\' WHERE ID IN (' . implode( ",", $items_to_unpublish ) . ');';
+	
+			$wpdb->get_results( $sql );
+		}
 	}
 
 	/**
@@ -339,11 +341,13 @@ class Realia_Packages {
 			}
 		}
 
-		global $wpdb;
-
-		$sql = 'UPDATE ' . $wpdb->prefix . 'posts SET post_status = \'publish\' WHERE ID IN (' . implode(",", $items_to_publish) . ');';
-
-		$wpdb->get_results( $sql );
+		if ( count( $items_to_publish ) > 0 ) {
+			global $wpdb;
+	
+			$sql = 'UPDATE ' . $wpdb->prefix . 'posts SET post_status = \'publish\' WHERE ID IN (' . implode(",", $items_to_publish) . ');';
+	
+			$wpdb->get_results( $sql );
+		}
 	}
 
 	/**
