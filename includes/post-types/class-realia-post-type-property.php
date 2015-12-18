@@ -303,7 +303,7 @@ class Realia_Post_Type_Property {
 					'name'              => __( 'Location', 'realia' ),
 					'type'              => 'pw_map',
 					'sanitization_cb'   => 'pw_map_sanitise',
-	                'split_values'      => true,
+	                		'split_values'      => true,
 				),
 			),
 		);
@@ -428,6 +428,7 @@ class Realia_Post_Type_Property {
 						'name'              => __( 'Location', 'realia' ),
 						'type'              => 'pw_map',
 						'sanitization_cb'   => 'pw_map_sanitise',
+						'split_values'      => true,
 					),
 					array(
 						'name'      => __( 'Locations', 'realia' ),
