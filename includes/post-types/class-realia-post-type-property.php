@@ -424,6 +424,15 @@ class Realia_Post_Type_Property {
 						'type'              => 'text',
 					),
 					array(
+		            			'name'              => __( 'Contract', 'realia' ),
+		            			'id'                => REALIA_PROPERTY_PREFIX . 'contract',
+		            			'type'              => 'select',
+		            			'options'           => array(
+			            			''                      => '',
+			            			REALIA_CONTRACT_RENT    => __( 'Rent', 'realia' ),
+			            			REALIA_CONTRACT_SALE    => __( 'Sale', 'realia' ),
+		            		),
+					array(
 						'id'                => REALIA_PROPERTY_PREFIX . 'map_location',
 						'name'              => __( 'Location', 'realia' ),
 						'type'              => 'pw_map',
