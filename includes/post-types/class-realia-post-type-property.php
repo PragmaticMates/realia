@@ -431,6 +431,7 @@ class Realia_Post_Type_Property {
 			            			''                      => '',
 			            			REALIA_CONTRACT_RENT    => __( 'Rent', 'realia' ),
 			            			REALIA_CONTRACT_SALE    => __( 'Sale', 'realia' ),
+			            		),
 		            		),
 					array(
 						'id'                => REALIA_PROPERTY_PREFIX . 'map_location',
