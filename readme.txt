@@ -3,7 +3,7 @@ Contributors: pragmaticmates
 Tags: real estate, agent, listing, estator, realestate, agent, agency, house, directory, property
 Requires at least: 4.1
 Tested up to: 4.3
-Stable tag: 0.8.5
+Stable tag: 0.8.6
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -120,6 +120,12 @@ Just be sure you are running at least PHP 5.3.4
 9. User properties
 
 == Changelog ==
+
+= 0.8.6 =
+
+*Release Date - ?? ???, 2016*
+
+* fixed enquire form which didn't send emails to property agent
 
 = 0.8.5 =
 
