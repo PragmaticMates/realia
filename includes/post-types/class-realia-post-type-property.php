@@ -470,6 +470,24 @@ class Realia_Post_Type_Property {
 						'type'      => 'taxonomy_multicheck',
 						'taxonomy'  => 'amenities',
 					),
+					array(
+						'name'              => __( 'Public facilities', 'realia' ),
+						'object_types'      => array( 'property' ),
+						'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_group',
+						'type'              => 'group',
+						'fields'            => array(
+							array(
+								'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_key',
+								'name'              => __( 'Key', 'realia' ),
+								'type'              => 'text',
+							),
+							array(
+								'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_value',
+								'name'              => __( 'Value', 'realia' ),
+								'type'              => 'text',
+							)
+						)
+					)
 				),
 			);
 		}
