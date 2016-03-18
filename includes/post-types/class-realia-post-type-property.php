@@ -84,7 +84,7 @@ class Realia_Post_Type_Property {
 			'show_names'                => true,
 			'fields'                    => array(
 				array(
-					'name'              => __( 'ID', 'realia' ),
+					'name'              => __( 'Reference', 'realia' ),
 					'id'                => REALIA_PROPERTY_PREFIX . 'id',
 					'type'              => 'text',
 				),
@@ -150,6 +150,30 @@ class Realia_Post_Type_Property {
 					'description'       => __( 'For more information about embeding videos and video links support please read this <a href="http://codex.wordpress.org/Embeds">article</a>.', 'realia' ),
 				),
 			),
+		);
+
+		$metaboxes[ REALIA_PROPERTY_PREFIX . 'contact' ] = array(
+			'id'                        => REALIA_PROPERTY_PREFIX . 'contact',
+			'title'                     => __( 'Contact', 'realia' ),
+			'description'               => __( 'Owner, agent or Agency', 'realia' ),
+			'object_types'              => array( 'property' ),
+			'context'                   => 'normal',
+			'priority'                  => 'high',
+			'show_names'                => true,
+			'fields'                    => array(
+				array(
+					'name'              => __( 'Contact name', 'realia' ),
+					'description'       => __( 'Owner, agent or Agency', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'contact_name',
+					'type'              => 'text',
+				),
+				array(
+					'name'              => __( 'Contact phone', 'realia' ),
+					'description'       => __( 'Phone number', 'realia' ),
+					'id'                => REALIA_PROPERTY_PREFIX . 'contact_phone',
+					'type'              => 'text',
+				)
+			)
 		);
 
 		$metaboxes[ REALIA_PROPERTY_PREFIX . 'pricing' ] = array(
@@ -371,6 +395,18 @@ class Realia_Post_Type_Property {
 						'default'           => ! empty( $post ) ? $post->post_title : '',
 					),
 					array(
+						'name'              => __( 'Contact name', 'realia' ),
+						'description'       => __( 'Owner, agent or Agency', 'realia' ),
+						'id'                => REALIA_PROPERTY_PREFIX . 'contact_name',
+						'type'              => 'text',
+					),
+					array(
+						'name'              => __( 'Contact phone', 'realia' ),
+						'description'       => __( 'Phone number', 'realia' ),
+						'id'                => REALIA_PROPERTY_PREFIX . 'contact_phone',
+						'type'              => 'text',
+					),
+					array(
 						'name'              => __( 'Description', 'realia' ),
 						'id'                => REALIA_PROPERTY_PREFIX . 'text',
 						'type'              => 'textarea',
@@ -383,7 +419,7 @@ class Realia_Post_Type_Property {
 						'default'           => ! empty( $featured_image ) ? $featured_image[0] : '',
 					),
 					array(
-						'name'              => __( 'ID', 'realia' ),
+						'name'              => __( 'Reference', 'realia' ),
 						'id'                => REALIA_PROPERTY_PREFIX . 'id',
 						'type'              => 'text',
 					),
@@ -470,24 +506,24 @@ class Realia_Post_Type_Property {
 						'type'      => 'taxonomy_multicheck',
 						'taxonomy'  => 'amenities',
 					),
-					array(
-						'name'              => __( 'Public facilities', 'realia' ),
-						'object_types'      => array( 'property' ),
-						'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_group',
-						'type'              => 'group',
-						'fields'            => array(
-							array(
-								'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_key',
-								'name'              => __( 'Key', 'realia' ),
-								'type'              => 'text',
-							),
-							array(
-								'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_value',
-								'name'              => __( 'Value', 'realia' ),
-								'type'              => 'text',
-							)
-						)
-					)
+//					array(
+//						'name'              => __( 'Public facilities', 'realia' ),
+//						'object_types'      => array( 'property' ),
+//						'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_group',
+//						'type'              => 'group',
+//						'fields'            => array(
+//							array(
+//								'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_key',
+//								'name'              => __( 'Key', 'realia' ),
+//								'type'              => 'text',
+//							),
+//							array(
+//								'id'                => REALIA_PROPERTY_PREFIX . 'public_facilities_value',
+//								'name'              => __( 'Value', 'realia' ),
+//								'type'              => 'text',
+//							)
+//						)
+//					)
 				),
 			);
 		}

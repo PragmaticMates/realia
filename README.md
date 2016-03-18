@@ -70,6 +70,15 @@ With Realia plugin you are able to assign agents to properties and create agenci
 
 ## Changelog
 
+**0.8.6**
+
+*Release Date - ?? ???, 2016*
+
+* fixed enquire form which didn't send emails to property agent
+* public facilites in the submission fields
+* user phone field
+* first name, last name, phone in registration form
+
 **0.8.5**
 
 *Release Date - 26th August, 2015*

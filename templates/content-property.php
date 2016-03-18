@@ -62,7 +62,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<?php $id = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'id', true ); ?>
 					<?php if ( ! empty( $id ) ) : ?>
-						<dt><?php echo __( 'ID', 'realia' ); ?></dt><dd><?php echo esc_attr( $id ); ?></dd>
+						<dt><?php echo __( 'Reference', 'realia' ); ?></dt><dd><?php echo esc_attr( $id ); ?></dd>
+					<?php endif; ?>
+
+					<?php $contact_name = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'contact_name', true ); ?>
+					<?php if ( ! empty( $contact_name ) ) : ?>
+						<dt><?php echo __( 'Contact name', 'realia' ); ?></dt><dd><?php echo esc_attr( $contact_name ); ?></dd>
+					<?php endif; ?>
+
+					<?php $contact_phone = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'contact_phone', true ); ?>
+					<?php if ( ! empty( $contact_phone ) ) : ?>
+						<dt><?php echo __( 'Contact phone', 'realia' ); ?></dt><dd><?php echo esc_attr( $contact_phone ); ?></dd>
 					<?php endif; ?>
 
 					<?php $year_built = get_post_meta( get_the_ID(), REALIA_PROPERTY_PREFIX . 'year_built', true ); ?>

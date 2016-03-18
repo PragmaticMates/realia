@@ -17,6 +17,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div><!-- /.form-group -->
 
 		<div class="form-group">
+			<label for="register-form-first-name"><?php echo __( 'First name', 'realia' ); ?></label>
+			<input id="register-form-first-name" type="text" name="first_name" class="form-control">
+		</div><!-- /.form-group -->
+
+		<div class="form-group">
+			<label for="register-form-last-name"><?php echo __( 'Last name', 'realia' ); ?></label>
+			<input id="register-form-last-name" type="text" name="last_name" class="form-control">
+		</div><!-- /.form-group -->
+
+		<div class="form-group">
+			<label for="register-form-phone"><?php echo __( 'Phone', 'realia' ); ?></label>
+			<input id="register-form-phone" type="text" name="phone" class="form-control">
+		</div><!-- /.form-group -->
+
+		<div class="form-group">
 			<label for="register-form-password"><?php echo __( 'Password', 'realia' ); ?></label>
 			<input id="register-form-password" type="password" name="password" class="form-control" required="required">
 		</div><!-- /.form-group -->

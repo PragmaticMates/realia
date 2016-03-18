@@ -114,6 +114,7 @@ class Realia_Post_Type_User {
 		$email = $_POST['email'];
 		$first_name = $_POST['first_name'];
 		$last_name = $_POST['last_name'];
+		$phone = $_POST['phone'];
 
 		if ( empty( $nickname ) ) {
 			$_SESSION['messages'][] = array( 'warning', __( 'Nickname is required.', 'realia' ) );
@@ -134,6 +135,7 @@ class Realia_Post_Type_User {
 		) );
 		update_user_meta( $user->ID, 'last_name', $last_name );
 		update_user_meta( $user->ID, 'first_name', $first_name );
+		update_user_meta( $user->ID, 'phone', $phone );
 
 		$_SESSION['messages'][] = array( 'success', __( 'Profile has been successfully updated.', 'realia' ) );
 	}
@@ -219,8 +221,14 @@ class Realia_Post_Type_User {
 	 * @return void
 	 */
 	public static function process_register_form() {
-		if ( ! isset( $_POST['register_form'] ) || ! get_option( 'users_can_register' ) ) {
+		if ( ! isset( $_POST['register_form'] ) ) {
 			return;
+		}
+
+		if ( ! get_option( 'users_can_register' ) ) {
+			$_SESSION['messages'][] = array( 'danger', __( 'Registrations are not allowed.', 'realia' ) );
+			wp_redirect( $_SERVER['HTTP_REFERER'] );
+			exit();
 		}
 
 		if ( empty( $_POST['name'] ) || empty( $_POST['email'] ) ) {
@@ -264,6 +272,10 @@ class Realia_Post_Type_User {
 			wp_redirect( site_url() );
 			exit();
 		}
+
+		update_user_meta( $user, 'last_name', $_POST['last_name'] );
+		update_user_meta( $user, 'first_name', $_POST['first_name'] );
+		update_user_meta( $user, 'phone', $_POST['phone'] );
 
 		$_SESSION['messages'][] = array(
 			'success',
