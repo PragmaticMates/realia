@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="property-small-image <?php if ( ! has_post_thumbnail() ) { echo 'without-image'; } ?>">
 		<?php if ( has_post_thumbnail() ) :   ?>
 			<a href="<?php the_permalink(); ?>">
-				<?php the_post_thumbnail( 'thumbnail' ); ?>
+				<?php the_post_thumbnail( 'thumbnail', array( 'alt' => get_the_title() ) );  ?>
 			</a>
 		<?php endif; ?>
 	</div><!-- /.property-small-image -->
