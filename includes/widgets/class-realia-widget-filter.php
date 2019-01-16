@@ -18,7 +18,7 @@ class Realia_Widget_Filter extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Filter() {
+	function __construct() {
 		parent::__construct(
 			'filter_widget',
 			__( 'Filter', 'realia' ),
