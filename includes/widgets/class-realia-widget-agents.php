@@ -18,7 +18,7 @@ class Realia_Widget_Agents extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Agents() {
+	function __construct() {
 		parent::__construct(
 			'agents_widget',
 			__( 'Agents', 'realia' ),
