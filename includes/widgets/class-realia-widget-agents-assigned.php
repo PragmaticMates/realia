@@ -18,7 +18,7 @@ class Realia_Widget_Agents_Assigned extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Agents_Assigned() {
+	function __construct() {
 		parent::__construct(
 			'agents_assigned_widget',
 			__( 'Assigned Agents', 'realia' ),
