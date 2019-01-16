@@ -18,7 +18,7 @@ class Realia_Widget_Properties extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Properties() {
+	function __construct() {
 		parent::__construct(
 			'properties_widget',
 			__( 'Properties', 'realia' ),
