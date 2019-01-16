@@ -18,7 +18,7 @@ class Realia_Widget_Enquire extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Enquire() {
+	function __construct() {
 		parent::__construct(
 			'enquire_widget',
 			__( 'Enquire Form', 'realia' ),
