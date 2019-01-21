@@ -18,7 +18,7 @@ class Realia_Widget_Filter_Rent_Sale extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Filter_Rent_Sale() {
+	function __construct() {
 		parent::__construct(
 			'filter_rent_sale_widget',
 			__( 'Rent/Sale Filter', 'realia' ),

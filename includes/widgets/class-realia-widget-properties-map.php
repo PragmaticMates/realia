@@ -18,7 +18,7 @@ class Realia_Widget_Properties_Map extends WP_Widget {
 	 * @access public
 	 * @return void
 	 */
-	function Realia_Widget_Properties_Map() {
+	function __construct() {
 		parent::__construct(
 			'properties_map',
 			__( 'Properties Map', 'realia' ),
